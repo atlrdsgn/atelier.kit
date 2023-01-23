@@ -24,7 +24,7 @@ const Context = React.createContext<{fontsLoaded: boolean}>({
 })
 export const useAppContext = () => React.useContext(Context)
 
-const App = ({Component, pageProps, ...rest}: AppProps) => {
+function App({Component, pageProps, ...rest}: AppProps) {
   globalStyles()
 
   const getLayout: GetLayoutFn =

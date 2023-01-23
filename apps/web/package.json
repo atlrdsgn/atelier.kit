@@ -1,0 +1,47 @@
+{
+    "name": "kit.website",
+    "packageManager": "yarn@3.2.2",
+    "version": "0.0.1",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@atlr/kit": "*",
+        "next": "^13.1.5",
+        "next-themes": "^0.2.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "eslint": "^8.32.0",
+        "eslint-config-next": "^13.1.5",
+        "prettier": "^2.8.3",
+        "typescript": "^4.9.4"
+    },
+    "prettier": {
+        "bracketSameLine": true,
+        "bracketSpacing": false,
+        "semi": false,
+        "singleQuote": true,
+        "arrowParens": "always",
+        "tabWidth": 2,
+        "useTabs": false,
+        "printWidth": 100,
+        "trailingComma": "es5",
+        "singleAttributePerLine": false
+    },
+    "prettierIgnore": [
+        "node_modules",
+        "dist",
+        "build",
+        "rollup.config.js"
+    ]
+}

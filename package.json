@@ -1,0 +1,52 @@
+{
+    "name": "atelier.kit.root",
+    "version": "0.0.1",
+    "license": "MIT",
+    "private": true,
+    "main": "packages/kit/src/index.ts",
+    "packageManager": "yarn@3.2.2",
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev --filter=web.kit",
+        "kit:build": "turbo run build --filter=kit",
+        "icon:build": "turbo run build --filter=icons",
+        "www:build": "turbo run build --filter=web.kit",
+        "enter:kit": "cd packages/kit",
+        "release": "turbo run build && turbo run release --filter=kit && changeset publish --tag beta",
+        "pretty": "prettier --write .",
+        "changeset": "changeset"
+    },
+    "dependencies": {
+        "@changesets/cli": "^2.26.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "rollup": "^3.9.1",
+        "tslib": "^2.4.1",
+        "turbo": "^1.7.0"
+    },
+    "prettier": {
+        "bracketSameLine": true,
+        "bracketSpacing": false,
+        "semi": false,
+        "singleQuote": true,
+        "arrowParens": "always",
+        "tabWidth": 2,
+        "useTabs": false,
+        "printWidth": 100,
+        "trailingComma": "es5",
+        "singleAttributePerLine": false
+    },
+    "prettierIgnore": [
+        "node_modules",
+        "dist",
+        "build",
+        "rollup.config.js"
+    ]
+}

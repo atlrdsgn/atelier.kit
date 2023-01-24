@@ -10,6 +10,7 @@ import {
   GridDemo,
   RadioGroupDemo,
   RevealDemo,
+  SwitchDemo,
   TabsDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
@@ -38,6 +39,8 @@ function Components() {
       <CopyTextFieldDemo />
       <SectionGap />
       <ButtonDemo />
+      <SectionGap />
+      <SwitchDemo />
       <SectionGap />
 
       <RadioGroupDemo />

@@ -3,9 +3,20 @@ import Head from 'next/head'
 
 import {Section} from 'atlr.kit'
 import {AppWrapper} from '@/components/AppWrapper'
-import {ButtonDemo, CopyTextFieldDemo} from '@/demo'
+import {
+  AccordionDemo,
+  ButtonDemo,
+  CheckboxDemo,
+  ContainerDemo,
+  CopyTextFieldDemo,
+  GridDemo,
+  RadioGroupDemo,
+  RevealDemo,
+  SwitchDemo,
+  TabsDemo,
+} from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
-import {ComponentPageWrapper} from '@/components/ComponentPageWrapper'
+import {AtelierKitLogo} from '@/components/AtelierKit.Logo'
 
 function Components() {
   return (
@@ -17,12 +28,31 @@ function Components() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AppWrapper>
-        {/* <!-- Components go here --> */}
+      {/* <!-- Components go here --> */}
 
+      <AppWrapper>
+        <AtelierKitLogo />
+        <SectionGap />
+        <ContainerDemo />
+        <SectionGap />
         <CopyTextFieldDemo />
         <SectionGap />
         <ButtonDemo />
+        <SectionGap />
+        <SwitchDemo />
+        <SectionGap />
+        <RadioGroupDemo />
+        <SectionGap />
+        <CheckboxDemo />
+        <SectionGap />
+        <TabsDemo />
+        <SectionGap />
+        <AccordionDemo />
+        <SectionGap />
+        <RevealDemo />
+        <SectionGap />
+        <GridDemo />
+        <SectionGap />
       </AppWrapper>
     </>
   )

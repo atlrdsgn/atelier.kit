@@ -9,15 +9,29 @@ type WrapProps = {
 const AppWrapper = ({children, ...props}: WrapProps) => {
   return (
     <div>
-      <StyledAppWrapper {...props}>{children}</StyledAppWrapper>
+      <Contain>
+        <StyledAppWrapper {...props}>{children}</StyledAppWrapper>
+      </Contain>
     </div>
   )
 }
 
+const Contain = styled('div', {
+  zIndex: 0,
+  display: 'flex',
+  margin: 'auto',
+  justifyContent: 'center',
+  alignItems: 'center',
+})
+
 const StyledAppWrapper = styled('div', {
+  zIndex: 1,
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  alignContent: 'center',
 
   overflow: 'auto',
 
@@ -25,14 +39,15 @@ const StyledAppWrapper = styled('div', {
   padding: 0,
 
   height: 'auto',
-  width: '100vw',
-  minWidth: '100vw',
+  width: '100%',
+  maxWidth: '100vw',
 
   paddingTop: 180,
   paddingBottom: 180,
 
   backgroundColor: KitColors.slate2,
-  color: KitColors.slate12,
+
+  //border: '1px solid red',
 })
 
 export {AppWrapper}

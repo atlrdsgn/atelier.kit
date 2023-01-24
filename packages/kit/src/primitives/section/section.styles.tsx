@@ -1,14 +1,18 @@
 import {KitTheme, KitColors, styled, VariantProps} from '../../theme'
 
-const sectionStyles = styled('div', {
+const baseSectionStyle = {
+  boxSizing: 'border-box',
+  display: 'section',
+  position: 'relative',
   width: '100%',
-  margin: 'auto',
-  display: 'flex',
-  flexDirection: 'column',
+  maxWidth: '100vw',
+  margin: 0,
+
   alignItems: 'center',
   justifyContent: 'center',
-  boxSizing: 'border-box',
+}
 
+const sectionStyles = styled('div', {
   variants: {
     /**
      *
@@ -18,18 +22,26 @@ const sectionStyles = styled('div', {
       sm: {
         paddingTop: 10,
         paddingBottom: 10,
+        paddingLeft: 0,
+        paddingRight: 0,
       },
       md: {
         paddingTop: 20,
         paddingBottom: 20,
+        paddingLeft: 0,
+        paddingRight: 0,
       },
       lg: {
         paddingTop: 40,
         paddingBottom: 40,
+        paddingLeft: 0,
+        paddingRight: 0,
       },
       xl: {
         paddingTop: 60,
         paddingBottom: 60,
+        paddingLeft: 0,
+        paddingRight: 0,
       },
     },
 
@@ -101,7 +113,7 @@ const sectionStyles = styled('div', {
     hero: false,
     dev: false,
     fluid: false,
-    responsive: true,
+    responsive: false,
   },
 })
 

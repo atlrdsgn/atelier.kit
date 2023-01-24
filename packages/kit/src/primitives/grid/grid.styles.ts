@@ -6,7 +6,7 @@ const coreDefaults = {
   display: 'grid',
   padding: 0,
   margin: 'auto',
-  width: '100%',
+  width: 'auto',
   whiteSpace: 'nowrap',
   overflowWrap: 'break-word',
   flexWrap: 'wrap',
@@ -33,6 +33,7 @@ const gridStyles = css({
       },
       stretch: {
         alignItems: 'stretch',
+        width: '100%',
       },
       baseline: {
         alignItems: 'baseline',

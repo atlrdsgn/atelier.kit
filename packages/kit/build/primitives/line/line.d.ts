@@ -4,17 +4,15 @@ import type { LineVariantProps } from './line.styles';
 interface lineProps {
     children?: never;
     orientation?: 'horizontal' | 'vertical' | string;
-    size?: 'sm' | 'md' | 'lg' | 'xl' | 'max' | string;
     weight?: '1' | '2' | '3' | '4' | '5' | string;
-    color?: 'slate' | 'helios' | 'white' | 'contrast' | string;
 }
 type LineComponentProps = React.HTMLAttributes<HTMLDivElement> & lineProps;
 type LineProps = LineComponentProps & LineVariantProps & {
     css?: CSS;
 };
 declare const LineComponent: React.ForwardRefExoticComponent<React.HTMLAttributes<HTMLDivElement> & lineProps & import("@stitches/react/types/styled-component").TransformProps<{
-    size?: "sm" | "md" | "lg" | "xl" | "max" | "xs" | "px50" | "px100" | undefined;
-    color?: "slate" | "helios" | "white" | "contrast" | undefined;
+    size?: "xs" | "sm" | "md" | "lg" | "xl" | "max" | "px50" | "px100" | undefined;
+    color?: "white" | "slate" | "helios" | "contrast" | undefined;
     weight?: number | "1" | "2" | "3" | "4" | "5" | undefined;
 }, {
     xs: string;

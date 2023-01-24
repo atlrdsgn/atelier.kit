@@ -1,14 +1,13 @@
 import * as TabsPrimitive from '@radix-ui/react-tabs'
 
-import {KitColors, KitTheme, styled} from '../../theme'
+import {KitColors, KitTheme, styled, VariantProps} from '../../theme'
 
 const styledTabs = styled(TabsPrimitive.Root, {
-  display: 'flex',
+  display: 'block',
   margin: 'auto',
   flexDirection: 'column',
   justifyContent: 'center',
   width: '100%',
-  minWidth: '100%',
   backgroundColor: KitColors.slate1,
 
   fontFamily: KitTheme.theme.fonts.sans,
@@ -36,6 +35,9 @@ const styledList = styled(TabsPrimitive.List, {
   },
   '&[data-orientation="vertical"]': {
     flexDirection: 'column',
+  },
+  '&[data-orientation="horizontal"]': {
+    flexDirection: 'row',
   },
 })
 
@@ -75,7 +77,12 @@ const styledContent = styled(TabsPrimitive.Content, {
   flexGrow: 1,
   flex: 1,
 
-  width: 'auto',
+  '&[data-state="active"]': {},
+  '&[data-state="inactive"]': {
+    width: '100%',
+  },
+
+  width: '100%',
   height: '100%',
 
   margin: '0',
@@ -93,9 +100,22 @@ const styledContent = styled(TabsPrimitive.Content, {
   borderBottomLeftRadius: '8px',
   borderBottomRightRadius: '8px',
   outline: 'none',
+
+  variants: {
+    align: {
+      left: {textAlign: 'left'},
+      center: {textAlign: 'center'},
+      right: {textAlign: 'right'},
+    },
+  },
+  defaultVariants: {
+    align: 'left',
+  },
 })
 
 export const StyledTabsRoot = styledTabs
 export const StyledTabsList = styledList
 export const StyledTabsTrigger = styledTrigger
 export const StyledTabsContent = styledContent
+
+export type TabsContentVariantProps = VariantProps<typeof styledContent>

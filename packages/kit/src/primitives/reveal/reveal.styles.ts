@@ -3,7 +3,7 @@ import * as Collapsible from '@radix-ui/react-collapsible'
 import {KitColors, KitTheme, styled} from '../../theme'
 
 const revealRoot = styled(Collapsible.Root, {
-  width: 'auto',
+  width: '100%',
   height: 'auto',
 })
 
@@ -48,7 +48,7 @@ const revealContent = styled(Collapsible.Content, {
   backgroundColor: KitColors.transparent,
   color: KitColors.slate11,
 
-  border: `1px solid ${KitColors.slate4}`,
+  // border: `1px solid ${KitColors.slate4}`,
   borderRadius: KitTheme.theme.radii.base,
 
   paddingTop: 2,

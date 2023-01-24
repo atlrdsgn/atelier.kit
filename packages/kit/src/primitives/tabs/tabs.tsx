@@ -1,12 +1,14 @@
 import * as React from 'react'
 
 import type {CSS} from '../../theme'
+import type {TabsContentVariantProps} from './tabs.styles'
 import {StyledTabsContent, StyledTabsList, StyledTabsRoot, StyledTabsTrigger} from './tabs.styles'
 
 type TabsProps = React.ComponentPropsWithRef<typeof StyledTabsRoot> & {css?: CSS}
 type TabsListProps = React.ComponentPropsWithRef<typeof StyledTabsList> & {css?: CSS}
 type TabsTriggerProps = React.ComponentPropsWithRef<typeof StyledTabsTrigger> & {css?: CSS}
-type TabsContentProps = React.ComponentPropsWithRef<typeof StyledTabsContent> & {css?: CSS}
+type TabsContentProps = React.ComponentPropsWithRef<typeof StyledTabsContent> &
+  TabsContentVariantProps & {css?: CSS}
 
 const TabsComponent = React.forwardRef<React.ElementRef<typeof StyledTabsRoot>, TabsProps>(
   ({...props}, forwardedRef) => (
@@ -59,7 +61,15 @@ const TabsContentComponent = React.forwardRef<
   React.ElementRef<typeof StyledTabsContent>,
   TabsContentProps
 >(({...props}, ref) => (
-  <StyledTabsContent {...props} ref={ref} value={props.value} forceMount={props.forceMount}>
+  <StyledTabsContent
+    {...props}
+    ref={ref}
+    value={props.value}
+    forceMount={props.forceMount}
+    align={props.align}
+    css={{
+      ...props.css,
+    }}>
     {props.children}
   </StyledTabsContent>
 ))

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Head from 'next/head'
 
-import {Canvas, KitColors} from '@atlr/kit'
+import {Button, Canvas, Flex, KitColors} from 'atlr.kit'
 import {AtelierKitLogo} from '@/components/AtelierKit.Logo'
 import {AppWrapper} from '@/components/AppWrapper'
 
@@ -19,7 +19,12 @@ function Index() {
 
       <AppWrapper>
         <Canvas>
-          <AtelierKitLogo color={color} />
+          <Flex direction="column" align="center" justify="center">
+            <AtelierKitLogo color={color} />
+            <Button size="sm" href="/components" secondary>
+              View Components
+            </Button>
+          </Flex>
         </Canvas>
       </AppWrapper>
     </>

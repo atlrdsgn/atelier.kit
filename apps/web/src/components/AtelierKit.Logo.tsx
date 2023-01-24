@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {KitColors} from '@atlr/kit'
+import {KitColors} from 'atlr.kit'
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   color?: string
   width?: number

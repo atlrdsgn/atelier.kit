@@ -11,7 +11,7 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@atlr/kit": "*",
+        "atlr.kit": "*",
         "next": "^13.1.5",
         "next-themes": "^0.2.1",
         "react": "18.2.0",

@@ -5,35 +5,6 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@atlr/kit@npm:*":
-  version: 0.4.6
-  resolution: "@atlr/kit@npm:0.4.6"
-  dependencies:
-    "@radix-ui/react-accordion": ^1.1.0
-    "@radix-ui/react-checkbox": ^1.0.1
-    "@radix-ui/react-collapsible": ^1.0.1
-    "@radix-ui/react-dialog": ^1.0.2
-    "@radix-ui/react-icons": ^1.1.1
-    "@radix-ui/react-label": ^2.0.0
-    "@radix-ui/react-menubar": ^1.0.0
-    "@radix-ui/react-popover": ^1.0.3
-    "@radix-ui/react-radio-group": ^1.1.1
-    "@radix-ui/react-scroll-area": ^1.0.2
-    "@radix-ui/react-separator": ^1.0.1
-    "@radix-ui/react-slider": ^1.1.0
-    "@radix-ui/react-switch": ^1.0.1
-    "@radix-ui/react-tabs": ^1.0.2
-    "@radix-ui/react-toast": ^1.1.2
-    "@radix-ui/react-toggle-group": ^1.0.2
-    "@stitches/react": ^1.2.8
-    copy-to-clipboard: ^3.3.3
-    framer-motion: ^8.5.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  checksum: 25a3cbbc37fcf5d5e4dc2a265d7d950db85fb26661ce4ee655876a4180307e27079b25a714f59dcdcaaed54a916c050a3cc22bd3fee09ac5bdf82c138b4d4e7a
-  languageName: node
-  linkType: hard
-
 "@babel/code-frame@npm:^7.0.0":
   version: 7.18.6
   resolution: "@babel/code-frame@npm:7.18.6"
@@ -1903,7 +1874,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"atlr.kit@workspace:packages/kit":
+"atlr.kit@*, atlr.kit@workspace:packages/kit":
   version: 0.0.0-use.local
   resolution: "atlr.kit@workspace:packages/kit"
   dependencies:
@@ -4059,11 +4030,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "kit.website@workspace:apps/web"
   dependencies:
-    "@atlr/kit": "*"
     "@next/bundle-analyzer": ^13.1.5
     "@types/node": ^18.11.18
     "@types/react": ^18.0.27
     "@types/react-dom": ^18.0.10
+    atlr.kit: "*"
     eslint: ^8.32.0
     eslint-config-next: ^13.1.5
     next: ^13.1.5

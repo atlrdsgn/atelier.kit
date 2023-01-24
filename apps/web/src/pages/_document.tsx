@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Document, {DocumentContext, Head, Html, Main, NextScript} from 'next/document'
-import {getCssText, reset} from '@atlr/kit'
+import {getCssText, reset} from 'atlr.kit'
 
 class App extends Document {
   static async getInitialProps(ctx: DocumentContext) {

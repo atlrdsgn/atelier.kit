@@ -1,5 +1,5 @@
 import * as Separator from '@radix-ui/react-separator'
-import {css, KitMedia, KitColors, styled, VariantProps} from '../../theme'
+import {KitMedia, KitColors, styled, VariantProps} from '../../theme'
 
 const coreStyles = {
   all: 'unset',
@@ -10,7 +10,7 @@ const coreStyles = {
 const lineRoot = styled(Separator.Root, {
   ...coreStyles,
 
-  backgroundColor: KitColors.slate6,
+  backgroundColor: KitColors.slate8,
   '&[data-orientation=horizontal]': {height: 1, width: '100%'},
   '&[data-orientation=vertical]': {height: '100%', width: 1},
 
@@ -36,7 +36,7 @@ const lineRoot = styled(Separator.Root, {
       max: {width: '100%'},
     },
     color: {
-      slate: {backgroundColor: KitColors.slate6},
+      slate: {backgroundColor: KitColors.slate8},
       helios: {backgroundColor: KitColors.helios7},
       white: {backgroundColor: KitColors.white},
       contrast: {backgroundColor: KitColors.slate12},

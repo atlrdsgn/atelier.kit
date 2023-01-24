@@ -25,7 +25,7 @@ const Contain = styled('div', {
 })
 
 const StyledAppWrapper = styled('div', {
-  zIndex: 1,
+  zIndex: 100,
   boxSizing: 'border-box',
   display: 'flex',
   flexDirection: 'column',
@@ -33,16 +33,15 @@ const StyledAppWrapper = styled('div', {
   alignItems: 'center',
   alignContent: 'center',
 
-  overflow: 'auto',
-
   margin: 0,
   padding: 0,
 
-  height: 'auto',
+  height: '100%',
+  maxHeight: '100vh',
   width: '100%',
   maxWidth: '100vw',
 
-  paddingTop: 180,
+  paddingTop: 0,
   paddingBottom: 180,
 
   backgroundColor: KitColors.slate2,

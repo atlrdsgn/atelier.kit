@@ -7,7 +7,7 @@ export {Button, TestButton} from './button'
 
 export {Canvas} from './canvas'
 export {CheckboxFlex, Checkbox, CheckboxLabel} from './checkbox'
-export {Collapse, CollapseTrigger, CollapseContent} from './collapse'
+// export {Collapse, CollapseTrigger, CollapseContent} from './collapse'
 export {Container} from './container'
 export {CopyField, CopyText, CopyTrigger} from './copy-text'
 
@@ -25,8 +25,8 @@ export {Input} from './input'
 export {InputWithLabel} from './input'
 
 export {Line, LineComponent} from './line'
-export {Link} from './link'
-export {List, ListItem} from './list'
+// export {Link} from './link'
+// export {List, ListItem} from './list'
 
 export {
   MenuBar,
@@ -46,6 +46,7 @@ export {
   MenuBarRightSlot,
 } from './menu-bar'
 
+/*
 export {
   NavMenu,
   NavMenuBar,
@@ -54,16 +55,17 @@ export {
   NavMenuLink,
   NavMenuViewport,
 } from './navigation-menu'
+*/
 
 export {Paragraph} from './paragraph'
 export {PassLink} from './pass-link'
-export {PopoverPrimitive, Popover, PopoverTrigger, PopoverContent} from './popover'
-export {PreText} from './preformatted-text'
+// export {PopoverPrimitive, Popover, PopoverTrigger, PopoverContent} from './popover'
+// export {PreText} from './preformatted-text'
 
 export {RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel} from './radio-group'
 export {Reveal, RevealTrigger, RevealContent} from './reveal'
 
-export {ScrollArea, ScrollAreaViewport, ScrollAreaScrollbar, ScrollAreaCorner} from './scroll-area'
+// export {ScrollArea, ScrollAreaViewport, ScrollAreaScrollbar, ScrollAreaCorner} from './scroll-area'
 export {Section} from './section'
 export {SlideMenu, SlideMenuTrigger, SlideMenuContent} from './slide-menu'
 export {Slider, SliderTrack, SliderRange, SliderThumb} from './slider'

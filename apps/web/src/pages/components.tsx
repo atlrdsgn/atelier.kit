@@ -1,8 +1,6 @@
 import * as React from 'react'
 import Head from 'next/head'
 
-import {Section} from 'atlr.kit'
-import {AppWrapper} from '@/components/AppWrapper'
 import {
   AccordionDemo,
   ButtonDemo,
@@ -12,11 +10,11 @@ import {
   GridDemo,
   RadioGroupDemo,
   RevealDemo,
-  SwitchDemo,
   TabsDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
 import {AtelierKitLogo} from '@/components/AtelierKit.Logo'
+import {Container} from 'atlr.kit'
 
 function Components() {
   return (
@@ -30,30 +28,30 @@ function Components() {
 
       {/* <!-- Components go here --> */}
 
-      <AppWrapper>
+      <Container size={'sm'} align={'center'}>
         <AtelierKitLogo />
-        <SectionGap />
-        <ContainerDemo />
-        <SectionGap />
-        <CopyTextFieldDemo />
-        <SectionGap />
-        <ButtonDemo />
-        <SectionGap />
-        <SwitchDemo />
-        <SectionGap />
-        <RadioGroupDemo />
-        <SectionGap />
-        <CheckboxDemo />
-        <SectionGap />
-        <TabsDemo />
-        <SectionGap />
-        <AccordionDemo />
-        <SectionGap />
-        <RevealDemo />
-        <SectionGap />
-        <GridDemo />
-        <SectionGap />
-      </AppWrapper>
+      </Container>
+
+      <SectionGap />
+      <ContainerDemo />
+      <SectionGap />
+      <CopyTextFieldDemo />
+      <SectionGap />
+      <ButtonDemo />
+      <SectionGap />
+
+      <RadioGroupDemo />
+      <SectionGap />
+      <CheckboxDemo />
+      <SectionGap />
+      <TabsDemo />
+      <SectionGap />
+      <AccordionDemo />
+      <SectionGap />
+      <RevealDemo />
+      <SectionGap />
+      <GridDemo />
+      <SectionGap />
     </>
   )
 }

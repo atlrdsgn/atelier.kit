@@ -2,7 +2,7 @@ import * as SwitchPrimitive from '@radix-ui/react-switch'
 import * as React from 'react'
 
 import type {CSS} from '../../theme'
-import {SwitchRoot, SwitchThumb} from './switch.styles'
+import {SwitchRoot, StyledSwitchThumb} from './switch.styles'
 
 type switchProps = {
   asChild?: boolean
@@ -21,35 +21,33 @@ type SwitchProps = SwitchPrimitiveProps & {css?: CSS}
 const SwitchComponent = React.forwardRef<React.ElementRef<typeof SwitchRoot>, SwitchProps>(
   ({...props}, forwardedRef) => {
     return (
-      <SwitchRoot
-        {...props}
-        ref={forwardedRef}
-        asChild={props.asChild}
-        defaultChecked={props.defaultChecked}
-        checked={props.checked}
-        onCheckedChange={props.onCheckedChange}
-        disabled={props.disabled}
-        required={props.required}
-        name={props.name}
-        value={props.value}
-        css={{
-          ...props.css,
-        }}>
-        <SwitchThumb
-          as={SwitchThumb}
-          asChild={props.asChild}
-          css={{
-            ...props.css,
-          }}
-        />
-      </SwitchRoot>
+      <>
+        <form>
+          <SwitchRoot
+            {...props}
+            ref={forwardedRef}
+            asChild={props.asChild}
+            defaultChecked={props.defaultChecked}
+            checked={props.checked}
+            onCheckedChange={props.onCheckedChange}
+            disabled={props.disabled}
+            required={props.required}
+            name={props.name}
+            value={props.value}
+            css={{
+              ...props.css,
+            }}>
+            {props.children}
+          </SwitchRoot>
+        </form>
+      </>
     )
   }
 )
 
-export const Switch = React.memo(SwitchComponent)
+export const Switch = SwitchComponent
+export const SwitchThumb = StyledSwitchThumb
 export type {SwitchProps}
 
-export {SwitchThumb}
-
 Switch.displayName = 'Switch'
+SwitchThumb.displayName = 'SwitchThumb'

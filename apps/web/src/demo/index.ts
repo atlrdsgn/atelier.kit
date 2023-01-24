@@ -3,7 +3,7 @@ export {ContainerDemo} from './Container.Demo'
 export {CheckboxDemo} from './Checkbox.Demo'
 export {CopyTextFieldDemo} from './CopyTextField.Demo'
 export {ButtonDemo} from './Button.Demo'
-export {SwitchDemo} from './Switch.Demo'
+
 export {TabsDemo} from './Tabs.Demo'
 export {RadioGroupDemo} from './RadioGroup.Demo'
 export {RevealDemo} from './Reveal.Demo'

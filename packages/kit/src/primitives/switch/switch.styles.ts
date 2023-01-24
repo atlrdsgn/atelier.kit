@@ -32,4 +32,4 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
 })
 
 export const SwitchRoot = StyledSwitch
-export const SwitchThumb = StyledThumb
+export const StyledSwitchThumb = StyledThumb

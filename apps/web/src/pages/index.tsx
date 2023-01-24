@@ -21,7 +21,7 @@ function Index() {
       </Head>
 
       <AppWrapper>
-        <Canvas>
+        <Canvas css={{zIndex: 100}}>
           <Flex direction="column" align="center" justify="center">
             <AtelierKitLogo color={color} />
             <Button size="sm" href="/components" secondary>
@@ -29,10 +29,10 @@ function Index() {
             </Button>
           </Flex>
         </Canvas>
-      </AppWrapper>
 
-      <BlurredCanvas />
-      <Image src={mainBackdrop} alt="src" fill style={{width: '100%', height: '100%'}} />
+        <BlurredCanvas />
+        <Image src={mainBackdrop} alt="src" fill style={{width: '100%', height: '100%'}} />
+      </AppWrapper>
     </>
   )
 }

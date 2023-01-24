@@ -444,7 +444,7 @@ export declare const SwitchRoot: import("@stitches/react/types/styled-component"
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-export declare const SwitchThumb: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<SwitchPrimitive.SwitchThumbProps & import("react").RefAttributes<HTMLSpanElement>>, {}, {
+export declare const StyledSwitchThumb: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<SwitchPrimitive.SwitchThumbProps & import("react").RefAttributes<HTMLSpanElement>>, {}, {
     xs: string;
     sm: string;
     md: string;

@@ -8,7 +8,7 @@
         "start": "next start",
         "lint": "next lint",
         "sb": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-sb": "build-storybook -s public"
     },
     "dependencies": {
         "@next/font": "13.1.4",
@@ -26,6 +26,7 @@
     "devDependencies": {
         "@babel/core": "^7.20.12",
         "@mdx-js/react": "^2.2.1",
+        "@next/bundle-analyzer": "^13.1.5",
         "@storybook/addon-actions": "^6.5.15",
         "@storybook/addon-docs": "^6.5.15",
         "@storybook/addon-essentials": "^6.5.15",
@@ -36,6 +37,7 @@
         "@storybook/react": "^6.5.15",
         "@storybook/testing-library": "^0.0.13",
         "@storybook/theming": "^6.5.15",
-        "babel-loader": "^9.1.2"
+        "babel-loader": "^9.1.2",
+        "storybook-addon-next": "^1.7.1"
     }
 }

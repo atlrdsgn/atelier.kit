@@ -34,5 +34,5 @@ export declare const Text: React.MemoExoticComponent<React.ForwardRefExoticCompo
     light: string;
 }> & React.HTMLAttributes<HTMLParagraphElement> & {
     css?: CSS | undefined;
-} & React.RefAttributes<HTMLParagraphElement>>>;
+} & React.RefAttributes<HTMLSpanElement>>>;
 export type { TextProps };

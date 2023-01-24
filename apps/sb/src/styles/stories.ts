@@ -1,4 +1,4 @@
-import { KitTheme, KitColors, globalCss, css } from '@atlr/kit';
+import { KitTheme, KitColors, globalCss, css } from 'atlr.kit';
 
 
 

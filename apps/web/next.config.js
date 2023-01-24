@@ -13,7 +13,7 @@ const config = {
         domains: ['*.chvndler.ch'],
     },
     experimental: {},
-    transpilePackages: ['@atlr/kit'],
+    transpilePackages: ['atlr.kit'],
 }
 
 module.exports = (_phase, { defaultConfig: _ }) => {

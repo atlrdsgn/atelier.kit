@@ -17,7 +17,7 @@ type PopoverPrimitiveProps = React.ComponentProps<typeof StyledPopover> &
 type PopoverProps = PopoverPrimitiveProps & {css?: CSS}
 
 const PopoverRoot = React.forwardRef<React.ElementRef<typeof StyledPopover>, PopoverProps>(
-  ({...props}, forwardedRef) => {
+  ({...props}) => {
     return <StyledPopover {...props}>{props.children}</StyledPopover>
   }
 )

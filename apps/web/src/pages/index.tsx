@@ -1,11 +1,14 @@
 import * as React from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import {Button, Canvas, Flex, KitColors} from 'atlr.kit'
 import {AtelierKitLogo} from '@/components/AtelierKit.Logo'
 import {AppWrapper} from '@/components/AppWrapper'
+import {BlurredCanvas} from '@/components/BlurredCanvas'
+import mainBackdrop from '../../public/main.png'
 
-const color = KitColors.slate11
+const color = KitColors.slate12
 
 function Index() {
   return (
@@ -27,6 +30,9 @@ function Index() {
           </Flex>
         </Canvas>
       </AppWrapper>
+
+      <BlurredCanvas />
+      <Image src={mainBackdrop} alt="src" fill style={{width: '100%', height: '100%'}} />
     </>
   )
 }

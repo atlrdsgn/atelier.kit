@@ -26,8 +26,11 @@ export default [{
         '@stitches/react',
 
         'copy-to-clipboard',
-        'framer-motion',
 
+        /**
+         *
+         * @radix-ui..
+         */
         '@radix-ui/react-icons',
         '@radix-ui/react-scroll-area',
         '@radix-ui/react-slider',

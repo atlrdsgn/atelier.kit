@@ -40,8 +40,8 @@ type ScrollAreaCornerPrimitiveProps = React.ComponentPropsWithRef<typeof StyledS
 type SACornerProps = ScrollAreaCornerPrimitiveProps & {
     css?: CSS;
 };
-export declare const ScrollArea: React.ForwardRefExoticComponent<Pick<SARootProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "type" | "css" | "scrollHideDelay"> & React.RefAttributes<HTMLDivElement>>;
-export declare const ScrollAreaViewport: React.ForwardRefExoticComponent<Pick<SAViewportProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css"> & React.RefAttributes<HTMLDivElement>>;
-export declare const ScrollAreaScrollbar: React.ForwardRefExoticComponent<Pick<SAScrollbarProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css" | "forceMount" | "orientation"> & React.RefAttributes<HTMLDivElement>>;
-export declare const ScrollAreaCorner: React.ForwardRefExoticComponent<Pick<SACornerProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css"> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollArea: React.ForwardRefExoticComponent<Pick<SARootProps, "key" | "css" | "asChild" | "type" | keyof React.HTMLAttributes<HTMLDivElement> | "scrollHideDelay"> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollAreaViewport: React.ForwardRefExoticComponent<Pick<SAViewportProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollAreaScrollbar: React.ForwardRefExoticComponent<Pick<SAScrollbarProps, "key" | "css" | "orientation" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement> | "forceMount"> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollAreaCorner: React.ForwardRefExoticComponent<Pick<SACornerProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
 export type { SARootProps, SAViewportProps, SAScrollbarProps, SACornerProps };

@@ -17,8 +17,8 @@ type SliderRangePrimitiveProps = React.HTMLAttributes<HTMLDivElement> & React.Co
 type SliderRangeProps = SliderRangePrimitiveProps & {
     css?: CSS;
 };
-export declare const Slider: React.ForwardRefExoticComponent<Pick<SliderRootProps, "max" | "min" | "inverted" | "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "name" | "disabled" | "orientation" | "step" | "minStepsBetweenThumbs" | "value" | "onValueChange" | "onValueCommit" | "css"> & React.RefAttributes<HTMLDivElement>>;
-export declare const SliderTrack: React.ForwardRefExoticComponent<Pick<SliderTrackProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css"> & React.RefAttributes<HTMLDivElement>>;
-export declare const SliderThumb: React.ForwardRefExoticComponent<Pick<SliderThumbProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css"> & React.RefAttributes<HTMLDivElement>>;
-export declare const SliderRange: React.ForwardRefExoticComponent<Pick<SliderRangeProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css"> & React.RefAttributes<HTMLDivElement>>;
+export declare const Slider: React.ForwardRefExoticComponent<Pick<SliderRootProps, "max" | "value" | "key" | "css" | "step" | "orientation" | "asChild" | "onValueChange" | "disabled" | "name" | keyof React.HTMLAttributes<HTMLDivElement> | "min" | "inverted" | "minStepsBetweenThumbs" | "onValueCommit"> & React.RefAttributes<HTMLDivElement>>;
+export declare const SliderTrack: React.ForwardRefExoticComponent<Pick<SliderTrackProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
+export declare const SliderThumb: React.ForwardRefExoticComponent<Pick<SliderThumbProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
+export declare const SliderRange: React.ForwardRefExoticComponent<Pick<SliderRangeProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
 export type { SliderRootProps, SliderTrackProps, SliderThumbProps, SliderRangeProps };

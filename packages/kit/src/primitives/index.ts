@@ -7,7 +7,6 @@ export {Button, TestButton} from './button'
 
 export {Canvas} from './canvas'
 export {CheckboxFlex, Checkbox, CheckboxLabel} from './checkbox'
-// export {Collapse, CollapseTrigger, CollapseContent} from './collapse'
 export {Container} from './container'
 export {CopyField, CopyText, CopyTrigger} from './copy-text'
 
@@ -67,8 +66,8 @@ export {Reveal, RevealTrigger, RevealContent} from './reveal'
 
 // export {ScrollArea, ScrollAreaViewport, ScrollAreaScrollbar, ScrollAreaCorner} from './scroll-area'
 export {Section} from './section'
-export {SlideMenu, SlideMenuTrigger, SlideMenuContent} from './slide-menu'
-export {Slider, SliderTrack, SliderRange, SliderThumb} from './slider'
+// export {SlideMenu, SlideMenuTrigger, SlideMenuContent} from './slide-menu'
+// export {Slider, SliderTrack, SliderRange, SliderThumb} from './slider'
 export {Space} from './space'
 export {Switch, SwitchThumb} from './switch'
 

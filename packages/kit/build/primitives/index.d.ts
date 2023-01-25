@@ -22,8 +22,6 @@ export { PassLink } from './pass-link';
 export { RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel } from './radio-group';
 export { Reveal, RevealTrigger, RevealContent } from './reveal';
 export { Section } from './section';
-export { SlideMenu, SlideMenuTrigger, SlideMenuContent } from './slide-menu';
-export { Slider, SliderTrack, SliderRange, SliderThumb } from './slider';
 export { Space } from './space';
 export { Switch, SwitchThumb } from './switch';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs';

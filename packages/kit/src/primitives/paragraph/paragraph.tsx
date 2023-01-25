@@ -3,37 +3,42 @@ import * as React from 'react'
 import {ParagraphContent} from './paragraph.styles'
 import type {ParagraphVariantProps} from './paragraph.styles'
 
-import type {CSS} from '../../theme'
+import {applyDisplayName} from '../@shared/utils'
+import {baseComponentProps} from '../@shared/types'
 
 type paragraphProps = {
   children?: React.ReactNode
-  size?: string
-  weight?: string
-  align?: string
 }
 
-type ParagraphPrimitiveProps = paragraphProps &
+type ParagraphPrimitiveProps = baseComponentProps &
+  paragraphProps &
   ParagraphVariantProps &
   React.HTMLAttributes<HTMLParagraphElement>
-type ParagraphProps = ParagraphPrimitiveProps & {css?: CSS}
+type ParagraphProps = ParagraphPrimitiveProps
 
-const ParagraphComponent = React.forwardRef<HTMLParagraphElement, ParagraphProps>(
-  (props: ParagraphProps, ref) => {
-    return (
-      <ParagraphContent
-        {...props}
-        ref={ref}
-        size={props.size}
-        weight={props.weight}
-        align={props.align}
-        css={{
-          ...props.css,
-        }}>
-        {props.children}
-      </ParagraphContent>
-    )
-  }
+const ParagraphElement = ({
+  children,
+  size = 'md',
+  color,
+  align,
+  weight,
+  css,
+  ...rest
+}: ParagraphProps) => (
+  <ParagraphContent
+    {...rest}
+    size={size}
+    weight={weight}
+    align={align}
+    css={{
+      ...css,
+    }}>
+    {children}
+  </ParagraphContent>
 )
 
-export const Paragraph = React.memo(ParagraphComponent)
+export const Paragraph = ParagraphElement
+
+applyDisplayName(Paragraph, 'Paragraph')
+
 export type {ParagraphProps}

@@ -36,7 +36,6 @@ export default [{
         '@radix-ui/react-slider',
         '@radix-ui/react-menubar',
         '@radix-ui/react-navigation-menu',
-        '@radix-ui/react-popover',
         '@radix-ui/react-label',
         '@radix-ui/react-dialog',
         '@radix-ui/react-checkbox',

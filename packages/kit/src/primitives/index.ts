@@ -58,7 +58,6 @@ export {
 
 export {Paragraph} from './paragraph'
 export {PassLink} from './pass-link'
-// export {PopoverPrimitive, Popover, PopoverTrigger, PopoverContent} from './popover'
 // export {PreText} from './preformatted-text'
 
 export {RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel} from './radio-group'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import {applyDisplayName} from '../@shared/utils'
 import {CSS} from '../../theme'
 import {BadgePrimitive, BadgeVariantsProps} from './badge.styles'
 
@@ -26,28 +26,43 @@ interface Props {
 type BadgePrimitiveProps = atlrProps & Props & BadgeVariantsProps
 type BadgeProps = BadgePrimitiveProps & {css?: CSS}
 
-const BadgeComponent = React.forwardRef<HTMLSpanElement, BadgeProps>(
-  ({type = 'default', ...props}, ref) => {
-    return (
-      <BadgePrimitive
-        {...props}
-        ref={ref}
-        type={type}
-        size={props.size}
-        color={props.color}
-        subtle={props.subtle}
-        as={props.as}
-        css={{
-          ...props.css,
-        }}>
-        {props.children}
-      </BadgePrimitive>
-    )
-  }
-)
+const BadgeComponent = ({
+  type = 'default',
+  color,
+  children,
+  subtle,
+  as,
+  size,
+  css,
+  ...rest
+}: BadgeProps) => {
+  /**
+   *
+   * previous implementation below..
+   *
+   * seems to be a typescript issue with the forwardRef..
+   */
+
+  // const BadgeComponent = React.forwardRef<React.ElementRef<typeof BadgePrimitive>, BadgeProps>(
+
+  return (
+    <BadgePrimitive
+      {...rest}
+      type={type}
+      size={size}
+      color={color}
+      subtle={subtle}
+      as={as}
+      css={{
+        ...css,
+      }}>
+      {children}
+    </BadgePrimitive>
+  )
+}
 
 export const Badge = BadgeComponent
 
-Badge.displayName = 'Badge'
+applyDisplayName(Badge, 'Badge')
 
 export type {BadgeProps}

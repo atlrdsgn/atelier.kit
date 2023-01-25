@@ -1,11 +1,12 @@
 import * as React from 'react';
 import type { CSS } from '../../theme';
 import type { AppbarVariantProps, AppbarSpotVariantProps } from './app.bar.styles';
+import type { baseComponentProps } from '../@shared/types';
 /**
  *
  * ..Appbar[Root].
  */
-type AppbarPrimitiveProps = AppbarVariantProps & React.HTMLAttributes<HTMLDivElement>;
+type AppbarPrimitiveProps = baseComponentProps & AppbarVariantProps & React.HTMLAttributes<HTMLDivElement>;
 type AppbarProps = AppbarPrimitiveProps & {
     css?: CSS;
 };
@@ -19,50 +20,11 @@ type AppbarProps = AppbarPrimitiveProps & {
  * ..center _ 'center'
  * ..right _ 'flex-start'
  */
-type AppbarSpotPrimitiveProps = AppbarSpotVariantProps & React.HTMLAttributes<HTMLDivElement>;
+type AppbarSpotPrimitiveProps = baseComponentProps & AppbarSpotVariantProps & React.HTMLAttributes<HTMLDivElement>;
 type AppbarSpotProps = AppbarSpotPrimitiveProps & {
     css?: CSS;
 };
-export declare const Appbar: React.ForwardRefExoticComponent<import("@stitches/react/types/styled-component").TransformProps<{
-    size?: "sm" | "md" | "lg" | undefined;
-    fixed?: boolean | "true" | undefined;
-    sticky?: boolean | "true" | undefined;
-    glass?: boolean | "true" | undefined;
-    border?: boolean | "true" | undefined;
-    color?: "transparent" | "loContrast" | "plain" | "accent" | undefined;
-}, {
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
-    full: string;
-    initial: string;
-    motion: string;
-    safari: string;
-    hover: string;
-    dark: string;
-    light: string;
-}> & React.HTMLAttributes<HTMLDivElement> & {
-    css?: CSS | undefined;
-} & React.RefAttributes<HTMLDivElement>>;
-export declare const AppbarSpot: React.ForwardRefExoticComponent<import("@stitches/react/types/styled-component").TransformProps<{
-    alignment?: "center" | "end" | "start" | undefined;
-}, {
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
-    full: string;
-    initial: string;
-    motion: string;
-    safari: string;
-    hover: string;
-    dark: string;
-    light: string;
-}> & React.HTMLAttributes<HTMLDivElement> & {
-    css?: CSS | undefined;
-} & React.RefAttributes<HTMLDivElement>>;
+export declare const Appbar: ({ children, color, glass, size, border, fixed, sticky, css, ...rest }: AppbarProps) => JSX.Element;
+export declare const AppbarSpot: ({ children, alignment, css, ...rest }: AppbarSpotProps) => JSX.Element;
 export type { AppbarProps };
 export type { AppbarSpotProps };

@@ -1,6 +1,5 @@
 import * as SwitchPrimitive from '@radix-ui/react-switch'
-
-import {KitColors, styled} from '../../theme'
+import {KitColors, styled, VariantProps} from '../../theme'
 
 const StyledSwitch = styled(SwitchPrimitive.Root, {
   all: 'unset',
@@ -13,6 +12,9 @@ const StyledSwitch = styled(SwitchPrimitive.Root, {
   WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
   '&:focus': {boxShadow: `0 0 0 2px ${KitColors.fizz4}`},
   '&[data-state="checked"]': {backgroundColor: KitColors.slate5},
+
+  variants: {},
+  defaultVariants: {},
 })
 
 const StyledThumb = styled(SwitchPrimitive.Thumb, {
@@ -33,3 +35,5 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
 
 export const SwitchRoot = StyledSwitch
 export const StyledSwitchThumb = StyledThumb
+
+export type SwitchVariantProps = VariantProps<typeof StyledSwitch>

@@ -1,34 +1,40 @@
 import * as React from 'react'
-import type {CSS} from '../../theme'
+
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
 import type {CanvasVariantProps} from './canvas.styles'
 import {CanvasPrimitive} from './canvas.styles'
 
 type canvasProps = React.ComponentPropsWithRef<typeof CanvasPrimitive> &
   React.HTMLAttributes<HTMLDivElement>
 
-type CanvasPrimitiveProps = canvasProps & CanvasVariantProps
-type CanvasProps = CanvasPrimitiveProps & {css?: CSS}
+type CanvasPrimitiveProps = baseComponentProps & canvasProps & CanvasVariantProps
+type CanvasProps = CanvasPrimitiveProps
 
-const CanvasComponent = React.forwardRef<React.ElementRef<typeof CanvasPrimitive>, CanvasProps>(
-  (props, forwardedRef) => {
-    return (
-      <CanvasPrimitive
-        {...props}
-        ref={forwardedRef}
-        align={props.align}
-        justify={props.justify}
-        blurred={props.blurred}
-        css={{
-          ...props.css,
-        }}>
-        {props.children}
-      </CanvasPrimitive>
-    )
-  }
+const CanvasComponent = ({
+  children,
+  className,
+  align = 'center',
+  justify = 'center',
+  blurred = false,
+  css,
+  ...rest
+}: CanvasPrimitiveProps) => (
+  <CanvasPrimitive
+    {...rest}
+    className={className}
+    align={align}
+    justify={justify}
+    blurred={blurred}
+    css={{
+      ...css,
+    }}>
+    {children}
+  </CanvasPrimitive>
 )
 
 export const Canvas = CanvasComponent
 
-Canvas.displayName = 'Canvas'
+applyDisplayName(Canvas, 'Canvas')
 
 export type {CanvasProps}

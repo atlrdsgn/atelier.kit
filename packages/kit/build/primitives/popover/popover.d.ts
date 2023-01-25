@@ -470,6 +470,6 @@ export declare const Popover: React.ForwardRefExoticComponent<Omit<import("@radi
 } & React.HTMLAttributes<HTMLDivElement> & {
     css?: CSS | undefined;
 } & React.RefAttributes<never>>;
-export declare const PopoverTrigger: React.ForwardRefExoticComponent<Pick<PopoverTriggerProps, "form" | "key" | "asChild" | "autoFocus" | "disabled" | "formAction" | "formEncType" | "formMethod" | "formNoValidate" | "formTarget" | "name" | "type" | "value" | "css" | keyof React.HTMLAttributes<HTMLButtonElement>> & React.RefAttributes<HTMLButtonElement>>;
+export declare const PopoverTrigger: React.ForwardRefExoticComponent<Pick<PopoverTriggerProps, "value" | "form" | "key" | "asChild" | "autoFocus" | "disabled" | "formAction" | "formEncType" | "formMethod" | "formNoValidate" | "formTarget" | "name" | "type" | "css" | keyof React.HTMLAttributes<HTMLButtonElement>> & React.RefAttributes<HTMLButtonElement>>;
 export declare const PopoverContent: React.ForwardRefExoticComponent<Pick<PopoverContentProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "sticky" | "css" | "forceMount" | "align" | "onEscapeKeyDown" | "onPointerDownOutside" | "onFocusOutside" | "onInteractOutside" | "side" | "sideOffset" | "alignOffset" | "arrowPadding" | "collisionBoundary" | "collisionPadding" | "hideWhenDetached" | "avoidCollisions" | "onOpenAutoFocus" | "onCloseAutoFocus"> & React.RefAttributes<HTMLDivElement>>;
 export type { PopoverProps, PopoverTriggerProps, PopoverContentProps };

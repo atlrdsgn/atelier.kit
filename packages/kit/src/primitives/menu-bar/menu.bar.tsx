@@ -1,6 +1,5 @@
 import * as React from 'react'
 import * as Menubar from '@radix-ui/react-menubar'
-import type {CSS} from '../../theme'
 import type {
   MenuBarRootVariantProps,
   MenuBarContentVariantProps,
@@ -24,6 +23,7 @@ import {
   StyledMenuBarMenu,
   StyledMenuBarSub,
 } from './menu.bar.styles'
+import {baseComponentProps} from '../@shared/types'
 
 /**
  *
@@ -39,11 +39,6 @@ import {
  *
  * @types
  */
-
-interface menuBarProps {
-  // children?: React.ReactNode
-  css?: CSS
-}
 
 /**
  *
@@ -61,8 +56,8 @@ interface menuBarProps {
  * - dir: 'ltr' | 'rtl'
  * - loop: boolean
  */
-type MenuBarPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.Root>
-type MenuBarProps = menuBarProps & MenuBarPrimitiveProps & MenuBarRootVariantProps
+type MenuBarPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof Menubar.Root>
+type MenuBarProps = MenuBarPrimitiveProps & MenuBarRootVariantProps
 const MenuRoot = React.forwardRef<React.ElementRef<typeof StyledMenuBarRoot>, MenuBarProps>(
   ({loop = true, ...props}, forwardedRef) => {
     return (
@@ -87,8 +82,8 @@ const MenuRoot = React.forwardRef<React.ElementRef<typeof StyledMenuBarRoot>, Me
  * MENU_SUB
  *
  */
-type MenuBarSUBPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.Sub>
-type MenuBarSUBProps = menuBarProps & MenuBarSUBPrimitiveProps
+type MenuBarSUBPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof Menubar.Sub>
+type MenuBarSUBProps = MenuBarSUBPrimitiveProps
 const MenuSub = React.forwardRef<React.ElementRef<typeof StyledMenuBarSub>, MenuBarSUBProps>(
   (props) => {
     return <StyledMenuBarSub {...props}>{props.children}</StyledMenuBarSub>
@@ -115,8 +110,9 @@ const MenuSub = React.forwardRef<React.ElementRef<typeof StyledMenuBarSub>, Menu
  *
  * button element that triggers the menu to open.
  */
-type MenuBarTriggerPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.Trigger>
-type MenuBarTriggerProps = menuBarProps & MenuBarTriggerPrimitiveProps
+type MenuBarTriggerPrimitiveProps = baseComponentProps &
+  React.ComponentPropsWithRef<typeof Menubar.Trigger>
+type MenuBarTriggerProps = MenuBarTriggerPrimitiveProps
 const MenuTrigger = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarTrigger>,
   MenuBarTriggerProps
@@ -147,8 +143,9 @@ const MenuTrigger = React.forwardRef<
  *   </Menubar.Portal>
  *  </Menubar.Sub>
  */
-type MenuBarSubTriggerPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.SubTrigger>
-type MenuBarSubTriggerProps = menuBarProps & MenuBarSubTriggerPrimitiveProps
+type MenuBarSubTriggerPrimitiveProps = baseComponentProps &
+  React.ComponentPropsWithRef<typeof Menubar.SubTrigger>
+type MenuBarSubTriggerProps = MenuBarSubTriggerPrimitiveProps
 const MenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarSubTrigger>,
   MenuBarSubTriggerProps
@@ -173,9 +170,9 @@ const MenuSubTrigger = React.forwardRef<
  */
 const MenuBarPortal = Menubar.Portal
 
-type MenuBarContentPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.Content>
-type MenuBarContentProps = menuBarProps &
-  MenuBarContentVariantProps &
+type MenuBarContentPrimitiveProps = baseComponentProps &
+  React.ComponentPropsWithRef<typeof Menubar.Content>
+type MenuBarContentProps = MenuBarContentVariantProps &
   MenuBarContentPrimitiveProps & {label?: string}
 const MenuContent = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarContent>,
@@ -205,8 +202,9 @@ const MenuContent = React.forwardRef<
  *
  * MENU_SUB_CONTENT & PORTAL..
  */
-type MenuBarSubContentPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.SubContent>
-type MenuBarSubContentProps = menuBarProps & MenuBarSubContentPrimitiveProps
+type MenuBarSubContentPrimitiveProps = baseComponentProps &
+  React.ComponentPropsWithRef<typeof Menubar.SubContent>
+type MenuBarSubContentProps = MenuBarSubContentPrimitiveProps
 const MenuSubContent = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarSubContent>,
   MenuBarSubContentProps
@@ -229,8 +227,10 @@ const MenuSubContent = React.forwardRef<
  * also could be named (option)
  */
 type asHrefProps = {as?: React.ElementType; href?: string}
-type MenuBarItemPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.Item> & asHrefProps
-type MenuBarItemProps = menuBarProps & MenuBarItemPrimitiveProps & MenuBarItemVariantProps
+type MenuBarItemPrimitiveProps = baseComponentProps &
+  React.ComponentPropsWithRef<typeof Menubar.Item> &
+  asHrefProps
+type MenuBarItemProps = MenuBarItemPrimitiveProps & MenuBarItemVariantProps
 const MenuItem = React.forwardRef<React.ElementRef<typeof StyledMenuBarItem>, MenuBarItemProps>(
   ({as, href, ...props}, forwardedRef) => {
     return (
@@ -249,8 +249,9 @@ const MenuItem = React.forwardRef<React.ElementRef<typeof StyledMenuBarItem>, Me
  *
  * also could be named (option)
  */
-type MenuBarGroupPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.Group>
-type MenuBarGroupProps = menuBarProps & MenuBarGroupPrimitiveProps
+type MenuBarGroupPrimitiveProps = baseComponentProps &
+  React.ComponentPropsWithRef<typeof Menubar.Group>
+type MenuBarGroupProps = MenuBarGroupPrimitiveProps
 const MenuGroup = React.forwardRef<React.ElementRef<typeof StyledMenuBarGroup>, MenuBarGroupProps>(
   ({...props}, forwardedRef) => {
     return (
@@ -261,10 +262,9 @@ const MenuGroup = React.forwardRef<React.ElementRef<typeof StyledMenuBarGroup>, 
   }
 )
 
-type MenuBarSeparatorPrimitiveProps = React.ComponentPropsWithRef<typeof Menubar.Separator>
-type MenuBarSeparatorProps = menuBarProps &
-  MenuBarSeparatorPrimitiveProps &
-  MenuBarSeparatorVariantProps
+type MenuBarSeparatorPrimitiveProps = baseComponentProps &
+  React.ComponentPropsWithRef<typeof Menubar.Separator>
+type MenuBarSeparatorProps = MenuBarSeparatorPrimitiveProps & MenuBarSeparatorVariantProps
 const MenuSeparator = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarSeparator>,
   MenuBarSeparatorProps

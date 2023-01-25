@@ -1,36 +1,59 @@
 import * as React from 'react'
 
+import {applyDisplayName} from '../@shared/utils'
 import type {CSS} from '../../theme'
 import type {AppbarVariantProps, AppbarSpotVariantProps} from './app.bar.styles'
+import type {baseComponentProps} from '../@shared/types'
 import {AppbarPrimitive, AppbarSpotComponent} from './app.bar.styles'
 
 /**
  *
  * ..Appbar[Root].
  */
-type AppbarPrimitiveProps = AppbarVariantProps & React.HTMLAttributes<HTMLDivElement>
+type AppbarPrimitiveProps = baseComponentProps &
+  AppbarVariantProps &
+  React.HTMLAttributes<HTMLDivElement>
 type AppbarProps = AppbarPrimitiveProps & {css?: CSS}
 
-const AppbarComponent = React.forwardRef<HTMLDivElement, AppbarProps>(
-  ({...props}, forwardedRef) => {
-    return (
-      <AppbarPrimitive
-        {...props}
-        ref={forwardedRef}
-        size={props.size}
-        color={props.color}
-        glass={props.glass}
-        border={props.border}
-        fixed={props.fixed}
-        sticky={props.sticky}
-        css={{
-          ...props.css,
-        }}>
-        {props.children}
-      </AppbarPrimitive>
-    )
-  }
-)
+/*
+    size: 'sm',
+    color: 'transparent',
+    border: true,
+    fixed: false,
+    sticky: false,
+    glass: false,
+    */
+
+const AppbarComponent = ({
+  children,
+
+  color = 'transparent',
+  glass = false,
+  size = 'sm',
+  border = true,
+  fixed = false,
+  sticky = false,
+  css,
+  ...rest
+}: AppbarProps) => {
+  // const AppbarComponent = React.forwardRef<HTMLDivElement, AppbarProps>(
+  // ({...props}, forwardedRef) => {
+  return (
+    <AppbarPrimitive
+      {...rest}
+      size={size}
+      color={color}
+      glass={glass}
+      border={border}
+      fixed={fixed}
+      sticky={sticky}
+      css={{
+        ...css,
+      }}>
+      {children}
+    </AppbarPrimitive>
+  )
+}
 
 /**
  *
@@ -42,30 +65,29 @@ const AppbarComponent = React.forwardRef<HTMLDivElement, AppbarProps>(
  * ..center _ 'center'
  * ..right _ 'flex-start'
  */
-type AppbarSpotPrimitiveProps = AppbarSpotVariantProps & React.HTMLAttributes<HTMLDivElement>
+type AppbarSpotPrimitiveProps = baseComponentProps &
+  AppbarSpotVariantProps &
+  React.HTMLAttributes<HTMLDivElement>
 type AppbarSpotProps = AppbarSpotPrimitiveProps & {css?: CSS}
 
-const SpotComponent = React.forwardRef<HTMLDivElement, AppbarSpotProps>(
-  ({...props}, forwardedRef) => {
-    return (
-      <AppbarSpotComponent
-        {...props}
-        ref={forwardedRef}
-        alignment={props.alignment}
-        css={{
-          ...props.css,
-        }}>
-        {props.children}
-      </AppbarSpotComponent>
-    )
-  }
-)
+const Spot = ({children, alignment = 'center', css, ...rest}: AppbarSpotProps) => {
+  return (
+    <AppbarSpotComponent
+      {...rest}
+      alignment={alignment}
+      css={{
+        ...css,
+      }}>
+      {children}
+    </AppbarSpotComponent>
+  )
+}
 
 export const Appbar = AppbarComponent
-export const AppbarSpot = SpotComponent
+export const AppbarSpot = Spot
 
-Appbar.displayName = 'Appbar'
-AppbarSpot.displayName = 'AppbarSpot'
+applyDisplayName(Appbar, 'Appbar')
+applyDisplayName(AppbarSpot, 'AppbarSpot')
 
 export type {AppbarProps}
 export type {AppbarSpotProps}

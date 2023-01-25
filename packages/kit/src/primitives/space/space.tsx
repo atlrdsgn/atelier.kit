@@ -1,7 +1,8 @@
 import React from 'react'
-import {CSS} from '../../theme'
 import {SpacePrimitive} from './space.styles'
 import type {SpaceVariantProps} from './space.styles'
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
 
 interface spaceProps {
   className?: string
@@ -9,23 +10,33 @@ interface spaceProps {
   devFlag?: boolean
 }
 
-type SpacePrimitiveProps = spaceProps & SpaceVariantProps & React.HTMLAttributes<HTMLDivElement>
-type SpaceProps = SpacePrimitiveProps & {css?: CSS}
+type SpacePrimitiveProps = baseComponentProps &
+  spaceProps &
+  SpaceVariantProps &
+  React.HTMLAttributes<HTMLDivElement>
+type SpaceProps = SpacePrimitiveProps
 
-const SpaceComponent = React.forwardRef<HTMLDivElement, SpaceProps>(({...props}, ref) => {
-  return (
-    <SpacePrimitive
-      {...props}
-      ref={ref}
-      size={props.size}
-      devFlag={props.devFlag}
-      className={props.className}
-      css={{
-        ...props.css,
-      }}
-    />
-  )
-})
+const SpaceComponent = ({
+  children,
+  className,
+  size = 'md',
+  devFlag = false,
+  css,
+  ...rest
+}: SpacePrimitiveProps) => (
+  <SpacePrimitive
+    {...rest}
+    size={size}
+    devFlag={devFlag}
+    className={className}
+    css={{
+      ...css,
+    }}
+  />
+)
 
 export const Space = SpaceComponent
+
+applyDisplayName(Space, 'Space')
+
 export type {SpaceProps}

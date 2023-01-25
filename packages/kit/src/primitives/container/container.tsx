@@ -1,7 +1,8 @@
 import * as React from 'react'
-import {CSS} from '../../theme'
 import {ContainerPrimitive} from './container.styles'
 import type {ContainerVariantProps} from './container.styles'
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
 
 interface containerProps {
   children?: React.ReactNode
@@ -9,47 +10,49 @@ interface containerProps {
   align?: 'left' | 'center' | 'right' | string
 }
 
-type ContainerPrimitiveProps = containerProps & ContainerVariantProps
-type ContainerProps = ContainerPrimitiveProps & {css?: CSS}
+type ContainerPrimitiveProps = baseComponentProps & containerProps & ContainerVariantProps
+type ContainerProps = ContainerPrimitiveProps
 
-const ContainerComponent = React.forwardRef<
-  React.ElementRef<typeof ContainerPrimitive>,
-  ContainerProps
->((props, forwardedRef) => {
-  return (
-    <ContainerPrimitive
-      {...props}
-      ref={forwardedRef}
-      /**
-       *
-       * optimal width prop..
-       */
-      optimal={props.optimal}
-      /**
-       *
-       * align | left, center, right
-       */
-      align={props.align}
-      /**
-       *
-       * size | sm, md, lg, xl, full
-       */
-      size={props.size}
-      /**
-       *
-       * throws a devFlag - small border around the container
-       */
-      dev={props.dev}
-      css={{
-        ...props.css,
-      }}>
-      {props.children}
-    </ContainerPrimitive>
-  )
-})
+const ContainerComponent = ({
+  children,
+  optimal = false,
+  align = 'center',
+  size = 'full',
+  dev = false,
+  css,
+  ...rest
+}: ContainerPrimitiveProps) => (
+  <ContainerPrimitive
+    {...rest}
+    /**
+     *
+     * optimal width prop..
+     */
+    optimal={optimal}
+    /**
+     *
+     * align | left, center, right
+     */
+    align={align}
+    /**
+     *
+     * size | sm, md, lg, xl, full
+     */
+    size={size}
+    /**
+     *
+     * throws a devFlag - small border around the container
+     */
+    dev={dev}
+    css={{
+      ...css,
+    }}>
+    {children}
+  </ContainerPrimitive>
+)
 
 export const Container = ContainerComponent
 
-Container.displayName = 'Container'
+applyDisplayName(Container, 'Container')
 
 export type {ContainerProps}

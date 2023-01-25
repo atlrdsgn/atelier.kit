@@ -13,3 +13,6 @@ export type ReplaceProps<Inner extends React.ElementType, P> = Omit<
   P
 > &
   P
+
+// exports.
+export {applyDisplayName} from './apply-display-name'

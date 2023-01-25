@@ -1,9 +1,9 @@
 import * as React from 'react'
-import {useMemo} from 'react'
-import type {CSS} from '../../theme'
 
 import {LinkPrimitive} from './pass-link.styles'
 import type {PassLinkVariantProps} from './pass-link.styles'
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
 
 interface passLinkProps {
   href: string | null
@@ -13,61 +13,68 @@ interface passLinkProps {
   size?: 'inherit' | 'xs' | 'sm' | 'md' | 'lg' | string
 }
 
-type PassLinkPrimitiveProps = passLinkProps &
+type PassLinkPrimitiveProps = baseComponentProps &
+  passLinkProps &
   PassLinkVariantProps &
   React.AnchorHTMLAttributes<HTMLAnchorElement>
-type PassLinkProps = PassLinkPrimitiveProps & {css?: CSS}
+type PassLinkProps = PassLinkPrimitiveProps
 
-const LinkComponent = React.forwardRef<React.ElementRef<typeof LinkPrimitive>, PassLinkProps>(
-  (props, ref) => {
-    /**
-     * mailto check to prevent the link from
-     * not understanding the mailto: protocol
-     */
-    const isMailto = useMemo(() => props.href.startsWith('mailto:'), [props.href])
-    const isExternal = useMemo(() => /https:/.test(props.href), [props.href])
+const PassLinkComponent = ({
+  children,
+  href,
+  as,
+  color = 'inherit',
+  mono = false,
+  size = 'inherit',
+  underline = false,
+  css,
+  ...rest
+}: PassLinkPrimitiveProps) => {
+  /**
+   * mailto check to prevent the link from
+   * not understanding the mailto: protocol
+   */
+  const isMailto = React.useMemo(() => href.startsWith('mailto:'), [href])
+  const isExternal = React.useMemo(() => /https:/.test(href), [href])
 
-    if (isExternal || isMailto) {
-      return (
-        <LinkPrimitive
-          {...props}
-          ref={ref}
-          as={'a'}
-          rel={'noreferrer nofollow noopenner'}
-          target={'_blank'}
-          href={props.href}
-          color={props.color}
-          size={props.size}
-          underline={props.underline}
-          css={{
-            ...props.css,
-          }}>
-          <span>{props.children}</span>
-        </LinkPrimitive>
-      )
-    }
-
+  if (isExternal || isMailto) {
     return (
       <LinkPrimitive
-        {...props}
-        ref={ref}
-        href={props.href}
-        as={props.as}
-        size={props.size}
-        color={props.color}
-        underline={props.underline}
+        {...rest}
+        as={'a'}
+        rel={'noreferrer nofollow noopenner'}
+        target={'_blank'}
+        href={href}
+        color={color}
+        size={size}
+        underline={underline}
         css={{
-          ...props.css,
+          ...css,
         }}>
-        <span>{props.children}</span>
+        <span>{children}</span>
       </LinkPrimitive>
     )
   }
-)
 
-export const PassLink = React.memo(LinkComponent)
+  return (
+    <LinkPrimitive
+      {...rest}
+      href={href}
+      as={as}
+      size={size}
+      color={color}
+      underline={underline}
+      css={{
+        ...css,
+      }}>
+      <span>{children}</span>
+    </LinkPrimitive>
+  )
+}
 
-PassLink.displayName = 'PassLink'
+export const PassLink = React.memo(PassLinkComponent)
+
+applyDisplayName(PassLink, 'PassLink')
 
 export type {PassLinkProps}
 

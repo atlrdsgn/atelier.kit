@@ -13,6 +13,8 @@ const baseSectionStyle = {
 }
 
 const sectionStyles = styled('div', {
+  ...baseSectionStyle,
+
   variants: {
     /**
      *

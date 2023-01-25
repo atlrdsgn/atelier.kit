@@ -1,7 +1,9 @@
 import * as SwitchPrimitive from '@radix-ui/react-switch'
-import * as React from 'react'
 
-import type {CSS} from '../../theme'
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
+import {PrimitivePropsWithRef} from '../primitive'
+import type {SwitchVariantProps} from './switch.styles'
 import {SwitchRoot, StyledSwitchThumb} from './switch.styles'
 
 type switchProps = {
@@ -15,39 +17,80 @@ type switchProps = {
   value?: string
 }
 
-type SwitchPrimitiveProps = switchProps & React.ComponentProps<typeof SwitchPrimitive.Root>
-type SwitchProps = SwitchPrimitiveProps & {css?: CSS}
+type SwitchPrimitiveProps = switchProps &
+  baseComponentProps &
+  SwitchVariantProps &
+  PrimitivePropsWithRef<typeof SwitchPrimitive.Root>
+type SwitchProps = SwitchPrimitiveProps
 
-const SwitchComponent = React.forwardRef<React.ElementRef<typeof SwitchRoot>, SwitchProps>(
-  ({...props}, forwardedRef) => {
-    return (
-      <>
-        <form>
-          <SwitchRoot
-            {...props}
-            ref={forwardedRef}
-            asChild={props.asChild}
-            defaultChecked={props.defaultChecked}
-            checked={props.checked}
-            onCheckedChange={props.onCheckedChange}
-            disabled={props.disabled}
-            required={props.required}
-            name={props.name}
-            value={props.value}
-            css={{
-              ...props.css,
-            }}>
-            {props.children}
-          </SwitchRoot>
-        </form>
-      </>
-    )
-  }
-)
+const SwitchComponent = ({
+  /**
+   *
+   * React.ReactNode - always
+   */
+  children,
+  /**
+   *
+   * Change the component to the HTML tag or custom component of the only child.
+   * This will merge the original component props with the props of the supplied
+   * element/component and change the underlying DOM node.
+   *
+   * (boolean)
+   */
+  asChild,
+  /**
+   *
+   * The state of the switch when it is initially rendered.
+   * Use when you do not need to control its state.
+   */
+  defaultChecked,
+  /**
+   *
+   * The controlled state of the switch.
+   * Must be used in conjunction with onCheckedChange.
+   */
+  checked,
+  onCheckedChange,
+  /**
+   *
+   * Whether the switch is disabled.
+   */
+  disabled,
+  /**
+   *
+   * Whether the switch is required.
+   */
+  required,
+  name,
+  value,
+  css,
+  ...rest
+}: SwitchProps) => {
+  return (
+    <>
+      <form>
+        <SwitchRoot
+          {...rest}
+          asChild={asChild}
+          defaultChecked={defaultChecked}
+          checked={checked}
+          onCheckedChange={onCheckedChange}
+          disabled={disabled}
+          required={required}
+          value={value}
+          css={{
+            ...css,
+          }}>
+          {children}
+        </SwitchRoot>
+      </form>
+    </>
+  )
+}
 
 export const Switch = SwitchComponent
 export const SwitchThumb = StyledSwitchThumb
 export type {SwitchProps}
 
-Switch.displayName = 'Switch'
-SwitchThumb.displayName = 'SwitchThumb'
+applyDisplayName(Switch, 'Switch')
+applyDisplayName(SwitchThumb, 'SwitchThumb')

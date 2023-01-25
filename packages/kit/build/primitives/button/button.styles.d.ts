@@ -1358,7 +1358,7 @@ export declare const InternalStyles: {
         border: number;
     };
 };
-export declare const ButtonComponent: import("@stitches/react/types/styled-component").StyledComponent<import("@stitches/react/types/styled-component").CssComponent<"button", {}, {
+export declare const StyledButton: import("@stitches/react/types/styled-component").StyledComponent<import("@stitches/react/types/styled-component").CssComponent<"button", {}, {
     xs: string;
     sm: string;
     md: string;

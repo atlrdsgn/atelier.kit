@@ -209,5 +209,5 @@ const internalStyles = {
 export const LinkComp = StyledHref
 export const InternalStyles = internalStyles
 
-export const ButtonComponent = baseButton
+export const StyledButton = baseButton
 export type ButtonVariantProps = VariantProps<typeof baseButton>

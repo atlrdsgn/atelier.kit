@@ -1,71 +1,107 @@
 import * as React from 'react'
 
-import {ButtonComponent} from './button.styles'
+import {StyledButton} from './button.styles'
 import type {ButtonVariantProps} from './button.styles'
 import type {buttonProps} from './button.types'
-import type {CSS} from '../../theme'
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
 
 type ButtonPrimitiveProps = React.HTMLAttributes<HTMLButtonElement> &
+  baseComponentProps &
   buttonProps &
   ButtonVariantProps
-type ButtonProps = ButtonPrimitiveProps & {css?: CSS}
+type ButtonProps = ButtonPrimitiveProps
 
-const ButtonPrimitive = React.forwardRef<React.ElementRef<typeof ButtonComponent>, ButtonProps>(
-  (props, forwardedRef) => {
-    return (
-      <ButtonComponent
-        {...props}
-        ref={forwardedRef}
-        /**
-         *
-         * type of usage..
-         * button, submit, reset..
-         */
-        type={props.type}
-        /**
-         *
-         * as React.ElementType..
-         * only takes 'a' or 'button'..
-         */
-        as={props.as || 'a'}
-        /**
-         *
-         * href for anchor tag
-         * pass a url string here..
-         */
-        href={props.href}
-        /**
-         *
-         * basic size options for component
-         * sm, md, lg
-         */
-        size={props.size}
-        /**
-         *
-         * color options for component
-         * atelier, ghost, neon, rainbow..
-         */
-        primary={props.primary}
-        secondary={props.secondary}
-        neon={props.neon}
-        rainbow={props.rainbow}
-        ghost={props.ghost}
-        /**
-         *
-         * className & CSS for overiding styles..
-         */
-        className={props.className}
-        css={{
-          ...props.css,
-        }}>
-        {props.children}
-      </ButtonComponent>
-    )
-  }
+const ButtonComponent = ({
+  /**
+   *
+   * React.ReactNode - always
+   */
+  children,
+  /**
+   *
+   * Change the component to the HTML tag or custom component of the only child.
+   */
+  type,
+  /**
+   *
+   * Color options.
+   */
+  color,
+  /**
+   *
+   * as React.ElementType..
+   * only takes 'a' or 'button'..
+   */
+  as = 'a',
+  /**
+   *
+   * linkHref - string
+   */
+  href,
+  onClick,
+  /**
+   *
+   * Styled Size options.
+   */
+  size = 'sm',
+  /**
+   *
+   * Styled variant options.
+   */
+  primary = true,
+  secondary = false,
+  neon = false,
+  rainbow = false,
+  ghost = false,
+  /**
+   *
+   * style prop.
+   */
+  css,
+  ...rest
+}: ButtonProps) => (
+  <StyledButton
+    {...rest}
+    /**
+     *
+     * type of usage..
+     * button, submit, reset..
+     */
+    type={type}
+    as={as || 'a'}
+    /**
+     *
+     * href for anchor tag
+     * pass a url string here..
+     */
+    href={href}
+    onClick={onClick}
+    /**
+     *
+     * basic size options for component
+     * sm, md, lg
+     */
+    size={size}
+    /**
+     *
+     * color options for component
+     * atelier, ghost, neon, rainbow..
+     */
+    primary={primary}
+    secondary={secondary}
+    neon={neon}
+    rainbow={rainbow}
+    ghost={ghost}
+    css={{
+      ...css,
+    }}>
+    {children}
+  </StyledButton>
 )
 
-export const Button = ButtonPrimitive
+export const Button = ButtonComponent
 
-Button.displayName = 'Button'
+applyDisplayName(Button, 'Button')
 
 export type {ButtonProps}

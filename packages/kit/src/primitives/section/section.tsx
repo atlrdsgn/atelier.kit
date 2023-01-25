@@ -1,46 +1,53 @@
 import * as React from 'react'
 
-import {CSS} from '../../theme'
+import {baseComponentProps} from '../@shared/types'
 import {SectionPrimitive} from './section.styles'
 import type {SectionVariantProps} from './section.styles'
 
-type SectionPrimitiveProps = SectionVariantProps & React.ComponentProps<typeof SectionPrimitive>
-type SectionProps = SectionPrimitiveProps & {css?: CSS}
+interface sectionProps {
+  children?: React.ReactNode
+}
 
-const SectionComponent = React.forwardRef<HTMLDivElement, SectionProps>(
-  ({...props}, forwardedRef) => {
-    return (
-      <SectionPrimitive
-        {...props}
-        ref={forwardedRef}
-        /**
-         *
-         * ..size | sm, md, lg, xl
-         */
-        size={props.size}
-        /**
-         *
-         * ..isResponsive | boolean
-         */
-        responsive={props.responsive}
-        /**
-         *
-         * ..isFluid | boolean
-         */
-        fluid={props.fluid}
-        /**
-         *
-         * ..isHero | boolean
-         * sets a stage for a perfect hero section.
-         */
-        hero={props.hero}
-        css={{
-          ...props.css,
-        }}>
-        {props.children}
-      </SectionPrimitive>
-    )
-  }
+type SectionPrimitiveProps = baseComponentProps & sectionProps & SectionVariantProps
+type SectionProps = SectionPrimitiveProps
+
+const SectionComponent = ({
+  children,
+  size = 'xl',
+  responsive = false,
+  fluid = false,
+  hero = false,
+  css,
+  ...rest
+}: SectionPrimitiveProps) => (
+  <SectionPrimitive
+    {...rest}
+    /**
+     *
+     * ..size | sm, md, lg, xl
+     */
+    size={size}
+    /**
+     *
+     * ..isResponsive | boolean
+     */
+    responsive={responsive}
+    /**
+     *
+     * ..isFluid | boolean
+     */
+    fluid={fluid}
+    /**
+     *
+     * ..isHero | boolean
+     * sets a stage for a perfect hero section.
+     */
+    hero={hero}
+    css={{
+      ...css,
+    }}>
+    {children}
+  </SectionPrimitive>
 )
 
 export const Section = SectionComponent

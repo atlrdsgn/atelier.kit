@@ -2,8 +2,9 @@ import * as React from 'react'
 import copy from 'copy-to-clipboard'
 
 import {StyledCopyField, StyledCopyFieldText, StyledCopyTrigger} from './copy.text.styles'
-import type {CSS} from '../../theme'
 import type {CopyTriggerVariantProps, CopyFieldVariantProps} from './copy.text.styles'
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
 
 /**
  *
@@ -21,25 +22,19 @@ import type {CopyTriggerVariantProps, CopyFieldVariantProps} from './copy.text.s
 interface copyTextProps {
   children?: React.ReactNode
   textElement?: string
-
-  css?: CSS
-
   primary?: boolean
   secondary?: boolean
 }
 
-type CopyFieldPrimitiveProps = React.HTMLAttributes<HTMLDivElement> &
+type CopyFieldPrimitiveProps = baseComponentProps &
+  React.HTMLAttributes<HTMLDivElement> &
   React.ComponentProps<typeof StyledCopyField>
 type CopyFieldProps = CopyFieldVariantProps & CopyFieldPrimitiveProps & copyTextProps
 
-const CopyFieldRoot = React.forwardRef<React.ElementRef<typeof StyledCopyField>, CopyFieldProps>(
-  ({...props}, ref) => {
-    return (
-      <StyledCopyField ref={ref} {...props} secondary={props.secondary} primary={props.primary}>
-        {props.children}
-      </StyledCopyField>
-    )
-  }
+const CopyFieldRoot = ({children, primary, secondary, css, ...rest}: CopyFieldProps) => (
+  <StyledCopyField {...rest} secondary={secondary} primary={primary} css={{...css}}>
+    {children}
+  </StyledCopyField>
 )
 
 /**
@@ -59,16 +54,9 @@ type CopyFieldTextPrimitiveProps = React.HTMLAttributes<HTMLParagraphElement> &
   React.ComponentProps<typeof StyledCopyFieldText>
 type CopyFieldTextProps = CopyFieldTextPrimitiveProps & copyTextProps
 
-const CopyFieldText = React.forwardRef<
-  React.ElementRef<typeof StyledCopyFieldText>,
-  CopyFieldTextProps
->(({textElement, ...props}, ref) => {
-  return (
-    <StyledCopyFieldText ref={ref} {...props}>
-      {props.children || textElement}
-    </StyledCopyFieldText>
-  )
-})
+const CopyFieldText = ({children, textElement, ...rest}: CopyFieldTextProps) => {
+  return <StyledCopyFieldText {...rest}>{children || textElement}</StyledCopyFieldText>
+}
 
 /**
  *
@@ -102,53 +90,61 @@ type copyTriggerProps = {
    * Custom CSS styles.
    *
    */
-  css?: CSS
 
   primary?: boolean
   secondary?: boolean
   //
 } & React.HTMLAttributes<HTMLButtonElement>
 
-type CopyTriggerPrimitiveProps = React.ComponentProps<typeof StyledCopyTrigger> &
+type CopyTriggerPrimitiveProps = baseComponentProps &
+  copyTriggerProps &
+  React.ComponentProps<typeof StyledCopyTrigger> &
   CopyTriggerVariantProps
-type CopyTriggerProps = CopyTriggerPrimitiveProps & copyTriggerProps
+type CopyTriggerProps = CopyTriggerPrimitiveProps
 
-const CopyTriggerButton = React.forwardRef<
-  React.ElementRef<typeof StyledCopyTrigger>,
-  CopyTriggerProps
->(({...props}, ref) => {
-  const {copyText, onClick, ...rest} = props
+const CopyTextTrigger = ({copyText, onClick, primary, secondary, ...rest}: CopyTriggerProps) => {
   const [copied, setCopied] = React.useState(false)
 
   const copyClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (copyText) {
       copy(copyText)
-
       setCopied(true)
     }
 
+    /**
+     *
+     * onClick() => {} handler
+     * copies the (copyText) prop to the clipboard.
+     */
     if (onClick) {
       onClick(e)
     }
 
+    /**
+     *
+     * setTimeout() => {} handler
+     */
     e.preventDefault()
 
+    /**
+     *
+     * returns the (copied).
+     */
     return copyText
   }
-
   return (
-    <StyledCopyTrigger ref={ref} onClick={copyClick} {...rest}>
+    <StyledCopyTrigger onClick={copyClick} {...rest}>
       {copied ? 'Copied' : 'Copy'}
     </StyledCopyTrigger>
   )
-})
+}
 
 export const CopyField = CopyFieldRoot
 export const CopyText = CopyFieldText
-export const CopyTrigger = CopyTriggerButton
+export const CopyTrigger = CopyTextTrigger
 
 export type {CopyFieldProps, CopyFieldTextProps, CopyTriggerProps}
 
-CopyField.displayName = 'Copy-Field'
-CopyText.displayName = 'Copy-Text'
-CopyTrigger.displayName = 'Copy-Trigger'
+applyDisplayName(CopyField, 'CopyField')
+applyDisplayName(CopyText, 'CopyText')
+applyDisplayName(CopyTrigger, 'CopyTrigger')

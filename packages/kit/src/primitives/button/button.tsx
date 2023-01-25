@@ -40,6 +40,8 @@ const ButtonComponent = ({
    */
   href,
   onClick,
+  target = '_self',
+  rel = 'noopener noreferrer',
   /**
    *
    * Styled Size options.
@@ -69,7 +71,7 @@ const ButtonComponent = ({
      * button, submit, reset..
      */
     type={type}
-    as={as || 'a'}
+    as={as}
     /**
      *
      * href for anchor tag
@@ -77,6 +79,8 @@ const ButtonComponent = ({
      */
     href={href}
     onClick={onClick}
+    target={target}
+    rel={rel}
     /**
      *
      * basic size options for component

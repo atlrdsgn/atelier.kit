@@ -39,7 +39,7 @@ type SIconProps = SIconPrimitiveProps;
  */
 type STriggerPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof StyledSelectTrigger> & React.HTMLAttributes<HTMLButtonElement>;
 type STriggerProps = STriggerPrimitiveProps;
-/**
+/***************************************************************
  *
  *
  *
@@ -47,6 +47,8 @@ type STriggerProps = STriggerPrimitiveProps;
  */
 type SContentPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof StyledSelectContent> & React.HTMLAttributes<HTMLDivElement>;
 type SContentProps = SContentPrimitiveProps;
+/***************************************************************
+
 /**
  *
  *
@@ -4064,4 +4066,6 @@ export type SelectProps = SProps;
 export type SelectTriggerProps = STriggerProps;
 export type SelectContentProps = SContentProps;
 export type SelectItemProps = SItemProps;
+export type SelectValueProps = SValueProps;
+export type SelectIconProps = SIconProps;
 export {};

@@ -22,6 +22,7 @@ export { PassLink } from './pass-link';
 export { RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel } from './radio-group';
 export { Reveal, RevealTrigger, RevealContent } from './reveal';
 export { Section } from './section';
+export { Select, SelectTrigger, SelectContent, SelectItem, SelectValue, SelectIcon, SelectViewport, SelectPortal, SelectItemIndicator, SelectItemText, SelectGroup, SelectLabel, SelectSeparator, SelectScrollUpButton, SelectScrollDownButton, SelectArrow, } from './select';
 export { Space } from './space';
 export { Switch, SwitchThumb } from './switch';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs';
@@ -34,3 +35,29 @@ export { ToggleGroupPrimitive, ToggleGroupItem } from './toggle-group';
  */
 export { composeEventHandlers } from './primitive';
 export type { ComponentPropsWithoutRef, PrimitivePropsWithRef, PropsWithHTMLElement, } from './primitive';
+/*********************************************************
+ *
+ *
+ * Primitives Coming Soon
+ *
+ * export {Link} from './link'
+ * export {List, ListItem} from './list'
+ *
+ * NavMenu,
+ * NavMenuBar,
+ * NavMenuTrigger,
+ * NavMenuContent,
+ * NavMenuLink,
+ * NavMenuViewport,
+ *
+ *
+ * export {PreText} from './preformatted-text'
+ *
+ * export {SlideMenu, SlideMenuTrigger, SlideMenuContent} from './slide-menu'
+ * export {Slider, SliderTrack, SliderRange, SliderThumb} from './slider'
+ * export {ScrollArea, ScrollAreaViewport, ScrollAreaScrollbar, ScrollAreaCorner} from './scroll-area'
+ *
+ *
+ *
+ *
+ *********************************************************/

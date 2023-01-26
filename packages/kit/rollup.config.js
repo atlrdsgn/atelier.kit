@@ -34,6 +34,7 @@ export default [{
         '@radix-ui/react-icons',
         '@radix-ui/react-scroll-area',
         '@radix-ui/react-slider',
+        '@radix-ui/react-select',
         '@radix-ui/react-menubar',
         '@radix-ui/react-navigation-menu',
         '@radix-ui/react-label',
@@ -56,7 +57,13 @@ export default [{
         peerDepsExternal(),
         typescript({
             useTsconfigDeclarationDir: true,
-            exclude: ['node_modules/**', '**/*.stories.tsx', '**/*.stories.ts', '**/*.test.tsx'],
+            exclude: [
+                'node_modules/**',
+                '**/*.stories.tsx',
+                '**/*.stories.ts',
+                '**/*.test.tsx',
+                '**/anatomy/*.example.md',
+            ],
         }),
         terser(),
     ],

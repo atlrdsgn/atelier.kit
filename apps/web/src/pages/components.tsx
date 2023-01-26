@@ -11,6 +11,7 @@ import {
   RadioGroupDemo,
   RevealDemo,
   SwitchDemo,
+  SelectDemo,
   TabsDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
@@ -42,7 +43,8 @@ function Components() {
       <SectionGap />
       <SwitchDemo />
       <SectionGap />
-
+      <SelectDemo />
+      <SectionGap />
       <RadioGroupDemo />
       <SectionGap />
       <CheckboxDemo />

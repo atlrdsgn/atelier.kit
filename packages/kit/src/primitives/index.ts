@@ -24,8 +24,6 @@ export {Input} from './input'
 export {InputWithLabel} from './input'
 
 export {Line, LineComponent} from './line'
-// export {Link} from './link'
-// export {List, ListItem} from './list'
 
 export {
   MenuBar,
@@ -45,28 +43,31 @@ export {
   MenuBarRightSlot,
 } from './menu-bar'
 
-/*
-export {
-  NavMenu,
-  NavMenuBar,
-  NavMenuTrigger,
-  NavMenuContent,
-  NavMenuLink,
-  NavMenuViewport,
-} from './navigation-menu'
-*/
-
 export {Paragraph} from './paragraph'
 export {PassLink} from './pass-link'
-// export {PreText} from './preformatted-text'
 
 export {RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel} from './radio-group'
 export {Reveal, RevealTrigger, RevealContent} from './reveal'
 
-// export {ScrollArea, ScrollAreaViewport, ScrollAreaScrollbar, ScrollAreaCorner} from './scroll-area'
 export {Section} from './section'
-// export {SlideMenu, SlideMenuTrigger, SlideMenuContent} from './slide-menu'
-// export {Slider, SliderTrack, SliderRange, SliderThumb} from './slider'
+export {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+  SelectIcon,
+  SelectViewport,
+  SelectPortal,
+  SelectItemIndicator,
+  SelectItemText,
+  SelectGroup,
+  SelectLabel,
+  SelectSeparator,
+  SelectScrollUpButton,
+  SelectScrollDownButton,
+  SelectArrow,
+} from './select'
 export {Space} from './space'
 export {Switch, SwitchThumb} from './switch'
 
@@ -85,3 +86,30 @@ export type {
   PrimitivePropsWithRef,
   PropsWithHTMLElement,
 } from './primitive'
+
+/*********************************************************
+ *
+ *
+ * Primitives Coming Soon
+ *
+ * export {Link} from './link'
+ * export {List, ListItem} from './list'
+ *
+ * NavMenu,
+ * NavMenuBar,
+ * NavMenuTrigger,
+ * NavMenuContent,
+ * NavMenuLink,
+ * NavMenuViewport,
+ *
+ *
+ * export {PreText} from './preformatted-text'
+ *
+ * export {SlideMenu, SlideMenuTrigger, SlideMenuContent} from './slide-menu'
+ * export {Slider, SliderTrack, SliderRange, SliderThumb} from './slider'
+ * export {ScrollArea, ScrollAreaViewport, ScrollAreaScrollbar, ScrollAreaCorner} from './scroll-area'
+ *
+ *
+ *
+ *
+ *********************************************************/

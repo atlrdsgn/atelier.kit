@@ -1,5 +1,10 @@
-export {createContext} from './createContext'
-export type {Measurable} from './observeElementRect'
+// compose-refs
+export {composeRefs, useComposedRefs} from './composeRefs'
+
+// create context.
+export { createContext, createContextScope } from './createContext';
+export type { CreateScope, Scope } from './createContext';
+
 export {useRect} from './observeElementRect'
 export {observeElementRect} from './observeElementRect'
 export {useCallbackRef} from './useCallbackRef'
@@ -7,3 +12,5 @@ export {useControllableState} from './useControllableState'
 export {useLayoutEffect} from './useLayoutEffect'
 export {usePrevious} from './usePrevious'
 export {useSize} from './useSize'
+
+export type {Measurable} from './observeElementRect'

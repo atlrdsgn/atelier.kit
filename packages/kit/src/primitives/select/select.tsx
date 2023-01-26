@@ -28,9 +28,7 @@ import {
  *
  * root.
  */
-type SPrimitiveProps = baseComponentProps &
-  React.ComponentPropsWithRef<typeof StyledSelectRoot> &
-  React.HTMLAttributes<HTMLDivElement>
+type SPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof StyledSelectRoot>
 type SProps = SPrimitiveProps
 
 const SelectRoot = ({
@@ -78,9 +76,21 @@ const SelectRoot = ({
  *
  */
 
-type SValuePrimitiveProps = React.ComponentPropsWithRef<typeof Slct.Value>
+type SValuePrimitiveProps = React.ComponentPropsWithRef<typeof Slct.Value> &
+  React.RefAttributes<HTMLSpanElement>
 type SValueProps = SValuePrimitiveProps
 
+const SelectValueComponent = React.forwardRef<React.ElementRef<typeof Slct.Value>, SValueProps>(
+  ({children, placeholder, ...rest}, forwardedRef) => {
+    return (
+      <StyledSelectValue {...rest} ref={forwardedRef} placeholder={placeholder}>
+        {children}
+      </StyledSelectValue>
+    )
+  }
+)
+
+/*
 const SelectValueComponent = ({children, asChild = false, placeholder, ...rest}: SValueProps) => {
   return (
     <>
@@ -90,6 +100,7 @@ const SelectValueComponent = ({children, asChild = false, placeholder, ...rest}:
     </>
   )
 }
+*/
 
 type SIconPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof StyledSelectIcon>
 type SIconProps = SIconPrimitiveProps

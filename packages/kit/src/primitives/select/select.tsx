@@ -80,15 +80,16 @@ type SValuePrimitiveProps = React.ComponentPropsWithRef<typeof Slct.Value> &
   React.RefAttributes<HTMLSpanElement>
 type SValueProps = SValuePrimitiveProps
 
-const SelectValueComponent = React.forwardRef<React.ElementRef<typeof Slct.Value>, SValueProps>(
-  ({children, placeholder, ...rest}, forwardedRef) => {
-    return (
-      <StyledSelectValue {...rest} ref={forwardedRef} placeholder={placeholder}>
-        {children}
-      </StyledSelectValue>
-    )
-  }
-)
+const SelectValueComponent = React.forwardRef<
+  React.ElementRef<typeof StyledSelectValue>,
+  SValueProps
+>(({children, placeholder, ...rest}, forwardedRef) => {
+  return (
+    <StyledSelectValue {...rest} ref={forwardedRef} placeholder={placeholder}>
+      {children}
+    </StyledSelectValue>
+  )
+})
 
 /*
 const SelectValueComponent = ({children, asChild = false, placeholder, ...rest}: SValueProps) => {

@@ -1,8 +1,8 @@
 import { VariantProps } from '../../theme';
 declare const badgeStyles: import("@stitches/react/types/styled-component").CssComponent<never, {
-    size?: number | "1" | "2" | "3" | undefined;
-    color?: "ghostPill" | "fizz" | "slate" | "helios" | "gold" | undefined;
-    subtle?: boolean | "true" | undefined;
+    pill?: boolean | "true" | undefined;
+    size?: "sm" | "md" | "lg" | undefined;
+    color?: "initial" | "subtle" | "fizz" | "slate" | "helios" | "heliotrope" | "gold" | undefined;
 }, {
     xs: string;
     sm: string;
@@ -449,9 +449,9 @@ declare const badgeStyles: import("@stitches/react/types/styled-component").CssC
 }, {}>>;
 export type BadgeVariantsProps = VariantProps<typeof badgeStyles>;
 export declare const BadgePrimitive: import("@stitches/react/types/styled-component").StyledComponent<"span", {
-    size?: number | "1" | "2" | "3" | undefined;
-    color?: "ghostPill" | "fizz" | "slate" | "helios" | "gold" | undefined;
-    subtle?: boolean | "true" | undefined;
+    pill?: boolean | "true" | undefined;
+    size?: "sm" | "md" | "lg" | undefined;
+    color?: "initial" | "subtle" | "fizz" | "slate" | "helios" | "heliotrope" | "gold" | undefined;
 }, {
     xs: string;
     sm: string;

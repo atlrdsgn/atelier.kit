@@ -126,9 +126,9 @@ const styledItem = styled(AccordionPrimitive.Item, {
  */
 
 const styledHeader = styled(AccordionPrimitive.Header, {
-  paddingTop: 3,
-  borderRadius: HEADER_RADIUS,
   all: 'unset',
+  padding: 0,
+  borderRadius: HEADER_RADIUS,
   display: 'flex',
   width: '100%',
 })
@@ -138,17 +138,17 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
   boxSizing: 'border-box',
   userSelect: 'none',
   fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: 14,
-  fontWeight: 'bold',
+  fontSize: KitTheme.theme.fontSizes.base,
+  fontWeight: KitTheme.theme.fontWeights.medium,
   lineHeight: 'normal',
-  paddingLeft: '20px',
-  paddingRight: '20px',
-  height: '45px',
+  paddingLeft: KitTheme.theme.space[5],
+  paddingRight: KitTheme.theme.space[5],
+  height: 45,
   flex: '1',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  color: KitColors.slate12,
+  color: KitColors.slate11,
   width: '100%',
   borderRadius: TRIGGER_RADIUS,
 
@@ -227,34 +227,33 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
 })
 
 const styledContent = styled(AccordionPrimitive.Content, {
-  overflow: 'hidden',
+  boxSizing: 'border-box',
+  padding: '15px 20px',
+  margin: 0,
   color: KitColors.slate11,
   backgroundColor: KitColors.slate1,
-  fontFamily: 'inherit',
-  fontSize: 14,
-  fontWeight: 'inherit',
-  lineHeight: 'normal',
-  padding: 0,
   width: '100%',
-
+  height: '100%',
   textAlign: 'left',
+  willChange: 'height',
+
+  transition: `height 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
 
   '&[data-state="open"]': {
+    height: 'auto',
     animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
   '&[data-state="closed"]': {
+    height: 0,
     animation: `${slideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
   },
 })
 
 const styledContentText = styled('div', {
-  padding: '15px 20px',
-
-  backgroundColor: KitColors.slate1,
   fontFamily: KitTheme.theme.fonts.sans,
   fontSize: KitTheme.theme.fontSizes.sm,
-  fontWeight: 'inherit',
-  lineHeight: 'normal',
+  fontWeight: KitTheme.theme.fontWeights.normal,
+  lineHeight: '1.2',
   textAlign: 'left',
 })
 

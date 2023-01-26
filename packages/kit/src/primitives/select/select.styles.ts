@@ -38,13 +38,13 @@ const triggerStyles = styled(Select.Trigger, {
 
   color: KitColors.slate11,
 
-  border: `1.5px solid ${KitColors.slate5}`,
+  border: `1.5px solid ${KitColors.slate6}`,
   borderRadius: KitTheme.theme.radii.lg,
   backgroundColor: KitColors.slate1,
 
   paddingTop: 0,
   paddingBottom: 0,
-  paddingLeft: 12,
+  paddingLeft: 14,
   paddingRight: 6,
 
   fontFamily: KitTheme.theme.fonts.sans,
@@ -53,7 +53,7 @@ const triggerStyles = styled(Select.Trigger, {
   lineHeight: 1,
   // boxShadow: `0 2px 3px ${KitColors.slateA7}`,
 
-  '&:hover': {backgroundColor: KitColors.slateA3},
+  '&:hover': {backgroundColor: KitColors.slate3},
   '&:focus': {boxShadow: `0 0 0 2px ${KitColors.helios4}`},
   '&[data-placeholder]': {color: KitColors.slate9},
 })

@@ -16,14 +16,21 @@ export default {
     size: {
       control: {
         type: 'select',
-        options: ['1', '2', '3'],
+        options: ['sm', 'md', 'lg'],
       },
     },
 
     color: {
       control: {
         type: 'select',
-        options: ['slate', 'primary', 'helios', 'fizz'],
+        options: ['initial', 'slate', 'helios', 'heliotrope', 'fizz', 'gold', 'subtle'],
+      },
+    },
+
+    pill: {
+      control: {
+        type: 'boolean',
+        defaultValue: false,
       },
     },
   },
@@ -32,26 +39,29 @@ export default {
 //👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args}>{args.children}</Badge>
 
-export const Primary = Template.bind({})
+export const Default = Template.bind({})
 
-Primary.args = {
-  size: '1',
-  color: 'slate',
-  children: 'Small Badge',
+Default.args = {
+  pill: true,
+  size: 'sm',
+  color: 'initial',
+  children: 'Default Badge',
 }
 
 export const Medium = Template.bind({})
 
 Medium.args = {
-  size: '2',
-  color: 'slate',
+  pill: true,
+  size: 'md',
+  color: 'initial',
   children: 'Medium Badge',
 }
 
 export const Large = Template.bind({})
 
 Large.args = {
-  size: '3',
-  color: 'slate',
+  pill: true,
+  size: 'lg',
+  color: 'initial',
   children: 'Large Badge',
 }

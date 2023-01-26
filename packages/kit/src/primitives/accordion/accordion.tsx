@@ -1,7 +1,6 @@
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import * as React from 'react'
-
-import type {CSS} from '../../theme'
+import {baseComponentProps} from '../@shared/types'
 import type {AccordionRootVariantProps} from './accordion.styles'
 
 import {
@@ -22,13 +21,14 @@ import {
  *
  */
 
-type AccordionPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Root>
-type AccordionProps = AccordionPrimitiveProps & AccordionRootVariantProps & {css?: CSS}
+type AccordionPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof AccordionPrimitive.Root>
+type AccordionProps = AccordionPrimitiveProps & AccordionRootVariantProps
 const accordion = React.forwardRef<React.ElementRef<typeof AtlrAccordionRoot>, AccordionProps>(
   ({...props}, forwardedRef) => (
     <AtlrAccordionRoot
-      ref={forwardedRef}
       {...props}
+      ref={forwardedRef}
       {...(props.type === 'single' ? {collapsible: true} : {})}
       bordered={props.bordered}
       css={{
@@ -47,8 +47,9 @@ const accordion = React.forwardRef<React.ElementRef<typeof AtlrAccordionRoot>, A
  *
  */
 
-type AccordionItemPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Item>
-type AccordionItemProps = AccordionItemPrimitiveProps & {css?: CSS}
+type AccordionItemPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof AccordionPrimitive.Item>
+type AccordionItemProps = AccordionItemPrimitiveProps
 const accordionItem = React.forwardRef<
   React.ElementRef<typeof AtlrAccordionItem>,
   AccordionItemProps
@@ -71,8 +72,9 @@ const accordionItem = React.forwardRef<
  *
  */
 
-type AccordionTriggerPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Trigger>
-type AccordionTriggerProps = AccordionTriggerPrimitiveProps & {css?: CSS}
+type AccordionTriggerPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof AccordionPrimitive.Trigger>
+type AccordionTriggerProps = AccordionTriggerPrimitiveProps
 const accordionTrigger = React.forwardRef<
   React.ElementRef<typeof AtlrAccordionTrigger>,
   AccordionTriggerProps
@@ -93,17 +95,16 @@ const accordionTrigger = React.forwardRef<
  *
  */
 
-type AccordionContentPrimitiveProps = React.ComponentProps<typeof AccordionPrimitive.Content>
-type AccordionContentProps = AccordionContentPrimitiveProps & {css?: CSS}
+type AccordionContentPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof AccordionPrimitive.Content>
+type AccordionContentProps = AccordionContentPrimitiveProps
 const accordionContent = React.forwardRef<
   React.ElementRef<typeof AtlrAccordionContent>,
   AccordionContentProps
 >(({...props}, forwardedRef) => (
-  <AtlrAccordionHeader>
-    <AtlrAccordionContent {...props} ref={forwardedRef} css={{...props.css}}>
-      <AtlrAccordionContentText css={{...props.css}}>{props.children}</AtlrAccordionContentText>
-    </AtlrAccordionContent>
-  </AtlrAccordionHeader>
+  <AtlrAccordionContent {...props} ref={forwardedRef} css={{...props.css}}>
+    <AtlrAccordionContentText css={{...props.css}}>{props.children}</AtlrAccordionContentText>
+  </AtlrAccordionContent>
 ))
 
 export const Accordion = React.memo(accordion)

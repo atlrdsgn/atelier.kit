@@ -10,7 +10,7 @@ const badgeStyles = css({
   display: 'inline-flex',
   flexShrink: 0,
   fontFamily: KitTheme.theme.fonts.sans,
-  fontWeight: 'bold',
+  fontWeight: KitTheme.theme.fontWeights.semibold,
   justifyContent: 'center',
   lineHeight: '1',
   verticalAlign: 'middle',
@@ -21,11 +21,10 @@ const badgeStyles = css({
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
   textAlign: 'center',
   margin: 'auto',
-
-  backgroundColor: KitColors.slate6,
-  color: KitColors.slate11,
   whiteSpace: 'nowrap',
   fontVariantNumeric: 'tabular-nums',
+
+  borderRadius: 'inherit',
 
   '&::before': {
     boxSizing: 'border-box',
@@ -37,76 +36,92 @@ const badgeStyles = css({
   },
 
   variants: {
-    size: {
-      '1': {
-        borderRadius: 6,
-        height: 'auto',
-        fontSize: KitTheme.theme.fontSizes.xs,
-        padding: KitTheme.theme.space[1],
-        fontWeight: 'bold',
-        border: `1px solid`,
-      },
-      '2': {
-        borderRadius: 7,
-        height: 'auto',
-        fontSize: KitTheme.theme.fontSizes.sm,
-        padding: KitTheme.theme.space[1],
-        border: `1.5px solid`,
-      },
-      '3': {
-        borderRadius: 9,
-        height: 'auto',
-        fontSize: KitTheme.theme.fontSizes.md,
-        padding: KitTheme.theme.space[2],
-        border: `2px solid`,
+    pill: {
+      true: {
+        borderRadius: 9999,
       },
     },
+    size: {
+      sm: {
+        height: 'auto',
+        fontSize: KitTheme.theme.fontSizes.xs,
+        fontWeight: KitTheme.theme.fontWeights.medium,
+        border: `1px solid`,
+
+        paddingTop: KitTheme.theme.space[1],
+        paddingBottom: KitTheme.theme.space[1],
+        paddingLeft: KitTheme.theme.space[2],
+        paddingRight: KitTheme.theme.space[2],
+      },
+      md: {
+        height: 'auto',
+        fontSize: KitTheme.theme.fontSizes.sm,
+        fontWeight: KitTheme.theme.fontWeights.medium,
+        border: `1.4px solid`,
+
+        paddingTop: KitTheme.theme.space[1],
+        paddingBottom: KitTheme.theme.space[1],
+        paddingLeft: KitTheme.theme.space[2],
+        paddingRight: KitTheme.theme.space[2],
+      },
+      lg: {
+        height: 'auto',
+        fontSize: KitTheme.theme.fontSizes.base,
+        fontWeight: KitTheme.theme.fontWeights.medium,
+        border: `1.8px solid`,
+
+        paddingTop: KitTheme.theme.space[2],
+        paddingBottom: KitTheme.theme.space[2],
+        paddingLeft: KitTheme.theme.space[3],
+        paddingRight: KitTheme.theme.space[3],
+      },
+    },
+
     color: {
-      ghostPill: {
+      initial: {
         backgroundColor: KitColors.atelier02,
-        color: KitColors.slate11,
-        borderColor: KitColors.slate5,
-        borderRadius: 9999,
-        paddingLeft: 8,
-        paddingRight: 8,
+        borderColor: KitColors.fizz5,
+        color: KitColors.slate2,
+      },
+      subtle: {
+        backgroundColor: KitColors.slateA4,
+        borderColor: KitColors.heliotrope4,
+        color: KitColors.slate9,
       },
       fizz: {
-        borderColor: KitColors.fizz5,
-        color: KitColors.fizz11,
         backgroundColor: KitColors.fizz3,
+        borderColor: KitColors.fizz5,
+        color: KitColors.fizz10,
       },
       slate: {
-        color: KitColors.slate10,
-        borderColor: KitColors.slate5,
         backgroundColor: KitColors.slate3,
+        borderColor: KitColors.slate5,
+        color: KitColors.slate10,
       },
       helios: {
-        borderColor: KitColors.helios5,
         backgroundColor: KitColors.helios3,
+        borderColor: KitColors.helios5,
         color: KitColors.helios11,
+      },
+      heliotrope: {
+        backgroundColor: KitColors.heliotrope4,
+        borderColor: KitColors.heliotrope6,
+        color: KitColors.heliotrope1,
       },
       gold: {
         backgroundColor: KitColors.gold3,
-        border: `1px solid ${KitColors.gold5}`,
+        borderColor: KitColors.gold5,
         color: KitColors.gold11,
         '&:focus': {
           boxShadow: `inset 0 0 0 1px ${KitColors.gold8}, 0 0 0 1px ${KitColors.gold8}`,
         },
       },
     },
-
-    subtle: {
-      true: {
-        backgroundColor: KitColors.slate4,
-        color: KitColors.slate10,
-      },
-    },
   },
   defaultVariants: {
-    size: '1',
-    color: 'slate',
-
-    subtle: false,
+    size: 'sm',
+    color: 'initial',
+    pill: true,
   },
 })
 

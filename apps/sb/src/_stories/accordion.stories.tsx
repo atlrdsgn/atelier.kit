@@ -1,39 +1,71 @@
-import type {Meta, StoryObj} from '@storybook/react'
+import {ComponentStory, ComponentMeta} from '@storybook/react'
 
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from 'atlr.kit'
 
-const meta: Meta<typeof Accordion> = {
-  title: 'primitives/accordion',
+export default {
+  /* 👇 The title prop is optional.
+   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
+   * to learn how to generate automatic titles
+   */
+  title: 'primitives/acordion',
   component: Accordion,
-  argTypes: {},
-}
 
-export default meta
-type Story = StoryObj<typeof Accordion>
+  argTypes: {
+    bordered: {
+      control: {
+        type: 'boolean',
+        defaultValue: false,
+      },
+    },
 
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/7.0/react/api/csf
- * to learn how to use render functions.
- */
-export const AtelierAccordion: Story = {
-  render: () => (
+    type: {
+      control: {
+        type: 'select',
+        options: ['single', 'multiple'],
+      },
+    },
+
+    css: {
+      control: {
+        type: 'object',
+      },
+    },
+  },
+} as ComponentMeta<typeof Accordion>
+
+const Template: ComponentStory<typeof Accordion> = (args) => {
+  return (
     <>
-      <Accordion type={'single'} bordered={false} css={{width: '500px', fontFamily: 'sans-serif'}}>
-        <AccordionItem value={'item1'} css={{}}>
-          <AccordionTrigger css={{}}>Accordion One</AccordionTrigger>
-          <AccordionContent css={{width: '100%'}}>
-            Deserunt culpa sunt eiusmod magna excepteur minim in id.
+      <Accordion {...args}>
+        <AccordionItem value={'item1'}>
+          <AccordionTrigger>Accordion One</AccordionTrigger>
+          <AccordionContent>
+            Aute qui sit officia elit non sunt ut amet reprehenderit sit non labore ex excepteur.
+            Esse occaecat voluptate deserunt. Sint fugiat amet cillum ad esse duis in labore
+            deserunt consectetur.
           </AccordionContent>
         </AccordionItem>
 
-        <AccordionItem value={'item2'} css={{}}>
-          <AccordionTrigger css={{}}>Accordion Two</AccordionTrigger>
-          <AccordionContent css={{width: '100%'}}>
-            Deserunt culpa sunt eiusmod magna excepteur minim in id.
+        <AccordionItem value={'item2'}>
+          <AccordionTrigger>Accordion Two</AccordionTrigger>
+          <AccordionContent>
+            Mollit proident laborum fugiat laborum nulla laborum irure magna nisi adipisicing
+            ullamco excepteur. Amet veniam eiusmod laborum quis amet dolore. Ex dolor est aute
+            voluptate irure. Occaecat anim dolor laborum commodo.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
     </>
-  ),
+  )
+}
+
+export const Basic = Template.bind({})
+
+Basic.args = {
+  bordered: true,
+  type: 'single',
+
+  css: {
+    width: '500px',
+  },
 }

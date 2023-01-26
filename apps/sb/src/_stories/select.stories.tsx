@@ -45,6 +45,18 @@ const options = [
     type: 'Checkbox',
     value: 'Checkbox',
   },
+  {
+    type: 'Dialog',
+    value: 'Dialog',
+  },
+  {
+    type: 'Reveal',
+    value: 'Reveal',
+  },
+  {
+    type: 'Switch',
+    value: 'Switch',
+  },
 ]
 
 //👇 We create a “template” of how args map to rendering
@@ -56,25 +68,23 @@ const Template: ComponentStory<typeof Select> = (args) => {
           <SelectValue placeholder={'Select an option..'} />
           <SelectIcon />
         </SelectTrigger>
-        <SelectPortal>
-          <SelectContent sideOffset={5}>
-            <SelectScrollUpButton>⌃</SelectScrollUpButton>
-            <SelectViewport>
-              <SelectGroup>
-                <SelectLabel>Primitives</SelectLabel>
-                <>
-                  {options.map((options) => (
-                    <SelectItem key={options.type} value={options.value}>
-                      {options.value}
-                    </SelectItem>
-                  ))}
-                </>
-              </SelectGroup>
-            </SelectViewport>
 
-            <SelectScrollDownButton>⌄</SelectScrollDownButton>
-          </SelectContent>
-        </SelectPortal>
+        <SelectContent sideOffset={5}>
+          <SelectScrollUpButton>⌃</SelectScrollUpButton>
+
+          <SelectGroup>
+            <SelectLabel>Primitives</SelectLabel>
+            <>
+              {options.map((options) => (
+                <SelectItem key={options.type} value={options.value}>
+                  {options.value}
+                </SelectItem>
+              ))}
+            </>
+          </SelectGroup>
+
+          <SelectScrollDownButton>⌄</SelectScrollDownButton>
+        </SelectContent>
       </Select>
     </Container>
   )

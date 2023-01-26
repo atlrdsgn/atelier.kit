@@ -25,7 +25,7 @@ export const RevealDemo = () => {
           <div>
             <Reveal open={open} onOpenChange={setOpen}>
               <Flex direction={'row'} align={'stretch'} css={{width: '100%'}}>
-                <Badge size="1">@chvndler starred 5 repositories</Badge>
+                <Badge size="sm">@chvndler starred 5 repositories</Badge>
                 <RevealTrigger asChild>
                   <Text size={'sm'}>{open ? <span>hide</span> : <span>view all</span>}</Text>
                 </RevealTrigger>

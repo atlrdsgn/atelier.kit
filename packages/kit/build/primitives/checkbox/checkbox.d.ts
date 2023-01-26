@@ -5,6 +5,11 @@ interface checkboxProps {
     children?: React.ReactNode;
     css?: CSS;
 }
+/**
+ *
+ *
+ * root.
+ */
 type CheckboxRootPrimitiveProps = React.HTMLAttributes<HTMLDivElement> & React.ComponentProps<typeof StyledCheckboxFlex>;
 type CheckboxRootProps = checkboxProps & CheckboxRootPrimitiveProps;
 type CheckboxPrimitiveProps = React.HTMLAttributes<HTMLButtonElement> & React.ComponentProps<typeof StyledCheckbox>;

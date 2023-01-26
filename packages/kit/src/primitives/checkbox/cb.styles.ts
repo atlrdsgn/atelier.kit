@@ -29,13 +29,15 @@ const cbStyles = styled(CheckboxPrimitive.Root, {
   '&:focus': {boxShadow: `0 0 0 2px black`},
 
   '&[data-state="checked"]': {
-    backgroundColor: KitColors.slate3,
+    backgroundColor: KitColors.heliotrope5,
   },
 })
 
 const indicatorStyles = styled(CheckboxPrimitive.Indicator, {
-  // 'span'
-  color: KitColors.heliotrope5,
+  // 'span' 'icon'
+  color: KitColors.fizz4,
+  height: 16,
+  width: 16,
 })
 
 const labelStyles = styled('label', {

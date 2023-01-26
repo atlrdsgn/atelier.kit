@@ -15,6 +15,11 @@ interface checkboxProps {
   css?: CSS
 }
 
+/**
+ *
+ *
+ * root.
+ */
 type CheckboxRootPrimitiveProps = React.HTMLAttributes<HTMLDivElement> &
   React.ComponentProps<typeof StyledCheckboxFlex>
 type CheckboxRootProps = checkboxProps & CheckboxRootPrimitiveProps
@@ -38,7 +43,6 @@ const CB = React.forwardRef<HTMLButtonElement, CheckboxProps>(({...props}, ref) 
       <StyledCheckboxIndicator>
         <CheckIcon />
       </StyledCheckboxIndicator>
-      {props.children}
     </StyledCheckbox>
   )
 })

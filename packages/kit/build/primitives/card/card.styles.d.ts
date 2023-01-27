@@ -471,7 +471,7 @@ declare const StyledCard: import("@stitches/react/types/styled-component").Style
  *
  * image holder.
  */
-declare const StyledImageHolder: import("@stitches/react/types/styled-component").StyledComponent<"img", {}, {
+declare const StyledImageHolder: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {
     xs: string;
     sm: string;
     md: string;

@@ -57,7 +57,6 @@ const menubarTrigger = styled(Menubar.Trigger, {
 
   lineHeight: 1,
   borderRadius: BORDER_RADIUS_INSIDE,
-  color: 'inherit',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',

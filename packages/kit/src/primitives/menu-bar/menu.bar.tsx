@@ -126,6 +126,8 @@ const MenuTrigger = React.forwardRef<
       ref={forwardedRef}
       asChild={props.asChild}
       slate={props.slate}
+      white={props.white}
+      black={props.black}
       css={{
         ...props.css,
       }}>

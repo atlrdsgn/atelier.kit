@@ -6,7 +6,7 @@ const coreDefaults = {
   display: 'grid',
   padding: 0,
   margin: 'auto',
-  width: 'auto',
+  width: '100%',
   whiteSpace: 'nowrap',
   overflowWrap: 'break-word',
   flexWrap: 'wrap',

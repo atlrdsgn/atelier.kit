@@ -38,7 +38,7 @@ const container = css({
       },
       full: {
         width: '100%',
-        minWidth: 'none',
+        maxWidth: 'none',
       },
     },
 

@@ -38,20 +38,18 @@ const Template: ComponentStory<typeof Accordion> = (args) => {
     <>
       <Accordion {...args}>
         <AccordionItem value={'item1'}>
-          <AccordionTrigger>Accordion One</AccordionTrigger>
+          <AccordionTrigger>Basic Accordion Primitive</AccordionTrigger>
           <AccordionContent>
             Aute qui sit officia elit non sunt ut amet reprehenderit sit non labore ex excepteur.
-            Esse occaecat voluptate deserunt. Sint fugiat amet cillum ad esse duis in labore
-            deserunt consectetur.
+            Esse occaecat voluptate deserunt.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value={'item2'}>
-          <AccordionTrigger>Accordion Two</AccordionTrigger>
+          <AccordionTrigger>Item Number Two</AccordionTrigger>
           <AccordionContent>
             Mollit proident laborum fugiat laborum nulla laborum irure magna nisi adipisicing
-            ullamco excepteur. Amet veniam eiusmod laborum quis amet dolore. Ex dolor est aute
-            voluptate irure. Occaecat anim dolor laborum commodo.
+            ullamco excepteur.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

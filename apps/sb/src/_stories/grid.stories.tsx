@@ -2,7 +2,7 @@ import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
 
-import {Grid, Box, KitColors, styled, KitTheme} from 'atlr.kit'
+import {Grid, Box, KitColors, styled, KitTheme, Container} from 'atlr.kit'
 
 export default {
   /* 👇 The title prop is optional.
@@ -44,12 +44,14 @@ export default {
 //👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof Grid> = (args) => {
   return (
-    <Grid {...args}>
-      <DemoBox>Space One</DemoBox>
-      <DemoBox>Space Two</DemoBox>
-      <DemoBox>Space Three</DemoBox>
-      <DemoBox>Space Four</DemoBox>
-    </Grid>
+    <Container size="full">
+      <Grid {...args}>
+        <DemoBox>Space One</DemoBox>
+        <DemoBox>Space Two</DemoBox>
+        <DemoBox>Space Three</DemoBox>
+        <DemoBox>Space Four</DemoBox>
+      </Grid>
+    </Container>
   )
 }
 

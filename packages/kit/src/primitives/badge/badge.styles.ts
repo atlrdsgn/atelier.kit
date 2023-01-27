@@ -47,6 +47,7 @@ const badgeStyles = css({
         fontSize: KitTheme.theme.fontSizes.xs,
         fontWeight: KitTheme.theme.fontWeights.medium,
         border: `1px solid`,
+        borderColor: 'inherit',
 
         paddingTop: KitTheme.theme.space[1],
         paddingBottom: KitTheme.theme.space[1],
@@ -58,6 +59,7 @@ const badgeStyles = css({
         fontSize: KitTheme.theme.fontSizes.sm,
         fontWeight: KitTheme.theme.fontWeights.medium,
         border: `1.4px solid`,
+        borderColor: 'inherit',
 
         paddingTop: KitTheme.theme.space[1],
         paddingBottom: KitTheme.theme.space[1],
@@ -69,6 +71,7 @@ const badgeStyles = css({
         fontSize: KitTheme.theme.fontSizes.base,
         fontWeight: KitTheme.theme.fontWeights.medium,
         border: `1.8px solid`,
+        borderColor: 'inherit',
 
         paddingTop: KitTheme.theme.space[2],
         paddingBottom: KitTheme.theme.space[2],

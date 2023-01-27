@@ -1,5 +1,6 @@
 import React from 'react'
-import type {CSS} from '../../theme'
+import {baseComponentProps} from '../@shared/types'
+import {applyDisplayName} from '../@shared/utils'
 import type {GridVariantProps} from './grid.styles'
 import {GridPrimitive} from './grid.styles'
 
@@ -15,8 +16,8 @@ type gridProps = {
   flow?: string
 }
 
-type GridPrimitiveProps = gridProps & GridVariantProps
-type GridProps = GridPrimitiveProps & {css?: CSS}
+type GridPrimitiveProps = baseComponentProps & gridProps & GridVariantProps
+type GridProps = GridPrimitiveProps
 
 const GridComponent = React.forwardRef<React.ElementRef<typeof GridPrimitive>, GridProps>(
   (props, ref) => {
@@ -41,6 +42,6 @@ const GridComponent = React.forwardRef<React.ElementRef<typeof GridPrimitive>, G
   }
 )
 
-// export {GridComponent as Grid}
-export const Grid = React.memo(GridComponent)
+export const Grid = GridComponent
+applyDisplayName(Grid, 'Grid')
 export type {GridProps}

@@ -20,14 +20,25 @@ const CHILD_RADIUS = KitTheme.theme.radii.md
 const HEADER_RADIUS = KitTheme.theme.radii.md
 const TRIGGER_RADIUS = KitTheme.theme.radii.md
 
+const CONTENT_HEIGHT_ZERO = '0px'
+const CONTENT_HEIGHT_FULL = '100%'
+
 const slideDown = keyframes({
-  from: {height: 0},
-  to: {height: 'var(--radix-accordion-content-height)'},
+  from: {
+    height: CONTENT_HEIGHT_ZERO,
+  },
+  to: {
+    height: `var(--radix-accordion-content-height)`,
+  },
 })
 
 const slideUp = keyframes({
-  from: {height: 'var(--radix-accordion-content-height)'},
-  to: {height: 0},
+  from: {
+    height: `var(--radix-accordion-content-height)`,
+  },
+  to: {
+    height: CONTENT_HEIGHT_ZERO,
+  },
 })
 
 /**
@@ -68,8 +79,6 @@ const styledAccordion = styled(AccordionPrimitive.Root, {
         border: `1px solid ${KitColors.slate6}`,
       },
     },
-    round: {},
-    square: {},
   },
   defaultVariants: {
     bordered: true,
@@ -125,32 +134,66 @@ const styledItem = styled(AccordionPrimitive.Item, {
  *
  */
 
-const styledHeader = styled(AccordionPrimitive.Header, {
+const styledHeader = styled(AccordionPrimitive.Header, 'h2', {
   all: 'unset',
-  padding: 0,
-  borderRadius: HEADER_RADIUS,
   display: 'flex',
-  width: '100%',
+
+  // boxSizing: 'border-box',
+  // borderRadius: HEADER_RADIUS,
+
+  // flexDirection: 'row',
+  // justifyContent: 'space-between',
+  // alignItems: 'center',
+
+  // lineHeight: 'normal',
+
+  // padding: 0,
+  // margin: 'auto',
+  // width: '100%',
+
+  variants: {
+    orientation: {
+      horizontal: {
+        flexDirection: 'row',
+      },
+      vertical: {
+        flexDirection: 'column',
+      },
+    },
+  },
+  defaultVariants: {
+    orientation: 'horizontal',
+  },
 })
 
 const styledTrigger = styled(AccordionPrimitive.Trigger, {
   all: 'unset',
   boxSizing: 'border-box',
   userSelect: 'none',
+
+  borderRadius: TRIGGER_RADIUS,
+
   fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: KitTheme.theme.fontSizes.base,
-  fontWeight: KitTheme.theme.fontWeights.medium,
+  fontSize: KitTheme.theme.fontSizes.lg,
+  fontWeight: KitTheme.theme.fontWeights.semibold,
   lineHeight: 'normal',
-  paddingLeft: KitTheme.theme.space[5],
-  paddingRight: KitTheme.theme.space[5],
-  height: 45,
+
+  paddingLeft: KitTheme.theme.space[4],
+  paddingRight: KitTheme.theme.space[4],
+  paddingTop: KitTheme.theme.space[3],
+  paddingBottom: KitTheme.theme.space[3],
+
+  // height: 45,
+  height: 'auto',
+
   flex: '1',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  margin: 'auto',
+
   color: KitColors.slate11,
   width: '100%',
-  borderRadius: TRIGGER_RADIUS,
 
   '&[data-state="closed"]': {
     backgroundColor: KitColors.slate1,
@@ -226,34 +269,58 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
   },
 })
 
-const styledContent = styled(AccordionPrimitive.Content, {
-  boxSizing: 'border-box',
-  padding: '15px 20px',
-  margin: 0,
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * ACCORDION_CONTENT
+ *
+ *
+ *
+ *
+ *
+ */
+const styledContent = styled(AccordionPrimitive.Content, 'div', {
+  fontFamily: KitTheme.theme.fonts.sans,
+  fontSize: KitTheme.theme.fontSizes.md,
+  fontWeight: KitTheme.theme.fontWeights.normal,
+
+  paddingLeft: KitTheme.theme.space[4],
+  paddingRight: KitTheme.theme.space[4],
+  paddingTop: KitTheme.theme.space[4],
+  paddingBottom: KitTheme.theme.space[4],
+  margin: 'auto',
+
   color: KitColors.slate11,
   backgroundColor: KitColors.slate1,
   width: '100%',
-  height: '100%',
-  textAlign: 'left',
-  willChange: 'height',
 
-  transition: `height 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+  textAlign: 'left',
 
   '&[data-state="open"]': {
-    height: 'auto',
-    animation: `${slideDown} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    height: CONTENT_HEIGHT_FULL,
+    animation: `${slideDown} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    animationName: `${slideDown}`,
   },
   '&[data-state="closed"]': {
-    height: 0,
-    animation: `${slideUp} 300ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    height: CONTENT_HEIGHT_ZERO,
+    animation: `${slideUp} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    animationName: `${slideUp}`,
   },
 })
 
-const styledContentText = styled('div', {
-  fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: KitTheme.theme.fontSizes.sm,
-  fontWeight: KitTheme.theme.fontWeights.normal,
-  lineHeight: '1.2',
+const styledContentText = styled('span', {
+  all: 'unset',
+
   textAlign: 'left',
 })
 
@@ -284,3 +351,5 @@ export const AtlrAccordionContentText = styledContentText
 export const AtlrAccordionArrowDown = styledArrowDown
 ///////////////////////////////////////////////////////////////////
 export type AccordionRootVariantProps = VariantProps<typeof styledAccordion>
+export type AccordionItemVariantProps = VariantProps<typeof styledItem>
+export type AccordionHeaderVariantProps = VariantProps<typeof styledHeader>

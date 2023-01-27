@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CSS } from '../../theme';
+import { baseComponentProps } from '../@shared/types';
 import type { GridVariantProps } from './grid.styles';
 type gridProps = {
     children?: React.ReactNode;
@@ -12,11 +12,9 @@ type gridProps = {
     columns?: number;
     flow?: string;
 };
-type GridPrimitiveProps = gridProps & GridVariantProps;
-type GridProps = GridPrimitiveProps & {
-    css?: CSS;
-};
-export declare const Grid: React.MemoExoticComponent<React.ForwardRefExoticComponent<gridProps & import("@stitches/react/types/styled-component").TransformProps<{
+type GridPrimitiveProps = baseComponentProps & gridProps & GridVariantProps;
+type GridProps = GridPrimitiveProps;
+export declare const Grid: React.ForwardRefExoticComponent<baseComponentProps & gridProps & import("@stitches/react/types/styled-component").TransformProps<{
     align?: "start" | "center" | "end" | "stretch" | "baseline" | undefined;
     justify?: "start" | "center" | "end" | "stretch" | "between" | undefined;
     flow?: "row" | "column" | "dense" | "rowDense" | "columnDense" | undefined;
@@ -38,7 +36,5 @@ export declare const Grid: React.MemoExoticComponent<React.ForwardRefExoticCompo
     hover: string;
     dark: string;
     light: string;
-}> & {
-    css?: CSS | undefined;
-} & React.RefAttributes<HTMLDivElement>>>;
+}> & React.RefAttributes<HTMLDivElement>>;
 export type { GridProps };

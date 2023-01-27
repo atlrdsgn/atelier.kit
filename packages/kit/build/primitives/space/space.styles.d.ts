@@ -256,6 +256,8 @@ declare const SpaceStyles: import("@stitches/react/types/styled-component").Styl
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -703,6 +705,8 @@ export declare const SpacePrimitive: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

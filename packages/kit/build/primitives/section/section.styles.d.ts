@@ -259,6 +259,8 @@ declare const sectionStyles: import("@stitches/react/types/styled-component").St
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -709,6 +711,8 @@ export declare const SectionPrimitive: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

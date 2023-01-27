@@ -254,6 +254,8 @@ export declare const StyledCheckboxFlex: import("@stitches/react/types/styled-co
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -698,6 +700,8 @@ export declare const StyledCheckbox: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1142,6 +1146,8 @@ export declare const StyledCheckboxIndicator: import("@stitches/react/types/styl
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1586,6 +1592,8 @@ export declare const StyledCheckboxLabel: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

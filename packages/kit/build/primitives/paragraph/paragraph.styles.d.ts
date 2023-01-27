@@ -258,6 +258,8 @@ declare const paragraphStyles: import("@stitches/react/types/styled-component").
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -707,6 +709,8 @@ export declare const ParagraphContent: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

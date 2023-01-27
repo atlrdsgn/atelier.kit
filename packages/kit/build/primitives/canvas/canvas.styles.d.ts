@@ -262,6 +262,8 @@ declare const CanvasStyles: import("@stitches/react/types/styled-component").Sty
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -710,6 +712,8 @@ export declare const CanvasPrimitive: import("@stitches/react/types/styled-compo
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

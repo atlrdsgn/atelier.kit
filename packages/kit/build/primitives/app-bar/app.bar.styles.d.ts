@@ -255,6 +255,8 @@ declare const appbarSpot: import("@stitches/react/types/styled-component").Style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -712,6 +714,8 @@ declare const appbar: import("@stitches/react/types/styled-component").CssCompon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1163,6 +1167,8 @@ export declare const AppbarPrimitive: import("@stitches/react/types/styled-compo
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1606,6 +1612,8 @@ export declare const AppbarPrimitive: import("@stitches/react/types/styled-compo
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2052,6 +2060,8 @@ export declare const AppbarSpotComponent: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

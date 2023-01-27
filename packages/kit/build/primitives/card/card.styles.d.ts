@@ -1,10 +1,19 @@
 import { VariantProps } from '../../theme';
-declare const textStyles: import("@stitches/react/types/styled-component").CssComponent<never, {
-    mono?: boolean | "true" | undefined;
-    size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl" | undefined;
-    weight?: "superlite" | "lite" | "normal" | "medium" | "semibold" | "bold" | "heavy" | undefined;
-    color?: "primary" | "secondary" | "slate" | undefined;
-    align?: "right" | "left" | "center" | undefined;
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * root.
+ */
+declare const StyledCard: import("@stitches/react/types/styled-component").StyledComponent<"div", {
+    dev?: boolean | "true" | undefined;
 }, {
     xs: string;
     sm: string;
@@ -451,13 +460,18 @@ declare const textStyles: import("@stitches/react/types/styled-component").CssCo
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-export declare const TextPrimitive: import("@stitches/react/types/styled-component").StyledComponent<"span", {
-    mono?: boolean | "true" | undefined;
-    size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" | "8xl" | "9xl" | undefined;
-    weight?: "superlite" | "lite" | "normal" | "medium" | "semibold" | "bold" | "heavy" | undefined;
-    color?: "primary" | "secondary" | "slate" | undefined;
-    align?: "right" | "left" | "center" | undefined;
-}, {
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * image holder.
+ */
+declare const StyledImageHolder: import("@stitches/react/types/styled-component").StyledComponent<"img", {}, {
     xs: string;
     sm: string;
     md: string;
@@ -903,5 +917,6 @@ export declare const TextPrimitive: import("@stitches/react/types/styled-compone
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-export type TextVariantProps = VariantProps<typeof textStyles>;
-export {};
+export { StyledCard };
+export { StyledImageHolder };
+export type CardVariantProps = VariantProps<typeof StyledCard>;

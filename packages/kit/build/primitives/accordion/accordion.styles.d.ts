@@ -271,6 +271,8 @@ declare const styledAccordion: import("@stitches/react/types/styled-component").
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -719,6 +721,8 @@ export declare const AtlrAccordionRoot: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1163,6 +1167,8 @@ export declare const AtlrAccordionItem: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1607,6 +1613,8 @@ export declare const AtlrAccordionHeader: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2051,6 +2059,8 @@ export declare const AtlrAccordionTrigger: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2495,6 +2505,8 @@ export declare const AtlrAccordionContent: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2939,6 +2951,8 @@ export declare const AtlrAccordionContentText: import("@stitches/react/types/sty
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3385,6 +3399,8 @@ export declare const AtlrAccordionArrowDown: import("@stitches/react/types/style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

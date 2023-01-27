@@ -254,6 +254,8 @@ export declare const StyledSelectRoot: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -698,6 +700,8 @@ export declare const StyledSelectTrigger: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1143,6 +1147,8 @@ export declare const StyledSelectIcon: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1589,6 +1595,8 @@ export declare const StyledSelectArrow: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2033,6 +2041,8 @@ export declare const StyledSelectContent: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2477,6 +2487,8 @@ export declare const StyledSelectScrollUpButton: import("@stitches/react/types/s
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2921,6 +2933,8 @@ export declare const StyledSelectScrollDownButton: import("@stitches/react/types
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3365,6 +3379,8 @@ export declare const StyledSelectViewport: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3810,6 +3826,8 @@ export declare const StyledSelectItem: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -4254,6 +4272,8 @@ export declare const StyledSelectItemText: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -4698,6 +4718,8 @@ export declare const StyledSelectItemIndicator: import("@stitches/react/types/st
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -5142,6 +5164,8 @@ export declare const StyledSelectSeparator: import("@stitches/react/types/styled
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -5586,6 +5610,8 @@ export declare const StyledSelectLabel: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -6030,6 +6056,8 @@ export declare const StyledSelectGroup: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

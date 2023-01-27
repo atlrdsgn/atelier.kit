@@ -253,6 +253,8 @@ declare const baseButton: import("@stitches/react/types/styled-component").Style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -703,6 +705,8 @@ declare const baseButton: import("@stitches/react/types/styled-component").Style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1147,6 +1151,8 @@ export declare const LinkComp: import("@stitches/react/types/styled-component").
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1612,6 +1618,8 @@ export declare const StyledButton: import("@stitches/react/types/styled-componen
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2062,6 +2070,8 @@ export declare const StyledButton: import("@stitches/react/types/styled-componen
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

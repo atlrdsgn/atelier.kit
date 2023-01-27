@@ -270,6 +270,8 @@ export declare const SwitchThumb: import("@stitches/react/types/styled-component
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

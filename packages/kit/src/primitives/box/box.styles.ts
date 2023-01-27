@@ -1,13 +1,13 @@
-import {css, KitColors, styled} from '../../theme'
+import {styled} from '../../theme'
 
 const coreDefaults = {
   all: 'unset',
   boxSizing: 'border-box',
-  color: KitColors.slate12,
+  color: 'inherit',
 }
 
-const boxStyles = css({
+const boxStyles = styled('div', {
   ...coreDefaults,
 })
 
-export const BoxPrimitive = styled('div', boxStyles)
+export const BoxPrimitive = boxStyles

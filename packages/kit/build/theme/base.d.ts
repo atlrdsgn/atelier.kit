@@ -418,6 +418,8 @@ export declare const KitTheme: {
             md: string;
             base: string;
             lg: string;
+            xl: string;
+            '2xl': string;
             pill: string;
             none: string;
         };
@@ -944,6 +946,8 @@ export declare const createThemeBase: <Argument0 extends string | ({
         md?: string | number | boolean | undefined;
         base?: string | number | boolean | undefined;
         lg?: string | number | boolean | undefined;
+        xl?: string | number | boolean | undefined;
+        '2xl'?: string | number | boolean | undefined;
         pill?: string | number | boolean | undefined;
         none?: string | number | boolean | undefined;
     } | undefined;
@@ -1237,6 +1241,8 @@ export declare const createThemeBase: <Argument0 extends string | ({
         md?: string | number | boolean | undefined;
         base?: string | number | boolean | undefined;
         lg?: string | number | boolean | undefined;
+        xl?: string | number | boolean | undefined;
+        '2xl'?: string | number | boolean | undefined;
         pill?: string | number | boolean | undefined;
         none?: string | number | boolean | undefined;
     } | undefined;
@@ -1534,6 +1540,8 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         md?: string | number | boolean | undefined;
         base?: string | number | boolean | undefined;
         lg?: string | number | boolean | undefined;
+        xl?: string | number | boolean | undefined;
+        '2xl'?: string | number | boolean | undefined;
         pill?: string | number | boolean | undefined;
         none?: string | number | boolean | undefined;
     } | undefined;
@@ -1827,6 +1835,8 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         md?: string | number | boolean | undefined;
         base?: string | number | boolean | undefined;
         lg?: string | number | boolean | undefined;
+        xl?: string | number | boolean | undefined;
+        '2xl'?: string | number | boolean | undefined;
         pill?: string | number | boolean | undefined;
         none?: string | number | boolean | undefined;
     } | undefined;
@@ -2139,6 +2149,8 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2593,6 +2605,8 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3026,6 +3040,8 @@ export declare const css: <Composers extends (string | import("@stitches/react/t
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3487,6 +3503,8 @@ export declare const globalCss: <Styles extends {
             md: string;
             base: string;
             lg: string;
+            xl: string;
+            '2xl': string;
             pill: string;
             none: string;
         };
@@ -3918,6 +3936,8 @@ export declare const globalCss: <Styles extends {
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -4350,6 +4370,8 @@ export declare const keyframes: (style: {
             md: string;
             base: string;
             lg: string;
+            xl: string;
+            '2xl': string;
             pill: string;
             none: string;
         };
@@ -4776,6 +4798,8 @@ export declare const theme: string & {
         md: import("@stitches/react/types/theme").Token<"md", string, "radii", string>;
         base: import("@stitches/react/types/theme").Token<"base", string, "radii", string>;
         lg: import("@stitches/react/types/theme").Token<"lg", string, "radii", string>;
+        xl: import("@stitches/react/types/theme").Token<"xl", string, "radii", string>;
+        '2xl': import("@stitches/react/types/theme").Token<"2xl", string, "radii", string>;
         pill: import("@stitches/react/types/theme").Token<"pill", string, "radii", string>;
         none: import("@stitches/react/types/theme").Token<"none", string, "radii", string>;
     };
@@ -5068,6 +5092,8 @@ export declare const kit_theme: string & {
         md: import("@stitches/react/types/theme").Token<"md", string, "radii", string>;
         base: import("@stitches/react/types/theme").Token<"base", string, "radii", string>;
         lg: import("@stitches/react/types/theme").Token<"lg", string, "radii", string>;
+        xl: import("@stitches/react/types/theme").Token<"xl", string, "radii", string>;
+        '2xl': import("@stitches/react/types/theme").Token<"2xl", string, "radii", string>;
         pill: import("@stitches/react/types/theme").Token<"pill", string, "radii", string>;
         none: import("@stitches/react/types/theme").Token<"none", string, "radii", string>;
     };
@@ -5373,6 +5399,8 @@ export declare const config: {
             md: string;
             base: string;
             lg: string;
+            xl: string;
+            '2xl': string;
             pill: string;
             none: string;
         };

@@ -1,4 +1,14 @@
-export declare const BoxPrimitive: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {
+import * as React from 'react';
+import { baseComponentProps } from '../@shared/types';
+import { CardVariantProps } from './card.styles';
+export interface cardProps {
+    children: React.ReactNode;
+    imageSrc?: string;
+}
+type CardPrimitiveProps = baseComponentProps & cardProps & CardVariantProps & React.HTMLAttributes<HTMLDivElement>;
+type CardProps = CardPrimitiveProps;
+export declare const Card: ({ children, imageSrc, dev, ...rest }: CardProps) => JSX.Element;
+export declare const CardImage: import("@stitches/react/types/styled-component").StyledComponent<"img", {}, {
     xs: string;
     sm: string;
     md: string;
@@ -444,3 +454,4 @@ export declare const BoxPrimitive: import("@stitches/react/types/styled-componen
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+export type { CardProps };

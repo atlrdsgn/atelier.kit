@@ -258,6 +258,8 @@ declare const headingStyles: import("@stitches/react/types/styled-component").Cs
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -707,6 +709,8 @@ export declare const HeadingContent: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

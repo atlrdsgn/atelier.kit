@@ -258,6 +258,8 @@ declare const container: import("@stitches/react/types/styled-component").CssCom
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -707,6 +709,8 @@ export declare const ContainerPrimitive: import("@stitches/react/types/styled-co
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

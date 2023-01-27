@@ -259,6 +259,8 @@ declare const inputStyles: import("@stitches/react/types/styled-component").Styl
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -703,6 +705,8 @@ export declare const StyledFlex: import("@stitches/react/types/styled-component"
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1147,6 +1151,8 @@ export declare const StyledLabel: import("@stitches/react/types/styled-component
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1595,6 +1601,8 @@ export declare const InputPrimitive: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

@@ -259,6 +259,8 @@ export declare const flexStyles: import("@stitches/react/types/styled-component"
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -709,6 +711,8 @@ export declare const FlexPrimitive: import("@stitches/react/types/styled-compone
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

@@ -254,6 +254,8 @@ export declare const GroupRoot_Radio: import("@stitches/react/types/styled-compo
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -698,6 +700,8 @@ export declare const GroupItem_Radio: import("@stitches/react/types/styled-compo
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1142,6 +1146,8 @@ export declare const GroupIndicator_Radio: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1586,6 +1592,8 @@ export declare const Label_Radio: import("@stitches/react/types/styled-component
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

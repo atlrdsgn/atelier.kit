@@ -317,6 +317,8 @@ export declare const SelectViewport: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -762,6 +764,8 @@ export declare const SelectItemText: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1206,6 +1210,8 @@ export declare const SelectItemIndicator: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1650,6 +1656,8 @@ export declare const SelectSeparator: import("@stitches/react/types/styled-compo
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2094,6 +2102,8 @@ export declare const SelectLabel: import("@stitches/react/types/styled-component
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2538,6 +2548,8 @@ export declare const SelectGroup: import("@stitches/react/types/styled-component
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2982,6 +2994,8 @@ export declare const SelectScrollUpButton: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3426,6 +3440,8 @@ export declare const SelectScrollDownButton: import("@stitches/react/types/style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3872,6 +3888,8 @@ export declare const SelectArrow: import("@stitches/react/types/styled-component
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

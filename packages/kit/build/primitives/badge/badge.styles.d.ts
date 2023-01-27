@@ -257,6 +257,8 @@ declare const badgeStyles: import("@stitches/react/types/styled-component").CssC
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -706,6 +708,8 @@ export declare const BadgePrimitive: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

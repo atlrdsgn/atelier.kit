@@ -256,6 +256,8 @@ declare const ButtonBase: import("@stitches/react/types/styled-component").Style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

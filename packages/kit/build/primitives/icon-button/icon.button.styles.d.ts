@@ -258,6 +258,8 @@ declare const icxnButtonStyles: import("@stitches/react/types/styled-component")
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -707,6 +709,8 @@ export declare const IconButtonComponent: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

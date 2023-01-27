@@ -1,6 +1,6 @@
 {
     "name": "atlr.kit",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "license": "MIT",
     "packageManager": "yarn@3.2.2",
     "type": "module",

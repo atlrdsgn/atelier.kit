@@ -254,6 +254,8 @@ export declare const Link: import("@stitches/react/types/styled-component").Styl
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

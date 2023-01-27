@@ -10,6 +10,7 @@ const rootStyles = styled(ToggleGroup.Root, {
 
   margin: 'auto',
 
+  borderRadius: KitTheme.theme.radii.sm,
   backgroundColor: KitColors.transparent,
   boxShadow: `0 2px 10px ${KitColors.blur}`,
 
@@ -19,6 +20,8 @@ const rootStyles = styled(ToggleGroup.Root, {
 })
 
 const toggleFlexBox = styled('div', {
+  borderRadius: KitTheme.theme.radii.sm,
+
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',

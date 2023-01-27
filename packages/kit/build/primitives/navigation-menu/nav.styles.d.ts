@@ -257,6 +257,8 @@ export declare const CalloutHeading: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -704,6 +706,8 @@ export declare const StyledNavMenuRoot: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1148,6 +1152,8 @@ export declare const StyledNavMenuBar: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1592,6 +1598,8 @@ export declare const StyledNavMenuInner: import("@stitches/react/types/styled-co
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2036,6 +2044,8 @@ export declare const StyledNavMenuContent: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2480,6 +2490,8 @@ export declare const StyledNavMenuTrigger: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2924,6 +2936,8 @@ export declare const StyledNavMenuIndicator: import("@stitches/react/types/style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3370,6 +3384,8 @@ export declare const StyledNavContentBox: import("@stitches/react/types/styled-c
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -3817,6 +3833,8 @@ export declare const StyledNavLink: import("@stitches/react/types/styled-compone
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -4264,6 +4282,8 @@ export declare const StyledNavCallout: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -4708,6 +4728,8 @@ export declare const StyledNavCalloutHeading: import("@stitches/react/types/styl
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -5152,6 +5174,8 @@ export declare const StyledNavCalloutText: import("@stitches/react/types/styled-
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -5599,6 +5623,8 @@ export declare const StyledNavMenuViewport: import("@stitches/react/types/styled
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -6043,6 +6069,8 @@ export declare const StyledViewport: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

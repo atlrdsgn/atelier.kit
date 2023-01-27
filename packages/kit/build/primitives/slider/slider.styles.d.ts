@@ -254,6 +254,8 @@ export declare const StyledSliderRoot: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -698,6 +700,8 @@ export declare const StyledSliderTrack: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1142,6 +1146,8 @@ export declare const StyledSliderRange: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1586,6 +1592,8 @@ export declare const StyledSliderThumb: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

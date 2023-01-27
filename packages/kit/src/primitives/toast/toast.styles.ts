@@ -28,29 +28,39 @@ const styledViewport = styled(ToastPrimitive.Viewport, {
   flexDirection: 'column',
   padding: VIEWPORT_PADDING,
   gap: 10,
-  width: '400px',
+  width: 380,
+  minWidth: 380,
   maxWidth: '100vw',
-  margin: '0',
+  margin: 0,
   listStyle: 'none',
-  zIndex: 2147483647,
+  zIndex: 99999,
   outline: 'none',
 })
 
 const provider = styled(ToastPrimitive.Provider, {})
 
+/**
+ *
+ *
+ *
+ * root.
+ */
 const styledToast = styled(ToastPrimitive.Root, {
   backgroundColor: KitColors.blur,
   backdropFilter: 'saturate(200%) blur(14px)',
   WebkitBackdropFilter: 'saturate(200%) blur(14px)',
-  borderRadius: '16px',
+  borderRadius: KitTheme.theme.radii['2xl'],
   border: `2px solid ${KitColors.slate5}`,
   boxShadow: 'hsl(206 22% 7% / 35%) 0px 5px 28px -30px, hsl(206 22% 7% / 20%) 0px 10px 10px -15px',
   padding: 16,
+
   display: 'grid',
   gridTemplateAreas: '"title action" "description action"',
   gridTemplateColumns: 'auto max-content',
   columnGap: 15,
-  alignItems: 'center',
+  alignItems: 'flex-start',
+
+  width: 'auto',
 
   '@media (prefers-reduced-motion: no-preference)': {
     '&[data-state="open"]': {
@@ -74,11 +84,16 @@ const styledToast = styled(ToastPrimitive.Root, {
 
 const styledTitle = styled(ToastPrimitive.Title, {
   gridArea: 'title',
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
   marginBottom: 5,
   fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: 15,
-  fontWeight: 600,
+  fontSize: KitTheme.theme.fontSizes.lg,
+  fontWeight: KitTheme.theme.fontWeights.bold,
   color: KitColors.slate11,
+
+  alignContent: 'left',
+  textAlign: 'left',
   '&:hover': {
     cursor: 'grab',
   },
@@ -86,12 +101,17 @@ const styledTitle = styled(ToastPrimitive.Title, {
 
 const styledDescription = styled(ToastPrimitive.Description, {
   gridArea: 'description',
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
   margin: 0,
   color: KitColors.slate10,
-  fontFamily: KitTheme.theme.fonts.mono,
-  fontSize: 13,
-  fontWeight: 500,
+  fontFamily: KitTheme.theme.fonts.sans,
+  fontSize: KitTheme.theme.fontSizes.sm,
+  fontWeight: KitTheme.theme.fontWeights.medium,
   lineHeight: 1.3,
+
+  alignContent: 'left',
+  textAlign: 'left',
   '&:hover': {
     cursor: 'grab',
   },
@@ -103,12 +123,19 @@ const styledAction = styled(ToastPrimitive.Action, {
   border: `1px solid ${KitColors.slate5}`,
   padding: '5px 10px',
   fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: 13,
-  fontWeight: 600,
+  fontSize: KitTheme.theme.fontSizes.sm,
+  fontWeight: KitTheme.theme.fontWeights.medium,
   color: KitColors.slate11,
+
   '&:hover': {
     cursor: 'pointer',
   },
+})
+
+const styledClose = styled(ToastPrimitive.Close, {
+  gridArea: 'action',
+  borderRadius: KitTheme.theme.radii.sm,
+  padding: 2,
 })
 
 /** -------------------------------------------------------------- *
@@ -122,4 +149,4 @@ export const ToastTitle = styledTitle
 export const ToastDescription = styledDescription
 /** -------------------------------------------------------------- */
 export const ToastAction = styledAction
-export const ToastClose = ToastPrimitive.Close
+export const ToastClose = styledClose

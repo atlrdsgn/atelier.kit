@@ -258,6 +258,8 @@ export declare const StyledSARoot: import("@stitches/react/types/styled-componen
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -702,6 +704,8 @@ export declare const StyledSAViewport: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1146,6 +1150,8 @@ export declare const StyledSAScrollbar: import("@stitches/react/types/styled-com
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1590,6 +1596,8 @@ export declare const StyledSAScrollbarThumb: import("@stitches/react/types/style
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2034,6 +2042,8 @@ export declare const StyledSACorner: import("@stitches/react/types/styled-compon
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

@@ -252,6 +252,8 @@ export declare const overlayStyles: import("@stitches/react/types/styled-compone
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -696,6 +698,8 @@ export declare const OverlayStyles: import("@stitches/react/types/styled-compone
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

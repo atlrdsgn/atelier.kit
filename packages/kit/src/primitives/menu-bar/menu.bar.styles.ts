@@ -57,7 +57,7 @@ const menubarTrigger = styled(Menubar.Trigger, {
 
   lineHeight: 1,
   borderRadius: BORDER_RADIUS_INSIDE,
-  color: KitColors.slate11,
+  color: 'inherit',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -79,6 +79,29 @@ const menubarTrigger = styled(Menubar.Trigger, {
   },
 
   '&[data-disabled]': {},
+
+  variants: {
+    white: {
+      true: {
+        color: KitColors.white,
+      },
+    },
+    black: {
+      true: {
+        color: KitColors.black,
+      },
+    },
+    slate: {
+      true: {
+        color: KitColors.slate11,
+      },
+    },
+  },
+  defaultVariants: {
+    white: false,
+    black: false,
+    slate: true,
+  },
 })
 
 const contentStyles = {
@@ -382,6 +405,7 @@ export const StyledMenuBarRightSlot = rightSlot
  */
 export type MenuBarRootVariantProps = VariantProps<typeof menubarRoot>
 export type MenuBarMenuVariantProps = VariantProps<typeof menubarMenu>
+export type MenuBarTriggerVariantProps = VariantProps<typeof menubarTrigger>
 export type MenuBarContentVariantProps = VariantProps<typeof menubarContent>
 export type MenuBarItemVariantProps = VariantProps<typeof menubarItem>
 

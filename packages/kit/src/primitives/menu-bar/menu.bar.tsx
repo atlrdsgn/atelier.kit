@@ -5,6 +5,7 @@ import type {
   MenuBarContentVariantProps,
   MenuBarItemVariantProps,
   MenuBarSeparatorVariantProps,
+  MenuBarTriggerVariantProps,
 } from './menu.bar.styles'
 import {
   StyledMenuBarRoot,
@@ -84,10 +85,11 @@ const MenuRoot = React.forwardRef<React.ElementRef<typeof StyledMenuBarRoot>, Me
  */
 type MenuBarSUBPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof Menubar.Sub>
 type MenuBarSUBProps = MenuBarSUBPrimitiveProps
-const MenuSub = React.forwardRef<React.ElementRef<typeof StyledMenuBarSub>, MenuBarSUBProps>(
-  (props) => {
-    return <StyledMenuBarSub {...props}>{props.children}</StyledMenuBarSub>
-  }
+
+const MenuSub = ({children, css, ...rest}: MenuBarSUBProps) => (
+  <StyledMenuBarSub {...rest} css={{...css}}>
+    {children}
+  </StyledMenuBarSub>
 )
 
 /**
@@ -111,6 +113,7 @@ const MenuSub = React.forwardRef<React.ElementRef<typeof StyledMenuBarSub>, Menu
  * button element that triggers the menu to open.
  */
 type MenuBarTriggerPrimitiveProps = baseComponentProps &
+  MenuBarTriggerVariantProps &
   React.ComponentPropsWithRef<typeof Menubar.Trigger>
 type MenuBarTriggerProps = MenuBarTriggerPrimitiveProps
 const MenuTrigger = React.forwardRef<
@@ -122,6 +125,7 @@ const MenuTrigger = React.forwardRef<
       {...props}
       ref={forwardedRef}
       asChild={props.asChild}
+      slate={props.slate}
       css={{
         ...props.css,
       }}>

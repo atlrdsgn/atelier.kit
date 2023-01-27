@@ -252,6 +252,8 @@ export declare const PreText: import("@stitches/react/types/styled-component").S
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

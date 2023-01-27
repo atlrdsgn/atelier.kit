@@ -255,6 +255,8 @@ export declare const SlideMenuRoot: import("@stitches/react/types/styled-compone
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -699,6 +701,8 @@ export declare const SlideMenuOverlay: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1143,6 +1147,8 @@ export declare const SlideMenuTrigger: import("@stitches/react/types/styled-comp
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -1589,6 +1595,8 @@ export declare const ContentStyles: import("@stitches/react/types/styled-compone
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };
@@ -2033,6 +2041,8 @@ export declare const CloseButton: import("@stitches/react/types/styled-component
         md: string;
         base: string;
         lg: string;
+        xl: string;
+        '2xl': string;
         pill: string;
         none: string;
     };

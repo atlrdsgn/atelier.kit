@@ -40,11 +40,10 @@ type ToastProps = ToastPrimitiveProps & toastProps & {css?: CSS}
 const ToastRoot = React.forwardRef<React.ElementRef<typeof ToastComponent>, ToastProps>(
   ({...props}, forwardedRef) => (
     <ToastProvider swipeDirection={'right'} duration={5000}>
-      <ToastViewport label={`Notifications ({hotkey})`} hotkey={props.hotkey}>
-        <ToastComponent ref={forwardedRef} {...props} open={props.open}>
-          {props.children}
-        </ToastComponent>
-      </ToastViewport>
+      <ToastComponent ref={forwardedRef} {...props} open={props.open}>
+        {props.children}
+      </ToastComponent>
+      <ToastViewport label={`Notifications ({hotkey})`} hotkey={props.hotkey} />
     </ToastProvider>
   )
 )

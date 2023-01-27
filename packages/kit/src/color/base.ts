@@ -11,6 +11,7 @@ import {slate, slateA} from './src/slate'
 import {torch} from './src/torch'
 import {gold} from './src/gold'
 import {brand} from './src/brand'
+import {gray} from './src/gray'
 
 const baseKitThemeColors = {
   white: '#ffffff',
@@ -52,6 +53,17 @@ const baseKitThemeColors = {
 
   limey: brand.limey,
   purp: brand.purple,
+
+  gray1: gray.gray1,
+  gray2: gray.gray2,
+  gray3: gray.gray3,
+  gray4: gray.gray4,
+  gray5: gray.gray5,
+  gray6: gray.gray6,
+  gray7: gray.gray7,
+  gray8: gray.gray8,
+  gray9: gray.gray9,
+  gray10: gray.gray10,
 
   slate1: slate.slate1,
   slate2: slate.slate2,

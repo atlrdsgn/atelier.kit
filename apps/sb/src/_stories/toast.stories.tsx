@@ -20,7 +20,9 @@ const Template: ComponentStory<typeof Toast> = (args) => {
 
   return (
     <Container size={'sm'} align={'center'}>
-      <Button onClick={() => setIsOpen(true)}>Open Toast</Button>
+      <Button rainbow onClick={() => setIsOpen(true)}>
+        Open Toast
+      </Button>
 
       <Toast {...args} open={isOpen} onOpenChange={setIsOpen} duration={5000}>
         <ToastHeading>Lorem Ipsum</ToastHeading>

@@ -1,0 +1,52 @@
+{
+    "name": "palette",
+    "colors": [{
+            "name": "Green Spring",
+            "hex": "#b7bab2"
+        },
+        {
+            "name": "Shark",
+            "hex": "#23252c"
+        },
+        {
+            "name": "Tom Thumb",
+            "hex": "#334b2d"
+        },
+        {
+            "name": "Ebb",
+            "hex": "#ebe5e3"
+        },
+        {
+            "name": "Baltic Sea",
+            "hex": "#2b2a31"
+        },
+        {
+            "name": "Blue Haze",
+            "hex": "#c8cedc"
+        },
+        {
+            "name": "Oslo Gray",
+            "hex": "#838b91"
+        },
+        {
+            "name": "Old Lace",
+            "hex": "#fcf5ec"
+        },
+        {
+            "name": "Old Lace",
+            "hex": "#fcf5ec"
+        },
+        {
+            "name": "Kimberly",
+            "hex": "#686799"
+        },
+        {
+            "name": "Mid Gray",
+            "hex": "#6a6b76"
+        },
+        {
+            "name": "Westar",
+            "hex": "#e3e2e0"
+        }
+    ]
+}

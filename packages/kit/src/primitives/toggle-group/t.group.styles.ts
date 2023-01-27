@@ -1,6 +1,11 @@
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
 import {styled, KitColors, KitTheme} from '../../theme'
 
+const TOGGLE_HEIGHT = 'auto'
+const TOGGLE_WIDTH = 'auto'
+const TOGGLE_PADDING_X = 12
+const TOGGLE_PADDING_Y = 6
+
 const rootStyles = styled(ToggleGroup.Root, {
   all: 'unset',
   display: 'flex',
@@ -10,7 +15,7 @@ const rootStyles = styled(ToggleGroup.Root, {
 
   margin: 'auto',
 
-  borderRadius: KitTheme.theme.radii.sm,
+  borderRadius: KitTheme.theme.radii.lg,
   backgroundColor: KitColors.transparent,
   boxShadow: `0 2px 10px ${KitColors.blur}`,
 
@@ -20,7 +25,10 @@ const rootStyles = styled(ToggleGroup.Root, {
 })
 
 const toggleFlexBox = styled('div', {
-  borderRadius: KitTheme.theme.radii.sm,
+  border: `2px solid ${KitColors.transparent}`,
+  borderRadius: KitTheme.theme.radii.lg,
+
+  backgroundColor: KitColors.transparent,
 
   display: 'flex',
   flexDirection: 'row',
@@ -41,45 +49,56 @@ const groupItemStyles = styled(ToggleGroup.Item, {
   position: 'relative',
   backgroundColor: KitColors.slate4,
   color: KitColors.slate12,
-  height: 32,
-  width: 42,
+  height: TOGGLE_HEIGHT,
+  width: TOGGLE_WIDTH,
   display: 'flex',
+
   fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: 12,
+  fontSize: KitTheme.theme.fontSizes.sm,
+  fontWeight: KitTheme.theme.fontWeights.medium,
+
   lineHeight: 1,
   alignItems: 'center',
   justifyContent: 'center',
   margin: 0,
 
-  paddingTop: 0,
-  paddingBottom: 0,
-  paddingLeft: 8,
-  paddingRight: 8,
+  paddingTop: TOGGLE_PADDING_Y,
+  paddingBottom: TOGGLE_PADDING_Y,
+  paddingLeft: TOGGLE_PADDING_X,
+  paddingRight: TOGGLE_PADDING_X,
 
   '&:focus': {
-    height: 32,
-    width: 42,
-    paddingTop: 0,
-    paddingBottom: 0,
-    paddingLeft: 8,
-    paddingRight: 8,
-    boxShadow: `0 0 0 1px ${KitColors.slateA6}`,
+    height: TOGGLE_HEIGHT,
+    width: TOGGLE_WIDTH,
+    paddingTop: TOGGLE_PADDING_Y,
+    paddingBottom: TOGGLE_PADDING_Y,
+    paddingLeft: TOGGLE_PADDING_X,
+    paddingRight: TOGGLE_PADDING_X,
+    // boxShadow: `0 0 0 1px ${KitColors.slateA6}`,
   },
 
   '&:first-child': {
-    borderTopLeftRadius: KitTheme.theme.radii.sm,
-    borderBottomLeftRadius: KitTheme.theme.radii.sm,
+    borderTopLeftRadius: KitTheme.theme.radii.base,
+    borderBottomLeftRadius: KitTheme.theme.radii.base,
   },
   '&:last-child': {
-    borderTopRightRadius: KitTheme.theme.radii.sm,
-    borderBottomRightRadius: KitTheme.theme.radii.sm,
+    borderTopRightRadius: KitTheme.theme.radii.base,
+    borderBottomRightRadius: KitTheme.theme.radii.base,
   },
   '&:hover': {backgroundColor: KitColors.slate5},
-  '&[data-state=on]': {
-    backgroundColor: KitColors.heliotrope5,
+  '&[data-state="on"]': {
+    backgroundColor: KitColors.helios5,
     color: KitColors.slate2,
   },
-  '&[data-state=on]:hover': {backgroundColor: KitColors.heliotrope6},
+  '&[data-state=on]:hover': {backgroundColor: KitColors.helios4},
+
+  /**
+   *
+   * data-state="off"
+   */
+  '&[data-state="off"]:hover': {
+    cursor: 'pointer',
+  },
 
   '&[data-orientation="vertical"]': {flexDirection: 'column', margin: 'auto'},
   '&[data-orientation="horizontal"]': {flexDirection: 'row', margin: 'auto'},

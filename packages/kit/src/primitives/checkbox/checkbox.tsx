@@ -8,6 +8,7 @@ import {
   StyledCheckboxIndicator,
   StyledCheckboxLabel,
   StyledCheckboxFlex,
+  CheckboxVariantProps,
 } from './cb.styles'
 
 interface checkboxProps {
@@ -33,7 +34,8 @@ const CBFlex = React.forwardRef<HTMLDivElement, CheckboxRootProps>((props, ref) 
   )
 })
 
-type CheckboxPrimitiveProps = React.HTMLAttributes<HTMLButtonElement> &
+type CheckboxPrimitiveProps = CheckboxVariantProps &
+  React.HTMLAttributes<HTMLButtonElement> &
   React.ComponentProps<typeof StyledCheckbox>
 type CheckboxProps = checkboxProps & CheckboxPrimitiveProps
 

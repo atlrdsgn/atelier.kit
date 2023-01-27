@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { CSS } from '../../theme';
-import { StyledCheckbox, StyledCheckboxLabel, StyledCheckboxFlex } from './cb.styles';
+import { StyledCheckbox, StyledCheckboxLabel, StyledCheckboxFlex, CheckboxVariantProps } from './cb.styles';
 interface checkboxProps {
     children?: React.ReactNode;
     css?: CSS;
@@ -12,7 +12,7 @@ interface checkboxProps {
  */
 type CheckboxRootPrimitiveProps = React.HTMLAttributes<HTMLDivElement> & React.ComponentProps<typeof StyledCheckboxFlex>;
 type CheckboxRootProps = checkboxProps & CheckboxRootPrimitiveProps;
-type CheckboxPrimitiveProps = React.HTMLAttributes<HTMLButtonElement> & React.ComponentProps<typeof StyledCheckbox>;
+type CheckboxPrimitiveProps = CheckboxVariantProps & React.HTMLAttributes<HTMLButtonElement> & React.ComponentProps<typeof StyledCheckbox>;
 type CheckboxProps = checkboxProps & CheckboxPrimitiveProps;
 type CheckboxLabelPrimitiveProps = React.HTMLAttributes<HTMLLabelElement> & React.ComponentProps<typeof StyledCheckboxLabel>;
 type CheckboxLabelProps = checkboxProps & CheckboxLabelPrimitiveProps;

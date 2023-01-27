@@ -1,4 +1,4 @@
-import {KitColors, KitTheme, styled} from '../../theme'
+import {KitColors, KitTheme, styled, VariantProps} from '../../theme'
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 
 const cbFlexStyles = styled('div', {
@@ -26,18 +26,23 @@ const cbStyles = styled(CheckboxPrimitive.Root, {
   // boxShadow: `1px 2px 2px ${KitColors.slateA7}`,
   transition: 'ease-in 200ms',
   '&:hover': {backgroundColor: KitColors.slateA4},
-  '&:focus': {boxShadow: `0 0 0 2px black`},
+  '&:focus': {
+    boxShadow: `0 0 0 1px ${KitColors.radical6}`,
+  },
 
   '&[data-state="checked"]': {
     backgroundColor: KitColors.heliotrope5,
   },
+
+  variants: {},
+  defaultVariants: {},
 })
 
 const indicatorStyles = styled(CheckboxPrimitive.Indicator, {
   // 'span' 'icon'
   color: KitColors.fizz4,
-  height: 16,
-  width: 16,
+  height: 15,
+  width: 15,
 })
 
 const labelStyles = styled('label', {
@@ -54,3 +59,5 @@ export const StyledCheckboxFlex = cbFlexStyles
 export const StyledCheckbox = cbStyles
 export const StyledCheckboxIndicator = indicatorStyles
 export const StyledCheckboxLabel = labelStyles
+
+export type CheckboxVariantProps = VariantProps<typeof cbStyles>

@@ -79,7 +79,7 @@ const accordionTrigger = React.forwardRef<
   React.ElementRef<typeof AtlrAccordionTrigger>,
   AccordionTriggerProps
 >(({...props}, forwardedRef) => (
-  <AtlrAccordionHeader css={{...props.css}}>
+  <AtlrAccordionHeader asChild={true} css={{...props.css}}>
     <AtlrAccordionTrigger {...props} ref={forwardedRef} css={{...props.css}}>
       {props.children}
       <AtlrAccordionArrowDown width={'24'} color={'slate'} />

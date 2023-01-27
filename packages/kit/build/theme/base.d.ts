@@ -215,6 +215,23 @@ export declare const KitTheme: {
             atlrPurple01: string;
             limey: string;
             purp: string;
+            gray1: string;
+            gray2: string;
+            gray3: string;
+            gray4: string;
+            gray5: string;
+            gray6: string; /**
+             *
+             *
+             * @ThemeMap
+             *
+             * this maps the css properties to accept our tokens.
+             *
+             */
+            gray7: string;
+            gray8: string;
+            gray9: string;
+            gray10: string;
             slate1: string;
             slate2: string;
             slate3: string;
@@ -226,10 +243,6 @@ export declare const KitTheme: {
             slate9: string;
             slate10: string;
             slate11: string;
-            /**
-             *
-             * using Stitches defaultThemeMap to start with.
-             */
             slate12: string;
             slateA1: string;
             slateA2: string;
@@ -269,11 +282,11 @@ export declare const KitTheme: {
             mauve9: string;
             mauve10: string;
             mauve11: string;
-            mauve12: string;
+            mauve12: string; /** ------------------------------------------------------------- **/
             mauve13: string;
             mauve14: string;
             mauve15: string;
-            helios1: string; /** --------------------------------------------------------------------- **/
+            helios1: string;
             helios2: string;
             helios3: string;
             helios4: string;
@@ -286,10 +299,6 @@ export declare const KitTheme: {
             helios11: string;
             helios12: string;
             helios13: string;
-            /**
-             *
-             * create stitches config..
-             */
             helios14: string;
             helios15: string;
             heliotrope1: string;
@@ -751,6 +760,16 @@ export declare const createThemeBase: <Argument0 extends string | ({
         atlrPurple01?: string | number | boolean | undefined;
         limey?: string | number | boolean | undefined;
         purp?: string | number | boolean | undefined;
+        gray1?: string | number | boolean | undefined;
+        gray2?: string | number | boolean | undefined;
+        gray3?: string | number | boolean | undefined;
+        gray4?: string | number | boolean | undefined;
+        gray5?: string | number | boolean | undefined;
+        gray6?: string | number | boolean | undefined;
+        gray7?: string | number | boolean | undefined;
+        gray8?: string | number | boolean | undefined;
+        gray9?: string | number | boolean | undefined;
+        gray10?: string | number | boolean | undefined;
         slate1?: string | number | boolean | undefined;
         slate2?: string | number | boolean | undefined;
         slate3?: string | number | boolean | undefined;
@@ -1046,6 +1065,16 @@ export declare const createThemeBase: <Argument0 extends string | ({
         atlrPurple01?: string | number | boolean | undefined;
         limey?: string | number | boolean | undefined;
         purp?: string | number | boolean | undefined;
+        gray1?: string | number | boolean | undefined;
+        gray2?: string | number | boolean | undefined;
+        gray3?: string | number | boolean | undefined;
+        gray4?: string | number | boolean | undefined;
+        gray5?: string | number | boolean | undefined;
+        gray6?: string | number | boolean | undefined;
+        gray7?: string | number | boolean | undefined;
+        gray8?: string | number | boolean | undefined;
+        gray9?: string | number | boolean | undefined;
+        gray10?: string | number | boolean | undefined;
         slate1?: string | number | boolean | undefined;
         slate2?: string | number | boolean | undefined;
         slate3?: string | number | boolean | undefined;
@@ -1345,6 +1374,16 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         atlrPurple01?: string | number | boolean | undefined;
         limey?: string | number | boolean | undefined;
         purp?: string | number | boolean | undefined;
+        gray1?: string | number | boolean | undefined;
+        gray2?: string | number | boolean | undefined;
+        gray3?: string | number | boolean | undefined;
+        gray4?: string | number | boolean | undefined;
+        gray5?: string | number | boolean | undefined;
+        gray6?: string | number | boolean | undefined;
+        gray7?: string | number | boolean | undefined;
+        gray8?: string | number | boolean | undefined;
+        gray9?: string | number | boolean | undefined;
+        gray10?: string | number | boolean | undefined;
         slate1?: string | number | boolean | undefined;
         slate2?: string | number | boolean | undefined;
         slate3?: string | number | boolean | undefined;
@@ -1640,6 +1679,16 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         atlrPurple01?: string | number | boolean | undefined;
         limey?: string | number | boolean | undefined;
         purp?: string | number | boolean | undefined;
+        gray1?: string | number | boolean | undefined;
+        gray2?: string | number | boolean | undefined;
+        gray3?: string | number | boolean | undefined;
+        gray4?: string | number | boolean | undefined;
+        gray5?: string | number | boolean | undefined;
+        gray6?: string | number | boolean | undefined;
+        gray7?: string | number | boolean | undefined;
+        gray8?: string | number | boolean | undefined;
+        gray9?: string | number | boolean | undefined;
+        gray10?: string | number | boolean | undefined;
         slate1?: string | number | boolean | undefined;
         slate2?: string | number | boolean | undefined;
         slate3?: string | number | boolean | undefined;
@@ -1954,6 +2003,16 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         atlrPurple01: string;
         limey: string;
         purp: string;
+        gray1: string;
+        gray2: string;
+        gray3: string;
+        gray4: string;
+        gray5: string;
+        gray6: string;
+        gray7: string;
+        gray8: string;
+        gray9: string;
+        gray10: string;
         slate1: string;
         slate2: string;
         slate3: string;
@@ -2410,6 +2469,16 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         atlrPurple01: string;
         limey: string;
         purp: string;
+        gray1: string;
+        gray2: string;
+        gray3: string;
+        gray4: string;
+        gray5: string;
+        gray6: string;
+        gray7: string;
+        gray8: string;
+        gray9: string;
+        gray10: string;
         slate1: string;
         slate2: string;
         slate3: string;
@@ -2845,6 +2914,16 @@ export declare const css: <Composers extends (string | import("@stitches/react/t
         atlrPurple01: string;
         limey: string;
         purp: string;
+        gray1: string;
+        gray2: string;
+        gray3: string;
+        gray4: string;
+        gray5: string;
+        gray6: string;
+        gray7: string;
+        gray8: string;
+        gray9: string;
+        gray10: string;
         slate1: string;
         slate2: string;
         slate3: string;
@@ -3308,6 +3387,16 @@ export declare const globalCss: <Styles extends {
             atlrPurple01: string;
             limey: string;
             purp: string;
+            gray1: string;
+            gray2: string;
+            gray3: string;
+            gray4: string;
+            gray5: string;
+            gray6: string;
+            gray7: string;
+            gray8: string;
+            gray9: string;
+            gray10: string;
             slate1: string;
             slate2: string;
             slate3: string;
@@ -3741,6 +3830,16 @@ export declare const globalCss: <Styles extends {
         atlrPurple01: string;
         limey: string;
         purp: string;
+        gray1: string;
+        gray2: string;
+        gray3: string;
+        gray4: string;
+        gray5: string;
+        gray6: string;
+        gray7: string;
+        gray8: string;
+        gray9: string;
+        gray10: string;
         slate1: string;
         slate2: string;
         slate3: string;
@@ -4175,6 +4274,16 @@ export declare const keyframes: (style: {
             atlrPurple01: string;
             limey: string;
             purp: string;
+            gray1: string;
+            gray2: string;
+            gray3: string;
+            gray4: string;
+            gray5: string;
+            gray6: string;
+            gray7: string;
+            gray8: string;
+            gray9: string;
+            gray10: string;
             slate1: string;
             slate2: string;
             slate3: string;
@@ -4603,6 +4712,16 @@ export declare const theme: string & {
         atlrPurple01: import("@stitches/react/types/theme").Token<"atlrPurple01", string, "colors", string>;
         limey: import("@stitches/react/types/theme").Token<"limey", string, "colors", string>;
         purp: import("@stitches/react/types/theme").Token<"purp", string, "colors", string>;
+        gray1: import("@stitches/react/types/theme").Token<"gray1", string, "colors", string>;
+        gray2: import("@stitches/react/types/theme").Token<"gray2", string, "colors", string>;
+        gray3: import("@stitches/react/types/theme").Token<"gray3", string, "colors", string>;
+        gray4: import("@stitches/react/types/theme").Token<"gray4", string, "colors", string>;
+        gray5: import("@stitches/react/types/theme").Token<"gray5", string, "colors", string>;
+        gray6: import("@stitches/react/types/theme").Token<"gray6", string, "colors", string>;
+        gray7: import("@stitches/react/types/theme").Token<"gray7", string, "colors", string>;
+        gray8: import("@stitches/react/types/theme").Token<"gray8", string, "colors", string>;
+        gray9: import("@stitches/react/types/theme").Token<"gray9", string, "colors", string>;
+        gray10: import("@stitches/react/types/theme").Token<"gray10", string, "colors", string>;
         slate1: import("@stitches/react/types/theme").Token<"slate1", string, "colors", string>;
         slate2: import("@stitches/react/types/theme").Token<"slate2", string, "colors", string>;
         slate3: import("@stitches/react/types/theme").Token<"slate3", string, "colors", string>;
@@ -4897,6 +5016,16 @@ export declare const kit_theme: string & {
         atlrPurple01: import("@stitches/react/types/theme").Token<"atlrPurple01", string, "colors", string>;
         limey: import("@stitches/react/types/theme").Token<"limey", string, "colors", string>;
         purp: import("@stitches/react/types/theme").Token<"purp", string, "colors", string>;
+        gray1: import("@stitches/react/types/theme").Token<"gray1", string, "colors", string>;
+        gray2: import("@stitches/react/types/theme").Token<"gray2", string, "colors", string>;
+        gray3: import("@stitches/react/types/theme").Token<"gray3", string, "colors", string>;
+        gray4: import("@stitches/react/types/theme").Token<"gray4", string, "colors", string>;
+        gray5: import("@stitches/react/types/theme").Token<"gray5", string, "colors", string>;
+        gray6: import("@stitches/react/types/theme").Token<"gray6", string, "colors", string>;
+        gray7: import("@stitches/react/types/theme").Token<"gray7", string, "colors", string>;
+        gray8: import("@stitches/react/types/theme").Token<"gray8", string, "colors", string>;
+        gray9: import("@stitches/react/types/theme").Token<"gray9", string, "colors", string>;
+        gray10: import("@stitches/react/types/theme").Token<"gray10", string, "colors", string>;
         slate1: import("@stitches/react/types/theme").Token<"slate1", string, "colors", string>;
         slate2: import("@stitches/react/types/theme").Token<"slate2", string, "colors", string>;
         slate3: import("@stitches/react/types/theme").Token<"slate3", string, "colors", string>;
@@ -5204,6 +5333,16 @@ export declare const config: {
             atlrPurple01: string;
             limey: string;
             purp: string;
+            gray1: string;
+            gray2: string;
+            gray3: string;
+            gray4: string;
+            gray5: string;
+            gray6: string;
+            gray7: string;
+            gray8: string;
+            gray9: string;
+            gray10: string;
             slate1: string;
             slate2: string;
             slate3: string;
@@ -5645,6 +5784,23 @@ export declare const KitColors: {
     atlrPurple01: string;
     limey: string;
     purp: string;
+    gray1: string;
+    gray2: string;
+    gray3: string;
+    gray4: string;
+    gray5: string;
+    gray6: string; /**
+     *
+     *
+     * @ThemeMap
+     *
+     * this maps the css properties to accept our tokens.
+     *
+     */
+    gray7: string;
+    gray8: string;
+    gray9: string;
+    gray10: string;
     slate1: string;
     slate2: string;
     slate3: string;
@@ -5656,10 +5812,6 @@ export declare const KitColors: {
     slate9: string;
     slate10: string;
     slate11: string;
-    /**
-     *
-     * using Stitches defaultThemeMap to start with.
-     */
     slate12: string;
     slateA1: string;
     slateA2: string;
@@ -5699,11 +5851,11 @@ export declare const KitColors: {
     mauve9: string;
     mauve10: string;
     mauve11: string;
-    mauve12: string;
+    mauve12: string; /** ------------------------------------------------------------- **/
     mauve13: string;
     mauve14: string;
     mauve15: string;
-    helios1: string; /** --------------------------------------------------------------------- **/
+    helios1: string;
     helios2: string;
     helios3: string;
     helios4: string;
@@ -5716,10 +5868,6 @@ export declare const KitColors: {
     helios11: string;
     helios12: string;
     helios13: string;
-    /**
-     *
-     * create stitches config..
-     */
     helios14: string;
     helios15: string;
     heliotrope1: string;

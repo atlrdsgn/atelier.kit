@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import {ComponentName} from '@/components/ComponentName'
-import {Checkbox, Section} from 'atlr.kit'
+import {Checkbox, CheckboxFlex, CheckboxLabel, Section} from 'atlr.kit'
 import {Container} from 'atlr.kit'
 
 export const CheckboxDemo = () => {
@@ -13,10 +13,10 @@ export const CheckboxDemo = () => {
 
           <div>
             <form>
-              <Checkbox.Flex>
+              <CheckboxFlex>
                 <Checkbox id="checkbox" />
-                <Checkbox.Label htmlFor="checkbox">Accept Terms and Conditions</Checkbox.Label>
-              </Checkbox.Flex>
+                <CheckboxLabel htmlFor="checkbox">Accept Terms and Conditions</CheckboxLabel>
+              </CheckboxFlex>
             </form>
           </div>
         </Container>

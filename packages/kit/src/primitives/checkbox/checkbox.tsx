@@ -54,10 +54,17 @@ const CBLabel = React.forwardRef<HTMLLabelElement, CheckboxLabelProps>(({...prop
   )
 })
 
+export const Checkbox = CBox
+export const CheckboxLabel = CBLabel
+export const CheckboxFlex = CBFlex
 export type {CheckboxProps, CheckboxLabelProps}
 
-// Path: src/primitives/checkbox/cb.styles.ts
+/**
+ *
+ * Experimenting with display names..
+ */
 
+/*
 CBox.displayName = 'Checkbox'
 CBLabel.displayName = 'Checkbox.Label'
 CBFlex.displayName = 'Checkbox.Flex'
@@ -66,3 +73,4 @@ export const Checkbox = CBox as typeof CBox & {
   Flex: typeof CBFlex
   Label: typeof CBLabel
 }
+*/

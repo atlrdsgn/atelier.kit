@@ -7,7 +7,7 @@ export {Button, TestButton} from './button'
 
 export {Canvas} from './canvas'
 export {Card, CardImage} from './card'
-export {Checkbox} from './checkbox'
+export {Checkbox, CheckboxFlex, CheckboxLabel} from './checkbox'
 export {Container} from './container'
 export {CopyField, CopyText, CopyTrigger} from './copy-text'
 

@@ -1,1 +1,1 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/primitives/checkbox/index.ts"],"names":[],"mappings":"AAAA,cAAc,YAAY,CAAA"}
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/primitives/checkbox/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,QAAQ,EAAC,MAAM,YAAY,CAAA;AACnC,OAAO,EAAC,YAAY,EAAC,MAAM,YAAY,CAAA;AACvC,OAAO,EAAC,aAAa,EAAC,MAAM,YAAY,CAAA"}

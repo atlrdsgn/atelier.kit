@@ -12,3 +12,4 @@ export declare const gold: {
     gold11: string;
     gold12: string;
 };
+//# sourceMappingURL=gold.d.ts.map

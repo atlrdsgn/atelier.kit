@@ -1371,3 +1371,4 @@ export declare const StyledRevealContent: import("@stitches/react/types/styled-c
 export type RevealProps = React.ComponentProps<typeof StyledRevealRoot>;
 export type RevealTriggerProps = React.ComponentProps<typeof StyledRevealTrigger>;
 export type RevealContentProps = React.ComponentProps<typeof StyledRevealContent>;
+//# sourceMappingURL=reveal.styles.d.ts.map

@@ -473,3 +473,4 @@ export declare const SwitchThumb: import("@stitches/react/types/styled-component
     zIndex: "zIndices";
 }, {}>>;
 export type { SwitchProps };
+//# sourceMappingURL=switch.d.ts.map

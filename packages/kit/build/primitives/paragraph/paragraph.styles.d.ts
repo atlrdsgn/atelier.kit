@@ -923,3 +923,4 @@ export declare const ParagraphContent: import("@stitches/react/types/styled-comp
 }, {}>>;
 export type ParagraphVariantProps = VariantProps<typeof paragraphStyles>;
 export {};
+//# sourceMappingURL=paragraph.styles.d.ts.map

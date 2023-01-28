@@ -11,3 +11,4 @@ export declare const kitRadii: {
         none: string;
     };
 };
+//# sourceMappingURL=kit.radii.d.ts.map

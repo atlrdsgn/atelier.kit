@@ -22,3 +22,4 @@ export declare const SliderTrack: React.ForwardRefExoticComponent<Pick<SliderTra
 export declare const SliderThumb: React.ForwardRefExoticComponent<Pick<SliderThumbProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
 export declare const SliderRange: React.ForwardRefExoticComponent<Pick<SliderRangeProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
 export type { SliderRootProps, SliderTrackProps, SliderThumbProps, SliderRangeProps };
+//# sourceMappingURL=slider.d.ts.map

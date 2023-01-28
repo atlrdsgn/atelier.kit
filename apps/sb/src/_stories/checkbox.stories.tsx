@@ -1,8 +1,7 @@
 import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
-
-import {Container, Checkbox, CheckboxFlex, CheckboxLabel} from 'atlr.kit'
+import {Container, Checkbox} from 'atlr.kit'
 
 export default {
   title: 'primitives/checkbox',
@@ -14,10 +13,10 @@ const Template: ComponentStory<typeof Checkbox> = (args) => {
   return (
     <Container size={'md'} align={'center'}>
       <form>
-        <CheckboxFlex>
+        <Checkbox.Flex>
           <Checkbox {...args} />
-          <CheckboxLabel>Accept terms and conditions</CheckboxLabel>
-        </CheckboxFlex>
+          <Checkbox.Label>Accept terms and conditions</Checkbox.Label>
+        </Checkbox.Flex>
       </form>
     </Container>
   )
@@ -26,5 +25,6 @@ const Template: ComponentStory<typeof Checkbox> = (args) => {
 export const Playground = Template.bind({})
 
 Playground.args = {
+  type: 'button',
   css: {},
 }

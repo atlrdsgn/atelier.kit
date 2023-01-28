@@ -4,3 +4,4 @@
  */
 declare function useCallbackRef<T extends (...args: any[]) => any>(callback: T | undefined): T;
 export { useCallbackRef };
+//# sourceMappingURL=useCallbackRef.d.ts.map

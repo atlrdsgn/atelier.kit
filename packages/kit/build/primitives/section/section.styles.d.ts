@@ -925,3 +925,4 @@ export declare const SectionPrimitive: import("@stitches/react/types/styled-comp
 }, {}>>;
 export type SectionVariantProps = VariantProps<typeof sectionStyles>;
 export {};
+//# sourceMappingURL=section.styles.d.ts.map

@@ -8,3 +8,4 @@ import * as React from 'react';
  */
 declare const useLayoutEffect: typeof React.useLayoutEffect;
 export { useLayoutEffect };
+//# sourceMappingURL=useLayoutEffect.d.ts.map

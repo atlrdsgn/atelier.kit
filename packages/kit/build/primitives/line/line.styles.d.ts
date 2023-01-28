@@ -1383,3 +1383,4 @@ export declare const StyledLine: import("@stitches/react/types/styled-component"
 }, {}>>;
 export type LineVariantProps = VariantProps<typeof lineRoot>;
 export {};
+//# sourceMappingURL=line.styles.d.ts.map

@@ -13,3 +13,4 @@ type FlexProps = FlexPrimitiveProps & {
 };
 export declare const Flex: React.ForwardRefExoticComponent<Pick<FlexProps, "gap" | "direction" | "align" | "justify" | "wrap" | "key" | keyof React.HTMLAttributes<HTMLDivElement> | "css" | "asChild"> & React.RefAttributes<HTMLDivElement>>;
 export type { FlexProps };
+//# sourceMappingURL=flex.d.ts.map

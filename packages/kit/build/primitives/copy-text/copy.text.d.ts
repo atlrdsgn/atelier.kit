@@ -76,3 +76,4 @@ export declare const CopyField: ({ children, primary, secondary, css, ...rest }:
 export declare const CopyText: ({ children, textElement, ...rest }: CopyFieldTextProps) => JSX.Element;
 export declare const CopyTrigger: ({ copyText, onClick, primary, secondary, ...rest }: CopyTriggerProps) => JSX.Element;
 export type { CopyFieldProps, CopyFieldTextProps, CopyTriggerProps };
+//# sourceMappingURL=copy.text.d.ts.map

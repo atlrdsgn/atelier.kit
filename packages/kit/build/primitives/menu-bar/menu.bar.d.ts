@@ -2860,3 +2860,4 @@ export declare const MenuBarRadioItem: import("@stitches/react/types/styled-comp
     zIndex: "zIndices";
 }, {}>>;
 export {};
+//# sourceMappingURL=menu.bar.d.ts.map

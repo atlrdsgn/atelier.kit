@@ -1824,3 +1824,4 @@ export declare const StyledTabsContent: import("@stitches/react/types/styled-com
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=tabs.styles.d.ts.map

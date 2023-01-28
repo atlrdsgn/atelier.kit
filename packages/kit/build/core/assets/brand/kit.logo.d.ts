@@ -25,3 +25,4 @@ import type { VectorProps } from '../types.svg';
  */
 declare const KitLogo: React.FC<VectorProps>;
 export { KitLogo };
+//# sourceMappingURL=kit.logo.d.ts.map

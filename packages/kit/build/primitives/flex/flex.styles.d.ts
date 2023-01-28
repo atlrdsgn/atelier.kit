@@ -924,3 +924,4 @@ export declare const FlexPrimitive: import("@stitches/react/types/styled-compone
     zIndex: "zIndices";
 }, {}>>;
 export type FlexVariantProps = VariantProps<typeof flexStyles>;
+//# sourceMappingURL=flex.styles.d.ts.map

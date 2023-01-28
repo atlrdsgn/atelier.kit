@@ -43,3 +43,4 @@ export declare const kitDarkColors: {
     slate11: string;
     slate12: string;
 };
+//# sourceMappingURL=dark.d.ts.map

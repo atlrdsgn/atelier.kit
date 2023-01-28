@@ -24,3 +24,4 @@ declare function createContextScope(scopeName: string, createContextScopeDeps?: 
 }, (consumerName: string, scope: Scope<ContextValueType | undefined>) => ContextValueType], CreateScope];
 export { createContext, createContextScope };
 export type { CreateScope, Scope };
+//# sourceMappingURL=createContext.d.ts.map

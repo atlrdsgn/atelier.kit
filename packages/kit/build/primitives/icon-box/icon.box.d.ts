@@ -457,3 +457,4 @@ export declare const IconBox: import("@stitches/react/types/styled-component").S
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=icon.box.d.ts.map

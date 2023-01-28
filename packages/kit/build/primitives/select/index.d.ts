@@ -15,3 +15,4 @@ export { SelectScrollUpButton } from './select';
 export { SelectScrollDownButton } from './select';
 export { SelectArrow } from './select';
 export type { SelectProps } from './select';
+//# sourceMappingURL=index.d.ts.map

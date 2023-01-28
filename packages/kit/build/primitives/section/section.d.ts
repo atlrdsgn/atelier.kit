@@ -8,3 +8,4 @@ type SectionPrimitiveProps = baseComponentProps & sectionProps & SectionVariantP
 type SectionProps = SectionPrimitiveProps;
 export declare const Section: ({ children, size, responsive, fluid, hero, css, ...rest }: SectionPrimitiveProps) => JSX.Element;
 export type { SectionProps };
+//# sourceMappingURL=section.d.ts.map

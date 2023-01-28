@@ -2283,3 +2283,4 @@ export declare const StyledCheckboxLabel: import("@stitches/react/types/styled-c
 }, {}>>;
 export type CheckboxVariantProps = VariantProps<typeof cbStyles>;
 export {};
+//# sourceMappingURL=cb.styles.d.ts.map

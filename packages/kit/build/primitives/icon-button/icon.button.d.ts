@@ -40,3 +40,4 @@ declare const IconButton: React.ForwardRefExoticComponent<import("@stitches/reac
 } & React.RefAttributes<HTMLButtonElement>>;
 export { IconButton };
 export type { IButtonProps };
+//# sourceMappingURL=icon.button.d.ts.map

@@ -12,3 +12,4 @@ export { darkTheme } from './base';
  * @types
  */
 export type { Colors, FontSizes, Fonts, FontWeights, Radii, zIndices, Breakpoints, StitchesConfig, VariantProps, PropertyValue, ScaleValue, CSSProperties, CSS, StitchesTheme, } from './base';
+//# sourceMappingURL=index.d.ts.map

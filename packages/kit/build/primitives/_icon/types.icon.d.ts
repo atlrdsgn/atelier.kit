@@ -16,3 +16,4 @@ interface IconPrimitiveProps extends React.SVGAttributes<SVGElement> {
 type IconProps = IconPrimitiveProps & IconVariantProps;
 export type { IconProps };
 export type { FirstTouchProps };
+//# sourceMappingURL=types.icon.d.ts.map

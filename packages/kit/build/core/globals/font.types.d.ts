@@ -7,3 +7,4 @@ declare const fontSizes: number[];
 declare const lineHeights: number[];
 declare const letterSpacings: number[];
 export { fontFamilies, fontSizes, lineHeights, letterSpacings };
+//# sourceMappingURL=font.types.d.ts.map

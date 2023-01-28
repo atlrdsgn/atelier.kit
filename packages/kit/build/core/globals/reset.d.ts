@@ -454,3 +454,4 @@ export declare const cssReset: import("@stitches/react/types/styled-component").
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=reset.d.ts.map

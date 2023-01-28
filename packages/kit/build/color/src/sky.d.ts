@@ -32,3 +32,4 @@ export declare const skyDark: {
     sky14: string;
     sky15: string;
 };
+//# sourceMappingURL=sky.d.ts.map

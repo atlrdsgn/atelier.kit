@@ -931,3 +931,4 @@ export declare const GridPrimitive: import("@stitches/react/types/styled-compone
 }, {}>>;
 export type GridVariantProps = VariantProps<typeof gridStyles>;
 export {};
+//# sourceMappingURL=grid.styles.d.ts.map

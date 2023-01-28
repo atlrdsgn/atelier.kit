@@ -1824,3 +1824,4 @@ export declare const Label_Radio: import("@stitches/react/types/styled-component
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=group.styles.d.ts.map

@@ -36,3 +36,4 @@ export declare const Text: React.MemoExoticComponent<React.ForwardRefExoticCompo
     css?: CSS | undefined;
 } & React.RefAttributes<HTMLSpanElement>>>;
 export type { TextProps };
+//# sourceMappingURL=text.d.ts.map

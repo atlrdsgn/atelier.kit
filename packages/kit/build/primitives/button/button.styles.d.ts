@@ -2314,3 +2314,4 @@ export declare const StyledButton: import("@stitches/react/types/styled-componen
 }, {}>>;
 export type ButtonVariantProps = VariantProps<typeof baseButton>;
 export {};
+//# sourceMappingURL=button.styles.d.ts.map

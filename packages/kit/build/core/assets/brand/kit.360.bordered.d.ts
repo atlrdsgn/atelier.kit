@@ -25,3 +25,4 @@ import type { VectorProps } from '../types.svg';
  */
 declare const KitBorderedLogo: React.FC<VectorProps>;
 export { KitBorderedLogo };
+//# sourceMappingURL=kit.360.bordered.d.ts.map

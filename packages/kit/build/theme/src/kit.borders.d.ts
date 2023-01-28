@@ -15,3 +15,4 @@ export declare const kitBorderWidths: {
         12: string;
     };
 };
+//# sourceMappingURL=kit.borders.d.ts.map

@@ -6,3 +6,4 @@ import { VectorProps } from '../types.svg';
  * copyright © 2022 Atelier® Design. All rights reserved.
  */
 export declare const ArrowDownIcon: React.ForwardRefExoticComponent<VectorProps & React.RefAttributes<SVGSVGElement>>;
+//# sourceMappingURL=arrow.down.icon.d.ts.map

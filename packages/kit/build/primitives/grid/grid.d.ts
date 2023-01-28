@@ -38,3 +38,4 @@ export declare const Grid: React.ForwardRefExoticComponent<baseComponentProps & 
     light: string;
 }> & React.RefAttributes<HTMLDivElement>>;
 export type { GridProps };
+//# sourceMappingURL=grid.d.ts.map

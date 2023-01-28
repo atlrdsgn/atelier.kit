@@ -3197,3 +3197,4 @@ export declare const ToastClose: import("@stitches/react/types/styled-component"
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=toast.styles.d.ts.map

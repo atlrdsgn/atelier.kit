@@ -32,3 +32,4 @@ declare const LineComponent: React.ForwardRefExoticComponent<React.HTMLAttribute
 } & React.RefAttributes<HTMLDivElement>>;
 export { LineComponent };
 export type { LineProps };
+//# sourceMappingURL=line.d.ts.map

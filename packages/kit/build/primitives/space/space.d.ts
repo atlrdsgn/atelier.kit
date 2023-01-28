@@ -10,3 +10,4 @@ type SpacePrimitiveProps = baseComponentProps & spaceProps & SpaceVariantProps &
 type SpaceProps = SpacePrimitiveProps;
 export declare const Space: ({ children, className, size, devFlag, css, ...rest }: SpacePrimitiveProps) => JSX.Element;
 export type { SpaceProps };
+//# sourceMappingURL=space.d.ts.map

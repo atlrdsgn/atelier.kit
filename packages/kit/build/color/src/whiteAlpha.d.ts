@@ -12,3 +12,4 @@ export declare const whiteA: {
     whiteA11: string;
     whiteA12: string;
 };
+//# sourceMappingURL=whiteAlpha.d.ts.map

@@ -910,3 +910,4 @@ export declare const OverlayStyles: import("@stitches/react/types/styled-compone
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=_overlay.d.ts.map

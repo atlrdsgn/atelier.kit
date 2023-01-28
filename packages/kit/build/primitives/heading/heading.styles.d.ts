@@ -923,3 +923,4 @@ export declare const HeadingContent: import("@stitches/react/types/styled-compon
 }, {}>>;
 export type HeadingVariantProps = VariantProps<typeof headingStyles>;
 export {};
+//# sourceMappingURL=heading.styles.d.ts.map

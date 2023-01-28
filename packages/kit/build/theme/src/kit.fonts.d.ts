@@ -7,3 +7,4 @@ export declare const kitFonts: {
         roboto: string;
     };
 };
+//# sourceMappingURL=kit.fonts.d.ts.map

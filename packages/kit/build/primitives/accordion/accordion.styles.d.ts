@@ -4611,3 +4611,4 @@ export type AccordionRootVariantProps = VariantProps<typeof styledAccordion>;
 export type AccordionItemVariantProps = VariantProps<typeof styledItem>;
 export type AccordionHeaderVariantProps = VariantProps<typeof styledHeader>;
 export {};
+//# sourceMappingURL=accordion.styles.d.ts.map

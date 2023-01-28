@@ -13,3 +13,4 @@ export { MenuBarSeparator } from './menu.bar';
 export { MenuBarRightSlot } from './menu.bar';
 export { MenuBarCheckboxItem } from './menu.bar';
 export { MenuBarRadioItem } from './menu.bar';
+//# sourceMappingURL=index.d.ts.map

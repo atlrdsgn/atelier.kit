@@ -926,3 +926,4 @@ export declare const CanvasPrimitive: import("@stitches/react/types/styled-compo
 }, {}>>;
 export type CanvasVariantProps = VariantProps<typeof CanvasStyles>;
 export {};
+//# sourceMappingURL=canvas.styles.d.ts.map

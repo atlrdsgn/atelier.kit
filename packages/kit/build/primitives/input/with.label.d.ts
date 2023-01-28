@@ -31,3 +31,4 @@ export declare const InputWithLabel: React.ForwardRefExoticComponent<import("@st
     css?: CSS | undefined;
 } & React.RefAttributes<HTMLInputElement>>;
 export {};
+//# sourceMappingURL=with.label.d.ts.map

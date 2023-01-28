@@ -32,3 +32,4 @@ export declare const heliosDark: {
     helios14: string;
     helios15: string;
 };
+//# sourceMappingURL=helios.d.ts.map

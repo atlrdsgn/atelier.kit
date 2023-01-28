@@ -921,3 +921,4 @@ export declare const BadgePrimitive: import("@stitches/react/types/styled-compon
     zIndex: "zIndices";
 }, {}>>;
 export {};
+//# sourceMappingURL=badge.styles.d.ts.map

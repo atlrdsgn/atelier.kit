@@ -39,3 +39,4 @@ declare const Root: Primitives;
 export { dispatchDiscreteCustomEvent, Primitive, Root, };
 export { composeEventHandlers };
 export type { ComponentPropsWithoutRef, PrimitivePropsWithRef, PropsWithHTMLElement };
+//# sourceMappingURL=primitive.d.ts.map

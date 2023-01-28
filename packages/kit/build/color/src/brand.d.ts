@@ -11,3 +11,4 @@ export declare const brand: {
     limey: string;
     purple: string;
 };
+//# sourceMappingURL=brand.d.ts.map

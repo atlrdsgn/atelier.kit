@@ -26,3 +26,4 @@ export declare const burnDark: {
     burn11: string;
     burn12: string;
 };
+//# sourceMappingURL=burn.d.ts.map

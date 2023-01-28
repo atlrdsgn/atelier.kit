@@ -33,3 +33,4 @@ interface buttonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children?: React.ReactNode;
 }
 export type { buttonProps };
+//# sourceMappingURL=button.types.d.ts.map

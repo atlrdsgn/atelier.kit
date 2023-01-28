@@ -12,3 +12,4 @@ export declare const heliotrope: {
     heliotrope11: string;
     heliotrope12: string;
 };
+//# sourceMappingURL=heliotrope.d.ts.map

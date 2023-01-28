@@ -2284,3 +2284,4 @@ export declare const StyledSACorner: import("@stitches/react/types/styled-compon
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=sa.styles.d.ts.map

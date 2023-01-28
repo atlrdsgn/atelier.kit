@@ -5983,3 +5983,4 @@ export declare const KitMedia: {
 };
 export declare const KitPrefix: string;
 export { darkTheme };
+//# sourceMappingURL=base.d.ts.map

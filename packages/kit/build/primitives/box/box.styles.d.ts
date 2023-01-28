@@ -454,3 +454,4 @@ export declare const BoxPrimitive: import("@stitches/react/types/styled-componen
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=box.styles.d.ts.map

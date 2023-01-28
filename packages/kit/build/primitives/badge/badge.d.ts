@@ -35,3 +35,4 @@ type BadgeProps = BadgePrimitiveProps;
  */
 export declare const Badge: React.FC<BadgePrimitiveProps>;
 export type { BadgeProps };
+//# sourceMappingURL=badge.d.ts.map

@@ -40,3 +40,4 @@ export declare const slateA: {
     slateA11: string;
     slateA12: string;
 };
+//# sourceMappingURL=slate.d.ts.map

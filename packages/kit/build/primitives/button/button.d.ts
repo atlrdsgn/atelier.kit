@@ -6,3 +6,4 @@ type ButtonPrimitiveProps = React.HTMLAttributes<HTMLButtonElement> & baseCompon
 type ButtonProps = ButtonPrimitiveProps;
 export declare const Button: ({ children, type, color, as, href, onClick, target, rel, size, primary, secondary, neon, rainbow, ghost, css, ...rest }: ButtonProps) => JSX.Element;
 export type { ButtonProps };
+//# sourceMappingURL=button.d.ts.map

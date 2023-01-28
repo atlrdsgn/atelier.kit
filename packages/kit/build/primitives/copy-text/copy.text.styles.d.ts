@@ -2306,3 +2306,4 @@ export declare const StyledCopyTrigger: import("@stitches/react/types/styled-com
 export type CopyTriggerVariantProps = VariantProps<typeof copyTriggerStyles>;
 export type CopyFieldVariantProps = VariantProps<typeof copyFieldStyles>;
 export {};
+//# sourceMappingURL=copy.text.styles.d.ts.map

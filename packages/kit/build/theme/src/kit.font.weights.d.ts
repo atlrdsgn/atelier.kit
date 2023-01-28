@@ -11,3 +11,4 @@ export declare const kitFontWeights: {
         black: number;
     };
 };
+//# sourceMappingURL=kit.font.weights.d.ts.map

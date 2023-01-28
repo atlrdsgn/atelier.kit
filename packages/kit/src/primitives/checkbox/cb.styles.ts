@@ -33,9 +33,6 @@ const cbStyles = styled(CheckboxPrimitive.Root, {
   '&[data-state="checked"]': {
     backgroundColor: KitColors.heliotrope5,
   },
-
-  variants: {},
-  defaultVariants: {},
 })
 
 const indicatorStyles = styled(CheckboxPrimitive.Indicator, {

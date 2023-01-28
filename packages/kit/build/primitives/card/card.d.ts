@@ -465,3 +465,4 @@ export declare const CardImage: import("@stitches/react/types/styled-component")
     zIndex: "zIndices";
 }, {}>>;
 export type { CardProps };
+//# sourceMappingURL=card.d.ts.map

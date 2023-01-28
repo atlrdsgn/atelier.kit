@@ -4,7 +4,6 @@ import Head from 'next/head'
 import {
   AccordionDemo,
   ButtonDemo,
-  CheckboxDemo,
   ContainerDemo,
   CopyTextFieldDemo,
   GridDemo,
@@ -47,7 +46,7 @@ function Components() {
       <SectionGap />
       <RadioGroupDemo />
       <SectionGap />
-      <CheckboxDemo />
+
       <SectionGap />
       <TabsDemo />
       <SectionGap />

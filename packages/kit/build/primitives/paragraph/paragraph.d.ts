@@ -8,3 +8,4 @@ type ParagraphPrimitiveProps = baseComponentProps & paragraphProps & ParagraphVa
 type ParagraphProps = ParagraphPrimitiveProps;
 export declare const Paragraph: ({ children, size, color, align, weight, css, ...rest }: ParagraphProps) => JSX.Element;
 export type { ParagraphProps };
+//# sourceMappingURL=paragraph.d.ts.map

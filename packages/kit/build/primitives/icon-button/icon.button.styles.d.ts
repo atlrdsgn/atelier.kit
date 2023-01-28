@@ -923,3 +923,4 @@ export declare const IconButtonComponent: import("@stitches/react/types/styled-c
 }, {}>>;
 export type IconButtonVariantProps = VariantProps<typeof icxnButtonStyles>;
 export {};
+//# sourceMappingURL=icon.button.styles.d.ts.map

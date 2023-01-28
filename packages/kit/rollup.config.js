@@ -22,11 +22,8 @@ export default [{
         'react',
         'react-dom',
         'react/jsx-runtime',
-
         '@stitches/react',
-
         'copy-to-clipboard',
-
         /**
          *
          * @radix-ui..

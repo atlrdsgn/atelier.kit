@@ -10,3 +10,4 @@ type ContainerPrimitiveProps = baseComponentProps & containerProps & ContainerVa
 type ContainerProps = ContainerPrimitiveProps;
 export declare const Container: ({ children, optimal, align, size, dev, css, ...rest }: ContainerPrimitiveProps) => JSX.Element;
 export type { ContainerProps };
+//# sourceMappingURL=container.d.ts.map

@@ -456,3 +456,4 @@ export declare const Link: import("@stitches/react/types/styled-component").Styl
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=link.d.ts.map

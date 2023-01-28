@@ -14,3 +14,4 @@ export declare const KitFontProvider: () => JSX.Element;
  * )
  *
  */
+//# sourceMappingURL=kit.head.d.ts.map

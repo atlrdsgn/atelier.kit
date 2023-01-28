@@ -26,3 +26,4 @@ export declare const limeDark: {
     lime11: string;
     lime12: string;
 };
+//# sourceMappingURL=lime.d.ts.map

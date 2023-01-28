@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import {baseComponentProps} from '../@shared/types'
-import {applyDisplayName} from '../@shared/utils'
+// import {applyDisplayName} from '../@shared/utils'
 import type {CanvasVariantProps} from './canvas.styles'
 import {CanvasPrimitive} from './canvas.styles'
 
@@ -33,8 +33,17 @@ const CanvasComponent = ({
   </CanvasPrimitive>
 )
 
-export const Canvas = CanvasComponent
-
-applyDisplayName(Canvas, 'Canvas')
+// export const Canvas = CanvasComponent
 
 export type {CanvasProps}
+
+CanvasComponent.displayName = 'Canvas'
+
+CanvasComponent.defaultProps = {
+  blurred: false,
+}
+
+/**
+ * @extends HTMLAttributes<HTMLDivElement>
+ */
+export const Canvas = CanvasComponent as typeof CanvasComponent

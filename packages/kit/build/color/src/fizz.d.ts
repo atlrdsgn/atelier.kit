@@ -26,3 +26,4 @@ export declare const fizzDark: {
     fizz11: string;
     fizz12: string;
 };
+//# sourceMappingURL=fizz.d.ts.map

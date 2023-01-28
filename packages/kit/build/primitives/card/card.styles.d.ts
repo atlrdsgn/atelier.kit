@@ -940,3 +940,4 @@ declare const StyledImageHolder: import("@stitches/react/types/styled-component"
 export { StyledCard };
 export { StyledImageHolder };
 export type CardVariantProps = VariantProps<typeof StyledCard>;
+//# sourceMappingURL=card.styles.d.ts.map

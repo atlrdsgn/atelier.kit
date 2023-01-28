@@ -12,3 +12,4 @@ type PassLinkPrimitiveProps = baseComponentProps & passLinkProps & PassLinkVaria
 type PassLinkProps = PassLinkPrimitiveProps;
 export declare const PassLink: React.MemoExoticComponent<({ children, href, as, color, mono, size, underline, css, ...rest }: PassLinkPrimitiveProps) => JSX.Element>;
 export type { PassLinkProps };
+//# sourceMappingURL=pass-link.d.ts.map

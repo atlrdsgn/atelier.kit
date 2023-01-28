@@ -6,3 +6,4 @@ declare function useSize(element: HTMLElement | null): {
     height: number;
 } | undefined;
 export { useSize };
+//# sourceMappingURL=useSize.d.ts.map

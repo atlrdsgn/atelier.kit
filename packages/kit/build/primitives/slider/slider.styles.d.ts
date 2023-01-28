@@ -1824,3 +1824,4 @@ export declare const StyledSliderThumb: import("@stitches/react/types/styled-com
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=slider.styles.d.ts.map

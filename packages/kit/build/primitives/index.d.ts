@@ -5,7 +5,7 @@ export { Box } from './box';
 export { Button, TestButton } from './button';
 export { Canvas } from './canvas';
 export { Card, CardImage } from './card';
-export { CheckboxFlex, Checkbox, CheckboxLabel } from './checkbox';
+export { Checkbox } from './checkbox';
 export { Container } from './container';
 export { CopyField, CopyText, CopyTrigger } from './copy-text';
 export { Flex } from './flex';
@@ -62,3 +62,4 @@ export type { ComponentPropsWithoutRef, PrimitivePropsWithRef, PropsWithHTMLElem
  *
  *
  *********************************************************/
+//# sourceMappingURL=index.d.ts.map

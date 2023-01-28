@@ -109,3 +109,4 @@ export declare const kitDarkColors: {
     moon11: string;
     moon12: string;
 };
+//# sourceMappingURL=dark.d.ts.map

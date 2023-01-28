@@ -206,3 +206,4 @@ export declare const kitColors: {
     gold11: string;
     gold12: string;
 };
+//# sourceMappingURL=base.d.ts.map

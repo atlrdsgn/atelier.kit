@@ -34,3 +34,4 @@ export declare const Heading: React.MemoExoticComponent<React.ForwardRefExoticCo
     css?: CSS | undefined;
 } & React.RefAttributes<HTMLParagraphElement>>>;
 export type { HeadingProps };
+//# sourceMappingURL=heading.d.ts.map

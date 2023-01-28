@@ -1368,3 +1368,4 @@ export declare const ToggleItem: import("@stitches/react/types/styled-component"
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=t.group.styles.d.ts.map

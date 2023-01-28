@@ -927,3 +927,4 @@ export declare const LinkPrimitive: import("@stitches/react/types/styled-compone
 }, {}>>;
 export type PassLinkVariantProps = VariantProps<typeof styledLink>;
 export {};
+//# sourceMappingURL=pass-link.styles.d.ts.map

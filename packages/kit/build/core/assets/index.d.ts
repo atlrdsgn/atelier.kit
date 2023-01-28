@@ -12,3 +12,4 @@ export { CrossIcon } from './icons/cross.icon';
 export { FrameIcon } from './icons/frame.icon';
 export { ReactIcon } from './icons/react.icon';
 export { ScaleIcon } from './icons/scale.icon';
+//# sourceMappingURL=index.d.ts.map

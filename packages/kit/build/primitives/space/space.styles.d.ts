@@ -919,3 +919,4 @@ export declare const SpacePrimitive: import("@stitches/react/types/styled-compon
 }, {}>>;
 export type SpaceVariantProps = VariantProps<typeof SpaceStyles>;
 export {};
+//# sourceMappingURL=space.styles.d.ts.map

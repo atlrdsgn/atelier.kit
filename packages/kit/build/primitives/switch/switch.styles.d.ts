@@ -1371,3 +1371,4 @@ export declare const StyledSwitchThumb: import("@stitches/react/types/styled-com
 }, {}>>;
 export type SwitchVariantProps = VariantProps<typeof StyledSwitch>;
 export {};
+//# sourceMappingURL=switch.styles.d.ts.map

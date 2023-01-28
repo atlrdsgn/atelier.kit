@@ -923,3 +923,4 @@ export declare const ContainerPrimitive: import("@stitches/react/types/styled-co
 }, {}>>;
 export type ContainerVariantProps = VariantProps<typeof container>;
 export {};
+//# sourceMappingURL=container.styles.d.ts.map

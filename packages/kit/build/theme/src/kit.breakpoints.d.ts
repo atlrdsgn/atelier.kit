@@ -7,3 +7,4 @@ export declare const kitBreakpoints: {
     full: string;
     initial: string;
 };
+//# sourceMappingURL=kit.breakpoints.d.ts.map

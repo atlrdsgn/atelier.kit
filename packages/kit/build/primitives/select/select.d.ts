@@ -4177,3 +4177,4 @@ export type SelectItemProps = SItemProps;
 export type SelectValueProps = SValueProps;
 export type SelectIconProps = SIconProps;
 export {};
+//# sourceMappingURL=select.d.ts.map

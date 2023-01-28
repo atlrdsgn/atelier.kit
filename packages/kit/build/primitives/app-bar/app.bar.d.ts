@@ -28,3 +28,4 @@ export declare const Appbar: ({ children, color, glass, size, border, fixed, sti
 export declare const AppbarSpot: ({ children, alignment, css, ...rest }: AppbarSpotProps) => JSX.Element;
 export type { AppbarProps };
 export type { AppbarSpotProps };
+//# sourceMappingURL=app.bar.d.ts.map

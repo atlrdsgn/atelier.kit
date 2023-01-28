@@ -3709,3 +3709,4 @@ export type TabsListVariantProps = VariantProps<typeof styledList>;
 export type TabsTriggerVariantProps = VariantProps<typeof styledTrigger>;
 export type TabsContentVariantProps = VariantProps<typeof styledContent>;
 export {};
+//# sourceMappingURL=tabs.styles.d.ts.map

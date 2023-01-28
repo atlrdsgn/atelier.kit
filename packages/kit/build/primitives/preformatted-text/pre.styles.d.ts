@@ -454,3 +454,4 @@ export declare const PreText: import("@stitches/react/types/styled-component").S
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=pre.styles.d.ts.map

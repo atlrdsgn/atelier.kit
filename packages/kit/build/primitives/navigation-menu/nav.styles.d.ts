@@ -6404,3 +6404,4 @@ export declare const StyledViewport: import("@stitches/react/types/styled-compon
 /**
  * @IcxnStyles
  */
+//# sourceMappingURL=nav.styles.d.ts.map

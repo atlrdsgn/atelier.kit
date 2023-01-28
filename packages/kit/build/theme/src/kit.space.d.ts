@@ -23,3 +23,4 @@ export declare const kitSpace: {
         20: string;
     };
 };
+//# sourceMappingURL=kit.space.d.ts.map

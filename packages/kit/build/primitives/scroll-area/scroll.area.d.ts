@@ -45,3 +45,4 @@ export declare const ScrollAreaViewport: React.ForwardRefExoticComponent<Pick<SA
 export declare const ScrollAreaScrollbar: React.ForwardRefExoticComponent<Pick<SAScrollbarProps, "key" | "css" | "orientation" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement> | "forceMount"> & React.RefAttributes<HTMLDivElement>>;
 export declare const ScrollAreaCorner: React.ForwardRefExoticComponent<Pick<SACornerProps, "key" | "css" | "asChild" | keyof React.HTMLAttributes<HTMLDivElement>> & React.RefAttributes<HTMLDivElement>>;
 export type { SARootProps, SAViewportProps, SAScrollbarProps, SACornerProps };
+//# sourceMappingURL=scroll.area.d.ts.map

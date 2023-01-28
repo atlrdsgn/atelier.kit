@@ -9,3 +9,4 @@ export { useLayoutEffect } from './useLayoutEffect';
 export { usePrevious } from './usePrevious';
 export { useSize } from './useSize';
 export type { Measurable } from './observeElementRect';
+//# sourceMappingURL=index.d.ts.map

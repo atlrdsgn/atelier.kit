@@ -16,3 +16,4 @@ export declare const kitFontSizes: {
         '9xl': string;
     };
 };
+//# sourceMappingURL=kit.font.sizes.d.ts.map

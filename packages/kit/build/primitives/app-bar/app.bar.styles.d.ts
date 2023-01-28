@@ -2305,3 +2305,4 @@ export declare const AppbarSpotComponent: import("@stitches/react/types/styled-c
 export type AppbarVariantProps = VariantProps<typeof appbar>;
 export type AppbarSpotVariantProps = VariantProps<typeof appbarSpot>;
 export {};
+//# sourceMappingURL=app.bar.styles.d.ts.map

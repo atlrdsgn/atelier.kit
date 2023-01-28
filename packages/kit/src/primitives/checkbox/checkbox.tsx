@@ -1,5 +1,4 @@
 import * as React from 'react'
-import type {CSS} from '../../theme'
 
 import {CheckIcon} from '@radix-ui/react-icons'
 
@@ -8,13 +7,8 @@ import {
   StyledCheckboxIndicator,
   StyledCheckboxLabel,
   StyledCheckboxFlex,
-  CheckboxVariantProps,
 } from './cb.styles'
-
-interface checkboxProps {
-  children?: React.ReactNode
-  css?: CSS
-}
+import type {baseComponentProps} from '../@shared/types'
 
 /**
  *
@@ -23,25 +17,24 @@ interface checkboxProps {
  */
 type CheckboxRootPrimitiveProps = React.HTMLAttributes<HTMLDivElement> &
   React.ComponentProps<typeof StyledCheckboxFlex>
-type CheckboxRootProps = checkboxProps & CheckboxRootPrimitiveProps
+type CheckboxRootProps = baseComponentProps & CheckboxRootPrimitiveProps
 
 const CBFlex = React.forwardRef<HTMLDivElement, CheckboxRootProps>((props, ref) => {
   const {children, css, ...restProps} = props
   return (
-    <StyledCheckboxFlex ref={ref} {...restProps}>
+    <StyledCheckboxFlex ref={ref} {...restProps} css={{...props.css}}>
       {children}
     </StyledCheckboxFlex>
   )
 })
 
-type CheckboxPrimitiveProps = CheckboxVariantProps &
-  React.HTMLAttributes<HTMLButtonElement> &
-  React.ComponentProps<typeof StyledCheckbox>
-type CheckboxProps = checkboxProps & CheckboxPrimitiveProps
+type CheckboxPrimitiveProps = React.HTMLAttributes<HTMLButtonElement> &
+  React.ComponentProps<typeof StyledCheckbox> & {type?: string}
+type CheckboxProps = baseComponentProps & CheckboxPrimitiveProps
 
-const CB = React.forwardRef<HTMLButtonElement, CheckboxProps>(({...props}, ref) => {
+const CBox = React.forwardRef<HTMLButtonElement, CheckboxProps>(({...props}, ref) => {
   return (
-    <StyledCheckbox {...props} ref={ref}>
+    <StyledCheckbox {...props} ref={ref} css={{...props.css}}>
       <StyledCheckboxIndicator>
         <CheckIcon />
       </StyledCheckboxIndicator>
@@ -51,7 +44,7 @@ const CB = React.forwardRef<HTMLButtonElement, CheckboxProps>(({...props}, ref) 
 
 type CheckboxLabelPrimitiveProps = React.HTMLAttributes<HTMLLabelElement> &
   React.ComponentProps<typeof StyledCheckboxLabel>
-type CheckboxLabelProps = checkboxProps & CheckboxLabelPrimitiveProps
+type CheckboxLabelProps = baseComponentProps & CheckboxLabelPrimitiveProps
 
 const CBLabel = React.forwardRef<HTMLLabelElement, CheckboxLabelProps>(({...props}, ref) => {
   return (
@@ -61,14 +54,15 @@ const CBLabel = React.forwardRef<HTMLLabelElement, CheckboxLabelProps>(({...prop
   )
 })
 
-export const Checkbox = CB
-export const CheckboxFlex = CBFlex
-export const CheckboxLabel = CBLabel
-
-CheckboxFlex.displayName = 'CheckboxFlex'
-Checkbox.displayName = 'Checkbox'
-CheckboxLabel.displayName = 'CheckboxLabel'
-
 export type {CheckboxProps, CheckboxLabelProps}
 
 // Path: src/primitives/checkbox/cb.styles.ts
+
+CBox.displayName = 'Checkbox'
+CBLabel.displayName = 'Checkbox.Label'
+CBFlex.displayName = 'Checkbox.Flex'
+
+export const Checkbox = CBox as typeof CBox & {
+  Flex: typeof CBFlex
+  Label: typeof CBLabel
+}

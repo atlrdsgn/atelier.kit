@@ -32,3 +32,4 @@ export declare const mauveDark: {
     mauve14: string;
     mauve15: string;
 };
+//# sourceMappingURL=mauve.d.ts.map

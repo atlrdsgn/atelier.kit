@@ -12,3 +12,4 @@ export declare const radical: {
     radical11: string;
     radical12: string;
 };
+//# sourceMappingURL=radical.d.ts.map

@@ -26,3 +26,4 @@ export declare const moonDark: {
     moon11: string;
     moon12: string;
 };
+//# sourceMappingURL=moon.d.ts.map

@@ -925,3 +925,4 @@ export declare const TextPrimitive: import("@stitches/react/types/styled-compone
 }, {}>>;
 export type TextVariantProps = VariantProps<typeof textStyles>;
 export {};
+//# sourceMappingURL=text.styles.d.ts.map

@@ -1835,3 +1835,4 @@ export declare const InputPrimitive: import("@stitches/react/types/styled-compon
 }, {}>>;
 export type InputVariantProps = VariantProps<typeof inputStyles>;
 export {};
+//# sourceMappingURL=input.styles.d.ts.map

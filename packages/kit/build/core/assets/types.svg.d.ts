@@ -6,3 +6,4 @@ interface VectorProps extends React.SVGAttributes<SVGElement> {
     height?: string;
 }
 export type { VectorProps };
+//# sourceMappingURL=types.svg.d.ts.map

@@ -14,3 +14,4 @@ type InputPrimitiveProps = baseComponentProps & InputVariantProps & inputProps &
 type InputProps = InputPrimitiveProps;
 export declare const Input: ({ label, placeholder, cursor, size, style, value, type, className, css, ...rest }: InputProps) => JSX.Element;
 export type { InputProps };
+//# sourceMappingURL=input.d.ts.map

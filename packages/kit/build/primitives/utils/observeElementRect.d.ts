@@ -20,3 +20,4 @@ export type { Measurable };
  */
 declare function useRect(measurable: Measurable | null): ClientRect | undefined;
 export { useRect };
+//# sourceMappingURL=observeElementRect.d.ts.map

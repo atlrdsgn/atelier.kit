@@ -22,3 +22,4 @@ export declare const grayDark: {
     gray9: string;
     gray10: string;
 };
+//# sourceMappingURL=gray.d.ts.map

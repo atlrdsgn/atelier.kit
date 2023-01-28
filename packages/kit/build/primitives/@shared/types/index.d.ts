@@ -25,3 +25,4 @@ export interface baseComponentProps {
     id?: string;
     css?: CSS;
 }
+//# sourceMappingURL=index.d.ts.map

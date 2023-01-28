@@ -9,3 +9,4 @@ type BoxPrimitiveProps = baseComponentProps & bProps & React.HTMLAttributes<HTML
 type BoxProps = BoxPrimitiveProps;
 export declare const Box: ({ children, css, ...rest }: BoxProps) => JSX.Element;
 export type { BoxProps };
+//# sourceMappingURL=box.d.ts.map

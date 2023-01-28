@@ -12,3 +12,4 @@ export declare const torch: {
     torch11: string;
     torch12: string;
 };
+//# sourceMappingURL=torch.d.ts.map

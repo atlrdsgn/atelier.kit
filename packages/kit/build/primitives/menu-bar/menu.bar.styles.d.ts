@@ -9651,3 +9651,4 @@ export type MenuBarContentVariantProps = VariantProps<typeof menubarContent>;
 export type MenuBarItemVariantProps = VariantProps<typeof menubarItem>;
 export type MenuBarSeparatorVariantProps = VariantProps<typeof menubarSeparator>;
 export {};
+//# sourceMappingURL=menu.bar.styles.d.ts.map

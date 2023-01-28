@@ -2284,3 +2284,4 @@ export declare const CloseButton: import("@stitches/react/types/styled-component
     zIndex: "zIndices";
 }, {}>>;
 export type SlideMenuVariantProps = VariantProps<typeof ContentStyles>;
+//# sourceMappingURL=slide.menu.styles.d.ts.map

@@ -6388,3 +6388,4 @@ export declare const StyledSelectGroup: import("@stitches/react/types/styled-com
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
+//# sourceMappingURL=select.styles.d.ts.map

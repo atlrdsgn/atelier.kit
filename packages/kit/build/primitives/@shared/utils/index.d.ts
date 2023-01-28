@@ -10,3 +10,4 @@ export type Exclude<T, U> = T extends U ? never : T;
 export type Omit<T, U> = Pick<T, Exclude<keyof T, keyof U>>;
 export type ReplaceProps<Inner extends React.ElementType, P> = Omit<React.ComponentPropsWithRef<Inner>, P> & P;
 export { applyDisplayName } from './apply-display-name';
+//# sourceMappingURL=index.d.ts.map

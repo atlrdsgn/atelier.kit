@@ -1,26 +1,33 @@
 import * as React from 'react'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import {
+  StyledNavMenuBarBox,
   StyledNavMenuRoot,
   StyledNavMenuBar,
   StyledNavMenuTrigger,
   StyledNavMenuContent,
+  StyledNavIcon,
   //
   StyledNavLink,
   //
   StyledNavMenuViewport,
   StyledViewport,
+  StyledNavMenuInner,
 } from './nav.styles'
-import type {CSS} from '../../theme'
+import type {NavMenuRootVariantProps, NavMenuBarBoxVariantProps} from './nav.styles'
+import type {baseComponentProps} from '../@shared/types'
+import {ArrowDownIcon} from '../_icon/src/ArrowDown.Icon'
 
 /* ---------------------------- Nav Menu Root ---------------------------- */
-type NavMenuPrimitiveProps = React.ComponentProps<typeof NavigationMenu.Root>
-type NavMenuProps = NavMenuPrimitiveProps & {css?: CSS}
+type NavMenuPrimitiveProps = baseComponentProps &
+  NavMenuRootVariantProps &
+  React.ComponentProps<typeof NavigationMenu.Root>
+type NavMenuProps = NavMenuPrimitiveProps
 
 const NavMenuRoot = React.forwardRef<React.ElementRef<typeof StyledNavMenuRoot>, NavMenuProps>(
   (props, forwardedRef) => {
     return (
-      <StyledNavMenuRoot {...props} ref={forwardedRef}>
+      <StyledNavMenuRoot {...props} ref={forwardedRef} inspect={props.inspect}>
         {props.children}
       </StyledNavMenuRoot>
     )
@@ -29,8 +36,9 @@ const NavMenuRoot = React.forwardRef<React.ElementRef<typeof StyledNavMenuRoot>,
 /* -------- END Root */
 
 /* ---------------------------- Nav Menu Bar ---------------------------- */
-type NavMenuBarPrimitiveProps = React.ComponentProps<typeof NavigationMenu.List>
-type NavMenuBarProps = NavMenuBarPrimitiveProps & {css?: CSS}
+type NavMenuBarPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof NavigationMenu.List>
+type NavMenuBarProps = NavMenuBarPrimitiveProps
 
 const NavBar_List = React.forwardRef<React.ElementRef<typeof StyledNavMenuBar>, NavMenuBarProps>(
   (props, forwardedRef) => {
@@ -43,41 +51,72 @@ const NavBar_List = React.forwardRef<React.ElementRef<typeof StyledNavMenuBar>, 
 )
 /* -------- END Bar */
 
+/* ---------------------------- Nav Menu Item Portal ---------------------------- */
+type NavMenuItemPrimitiveProps = React.ComponentPropsWithRef<typeof NavigationMenu.Item>
+type NavMenuItemProps = NavMenuItemPrimitiveProps
+const NavMenuItemComponent = React.forwardRef<
+  React.ElementRef<typeof NavigationMenu.Item>,
+  NavMenuItemProps
+>((props, forwardedRef) => {
+  return (
+    <NavigationMenu.Item {...props} ref={forwardedRef}>
+      {props.children}
+    </NavigationMenu.Item>
+  )
+})
+/* -------- END Root */
+
 /* ---------------------------- Nav Menu Trigger ---------------------------- */
-type NavMenuTriggerPrimitiveProps = React.ComponentProps<typeof NavigationMenu.Trigger>
-type NavMenuTriggerProps = NavMenuTriggerPrimitiveProps & {css?: CSS}
+type NavMenuTriggerPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof NavigationMenu.Trigger>
+type NavMenuTriggerProps = NavMenuTriggerPrimitiveProps
 
 const NavTrigger = React.forwardRef<
   React.ElementRef<typeof StyledNavMenuTrigger>,
   NavMenuTriggerProps
 >((props, forwardedRef) => {
   return (
-    <StyledNavMenuTrigger {...props} ref={forwardedRef}>
+    <StyledNavMenuTrigger
+      {...props}
+      ref={forwardedRef}
+      css={{
+        ...props.css,
+      }}>
       {props.children}
+      <StyledNavIcon>
+        <ArrowDownIcon />
+      </StyledNavIcon>
     </StyledNavMenuTrigger>
   )
 })
 /* -------- END Trigger */
 
 /* ---------------------------- Nav Menu Content ---------------------------- */
-type NavMenuContentPrimitiveProps = React.ComponentProps<typeof NavigationMenu.Content>
-type NavMenuContentProps = NavMenuContentPrimitiveProps & {css?: CSS}
+type NavMenuContentPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof NavigationMenu.Content>
+type NavMenuContentProps = NavMenuContentPrimitiveProps
 
 const NavContent = React.forwardRef<
   React.ElementRef<typeof StyledNavMenuContent>,
   NavMenuContentProps
 >((props, forwardedRef) => {
   return (
-    <StyledNavMenuContent {...props} ref={forwardedRef}>
-      {props.children}
+    <StyledNavMenuContent
+      {...props}
+      ref={forwardedRef}
+      css={{
+        ...props.css,
+      }}>
+      <StyledNavMenuInner>{props.children}</StyledNavMenuInner>
     </StyledNavMenuContent>
   )
 })
 /* -------- END Content */
 
 /* ---------------------------- Nav Menu Link ---------------------------- */
-type NavMenuLinkPrimitiveProps = React.ComponentProps<typeof NavigationMenu.Link>
-type NavMenuLinkProps = NavMenuLinkPrimitiveProps & {css?: CSS}
+type NavMenuLinkPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof NavigationMenu.Link>
+type NavMenuLinkProps = NavMenuLinkPrimitiveProps
 
 const NavLink = React.forwardRef<React.ElementRef<typeof StyledNavLink>, NavMenuLinkProps>(
   (props, forwardedRef) => {
@@ -91,10 +130,9 @@ const NavLink = React.forwardRef<React.ElementRef<typeof StyledNavLink>, NavMenu
 /* -------- END Link */
 
 /* ---------------------------- Nav Menu Viewport ---------------------------- */
-type NavMenuViewportPrimitiveProps = React.ComponentProps<typeof NavigationMenu.Viewport>
-type NavMenuViewportProps = NavMenuViewportPrimitiveProps & {
-  css?: CSS
-}
+type NavMenuViewportPrimitiveProps = baseComponentProps &
+  React.ComponentProps<typeof NavigationMenu.Viewport>
+type NavMenuViewportProps = NavMenuViewportPrimitiveProps
 
 const NavViewport = React.forwardRef<
   React.ElementRef<typeof StyledNavMenuViewport>,
@@ -133,6 +171,8 @@ const NavViewport = React.forwardRef<
 /* ---------------------------- EXPORTS ---------------------------- */
 export const NavMenu = NavMenuRoot
 export const NavMenuBar = NavBar_List
+export const NavMenuItem = NavMenuItemComponent
+
 export const NavMenuTrigger = NavTrigger
 export const NavMenuContent = NavContent
 export const NavMenuLink = NavLink

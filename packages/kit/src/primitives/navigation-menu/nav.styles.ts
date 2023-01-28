@@ -1,5 +1,5 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
-import {keyframes, styled, KitTheme, KitColors} from '../../theme'
+import {keyframes, styled, KitTheme, KitColors, VariantProps} from '../../theme'
 
 /**
  * @keyframes
@@ -51,12 +51,32 @@ const NavigationMenuRoot = styled(NavigationMenu.Root, {
    *
    * border: '1px solid blue',
    */
+
+  // NavMenuRootVariantProps..
+  variants: {
+    dev: {
+      true: {
+        border: '1px solid blue',
+      },
+    },
+    inspect: {
+      true: {
+        border: '1px solid blue',
+      },
+    },
+  },
+  defaultVariants: {
+    dev: false,
+    inspect: false,
+  },
 })
 
-/* --------------------------------- Bar --------------------------------- */
-/**
- * @MenuBar
- */
+/* --------------------------------- Bar ---------------------------------
+ * menu bar.
+ *
+ * this is the action div element that holds the component together.
+ * ----------------------------------------------------------------------- */
+
 const NavigationMenuBarStyles = styled(NavigationMenu.List, {
   position: 'fixed',
   top: 4,
@@ -77,12 +97,17 @@ const NavigationMenuBarStyles = styled(NavigationMenu.List, {
   backdropFilter: 'blur(40px) saturate(180%)',
   WebkitBackdropFilter: 'blur(40px) saturate(180%)',
   lineHeight: '23px',
-  height: 48,
-  border: `1px solid transparent`,
+  height: 'auto',
+  border: `1px solid ${KitColors.slate4}`,
 })
 
-/* --------------------------------- Styled Content Box --------------------------------- */
-const StyledContentBox = styled('div', {
+/* --------------------------------- Bar-box ---------------------------------
+ * menu bar box.
+ *
+ * a simple flex box that allows us to position and provide
+ * proper alignment props to the items/elements within NavMenuBar.
+ * ----------------------------------------------------------------------- */
+const NavigationMenuBoxStyles = styled('div', {
   display: 'flex',
   width: '100%',
   margin: 'auto',
@@ -90,6 +115,7 @@ const StyledContentBox = styled('div', {
   color: KitColors.slate9,
   transition: 'color 0.4s ease',
 
+  // NavMenuBarBoxVariantProps..
   variants: {
     alignment: {
       start: {
@@ -111,7 +137,12 @@ const StyledContentBox = styled('div', {
   },
 })
 
-/* --------------------------------- Shared Item Styles --------------------------------- */
+/* --------------------------------------------------- @shared - ITEM STYLES ----
+ * menu bar box.
+ *
+ * these styles will be applied to all items/buttons within the menu bar.
+ * ----------------------------------------------------------------------- */
+
 /**
  *
  * @MenuItems
@@ -121,6 +152,8 @@ const StyledContentBox = styled('div', {
  */
 const itemStyles = {
   all: 'unset',
+
+  // initial..
   '*': {
     boxSizing: 'border-box',
     outline: 'none',
@@ -136,9 +169,11 @@ const itemStyles = {
     outline: 'none',
     cursor: 'none',
   },
+
+  // styles.
   alignItems: 'center',
   boxSizing: 'border-box',
-  userSelect: 'none',
+  cursor: 'auto',
 
   display: 'inline-flex',
   flexShrink: 0,
@@ -150,20 +185,20 @@ const itemStyles = {
   paddingLeft: 16,
   paddingRight: 13,
 
-  height: '38px',
+  height: 38,
   fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: 15,
-  fontWeight: 500,
+  fontSize: KitTheme.theme.fontSizes.base,
+  fontWeight: KitTheme.theme.fontWeights.medium,
 
   borderRadius: 12,
   border: '1px solid transparent',
   width: 'auto',
   color: KitColors.slate9,
 
+  // selectors.
   '&:hover': {
     color: KitColors.slate9,
     backgroundColor: KitColors.slate3,
-    cursor: 'pointer',
   },
   '&:active': {},
   '&:focus': {},
@@ -187,16 +222,21 @@ const itemStyles = {
   },
 }
 
-/* --------------------------------- Trigger --------------------------------- */
-/**
- * @NavMenuTrigger
- */
+/* --------------------------------------------------- TRIGGER STYLES -- *
+ * menu bar trigger.
+ *
+ * this is the trigger button that will open a menu.
+ *
+ * - has itemStyles applied to it. -
+ * ----------------------------------------------------------------------- */
+
 const NavigationMenuTrigger = styled(NavigationMenu.Trigger, {
   ...itemStyles,
 
   all: 'unset',
-  display: 'flex',
+  display: 'inline-flex',
   alignItems: 'center',
+  horizontalAlign: 'center',
   justifyContent: 'space-between',
   gap: 2,
 
@@ -217,10 +257,14 @@ const NavigationMenuTrigger = styled(NavigationMenu.Trigger, {
   },
 })
 
-/* --------------------------------- Menu Link --------------------------------- */
-/**
- * @MenuLink
- */
+/* --------------------------------------------------- MENU LINK STYLES -- *
+ * menu bar link.
+ *
+ * this is the link button that link to somewhere.
+ *
+ * - has itemStyles applied to it. -
+ * ----------------------------------------------------------------------- */
+
 const NavigationMenuLink = styled(NavigationMenu.Link, {
   ...itemStyles,
 
@@ -242,9 +286,9 @@ const NavigationMenuLink = styled(NavigationMenu.Link, {
     cursor: 'none',
   },
 
-  fontFamily: KitTheme.theme.fonts.system,
-  fontSize: 14,
-  fontWeight: 600,
+  fontFamily: KitTheme.theme.fonts.sans,
+  fontSize: KitTheme.theme.fontSizes.base,
+  fontWeight: KitTheme.theme.fontWeights.medium,
   transition: 'color 0.3s ease',
   textDecoration: 'none',
   lineHeight: 1,
@@ -261,6 +305,7 @@ const NavigationMenuLink = styled(NavigationMenu.Link, {
     cursor: 'pointer',
   },
 
+  // NavMenuBarLinkVariantProps..
   variants: {
     level2: {
       true: {
@@ -281,21 +326,22 @@ const NavigationMenuLink = styled(NavigationMenu.Link, {
   defaultVariants: {},
 })
 
-/* --------------------------------- Menu Content --------------------------------- */
-/**
- * @MenuContent
- */
+/* --------------------------------------------------- MENU CONTENT STYLES -- *
+ * menu content.
+ *
+ * ..escaped styles..
+ *
+ * position: 'fixed',
+ * top: 0,
+ * left: 0,
+ * right: 0,
+ * backdropFilter: 'blur(20px) saturate(180%)',
+ * WebkitBackdropFilter: 'blur(20px) saturate(180%)',
+ * ----------------------------------------------------------------------- */
 const NavigationMenuContent = styled(NavigationMenu.Content, {
   zIndex: '999999',
-  backgroundColor: 'transparent',
-  // backdropFilter: 'blur(20px) saturate(180%)',
-  /// WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-  /*
-  position: 'fixed',
-  top: '0',
-  left: 0,
-  right: 0,
-*/
+  backgroundColor: KitColors.transparent,
+
   borderRadius: 16,
   boxSizing: 'border-box',
   width: '100%',
@@ -458,20 +504,22 @@ const CalloutText = styled('p', {
  * @NavIcxn
  */
 
-/*
-const StyledIcxn = styled(Icxn, {
+const StyledNavIcon = styled('span', {
   position: 'relative',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+
   color: 'inherit',
-  top: 0.5,
+
   marginLeft: 3,
   // transition: 'transform 100ms ease',
   '[data-state=open] &': {
     transform: 'rotate(-180deg)',
     // transform: `rotateZ(180deg)`
-    transitionDuration: `200ms`
-  }
+    transitionDuration: `200ms`,
+  },
 })
-*/
 
 export const StyledNavMenuRoot = NavigationMenuRoot
 export const StyledNavMenuBar = NavigationMenuBarStyles
@@ -479,7 +527,7 @@ export const StyledNavMenuInner = NavigationMenuInner
 export const StyledNavMenuContent = NavigationMenuContent
 export const StyledNavMenuTrigger = NavigationMenuTrigger
 export const StyledNavMenuIndicator = NavigationMenuIndicator
-export const StyledNavContentBox = StyledContentBox
+export const StyledNavMenuBarBox = NavigationMenuBarStyles
 
 export const StyledNavLink = NavigationMenuLink
 
@@ -499,4 +547,8 @@ export const StyledViewport = ViewportPosition
 /**
  * @IcxnStyles
  */
-// export const NavIcxn = StyledIcxn
+export {StyledNavIcon}
+
+export type NavMenuRootVariantProps = VariantProps<typeof NavigationMenuRoot>
+export type NavMenuBarBoxVariantProps = VariantProps<typeof NavigationMenuBoxStyles>
+export type NavMenuBarLinkVariantProps = VariantProps<typeof NavigationMenuLink>

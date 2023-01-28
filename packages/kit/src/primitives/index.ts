@@ -44,6 +44,16 @@ export {
   MenuBarRightSlot,
 } from './menu-bar'
 
+export {
+  NavMenu,
+  NavMenuBar,
+  NavMenuItem,
+  NavMenuTrigger,
+  NavMenuContent,
+  NavMenuLink,
+  NavMenuViewport,
+} from './navigation-menu'
+
 export {Paragraph} from './paragraph'
 export {PassLink} from './pass-link'
 
@@ -96,12 +106,6 @@ export type {
  * export {Link} from './link'
  * export {List, ListItem} from './list'
  *
- * NavMenu,
- * NavMenuBar,
- * NavMenuTrigger,
- * NavMenuContent,
- * NavMenuLink,
- * NavMenuViewport,
  *
  *
  * export {PreText} from './preformatted-text'

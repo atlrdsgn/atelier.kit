@@ -18,6 +18,7 @@ export { Input } from './input';
 export { InputWithLabel } from './input';
 export { Line, LineComponent } from './line';
 export { MenuBar, MenuBarMenu, MenuBarLabel, MenuBarTrigger, MenuBarSub, MenuBarSubTrigger, MenuBarContent, MenuBarSubContent, MenuBarGroup, MenuBarItem, MenuBarItemIndicator, MenuBarSeparator, MenuBarCheckboxItem, MenuBarRadioItem, MenuBarRightSlot, } from './menu-bar';
+export { NavMenu, NavMenuBar, NavMenuItem, NavMenuTrigger, NavMenuContent, NavMenuLink, NavMenuViewport, } from './navigation-menu';
 export { Paragraph } from './paragraph';
 export { PassLink } from './pass-link';
 export { RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel } from './radio-group';
@@ -44,12 +45,6 @@ export type { ComponentPropsWithoutRef, PrimitivePropsWithRef, PropsWithHTMLElem
  * export {Link} from './link'
  * export {List, ListItem} from './list'
  *
- * NavMenu,
- * NavMenuBar,
- * NavMenuTrigger,
- * NavMenuContent,
- * NavMenuLink,
- * NavMenuViewport,
  *
  *
  * export {PreText} from './preformatted-text'

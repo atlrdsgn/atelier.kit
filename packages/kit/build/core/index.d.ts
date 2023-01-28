@@ -1,4 +1,4 @@
 export { KitLogo, KitTypefaceLogo } from './assets';
-export * from './globals';
-export * from './utils';
+export { cssReset, coreStyles } from './globals';
+export { getCssAndReset } from './utils';
 //# sourceMappingURL=index.d.ts.map

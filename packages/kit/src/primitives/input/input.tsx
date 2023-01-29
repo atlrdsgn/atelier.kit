@@ -25,7 +25,7 @@ const InputElement = ({
   label,
   placeholder,
   cursor = 'text',
-  size = 'md',
+  size,
   style,
 
   value,
@@ -42,6 +42,9 @@ const InputElement = ({
       type={type}
       placeholder={placeholder}
       value={value}
+      size={size}
+      style={style}
+      cursor={cursor}
       css={{
         ...css,
       }}

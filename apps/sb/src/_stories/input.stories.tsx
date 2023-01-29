@@ -43,7 +43,7 @@ export const Default = Template.bind({})
 
 Default.args = {
   placeholder: 'Placeholder',
-  size: 'md',
+  size: 'sm',
   css: styles,
 }
 

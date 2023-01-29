@@ -134,10 +134,22 @@ const inputStyles = styled('input', {
         '&:read-only': {},
       },
     },
+    /**
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     * size.
+     *
+     */
     size: {
       sm: {
         fontSize: 12,
-        borderRadius: 9,
+        borderRadius: KitTheme.theme.radii.lg,
         height: '30px',
         lineHeight: '30px',
         padding: 1,
@@ -148,7 +160,7 @@ const inputStyles = styled('input', {
       },
       md: {
         fontSize: 14,
-        borderRadius: 10,
+        borderRadius: KitTheme.theme.radii.lg,
         height: '38px',
         lineHeight: '38px',
         padding: 1,
@@ -159,7 +171,7 @@ const inputStyles = styled('input', {
       },
       lg: {
         fontSize: 16,
-        borderRadius: 11,
+        borderRadius: KitTheme.theme.radii.xl,
         height: '42px',
         lineHeight: '42px',
         padding: 1,
@@ -192,7 +204,7 @@ const inputStyles = styled('input', {
   },
   defaultVariants: {
     style: 'atelier',
-    size: 'md',
+    size: 'sm',
     cursor: 'text',
   },
 })

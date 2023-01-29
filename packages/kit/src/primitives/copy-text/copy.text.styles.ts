@@ -11,6 +11,9 @@ const TEXT_TAG = 'p'
 const FIELD_BORDER_RADIUS = 11
 const TRIGGER_BORDER_RADIUS = 7
 
+const FIELD_PADDING_LEFT = 14
+const FIELD_PADDING_RIGHT = 3.5
+
 const baseTriggerStyles = {
   all: 'unset',
   transition: 'all 250ms ease-in-out',
@@ -56,7 +59,7 @@ const copyFieldStyles = styled(FIELD_TAG, {
   boxSizing: 'border-box',
 
   // maxWidth: 380,
-  width: '100%',
+  width: 'max-content',
   height: 35,
 
   gap: 26,
@@ -69,25 +72,19 @@ const copyFieldStyles = styled(FIELD_TAG, {
   margin: 'auto',
   marginTop: 0,
   marginBottom: 0,
-  paddingLeft: 14,
-  paddingRight: 3.5,
   paddingTop: 0,
   paddingBottom: 0,
+  paddingLeft: FIELD_PADDING_LEFT,
+  paddingRight: FIELD_PADDING_RIGHT,
 
   color: KitColors.slate12,
   backgroundColor: KitColors.slateA4,
   border: `2px solid ${KitColors.atlrPurple00}`,
   borderRadius: FIELD_BORDER_RADIUS,
 
+  // CopyFieldVariantProps..
   variants: {
     primary: {
-      true: {
-        color: KitColors.slate12,
-        backgroundColor: KitColors.slateA4,
-        border: `2px solid ${KitColors.atlrPurple00}`,
-      },
-    },
-    secondary: {
       true: {
         color: KitColors.slate11,
         backgroundColor: KitColors.slate2,
@@ -98,10 +95,17 @@ const copyFieldStyles = styled(FIELD_TAG, {
         },
       },
     },
+    secondary: {
+      true: {
+        color: KitColors.slate12,
+        backgroundColor: KitColors.slateA4,
+        border: `2px solid ${KitColors.atlrPurple00}`,
+      },
+    },
   },
   defaultVariants: {
-    primary: false,
-    secondary: true,
+    primary: true,
+    secondary: false,
   },
 })
 
@@ -140,12 +144,32 @@ const copyTextStyles = styled(TEXT_TAG, {
 const copyTriggerStyles = styled(TRIGGER_TAG, {
   ...baseTriggerStyles,
 
+  // CopyTriggerVariantProps..
   variants: {
     /**
      *
      * ..Primary <Button /> ... styles
      */
     primary: {
+      true: {
+        color: KitColors.secondaryGray,
+        backgroundColor: KitColors.white,
+        background: KitColors.white,
+        border: `1px solid ${KitColors.secondaryBorder}`,
+        justifyContent: 'center',
+
+        '&:hover': {
+          backgroundColor: KitColors.white,
+          borderColor: KitColors.slate10,
+          cursor: 'pointer',
+        },
+      },
+    },
+    /**
+     *
+     * ..Secondary <Button /> ... styles
+     */
+    secondary: {
       true: {
         color: 'white',
         backgroundColor: KitColors.helios6,
@@ -165,30 +189,10 @@ const copyTriggerStyles = styled(TRIGGER_TAG, {
         },
       },
     },
-
-    /**
-     *
-     * ..Secondary <Button /> ... styles
-     */
-    secondary: {
-      true: {
-        color: KitColors.secondaryGray,
-        backgroundColor: KitColors.white,
-        background: KitColors.white,
-        border: `1px solid ${KitColors.secondaryBorder}`,
-        justifyContent: 'center',
-
-        '&:hover': {
-          backgroundColor: KitColors.white,
-          borderColor: KitColors.slate10,
-          cursor: 'pointer',
-        },
-      },
-    },
   },
   defaultVariants: {
-    primary: false,
-    secondary: true,
+    primary: true,
+    secondary: false,
   },
 })
 

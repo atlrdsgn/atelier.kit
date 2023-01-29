@@ -332,6 +332,10 @@ declare const styledTabs: import("@stitches/react/types/styled-component").Style
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -799,6 +803,10 @@ declare const styledList: import("@stitches/react/types/styled-component").Style
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1267,6 +1275,10 @@ declare const styledTrigger: import("@stitches/react/types/styled-component").St
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1738,6 +1750,10 @@ declare const styledContent: import("@stitches/react/types/styled-component").St
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2196,6 +2212,10 @@ export declare const StyledTabsRoot: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2654,6 +2674,10 @@ export declare const StyledTabsList: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3112,6 +3136,10 @@ export declare const StyledTabsTrigger: import("@stitches/react/types/styled-com
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3571,6 +3599,10 @@ export declare const StyledTabsContent: import("@stitches/react/types/styled-com
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

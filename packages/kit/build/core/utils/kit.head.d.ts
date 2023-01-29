@@ -1,5 +1,5 @@
 /// <reference types="react" />
-export declare const KitFontProvider: () => JSX.Element;
+declare const kitHead: () => JSX.Element;
 /**
  *
  * In a next.js app, you can import this file in _app.tsx
@@ -14,4 +14,5 @@ export declare const KitFontProvider: () => JSX.Element;
  * )
  *
  */
+export { kitHead as KitHead, };
 //# sourceMappingURL=kit.head.d.ts.map

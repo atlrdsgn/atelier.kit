@@ -323,6 +323,10 @@ export declare const StyledRevealRoot: import("@stitches/react/types/styled-comp
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -779,6 +783,10 @@ export declare const StyledRevealTrigger: import("@stitches/react/types/styled-c
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1235,6 +1243,10 @@ export declare const StyledRevealContent: import("@stitches/react/types/styled-c
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

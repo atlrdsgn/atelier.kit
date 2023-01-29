@@ -3,15 +3,12 @@ import { readFileSync } from 'node:fs'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import terser from '@rollup/plugin-terser'
 import typescript from 'rollup-plugin-typescript2'
+import copy from 'rollup-plugin-copy'
 
 const packageJson = JSON.parse(readFileSync(new URL('./package.json',
     import.meta.url)))
 
 export default [{
-    /**
-     *
-     * input always src/index.ts
-     */
     input: ['./src/index.ts'],
     /**
      *
@@ -52,6 +49,9 @@ export default [{
     },
     plugins: [
         peerDepsExternal(),
+        copy({
+            targets: [{ src: './src/theme/font-kit/src/*', dest: 'build/font-kit' }],
+        }),
         typescript({
             useTsconfigDeclarationDir: true,
             exclude: [

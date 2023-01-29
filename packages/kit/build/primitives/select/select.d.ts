@@ -386,6 +386,10 @@ export declare const SelectViewport: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -843,6 +847,10 @@ export declare const SelectItemText: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1299,6 +1307,10 @@ export declare const SelectItemIndicator: import("@stitches/react/types/styled-c
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1755,6 +1767,10 @@ export declare const SelectSeparator: import("@stitches/react/types/styled-compo
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2211,6 +2227,10 @@ export declare const SelectLabel: import("@stitches/react/types/styled-component
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2667,6 +2687,10 @@ export declare const SelectGroup: import("@stitches/react/types/styled-component
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3123,6 +3147,10 @@ export declare const SelectScrollUpButton: import("@stitches/react/types/styled-
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3579,6 +3607,10 @@ export declare const SelectScrollDownButton: import("@stitches/react/types/style
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -4037,6 +4069,10 @@ export declare const SelectArrow: import("@stitches/react/types/styled-component
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

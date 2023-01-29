@@ -331,6 +331,10 @@ declare const CanvasStyles: import("@stitches/react/types/styled-component").Sty
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -791,6 +795,10 @@ export declare const CanvasPrimitive: import("@stitches/react/types/styled-compo
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

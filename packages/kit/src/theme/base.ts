@@ -1,13 +1,13 @@
 import type * as Stitches from '@stitches/react'
 import {createStitches, defaultThemeMap, createTheme} from '@stitches/react'
 import {kitColors, kitDarkColors} from '../color'
+import {kitFonts} from './font-kit'
 import {
   kitBorderWidths,
   kitBreakpoints,
   kitRadii,
   kitSpace,
   kitZIndices,
-  kitFonts,
   kitFontSizes,
   kitFontWeights,
 } from './src'

@@ -321,6 +321,10 @@ export declare const PreText: import("@stitches/react/types/styled-component").S
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

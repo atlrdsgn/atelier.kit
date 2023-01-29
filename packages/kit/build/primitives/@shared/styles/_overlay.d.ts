@@ -321,6 +321,10 @@ export declare const overlayStyles: import("@stitches/react/types/styled-compone
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -777,6 +781,10 @@ export declare const OverlayStyles: import("@stitches/react/types/styled-compone
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

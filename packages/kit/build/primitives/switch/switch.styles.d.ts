@@ -324,6 +324,10 @@ declare const StyledSwitch: import("@stitches/react/types/styled-component").Sty
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -780,6 +784,10 @@ export declare const SwitchRoot: import("@stitches/react/types/styled-component"
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1236,6 +1244,10 @@ export declare const StyledSwitchThumb: import("@stitches/react/types/styled-com
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

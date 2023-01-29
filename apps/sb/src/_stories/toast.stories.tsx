@@ -16,7 +16,7 @@ export default {
 } as ComponentMeta<typeof Toast>
 
 const Template: ComponentStory<typeof Toast> = (args) => {
-  const [isOpen, setIsOpen] = React.useState(true)
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <Container size={'sm'} align={'center'}>

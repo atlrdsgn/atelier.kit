@@ -328,6 +328,10 @@ declare const sectionStyles: import("@stitches/react/types/styled-component").St
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -790,6 +794,10 @@ export declare const SectionPrimitive: import("@stitches/react/types/styled-comp
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

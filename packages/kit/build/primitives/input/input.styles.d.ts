@@ -328,6 +328,10 @@ declare const inputStyles: import("@stitches/react/types/styled-component").Styl
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -784,6 +788,10 @@ export declare const StyledFlex: import("@stitches/react/types/styled-component"
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1240,6 +1248,10 @@ export declare const StyledLabel: import("@stitches/react/types/styled-component
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1700,6 +1712,10 @@ export declare const InputPrimitive: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

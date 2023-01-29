@@ -1,2 +1,2 @@
 export declare const getCssAndReset: () => string;
-//# sourceMappingURL=getCssAndReset.d.ts.map
+//# sourceMappingURL=style.d.ts.map

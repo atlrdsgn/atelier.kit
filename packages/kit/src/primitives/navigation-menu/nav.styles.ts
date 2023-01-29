@@ -5,6 +5,26 @@ import {keyframes, styled, KitTheme, KitColors, VariantProps} from '../../theme'
  * @keyframes
  */
 
+const enterFromRight = keyframes({
+  from: {transform: 'translateX(200px)', opacity: 0},
+  to: {transform: 'translateX(0)', opacity: 1},
+})
+
+const enterFromLeft = keyframes({
+  from: {transform: 'translateX(-200px)', opacity: 0},
+  to: {transform: 'translateX(0)', opacity: 1},
+})
+
+const exitToRight = keyframes({
+  from: {transform: 'translateX(0)', opacity: 1},
+  to: {transform: 'translateX(200px)', opacity: 0},
+})
+
+const exitToLeft = keyframes({
+  from: {transform: 'translateX(0)', opacity: 1},
+  to: {transform: 'translateX(-200px)', opacity: 0},
+})
+
 const scaleIn = keyframes({
   from: {transform: 'rotateX(-30deg) scale(0.9)', opacity: 0},
   to: {transform: 'rotateX(0deg) scale(1)', opacity: 1},
@@ -30,7 +50,7 @@ const fadeOut = keyframes({
  * @MenuRoot
  */
 const NavigationMenuRoot = styled(NavigationMenu.Root, {
-  zIndex: 9998,
+  zIndex: 9997,
   position: 'fixed',
   top: '0.5rem',
   left: '50%',
@@ -78,11 +98,11 @@ const NavigationMenuRoot = styled(NavigationMenu.Root, {
  * ----------------------------------------------------------------------- */
 
 const NavigationMenuBarStyles = styled(NavigationMenu.List, {
+  zIndex: 9999,
   position: 'fixed',
   top: 4,
   left: 0,
   right: 0,
-  zIndex: 9999,
   display: 'flex',
   width: '100%',
   maxWidth: '400px',
@@ -157,17 +177,14 @@ const itemStyles = {
   '*': {
     boxSizing: 'border-box',
     outline: 'none',
-    cursor: 'none',
   },
   '*:active': {
     boxSizing: 'border-box',
     outline: 'none',
-    cursor: 'none',
   },
   '*:focus': {
     boxSizing: 'border-box',
     outline: 'none',
-    cursor: 'none',
   },
 
   // styles.
@@ -211,10 +228,7 @@ const itemStyles = {
   },
 
   '&:disabled': {
-    boxShadow: `inset 0 0 0 1px ${KitTheme.theme.colors.slate7}`,
-    color: '$sage10',
-    pointerEvents: 'none',
-    cursor: 'not-allowed',
+    boxShadow: `inset 0 0 0 1px ${KitColors.slate7}`,
     '&:hover': {
       backgroundColor: '$blur',
       cursor: 'not-allowed',
@@ -243,17 +257,14 @@ const NavigationMenuTrigger = styled(NavigationMenu.Trigger, {
   '*': {
     boxSizing: 'border-box',
     outline: 'none',
-    cursor: 'none',
   },
   '*:active': {
     boxSizing: 'border-box',
     outline: 'none',
-    cursor: 'none',
   },
   '*:focus': {
     boxSizing: 'border-box',
     outline: 'none',
-    cursor: 'none',
   },
 })
 
@@ -263,14 +274,7 @@ const NavigationMenuTrigger = styled(NavigationMenu.Trigger, {
  * this is the link button that link to somewhere.
  *
  * - has itemStyles applied to it. -
- * ----------------------------------------------------------------------- */
-
-const NavigationMenuLink = styled(NavigationMenu.Link, {
-  ...itemStyles,
-
-  all: 'unset',
-
-  '*': {
+ *   '*': {
     boxSizing: 'border-box',
     outline: 'none',
     cursor: 'none',
@@ -285,6 +289,12 @@ const NavigationMenuLink = styled(NavigationMenu.Link, {
     outline: 'none',
     cursor: 'none',
   },
+ * ----------------------------------------------------------------------- */
+
+const NavigationMenuLink = styled(NavigationMenu.Link, {
+  ...itemStyles,
+
+  all: 'unset',
 
   fontFamily: KitTheme.theme.fonts.sans,
   fontSize: KitTheme.theme.fontSizes.base,
@@ -309,17 +319,7 @@ const NavigationMenuLink = styled(NavigationMenu.Link, {
   variants: {
     level2: {
       true: {
-        color: KitTheme.theme.colors.slate9,
-      },
-    },
-    disabled: {
-      true: {
-        color: KitTheme.theme.colors.slate9,
-        '&:hover': {
-          color: KitTheme.theme.colors.slate9,
-          cursor: 'not-allowed',
-          pointerEvents: 'visible',
-        },
+        color: KitColors.slate9,
       },
     },
   },
@@ -339,7 +339,7 @@ const NavigationMenuLink = styled(NavigationMenu.Link, {
  * WebkitBackdropFilter: 'blur(20px) saturate(180%)',
  * ----------------------------------------------------------------------- */
 const NavigationMenuContent = styled(NavigationMenu.Content, {
-  zIndex: '999999',
+  zIndex: 9998,
   backgroundColor: KitColors.transparent,
 
   borderRadius: 16,
@@ -353,10 +353,14 @@ const NavigationMenuContent = styled(NavigationMenu.Content, {
 
   animationDuration: '250ms',
   animationTimingFunction: 'ease',
-  '&[data-motion="from-start"]': {animationName: fadeIn},
-  '&[data-motion="from-end"]': {animationName: fadeOut},
-  '&[data-motion="to-start"]': {animationName: fadeIn},
-  '&[data-motion="to-end"]': {animationName: fadeOut},
+  // '&[data-motion="from-start"]': {animationName: fadeIn},
+  // '&[data-motion="from-end"]': {animationName: fadeOut},
+  // '&[data-motion="to-start"]': {animationName: fadeIn},
+  // '&[data-motion="to-end"]': {animationName: fadeOut},
+  '&[data-motion="from-start"]': {animationName: enterFromLeft},
+  '&[data-motion="from-end"]': {animationName: enterFromRight},
+  '&[data-motion="to-start"]': {animationName: exitToLeft},
+  '&[data-motion="to-end"]': {animationName: exitToRight},
 
   /**
    * @media only screen and (min-width: 600px)': { width: 'auto' },

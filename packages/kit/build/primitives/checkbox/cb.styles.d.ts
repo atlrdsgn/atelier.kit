@@ -324,6 +324,10 @@ declare const cbStyles: import("@stitches/react/types/styled-component").StyledC
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -780,6 +784,10 @@ export declare const StyledCheckboxFlex: import("@stitches/react/types/styled-co
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1236,6 +1244,10 @@ export declare const StyledCheckbox: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1692,6 +1704,10 @@ export declare const StyledCheckboxIndicator: import("@stitches/react/types/styl
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2148,6 +2164,10 @@ export declare const StyledCheckboxLabel: import("@stitches/react/types/styled-c
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

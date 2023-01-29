@@ -327,6 +327,10 @@ declare const headingStyles: import("@stitches/react/types/styled-component").Cs
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -788,6 +792,10 @@ export declare const HeadingContent: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

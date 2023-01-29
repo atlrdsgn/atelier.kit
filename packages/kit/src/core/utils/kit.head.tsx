@@ -1,18 +1,6 @@
-import {getCssText, reset} from '../../theme'
-import {coreStyles} from './global.styles'
-import {cssReset} from './reset'
+import {getCssAndReset} from '../../theme/style'
 
-const getCssAndReset = () => {
-  const css = getCssText()
-
-  reset()
-  cssReset()
-  coreStyles()
-
-  return css
-}
-
-export const KitFontProvider = () => {
+const kitHead = () => {
   return (
     <head>
       <meta charSet="utf-8" />
@@ -39,3 +27,9 @@ export const KitFontProvider = () => {
  * )
  *
  */
+
+export {
+  //
+  kitHead as KitHead,
+  //
+}

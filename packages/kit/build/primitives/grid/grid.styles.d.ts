@@ -331,6 +331,10 @@ declare const gridStyles: import("@stitches/react/types/styled-component").CssCo
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -796,6 +800,10 @@ export declare const GridPrimitive: import("@stitches/react/types/styled-compone
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

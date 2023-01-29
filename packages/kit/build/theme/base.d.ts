@@ -30,28 +30,6 @@ export declare const baseMap: {
     gridColumnGap: "space";
     rowGap: "space";
     gridRowGap: "space";
-    /**
-     *
-     *
-     * This the main stitches config.
-     *
-     * where all css tokens are generated from.
-     * if a value does not derive from [baseKitTheme] it will be ignored.
-     *
-     * for Stitches Config Documentation
-     * see https://stitches.dev/docs/introduction
-     *
-     * config file accepts:
-     * - prefix: string
-     * - theme: object
-     *    - color: object
-     *    - utils: object
-     * - media: object
-     * - themeMap: object
-     * - utils: object
-     * - breakpoints: object
-     *
-     */
     inset: "space";
     insetBlock: "space";
     insetBlockEnd: "space";
@@ -96,16 +74,6 @@ export declare const baseMap: {
     scrollPaddingTop: "space";
     scrollPaddingRight: "space";
     scrollPaddingBottom: "space";
-    /**
-     *
-     *
-     * @darkTheme
-     *
-     * we will build this soon.
-     *
-     * coming soon.
-     *
-     */
     scrollPaddingLeft: "space";
     scrollPaddingBlock: "space";
     scrollPaddingBlockEnd: "space";
@@ -188,6 +156,17 @@ export declare const KitTheme: {
             black: string;
             primaryGray: string;
             secondaryGray: string;
+            /**
+             *
+             *
+             *
+             * @baseColors
+             *
+             * passing all values forward as [baseColors].
+             *
+             * later extending use with KitColors.color as the final token.
+             *
+             */
             accentHeliotrope: string;
             accentFizz: string;
             transparent: string;
@@ -195,6 +174,17 @@ export declare const KitTheme: {
             transparentPanel: string;
             shadowLight: string;
             shadowDark: string;
+            /**
+             *
+             *
+             *
+             * @baseMedia
+             *
+             * passing all values forward as [baseMedia].
+             *
+             * later extending use with KitMedia.size as the final token.
+             *
+             */
             primaryBorder: string;
             primaryBorderHover: string;
             secondaryBorder: string;
@@ -220,7 +210,9 @@ export declare const KitTheme: {
             gray3: string;
             gray4: string;
             gray5: string;
-            gray6: string; /**
+            gray6: string;
+            gray7: string;
+            /**
              *
              *
              * @ThemeMap
@@ -228,7 +220,6 @@ export declare const KitTheme: {
              * this maps the css properties to accept our tokens.
              *
              */
-            gray7: string;
             gray8: string;
             gray9: string;
             gray10: string;
@@ -282,7 +273,7 @@ export declare const KitTheme: {
             mauve9: string;
             mauve10: string;
             mauve11: string;
-            mauve12: string; /** ------------------------------------------------------------- **/
+            mauve12: string;
             mauve13: string;
             mauve14: string;
             mauve15: string;
@@ -452,7 +443,16 @@ export declare const KitTheme: {
             16: string;
             17: string;
             18: string;
-            19: string;
+            19: string; /**
+             *
+             *
+             *
+             *
+             * @baseTokens for styling components.
+             *
+             * passing all values forward as [baseTokens].
+             *
+             */
             20: string;
         };
         fontWeights: {
@@ -486,6 +486,10 @@ export declare const KitTheme: {
             system: string;
             sans: string;
             mono: string;
+            base: string;
+            monoMono: string;
+            kit: string;
+            prag: string;
             lateral: string;
             roboto: string;
         };
@@ -526,28 +530,6 @@ export declare const KitTheme: {
         gridColumnGap: "space";
         rowGap: "space";
         gridRowGap: "space";
-        /**
-         *
-         *
-         * This the main stitches config.
-         *
-         * where all css tokens are generated from.
-         * if a value does not derive from [baseKitTheme] it will be ignored.
-         *
-         * for Stitches Config Documentation
-         * see https://stitches.dev/docs/introduction
-         *
-         * config file accepts:
-         * - prefix: string
-         * - theme: object
-         *    - color: object
-         *    - utils: object
-         * - media: object
-         * - themeMap: object
-         * - utils: object
-         * - breakpoints: object
-         *
-         */
         inset: "space";
         insetBlock: "space";
         insetBlockEnd: "space";
@@ -592,16 +574,6 @@ export declare const KitTheme: {
         scrollPaddingTop: "space";
         scrollPaddingRight: "space";
         scrollPaddingBottom: "space";
-        /**
-         *
-         *
-         * @darkTheme
-         *
-         * we will build this soon.
-         *
-         * coming soon.
-         *
-         */
         scrollPaddingLeft: "space";
         scrollPaddingBlock: "space";
         scrollPaddingBlockEnd: "space";
@@ -1024,6 +996,10 @@ export declare const createThemeBase: <Argument0 extends string | ({
         system?: string | number | boolean | undefined;
         sans?: string | number | boolean | undefined;
         mono?: string | number | boolean | undefined;
+        base?: string | number | boolean | undefined;
+        monoMono?: string | number | boolean | undefined;
+        kit?: string | number | boolean | undefined;
+        prag?: string | number | boolean | undefined;
         lateral?: string | number | boolean | undefined;
         roboto?: string | number | boolean | undefined;
     } | undefined;
@@ -1329,6 +1305,10 @@ export declare const createThemeBase: <Argument0 extends string | ({
         system?: string | number | boolean | undefined;
         sans?: string | number | boolean | undefined;
         mono?: string | number | boolean | undefined;
+        base?: string | number | boolean | undefined;
+        monoMono?: string | number | boolean | undefined;
+        kit?: string | number | boolean | undefined;
+        prag?: string | number | boolean | undefined;
         lateral?: string | number | boolean | undefined;
         roboto?: string | number | boolean | undefined;
     } | undefined;
@@ -1638,6 +1618,10 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         system?: string | number | boolean | undefined;
         sans?: string | number | boolean | undefined;
         mono?: string | number | boolean | undefined;
+        base?: string | number | boolean | undefined;
+        monoMono?: string | number | boolean | undefined;
+        kit?: string | number | boolean | undefined;
+        prag?: string | number | boolean | undefined;
         lateral?: string | number | boolean | undefined;
         roboto?: string | number | boolean | undefined;
     } | undefined;
@@ -1943,6 +1927,10 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         system?: string | number | boolean | undefined;
         sans?: string | number | boolean | undefined;
         mono?: string | number | boolean | undefined;
+        base?: string | number | boolean | undefined;
+        monoMono?: string | number | boolean | undefined;
+        kit?: string | number | boolean | undefined;
+        prag?: string | number | boolean | undefined;
         lateral?: string | number | boolean | undefined;
         roboto?: string | number | boolean | undefined;
     } | undefined;
@@ -2267,6 +2255,10 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2733,6 +2725,10 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3178,6 +3174,10 @@ export declare const css: <Composers extends (string | import("@stitches/react/t
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3651,6 +3651,10 @@ export declare const globalCss: <Styles extends {
             system: string;
             sans: string;
             mono: string;
+            base: string;
+            monoMono: string;
+            kit: string;
+            prag: string;
             lateral: string;
             roboto: string;
         };
@@ -4094,6 +4098,10 @@ export declare const globalCss: <Styles extends {
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -4538,6 +4546,10 @@ export declare const keyframes: (style: {
             system: string;
             sans: string;
             mono: string;
+            base: string;
+            monoMono: string;
+            kit: string;
+            prag: string;
             lateral: string;
             roboto: string;
         };
@@ -4976,6 +4988,10 @@ export declare const theme: string & {
         system: import("@stitches/react/types/theme").Token<"system", string, "fonts", string>;
         sans: import("@stitches/react/types/theme").Token<"sans", string, "fonts", string>;
         mono: import("@stitches/react/types/theme").Token<"mono", string, "fonts", string>;
+        base: import("@stitches/react/types/theme").Token<"base", string, "fonts", string>;
+        monoMono: import("@stitches/react/types/theme").Token<"monoMono", string, "fonts", string>;
+        kit: import("@stitches/react/types/theme").Token<"kit", string, "fonts", string>;
+        prag: import("@stitches/react/types/theme").Token<"prag", string, "fonts", string>;
         lateral: import("@stitches/react/types/theme").Token<"lateral", string, "fonts", string>;
         roboto: import("@stitches/react/types/theme").Token<"roboto", string, "fonts", string>;
     };
@@ -5280,6 +5296,10 @@ export declare const kit_theme: string & {
         system: import("@stitches/react/types/theme").Token<"system", string, "fonts", string>;
         sans: import("@stitches/react/types/theme").Token<"sans", string, "fonts", string>;
         mono: import("@stitches/react/types/theme").Token<"mono", string, "fonts", string>;
+        base: import("@stitches/react/types/theme").Token<"base", string, "fonts", string>;
+        monoMono: import("@stitches/react/types/theme").Token<"monoMono", string, "fonts", string>;
+        kit: import("@stitches/react/types/theme").Token<"kit", string, "fonts", string>;
+        prag: import("@stitches/react/types/theme").Token<"prag", string, "fonts", string>;
         lateral: import("@stitches/react/types/theme").Token<"lateral", string, "fonts", string>;
         roboto: import("@stitches/react/types/theme").Token<"roboto", string, "fonts", string>;
     };
@@ -5597,6 +5617,10 @@ export declare const config: {
             system: string;
             sans: string;
             mono: string;
+            base: string;
+            monoMono: string;
+            kit: string;
+            prag: string;
             lateral: string;
             roboto: string;
         };
@@ -5757,6 +5781,17 @@ export declare const KitColors: {
     black: string;
     primaryGray: string;
     secondaryGray: string;
+    /**
+     *
+     *
+     *
+     * @baseColors
+     *
+     * passing all values forward as [baseColors].
+     *
+     * later extending use with KitColors.color as the final token.
+     *
+     */
     accentHeliotrope: string;
     accentFizz: string;
     transparent: string;
@@ -5764,6 +5799,17 @@ export declare const KitColors: {
     transparentPanel: string;
     shadowLight: string;
     shadowDark: string;
+    /**
+     *
+     *
+     *
+     * @baseMedia
+     *
+     * passing all values forward as [baseMedia].
+     *
+     * later extending use with KitMedia.size as the final token.
+     *
+     */
     primaryBorder: string;
     primaryBorderHover: string;
     secondaryBorder: string;
@@ -5789,7 +5835,9 @@ export declare const KitColors: {
     gray3: string;
     gray4: string;
     gray5: string;
-    gray6: string; /**
+    gray6: string;
+    gray7: string;
+    /**
      *
      *
      * @ThemeMap
@@ -5797,7 +5845,6 @@ export declare const KitColors: {
      * this maps the css properties to accept our tokens.
      *
      */
-    gray7: string;
     gray8: string;
     gray9: string;
     gray10: string;
@@ -5851,7 +5898,7 @@ export declare const KitColors: {
     mauve9: string;
     mauve10: string;
     mauve11: string;
-    mauve12: string; /** ------------------------------------------------------------- **/
+    mauve12: string;
     mauve13: string;
     mauve14: string;
     mauve15: string;

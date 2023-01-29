@@ -1,4 +1,5 @@
 export {css, styled, globalCss, keyframes, getCssText, theme, config, reset} from './base'
+export {getCssAndReset} from './style'
 
 /**
  *

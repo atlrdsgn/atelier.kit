@@ -323,6 +323,10 @@ export declare const ToggleGroupRoot: import("@stitches/react/types/styled-compo
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -779,6 +783,10 @@ export declare const ToggleFlexBox: import("@stitches/react/types/styled-compone
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1235,6 +1243,10 @@ export declare const ToggleItem: import("@stitches/react/types/styled-component"
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

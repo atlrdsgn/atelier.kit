@@ -438,6 +438,10 @@ export declare const MenuBarLabel: import("@stitches/react/types/styled-componen
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -898,6 +902,10 @@ export declare const MenuBarItemIndicator: import("@stitches/react/types/styled-
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1358,6 +1366,10 @@ export declare const MenuBarMenu: import("@stitches/react/types/styled-component
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1814,6 +1826,10 @@ export declare const MenuBarRightSlot: import("@stitches/react/types/styled-comp
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2270,6 +2286,10 @@ export declare const MenuBarCheckboxItem: import("@stitches/react/types/styled-c
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2726,6 +2746,10 @@ export declare const MenuBarRadioItem: import("@stitches/react/types/styled-comp
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

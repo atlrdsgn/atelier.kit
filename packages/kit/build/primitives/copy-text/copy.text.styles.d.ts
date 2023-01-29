@@ -331,6 +331,10 @@ declare const copyFieldStyles: import("@stitches/react/types/styled-component").
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -796,6 +800,10 @@ declare const copyTriggerStyles: import("@stitches/react/types/styled-component"
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1255,6 +1263,10 @@ export declare const StyledCopyField: import("@stitches/react/types/styled-compo
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1711,6 +1723,10 @@ export declare const StyledCopyFieldText: import("@stitches/react/types/styled-c
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2170,6 +2186,10 @@ export declare const StyledCopyTrigger: import("@stitches/react/types/styled-com
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

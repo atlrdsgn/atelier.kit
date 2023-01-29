@@ -1,7 +1,6 @@
 import * as React from 'react'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import {
-  StyledNavMenuBarBox,
   StyledNavMenuRoot,
   StyledNavMenuBar,
   StyledNavMenuTrigger,
@@ -10,11 +9,12 @@ import {
   //
   StyledNavLink,
   //
+  StyledNavMenuIndicator,
   StyledNavMenuViewport,
   StyledViewport,
   StyledNavMenuInner,
 } from './nav.styles'
-import type {NavMenuRootVariantProps, NavMenuBarBoxVariantProps} from './nav.styles'
+import type {NavMenuRootVariantProps} from './nav.styles'
 import type {baseComponentProps} from '../@shared/types'
 import {ArrowDownIcon} from '../_icon/src/ArrowDown.Icon'
 
@@ -45,6 +45,8 @@ const NavBar_List = React.forwardRef<React.ElementRef<typeof StyledNavMenuBar>, 
     return (
       <StyledNavMenuBar {...props} ref={forwardedRef}>
         {props.children}
+
+        <StyledNavMenuIndicator />
       </StyledNavMenuBar>
     )
   }

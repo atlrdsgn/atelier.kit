@@ -330,6 +330,10 @@ declare const NavigationMenuRoot: import("@stitches/react/types/styled-component
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -788,6 +792,10 @@ declare const NavigationMenuBoxStyles: import("@stitches/react/types/styled-comp
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -923,7 +931,6 @@ declare const NavigationMenuBoxStyles: import("@stitches/react/types/styled-comp
 }, {}>>;
 declare const NavigationMenuLink: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<NavigationMenu.NavigationMenuLinkProps & import("react").RefAttributes<HTMLAnchorElement>>, {
     level2?: boolean | "true" | undefined;
-    disabled?: boolean | "true" | undefined;
 }, {
     xs: string;
     sm: string;
@@ -1247,6 +1254,10 @@ declare const NavigationMenuLink: import("@stitches/react/types/styled-component
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -1706,6 +1717,10 @@ export declare const CalloutHeading: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2165,6 +2180,10 @@ declare const StyledNavIcon: import("@stitches/react/types/styled-component").St
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -2624,6 +2643,10 @@ export declare const StyledNavMenuRoot: import("@stitches/react/types/styled-com
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3080,6 +3103,10 @@ export declare const StyledNavMenuBar: import("@stitches/react/types/styled-comp
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3536,6 +3563,10 @@ export declare const StyledNavMenuInner: import("@stitches/react/types/styled-co
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -3992,6 +4023,10 @@ export declare const StyledNavMenuContent: import("@stitches/react/types/styled-
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -4448,6 +4483,10 @@ export declare const StyledNavMenuTrigger: import("@stitches/react/types/styled-
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -4904,6 +4943,10 @@ export declare const StyledNavMenuIndicator: import("@stitches/react/types/style
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -5360,6 +5403,10 @@ export declare const StyledNavMenuBarBox: import("@stitches/react/types/styled-c
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -5495,7 +5542,6 @@ export declare const StyledNavMenuBarBox: import("@stitches/react/types/styled-c
 }, {}>>;
 export declare const StyledNavLink: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<NavigationMenu.NavigationMenuLinkProps & import("react").RefAttributes<HTMLAnchorElement>>, {
     level2?: boolean | "true" | undefined;
-    disabled?: boolean | "true" | undefined;
 }, {
     xs: string;
     sm: string;
@@ -5819,6 +5865,10 @@ export declare const StyledNavLink: import("@stitches/react/types/styled-compone
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -6278,6 +6328,10 @@ export declare const StyledNavCallout: import("@stitches/react/types/styled-comp
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -6734,6 +6788,10 @@ export declare const StyledNavCalloutHeading: import("@stitches/react/types/styl
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -7190,6 +7248,10 @@ export declare const StyledNavCalloutText: import("@stitches/react/types/styled-
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -7649,6 +7711,10 @@ export declare const StyledNavMenuViewport: import("@stitches/react/types/styled
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };
@@ -8105,6 +8171,10 @@ export declare const StyledViewport: import("@stitches/react/types/styled-compon
         system: string;
         sans: string;
         mono: string;
+        base: string;
+        monoMono: string;
+        kit: string;
+        prag: string;
         lateral: string;
         roboto: string;
     };

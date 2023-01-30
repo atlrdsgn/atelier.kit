@@ -17,6 +17,7 @@
         "@types/react-dom": "18.0.10",
         "atlr.kit": "*",
         "eslint": "8.32.0",
+        "eslint-config-kit": "*",
         "eslint-config-next": "13.1.4",
         "next": "13.1.4",
         "react": "18.2.0",

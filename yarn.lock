@@ -8599,6 +8599,7 @@ __metadata:
     eslint-config-prettier: ^8.6.0
     eslint-config-turbo: latest
     eslint-import-resolver-typescript: ^3.5.3
+    eslint-plugin-import: ^2.27.5
     eslint-plugin-react: ^7.32.1
     eslint-plugin-simple-import-sort: ^10.0.0
   languageName: unknown
@@ -8736,7 +8737,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.26.0":
+"eslint-plugin-import@npm:^2.26.0, eslint-plugin-import@npm:^2.27.5":
   version: 2.27.5
   resolution: "eslint-plugin-import@npm:2.27.5"
   dependencies:
@@ -11711,6 +11712,7 @@ __metadata:
     atlr.kit: "*"
     babel-loader: ^9.1.2
     eslint: 8.32.0
+    eslint-config-kit: "*"
     eslint-config-next: 13.1.4
     next: 13.1.4
     react: 18.2.0
@@ -11730,6 +11732,7 @@ __metadata:
     "@types/react-dom": ^18.0.10
     atlr.kit: "*"
     eslint: ^8.32.0
+    eslint-config-kit: "*"
     eslint-config-next: ^13.1.5
     next: ^13.1.5
     next-themes: ^0.2.1

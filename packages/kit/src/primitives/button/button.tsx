@@ -25,11 +25,6 @@ const ButtonComponent = ({
   type,
   /**
    *
-   * Color options.
-   */
-  color,
-  /**
-   *
    * as React.ElementType..
    * only takes 'a' or 'button'..
    */
@@ -56,6 +51,7 @@ const ButtonComponent = ({
   neon = false,
   rainbow = false,
   ghost = false,
+
   /**
    *
    * style prop.
@@ -92,6 +88,7 @@ const ButtonComponent = ({
      * color options for component
      * atelier, ghost, neon, rainbow..
      */
+
     primary={primary}
     secondary={secondary}
     neon={neon}

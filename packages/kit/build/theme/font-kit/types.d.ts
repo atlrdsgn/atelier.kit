@@ -7,5 +7,5 @@ declare const lineHeights: number[];
 declare const letterSpacings: number[];
 declare const faceWeights: number[];
 declare const fontFams: Record<FontType, string>;
-export { lineHeights, letterSpacings, faceWeights, fontFams };
-//# sourceMappingURL=font.types.d.ts.map
+export { lineHeights, letterSpacings, faceWeights, fontFams, };
+//# sourceMappingURL=types.d.ts.map

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { BadgeVariantsProps } from './badge.styles';
 import { baseComponentProps } from '../@shared/types';
-type atlrProps = React.HTMLAttributes<HTMLSpanElement> & {
+type badgeProps = React.HTMLAttributes<HTMLSpanElement> & {
     as?: keyof JSX.IntrinsicElements;
     children?: React.ReactNode;
 };
-type BadgePrimitiveProps = baseComponentProps & atlrProps & BadgeVariantsProps;
+type BadgePrimitiveProps = baseComponentProps & badgeProps & BadgeVariantsProps;
 type BadgeProps = BadgePrimitiveProps;
 /**
  *

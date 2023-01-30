@@ -32,18 +32,6 @@ const baseKitDarkThemeColors = {
   atelier02: '#A493F8',
   atelier03: '#837E95',
 
-  atlr00: brand.atlrGray1,
-  atlr01: brand.atlrGray2,
-  atlr02: brand.atlrGray3,
-  atlr03: brand.atlrGray4,
-  atlr04: brand.atlrGray5,
-
-  atlrLime00: brand.atlrLime1,
-  atlrLime01: brand.atlrLime2,
-
-  atlrPurple00: brand.atlrPurple1,
-  atlrPurple01: brand.atlrPurple2,
-
   limey: brand.limey,
   purp: brand.purple,
 

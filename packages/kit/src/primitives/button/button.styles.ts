@@ -1,27 +1,36 @@
 import {KitTheme, KitColors, css, styled, VariantProps} from '../../theme'
 
-const TAG = css('button', {})
-
-const baseButton = styled(TAG, {
+const baseButtonConfig = {
   all: 'unset',
-  transition: 'all 250ms ease-in-out',
+
+  display: 'inline-flex',
+  position: 'relative',
+  flexShrink: 0,
+
+  justifyContent: 'center',
   alignItems: 'center',
   boxSizing: 'border-box',
   userSelect: 'none',
 
-  display: 'inline-flex',
-  flexShrink: 0,
-  justifyContent: 'center',
-  lineHeight: '1',
-  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+  backgroundColor: 'inherit',
 
-  fontFamily: KitTheme.theme.fonts.sans,
-  fontWeight: KitTheme.theme.fontWeights['semibold'],
+  lineHeight: 'normal',
 
   fontVariantNumeric: 'tabular-nums',
+  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
 
-  backgroundColor: 'white',
-  position: 'relative',
+  // transitions.
+  transition: 'all 220ms ease-in-out',
+}
+
+const TAG = css('button', {})
+
+const baseButton = styled(TAG, {
+  ...baseButtonConfig,
+
+  // default..
+  fontFamily: KitTheme.theme.fonts.sans,
+  fontWeight: KitTheme.theme.fontWeights['semibold'],
   color: KitColors.slate12,
 
   variants: {
@@ -58,8 +67,8 @@ const baseButton = styled(TAG, {
      */
     primary: {
       true: {
-        color: 'white',
-        backgroundColor: KitColors.helios6,
+        color: KitColors.white,
+        backgroundColor: KitColors.helios5,
         background: KitColors.helios6,
         border: `1.6px solid ${KitColors.primaryBorder}`,
         boxShadow: `0px 2px 2px rgba(0, 0, 0, 0)`,
@@ -68,8 +77,8 @@ const baseButton = styled(TAG, {
         justifyContent: 'center',
         alignItems: 'center',
         '&:hover': {
-          backgroundColor: KitColors.helios7,
-          background: KitColors.helios5,
+          backgroundColor: KitColors.helios6,
+          background: KitColors.helios6,
           boxShadow: `0px 2px 2px rgba(0, 0, 0, 0.09)`,
           borderColor: KitColors.primaryBorderHover,
           cursor: 'pointer',

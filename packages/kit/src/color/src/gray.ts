@@ -7,8 +7,10 @@ const g = {
   gray6: '#C1C8CD',
   gray7: '#889096',
   gray8: '#7E868C',
-  gray9: '#687076',
-  gray10: '#11181C',
+  gray9: '#26292B',
+  gray10: '#16181A',
+  gray11: '#151515',
+  gray12: '#090909',
 }
 
 const gD = {
@@ -22,6 +24,8 @@ const gD = {
   gray8: '#787F85',
   gray9: '#9BA1A6',
   gray10: '#ECEDEE',
+  gray11: '#F1F3F5',
+  gray12: '#F8F9FA',
 }
 
 export const gray = g

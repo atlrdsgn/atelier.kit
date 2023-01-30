@@ -1,4 +1,4 @@
-import {baseFace, monoFace, kitFace, pragFace} from './font.types'
+import {baseFace, monoFace, kitFace, pragFace} from './types'
 
 export const kitFonts = {
   fonts: {

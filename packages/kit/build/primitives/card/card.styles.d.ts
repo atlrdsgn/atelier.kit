@@ -62,15 +62,18 @@ declare const StyledCard: import("@stitches/react/types/styled-component").Style
         atelier01: string;
         atelier02: string;
         atelier03: string;
-        atlr00: string;
-        atlr01: string;
-        atlr02: string;
-        atlr03: string;
-        atlr04: string;
-        atlrLime00: string;
-        atlrLime01: string;
-        atlrPurple00: string;
-        atlrPurple01: string;
+        brand1: string;
+        brand2: string;
+        brand3: string;
+        brand4: string;
+        brand5: string;
+        brand6: string;
+        brand7: string;
+        brand8: string;
+        brand9: string;
+        brand10: string;
+        brand11: string;
+        brand12: string;
         limey: string;
         purp: string;
         gray1: string;
@@ -83,6 +86,8 @@ declare const StyledCard: import("@stitches/react/types/styled-component").Style
         gray8: string;
         gray9: string;
         gray10: string;
+        gray11: string;
+        gray12: string;
         slate1: string;
         slate2: string;
         slate3: string;
@@ -485,7 +490,7 @@ declare const StyledCard: import("@stitches/react/types/styled-component").Style
  *
  * image holder.
  */
-declare const StyledImageHolder: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {
+declare const StyledImageHolder: import("@stitches/react/types/styled-component").StyledComponent<"img", {}, {
     xs: string;
     sm: string;
     md: string;
@@ -533,15 +538,18 @@ declare const StyledImageHolder: import("@stitches/react/types/styled-component"
         atelier01: string;
         atelier02: string;
         atelier03: string;
-        atlr00: string;
-        atlr01: string;
-        atlr02: string;
-        atlr03: string;
-        atlr04: string;
-        atlrLime00: string;
-        atlrLime01: string;
-        atlrPurple00: string;
-        atlrPurple01: string;
+        brand1: string;
+        brand2: string;
+        brand3: string;
+        brand4: string;
+        brand5: string;
+        brand6: string;
+        brand7: string;
+        brand8: string;
+        brand9: string;
+        brand10: string;
+        brand11: string;
+        brand12: string;
         limey: string;
         purp: string;
         gray1: string;
@@ -554,6 +562,8 @@ declare const StyledImageHolder: import("@stitches/react/types/styled-component"
         gray8: string;
         gray9: string;
         gray10: string;
+        gray11: string;
+        gray12: string;
         slate1: string;
         slate2: string;
         slate3: string;

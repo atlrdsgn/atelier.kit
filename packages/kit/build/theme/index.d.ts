@@ -10,6 +10,11 @@ export { KitMedia } from './base';
 export { darkTheme } from './base';
 /**
  *
+ * @utils
+ */
+export { generateColorArray } from './utils/generate-color-array';
+/**
+ *
  * @types
  */
 export type { Colors, FontSizes, Fonts, FontWeights, Radii, zIndices, Breakpoints, StitchesConfig, VariantProps, PropertyValue, ScaleValue, CSSProperties, CSS, StitchesTheme, } from './base';

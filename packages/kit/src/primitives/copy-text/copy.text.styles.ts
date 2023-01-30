@@ -79,7 +79,7 @@ const copyFieldStyles = styled(FIELD_TAG, {
 
   color: KitColors.slate12,
   backgroundColor: KitColors.slateA4,
-  border: `2px solid ${KitColors.atlrPurple00}`,
+  border: `2px solid ${KitColors.gray10}`,
   borderRadius: FIELD_BORDER_RADIUS,
 
   // CopyFieldVariantProps..
@@ -99,7 +99,7 @@ const copyFieldStyles = styled(FIELD_TAG, {
       true: {
         color: KitColors.slate12,
         backgroundColor: KitColors.slateA4,
-        border: `2px solid ${KitColors.atlrPurple00}`,
+        border: `2px solid ${KitColors.gray10}`,
       },
     },
   },

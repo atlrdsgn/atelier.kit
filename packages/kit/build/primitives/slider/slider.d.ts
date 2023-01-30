@@ -17,7 +17,7 @@ type SliderRangePrimitiveProps = React.HTMLAttributes<HTMLDivElement> & React.Co
 type SliderRangeProps = SliderRangePrimitiveProps & {
     css?: CSS;
 };
-export declare const Slider: React.ForwardRefExoticComponent<Pick<SliderRootProps, "max" | "value" | "key" | "css" | "step" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "orientation" | "disabled" | "name" | "min" | "inverted" | "minStepsBetweenThumbs" | "onValueChange" | "onValueCommit"> & React.RefAttributes<HTMLDivElement>>;
+export declare const Slider: React.ForwardRefExoticComponent<Pick<SliderRootProps, "name" | "max" | "value" | "key" | "css" | "step" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "orientation" | "disabled" | "min" | "inverted" | "minStepsBetweenThumbs" | "onValueChange" | "onValueCommit"> & React.RefAttributes<HTMLDivElement>>;
 export declare const SliderTrack: React.ForwardRefExoticComponent<Pick<SliderTrackProps, "key" | "css" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild"> & React.RefAttributes<HTMLDivElement>>;
 export declare const SliderThumb: React.ForwardRefExoticComponent<Pick<SliderThumbProps, "key" | "css" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild"> & React.RefAttributes<HTMLDivElement>>;
 export declare const SliderRange: React.ForwardRefExoticComponent<Pick<SliderRangeProps, "key" | "css" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild"> & React.RefAttributes<HTMLDivElement>>;

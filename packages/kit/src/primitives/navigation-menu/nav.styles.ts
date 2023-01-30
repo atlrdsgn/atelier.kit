@@ -98,7 +98,7 @@ const NavigationMenuRoot = styled(NavigationMenu.Root, {
  * ----------------------------------------------------------------------- */
 
 const NavigationMenuBarStyles = styled(NavigationMenu.List, {
-  zIndex: 9999,
+  zIndex: 99999,
   position: 'fixed',
   top: 4,
   left: 0,
@@ -381,7 +381,7 @@ const NavigationMenuInner = styled('div', {
   height: '100%',
   boxSizing: 'border-box',
   borderRadius: 16,
-  border: '1px solid $sageA4',
+  border: `1px solid ${KitColors.slateA4}`,
   transition: 'color 0.8s ease',
   /**
    * @backgroundColor
@@ -432,7 +432,7 @@ const ViewportPosition = styled('div', {
   left: 0,
   right: 0,
      */
-  zIndex: 999999,
+  zIndex: 999,
   position: 'fixed',
   top: 0,
   left: 0,

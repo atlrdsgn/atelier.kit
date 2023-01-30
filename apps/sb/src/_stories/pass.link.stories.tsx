@@ -11,13 +11,64 @@ export default {
    */
   title: 'primitives/pass.link',
   component: PassLink,
+
+  argTypes: {
+    size: {
+      control: {
+        type: 'select',
+        options: ['inherit', 'xs', 'sm', 'md', 'lg'],
+        default: 'inherit',
+      },
+    },
+
+    underline: {
+      control: {
+        type: 'boolean',
+        defaultValue: false,
+      },
+    },
+
+    sans: {
+      control: {
+        type: 'boolean',
+        defaultValue: true,
+      },
+    },
+
+    mono: {
+      control: {
+        type: 'boolean',
+        defaultValue: false,
+      },
+    },
+
+    color: {
+      control: {
+        type: 'select',
+        options: [
+          'inherit',
+          'default',
+          'slate',
+          'white',
+          'black',
+          'helios',
+          'fizz',
+          'mauve',
+          'sky',
+        ],
+        default: 'inherit',
+      },
+    },
+  },
 } as ComponentMeta<typeof PassLink>
 
 //👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof PassLink> = (args) => {
   return (
     <Container size={'sm'} align={'center'}>
-      <PassLink href={'/'}>Edit on CodeSandbox</PassLink>
+      <PassLink {...args} href={'/'}>
+        Edit on CodeSandbox
+      </PassLink>
     </Container>
   )
 }
@@ -25,5 +76,9 @@ const Template: ComponentStory<typeof PassLink> = (args) => {
 export const Basic = Template.bind({})
 
 Basic.args = {
+  color: 'inherit',
+  underline: false,
+  mono: false,
+  sans: true,
   css: {},
 }

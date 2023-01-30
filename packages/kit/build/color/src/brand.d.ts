@@ -1,13 +1,16 @@
 export declare const brand: {
-    atlrLime1: string;
-    atlrLime2: string;
-    atlrPurple1: string;
-    atlrPurple2: string;
-    atlrGray1: string;
-    atlrGray2: string;
-    atlrGray3: string;
-    atlrGray4: string;
-    atlrGray5: string;
+    brand1: string;
+    brand2: string;
+    brand3: string;
+    brand4: string;
+    brand5: string;
+    brand6: string;
+    brand7: string;
+    brand8: string;
+    brand9: string;
+    brand10: string;
+    brand11: string;
+    brand12: string;
     limey: string;
     purple: string;
 };

@@ -6,25 +6,35 @@ import {CardVariantProps, StyledCard, StyledImageHolder} from './card.styles'
 
 export interface cardProps {
   children: React.ReactNode
-  imageSrc?: string
+}
+
+export interface imgProps extends React.HTMLAttributes<HTMLImageElement> {
+  src?: string
+
+  alt?: string
+
+  width?: number
+
+  height?: number
+
+  style?: React.CSSProperties
+
+  className?: string
+
+  loading?: 'eager' | 'lazy'
+
+  sizes?: string
 }
 
 type CardPrimitiveProps = baseComponentProps &
-  cardProps &
   CardVariantProps &
   React.HTMLAttributes<HTMLDivElement>
-type CardProps = CardPrimitiveProps
+type CardProps = CardPrimitiveProps & imgProps
 
-const CardComponent = ({children, imageSrc, dev = false, ...rest}: CardProps) => {
+const CardComponent = ({children, src, dev = false, ...rest}: CardProps) => {
   return (
     <StyledCard {...rest} dev={dev}>
-      <>
-        {imageSrc && (
-          <StyledImageHolder>
-            <img src={imageSrc} />
-          </StyledImageHolder>
-        )}
-      </>
+      <>{src && <StyledImageHolder src={src} />}</>
 
       {/* <!-- CardTitle and CTA will be added here --> */}
       {children}

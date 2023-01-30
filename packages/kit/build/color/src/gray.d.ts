@@ -9,6 +9,8 @@ export declare const gray: {
     gray8: string;
     gray9: string;
     gray10: string;
+    gray11: string;
+    gray12: string;
 };
 export declare const grayDark: {
     gray1: string;
@@ -21,5 +23,7 @@ export declare const grayDark: {
     gray8: string;
     gray9: string;
     gray10: string;
+    gray11: string;
+    gray12: string;
 };
 //# sourceMappingURL=gray.d.ts.map

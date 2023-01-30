@@ -2,10 +2,14 @@ import * as React from 'react'
 import {IconProps} from './types.icon'
 
 import {AtelierIcon} from './src/Atelier.Icon'
+import {AtelierFilledIcon} from './src/Atelier.Filled.Icon'
 import {AppleIcon} from './src/Apple.Icon'
 import {ArrowDownIcon} from './src/ArrowDown.Icon'
+import {ButterflyIcon} from './src/Butterfly.Icon'
 import {CodeSandboxIcon} from './src/CodeSandbox.Icon'
 import {CodeSandbox2Icon} from './src/CodeSandbox2.Icon'
+import {MailIcon} from './src/Mail.Icon'
+import {TypescriptIcon} from './src/Typescript.Icon'
 import {YouTubeIcon} from './src/YouTube.Icon'
 import {XIcon} from './src/X.Icon'
 
@@ -13,14 +17,17 @@ import {XIcon} from './src/X.Icon'
  *
  * Atelier.Icon [/]
  * Apple.Icon [/]
- *
+ * ArrowDown.Icon [/]
+ * CodeSandbox.Icon [/]
+ * CodeSandbox2.Icon [/]
+ * YouTube.Icon [/]
  * X.Icon [/]
  *
  */
 
 /**
  *
- * @param param0
+ * @param any
  *
  *
  *
@@ -41,6 +48,17 @@ const IconSource = ({
    */
   if (variant === 'Atelier.Icon') {
     return <AtelierIcon {...props} color={color} />
+  }
+
+  /**
+   *
+   *
+   *
+   * AtelierFilled[Icon]
+   *
+   */
+  if (variant === 'Atelier.Filled.Icon') {
+    return <AtelierFilledIcon {...props} color={color} />
   }
 
   /**
@@ -71,13 +89,11 @@ const IconSource = ({
    *
    *
    *
-   *
-   * X[Icon]
-   *
+   * Butterfly[Icon]
    *
    */
-  if (variant === 'X.Icon') {
-    return <XIcon {...props} color={color} />
+  if (variant === 'Butterfly.Icon') {
+    return <ButterflyIcon {...props} color={color} />
   }
 
   /**
@@ -104,6 +120,41 @@ const IconSource = ({
    */
   if (variant === 'CodeSandbox2.Icon') {
     return <CodeSandbox2Icon {...props} color={color} />
+  }
+
+  /**
+   *
+   *
+   *
+   * Mail[Icon]
+   *
+   */
+  if (variant === 'Mail.Icon') {
+    return <MailIcon {...props} color={color} />
+  }
+
+  /**
+   *
+   *
+   *
+   * Typescript[Icon]
+   *
+   */
+  if (variant === 'Typescript.Icon') {
+    return <TypescriptIcon {...props} color={color} />
+  }
+
+  /**
+   *
+   *
+   *
+   *
+   * X[Icon]
+   *
+   *
+   */
+  if (variant === 'X.Icon') {
+    return <XIcon {...props} color={color} />
   }
 
   /**

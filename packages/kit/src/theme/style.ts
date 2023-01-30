@@ -1,6 +1,6 @@
 import {css, reset, getCssText, globalCss, KitColors} from './base'
 
-import {baseFace, monoFace, kitFace, pragFace, faceWeights} from './font-kit/font.types'
+import {baseFace, monoFace, kitFace, pragFace, faceWeights} from './font-kit/types'
 
 /**
  *

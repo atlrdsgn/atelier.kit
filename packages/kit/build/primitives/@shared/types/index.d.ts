@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import type { CSS } from '../../../theme';
 export interface baseKitProp {
     /** Stitches.Config.CSS */
@@ -25,4 +25,18 @@ export interface baseComponentProps {
     id?: string;
     css?: CSS;
 }
+/**
+ * Component helper type to be extended by component types, e.g.:
+ * type CustomComponentProps = BaseProps<HTMLDivElement> & { ... }
+ *
+ * Example use:
+ * const CustomComponent = forwardRef<HTMLDivElement, CustomComponentProps>(({className, ...props}, ref) => { ... })
+ * // OR:
+ * const CustomComponent = forwardRef(({className: CustomComponentProps, ...props}, ref: Ref<HTMLDivElement>) => { ... })
+ */
+export type BaseProps<T> = {
+    className?: string;
+    id?: string;
+    ref?: React.Ref<T>;
+};
 //# sourceMappingURL=index.d.ts.map

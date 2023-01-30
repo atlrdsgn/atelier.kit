@@ -19,15 +19,6 @@ export declare const kitDarkColors: {
     atelier01: string;
     atelier02: string;
     atelier03: string;
-    atlr00: string;
-    atlr01: string;
-    atlr02: string;
-    atlr03: string;
-    atlr04: string;
-    atlrLime00: string;
-    atlrLime01: string;
-    atlrPurple00: string;
-    atlrPurple01: string;
     limey: string;
     purp: string;
     slate1: string;

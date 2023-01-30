@@ -44,8 +44,8 @@ const indicatorStyles = styled(CheckboxPrimitive.Indicator, {
 
 const labelStyles = styled('label', {
   fontFamily: KitTheme.theme.fonts.sans,
-  color: KitColors.slate11,
-  fontSize: 12,
+  color: KitColors.gray12,
+  fontSize: KitTheme.theme.fontSizes.sm,
   fontWeight: KitTheme.theme.fontWeights.semibold,
   lineHeight: 1,
   userSelect: 'none',

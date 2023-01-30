@@ -39,17 +39,18 @@ const baseKitThemeColors = {
   atelier02: '#A493F8',
   atelier03: '#837E95',
 
-  atlr00: brand.atlrGray1,
-  atlr01: brand.atlrGray2,
-  atlr02: brand.atlrGray3,
-  atlr03: brand.atlrGray4,
-  atlr04: brand.atlrGray5,
-
-  atlrLime00: brand.atlrLime1,
-  atlrLime01: brand.atlrLime2,
-
-  atlrPurple00: brand.atlrPurple1,
-  atlrPurple01: brand.atlrPurple2,
+  brand1: brand.brand1,
+  brand2: brand.brand2,
+  brand3: brand.brand3,
+  brand4: brand.brand4,
+  brand5: brand.brand5,
+  brand6: brand.brand6,
+  brand7: brand.brand7,
+  brand8: brand.brand8,
+  brand9: brand.brand9,
+  brand10: brand.brand10,
+  brand11: brand.brand11,
+  brand12: brand.brand12,
 
   limey: brand.limey,
   purp: brand.purple,
@@ -64,6 +65,8 @@ const baseKitThemeColors = {
   gray8: gray.gray8,
   gray9: gray.gray9,
   gray10: gray.gray10,
+  gray11: gray.gray11,
+  gray12: gray.gray12,
 
   slate1: slate.slate1,
   slate2: slate.slate2,

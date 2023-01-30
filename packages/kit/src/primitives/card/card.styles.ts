@@ -61,7 +61,7 @@ const StyledCard = styled('div', {
  *
  * image holder.
  */
-const StyledImageHolder = styled('div', {
+const StyledImageHolder = styled('img', {
   width: '100%',
 
   position: 'absolute',

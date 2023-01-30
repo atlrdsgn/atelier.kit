@@ -16,4 +16,12 @@ const fontFams: Record<FontType, string> = {
   pragmatica: `${pragFace}, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, sans-serif`,
 }
 
-export {lineHeights, letterSpacings, faceWeights, fontFams}
+export {
+  lineHeights,
+  //
+  letterSpacings,
+  //
+  faceWeights,
+  //
+  fontFams,
+}

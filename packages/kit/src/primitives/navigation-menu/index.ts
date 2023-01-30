@@ -19,7 +19,7 @@ export const AtlrNavbar = () => {
 
 
 
-        <NavigationMenu.Item>
+        <NavigationMenu.Item> // NavMenuItem
           <NavMenuTrigger>
             Projects <NavIcxn variant='SmallArrowDown' />
           </NavMenuTrigger>

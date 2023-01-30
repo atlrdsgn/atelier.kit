@@ -8,8 +8,13 @@ export {getCssAndReset} from './style'
 export {KitTheme} from './base'
 export {KitColors} from './base'
 export {KitMedia} from './base'
-
 export {darkTheme} from './base'
+
+/**
+ *
+ * @utils
+ */
+export {generateColorArray} from './utils/generate-color-array'
 
 /**
  *

@@ -44,10 +44,10 @@ const iconBoxStyles = css({
         color: KitColors.fizz6,
       },
       purple: {
-        color: KitColors.atlrPurple00,
+        color: KitColors.helios5,
       },
       lime: {
-        color: KitColors.atlrLime00,
+        color: KitColors.fizz4,
       },
     },
   },

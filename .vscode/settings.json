@@ -1,0 +1,16 @@
+{
+  "git.ignoreLimitWarning": true,
+  "files.autoSave": "onWindowChange",
+  "editor.fontSize": 11,
+  "editor.fontFamily": "SF Mono, monospace",
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "CodeSandbox Black 2021",
+  "editor.formatOnPaste": true,
+  "window.zoomLevel": 0,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "500",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

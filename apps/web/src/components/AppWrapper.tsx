@@ -44,7 +44,7 @@ const StyledAppWrapper = styled('div', {
   paddingTop: 0,
   paddingBottom: 180,
 
-  backgroundColor: KitColors.slate2,
+  backgroundColor: KitColors.transparent,
 
   //border: '1px solid red',
 })

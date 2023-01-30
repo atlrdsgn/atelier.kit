@@ -14,7 +14,7 @@ import {
   TabsDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
-import {AtelierKitLogo} from '@/components/AtelierKit.Logo'
+import {AtelierKitLogo} from 'atlr.kit'
 import {Container} from 'atlr.kit'
 
 function Components() {
@@ -30,7 +30,7 @@ function Components() {
       {/* <!-- Components go here --> */}
 
       <Container size={'sm'} align={'center'}>
-        <AtelierKitLogo />
+        <AtelierKitLogo width={'180'} color={'white'} />
       </Container>
 
       <SectionGap />

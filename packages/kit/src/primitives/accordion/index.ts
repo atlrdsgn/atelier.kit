@@ -1,8 +1,6 @@
-export {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from './accordion'
+export {Accordion} from './accordion'
 
-export type {
-  AccordionContentProps,
-  AccordionItemProps,
-  AccordionProps,
-  AccordionTriggerProps,
-} from './accordion'
+export {AccordionItem} from './accordion'
+export {AccordionTrigger} from './accordion'
+
+export {AccordionContent} from './accordion'

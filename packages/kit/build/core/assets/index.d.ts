@@ -1,3 +1,4 @@
+export { AtelierKitLogo } from './brand/atelier.kit';
 export { KitLogo } from './brand/kit.logo';
 export { KitTypefaceLogo } from './brand/kit.typeface.logo';
 export { KitBorderedLogo } from './brand/kit.360.bordered';

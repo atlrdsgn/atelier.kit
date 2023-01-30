@@ -2,11 +2,13 @@ import * as React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import {Button, Canvas, Flex} from 'atlr.kit'
-import {AtelierKitLogo} from '@/components/AtelierKit.Logo'
+import {Button, Canvas, Flex, KitColors, Space} from 'atlr.kit'
+import {AtelierKitLogo} from 'atlr.kit'
 import {AppWrapper} from '@/components/AppWrapper'
 import {BlurredCanvas} from '@/components/BlurredCanvas'
 import mainBackdrop from '../../public/main.png'
+
+const logoColor = KitColors.fizz3
 
 function Index() {
   return (
@@ -21,7 +23,8 @@ function Index() {
       <AppWrapper>
         <Canvas css={{zIndex: 100}}>
           <Flex direction="column" align="center" justify="center">
-            <AtelierKitLogo />
+            <AtelierKitLogo width={'260'} color={logoColor} />
+            <Space size={'xs'} />
             <Button size="sm" href="/components" secondary>
               View Components
             </Button>

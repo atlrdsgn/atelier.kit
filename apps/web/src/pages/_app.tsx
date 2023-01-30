@@ -9,12 +9,12 @@ const globalStyles = globalCss({
   html: {
     margin: 0,
     padding: 0,
-    backgroundColor: KitColors.slate2,
+    backgroundColor: KitColors.slate12,
   },
   body: {
     margin: 0,
     WebkitTextSizeAdjust: '100%',
-    backgroundColor: KitColors.slate2,
+    backgroundColor: KitColors.slate12,
     color: KitColors.slate12,
   },
 })

@@ -1,6 +1,7 @@
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import {KitColors, KitTheme, keyframes, styled, VariantProps} from '../../theme'
 import {ArrowDownIcon} from '../_icon/src/ArrowDown.Icon'
+import {Icon} from '../_icon'
 
 /**
  *
@@ -28,13 +29,15 @@ const slideDown = keyframes({
     height: CONTENT_HEIGHT_ZERO,
   },
   to: {
-    height: `var(--radix-accordion-content-height)`,
+    // height: `var(--radix-accordion-content-height)`,
+    height: `--radix-accordion-content-height`,
   },
 })
 
 const slideUp = keyframes({
   from: {
-    height: `var(--radix-accordion-content-height)`,
+    height: `--radix-accordion-content-height`,
+    // height: `var(--radix-accordion-content-height)`,
   },
   to: {
     height: CONTENT_HEIGHT_ZERO,
@@ -137,6 +140,7 @@ const styledItem = styled(AccordionPrimitive.Item, {
 const styledHeader = styled(AccordionPrimitive.Header, 'h2', {
   all: 'unset',
   display: 'flex',
+  borderRadius: HEADER_RADIUS,
 
   // boxSizing: 'border-box',
   // borderRadius: HEADER_RADIUS,
@@ -290,6 +294,9 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
  *
  */
 const styledContent = styled(AccordionPrimitive.Content, 'div', {
+  boxSizing: 'border-box',
+  overflow: 'hidden',
+
   fontFamily: KitTheme.theme.fonts.sans,
   fontSize: KitTheme.theme.fontSizes.md,
   fontWeight: KitTheme.theme.fontWeights.normal,
@@ -298,23 +305,24 @@ const styledContent = styled(AccordionPrimitive.Content, 'div', {
   paddingRight: KitTheme.theme.space[4],
   paddingTop: KitTheme.theme.space[4],
   paddingBottom: KitTheme.theme.space[4],
-  margin: 'auto',
+  margin: 0,
 
   color: KitColors.slate11,
   backgroundColor: KitColors.slate1,
   width: '100%',
+  height: 'auto',
 
   textAlign: 'left',
 
   '&[data-state="open"]': {
     height: CONTENT_HEIGHT_FULL,
     animation: `${slideDown} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
-    animationName: `${slideDown}`,
+    // animationName: `${slideDown}`,
   },
   '&[data-state="closed"]': {
     height: CONTENT_HEIGHT_ZERO,
     animation: `${slideUp} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
-    animationName: `${slideUp}`,
+    // animationName: `${slideUp}`,
   },
 })
 
@@ -341,6 +349,23 @@ const styledArrowDown = styled(ArrowDownIcon, {
   },
 })
 
+const styledArrow = styled(Icon, {
+  color: KitColors.slate8,
+  transition: 'transform 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+  '[data-state=open] &': {transform: 'rotate(90deg)'},
+
+  variants: {
+    color: {
+      slate: {
+        color: KitColors.slate8,
+      },
+    },
+  },
+  defaultVariants: {
+    color: 'slate',
+  },
+})
+
 /////////////////////// EXPORTS ////////////////////////////////////
 export const AtlrAccordionRoot = styledAccordion
 export const AtlrAccordionItem = styledItem
@@ -349,6 +374,7 @@ export const AtlrAccordionTrigger = styledTrigger
 export const AtlrAccordionContent = styledContent
 export const AtlrAccordionContentText = styledContentText
 export const AtlrAccordionArrowDown = styledArrowDown
+export const StyledArrow = styledArrow
 ///////////////////////////////////////////////////////////////////
 export type AccordionRootVariantProps = VariantProps<typeof styledAccordion>
 export type AccordionItemVariantProps = VariantProps<typeof styledItem>

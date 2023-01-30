@@ -1,12 +1,15 @@
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import * as React from 'react'
 import {baseComponentProps} from '../@shared/types'
-import type {AccordionRootVariantProps, AccordionHeaderVariantProps} from './accordion.styles'
+import {
+  AccordionRootVariantProps,
+  // AccordionHeaderVariantProps,
+  StyledArrow,
+} from './accordion.styles'
 
 import {
-  AtlrAccordionArrowDown,
+  // AtlrAccordionArrowDown,
   AtlrAccordionContent,
-  AtlrAccordionContentText,
   AtlrAccordionHeader,
   AtlrAccordionItem,
   AtlrAccordionRoot,
@@ -22,20 +25,26 @@ import {
  */
 
 type AccordionPrimitiveProps = baseComponentProps &
+  AccordionRootVariantProps &
   React.ComponentProps<typeof AccordionPrimitive.Root>
-type AccordionProps = AccordionPrimitiveProps & AccordionRootVariantProps
+type AccordionProps = AccordionPrimitiveProps
 const accordion = React.forwardRef<React.ElementRef<typeof AtlrAccordionRoot>, AccordionProps>(
-  ({...props}, forwardedRef) => (
+  ({children, bordered = false, ...rest}, forwardedRef) => (
     <AtlrAccordionRoot
-      {...props}
+      {...rest}
       ref={forwardedRef}
-      // {...(props.type === 'single' ? {collapsible: true} : {})}
-
-      bordered={props.bordered}
+      {...(rest.type === 'single'
+        ? {
+            collapsible: true,
+          }
+        : {
+            collapsible: false,
+          })}
+      bordered={bordered}
       css={{
-        ...props.css,
+        ...rest.css,
       }}>
-      {props.children}
+      {children}
     </AtlrAccordionRoot>
   )
 )
@@ -72,11 +81,10 @@ const accordionItem = React.forwardRef<
  * Accordion.Header...
  *
  */
-
+/*
 type AccordionHeaderPrimitiveProps = baseComponentProps &
   AccordionHeaderVariantProps &
-  React.ComponentProps<typeof AccordionPrimitive.Header> &
-  React.HTMLAttributes<HTMLHeadingElement>
+  React.ComponentProps<typeof AccordionPrimitive.Header> 
 type AccordionHeaderProps = AccordionHeaderPrimitiveProps
 const ForwardedHeader = React.forwardRef<
   React.ElementRef<typeof AtlrAccordionHeader>,
@@ -94,7 +102,7 @@ const ForwardedHeader = React.forwardRef<
     {props.children}
   </AtlrAccordionHeader>
 ))
-
+*/
 /**
  *
  *
@@ -111,12 +119,14 @@ const accordionTrigger = React.forwardRef<
   React.ElementRef<typeof AtlrAccordionTrigger>,
   AccordionTriggerProps
 >(({...props}, forwardedRef) => (
-  <ForwardedHeader>
+  <AtlrAccordionHeader orientation={'horizontal'}>
     <AtlrAccordionTrigger {...props} ref={forwardedRef} css={{...props.css}}>
-      {props.children}
-      <AtlrAccordionArrowDown width={'24'} color={'slate'} />
+      <span>{props.children}</span>
+      {/* <!-- <AtlrAccordionArrowDown width={'24'} color={'slate'} /> --> */}
+
+      <StyledArrow variant={'ArrowDown.Icon'} />
     </AtlrAccordionTrigger>
-  </ForwardedHeader>
+  </AtlrAccordionHeader>
 ))
 
 /**
@@ -128,8 +138,7 @@ const accordionTrigger = React.forwardRef<
  */
 
 type AccordionContentPrimitiveProps = baseComponentProps &
-  React.ComponentProps<typeof AccordionPrimitive.Content> &
-  React.HTMLAttributes<HTMLDivElement>
+  React.ComponentProps<typeof AccordionPrimitive.Content>
 type AccordionContentProps = AccordionContentPrimitiveProps
 const accordionContent = React.forwardRef<
   React.ElementRef<typeof AtlrAccordionContent>,

@@ -12,6 +12,11 @@ import {MailIcon} from './src/Mail.Icon'
 import {TypescriptIcon} from './src/Typescript.Icon'
 import {YouTubeIcon} from './src/YouTube.Icon'
 import {XIcon} from './src/X.Icon'
+import {FourKIcon} from './src/4K.Icon'
+import {ASolidIcon} from './src/A.Filled.Icon'
+
+import {SdIcon} from './src/SD.Icon'
+import {HdIcon} from './src/HD.Icon'
 
 /**
  *
@@ -39,131 +44,88 @@ const IconSource = ({
   variant = 'Atelier.Icon' as IconProps['variant'],
   ...props
 }: IconProps) => {
-  /**
-   *
-   *
-   *
-   * Atelier[Icon]
-   *
-   */
-  if (variant === 'Atelier.Icon') {
+  /* -------------- numbers. -------------- */
+  if (variant === '[4K].Icon') {
+    // 4K.Icon
+    return <FourKIcon {...props} color={color} />
+  }
+
+  if (variant === '[SD].Icon') {
+    // [SD].Icon
+    return <SdIcon {...props} color={color} />
+  }
+
+  if (variant === '[HD].Icon') {
+    return <HdIcon {...props} color={color} />
+  }
+
+  /* -------------- brand. -------------- */
+
+  if (variant === '[A].Filled.Icon') {
+    // A.Filled[Icon]
+    return <ASolidIcon {...props} color={color} />
+  }
+
+  // -- Atelier[Icon]
+  if (variant === '[Atelier].Icon') {
     return <AtelierIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   * AtelierFilled[Icon]
-   *
-   */
-  if (variant === 'Atelier.Filled.Icon') {
+  // -- Atelier[Filled.Icon]
+  if (variant === '[Atelier].[Filled].Icon') {
     return <AtelierFilledIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   * ArrowDown[Icon]
-   *
-   */
+  // -- ArrowDown[Icon]
+  if (variant === '[ArrowDown].Icon') {
+    return <ArrowDownIcon {...props} color={color} />
+  }
+
   if (variant === 'ArrowDown.Icon') {
     return <ArrowDownIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   *
-   * Apple[Icon]
-   *
-   *
-   */
-  if (variant === 'Apple.Icon') {
+  // -- Apple[Icon]
+  if (variant === '[Apple].Icon') {
     return <AppleIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   * Butterfly[Icon]
-   *
-   */
-  if (variant === 'Butterfly.Icon') {
+  // -- Butterfly[Icon]
+  if (variant === '[Butterfly].Icon') {
     return <ButterflyIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   *
-   * CodeSandbox[Icon]
-   *
-   *
-   */
-  if (variant === 'CodeSandbox.Icon') {
+  // -- CodeSandbox[Icon]
+  if (variant === '[CodeSandbox].Icon') {
     return <CodeSandboxIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   *
-   * CodeSandbox2[Icon]
-   *
-   *
-   */
-  if (variant === 'CodeSandbox2.Icon') {
+  // -- CodeSandbox2[Icon]
+  if (variant === '[CodeSandbox2].Icon') {
     return <CodeSandbox2Icon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   * Mail[Icon]
-   *
-   */
-  if (variant === 'Mail.Icon') {
+  // -- Mail[Icon]
+  if (variant === '[Mail].Icon') {
     return <MailIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   * Typescript[Icon]
-   *
-   */
-  if (variant === 'Typescript.Icon') {
+  // -- Typescript[Icon]
+  if (variant === '[Typescript].Icon') {
     return <TypescriptIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   *
-   *
-   * X[Icon]
-   *
-   *
-   */
+  // -- X[Icon]
+  if (variant === '[x].Icon') {
+    return <XIcon {...props} color={color} />
+  }
+
   if (variant === 'X.Icon') {
     return <XIcon {...props} color={color} />
   }
 
-  /**
-   *
-   *
-   * YouTube[Icon]
-   *
-   */
-  if (variant === 'YouTube.Icon') {
+  // -- YouTube[Icon]
+  if (variant === '[YouTube].Icon') {
     return <YouTubeIcon {...props} color={color} />
   }
 

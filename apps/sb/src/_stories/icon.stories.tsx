@@ -15,17 +15,17 @@ const Template: ComponentStory<typeof Icon> = (args) => {
   return (
     <Container size={'md'} align={'center'}>
       <Flex align={'center'} justify={'between'}>
-        <Icon {...args} variant={'Atelier.Icon'} color={color} />
-        <Icon {...args} variant={'Atelier.Filled.Icon'} color={color} />
-        <Icon {...args} variant={'Apple.Icon'} color={color} />
-        <Icon {...args} variant={'ArrowDown.Icon'} color={color} />
-        <Icon {...args} variant={'Butterfly.Icon'} color={color} />
-        <Icon {...args} variant={'CodeSandbox.Icon'} color={color} />
-        <Icon {...args} variant={'CodeSandbox2.Icon'} color={color} />
-        <Icon {...args} variant={'Mail.Icon'} color={color} />
-        <Icon {...args} variant={'YouTube.Icon'} color={color} />
-        <Icon {...args} variant={'Typescript.Icon'} color={color} />
-        <Icon {...args} variant={'X.Icon'} color={color} />
+        <Icon {...args} variant={'[Atelier].Icon'} color={color} />
+        <Icon {...args} variant={'[Atelier].[Filled].Icon'} color={color} />
+        <Icon {...args} variant={'[Apple].Icon'} color={color} />
+        <Icon {...args} variant={'[ArrowDown].Icon'} color={color} />
+        <Icon {...args} variant={'[Butterfly].Icon'} color={color} />
+        <Icon {...args} variant={'[CodeSandbox].Icon'} color={color} />
+        <Icon {...args} variant={'[CodeSandbox2].Icon'} color={color} />
+        <Icon {...args} variant={'[Mail].Icon'} color={color} />
+        <Icon {...args} variant={'[YouTube].Icon'} color={color} />
+        <Icon {...args} variant={'[Typescript].Icon'} color={color} />
+        <Icon {...args} variant={'[x].Icon'} color={color} />
       </Flex>
     </Container>
   )

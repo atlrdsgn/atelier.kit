@@ -1,3 +1,3 @@
-type IconVariant = 'Atelier.Icon' | 'Atelier.Filled.Icon' | 'ArrowDown.Icon' | 'Apple.Icon' | 'Butterfly.Icon' | 'CodeSandbox.Icon' | 'CodeSandbox2.Icon' | 'Mail.Icon' | 'Typescript.Icon' | 'X.Icon' | 'YouTube.Icon';
+type IconVariant = '[4K].Icon' | '[A].Filled.Icon' | 'A[Alternate].Icon' | 'A[Bordered].Icon' | '[Atelier].Icon' | '[Atelier].[Filled].Icon' | '[ArrowDown].Icon' | '[Apple].Icon' | 'ArrowDown.Icon' | '[Butterfly].Icon' | '[CodeSandbox].Icon' | '[CodeSandbox2].Icon' | '[HD].Icon' | '[SD].Icon' | '[Mail].Icon' | '[Typescript].Icon' | '[x].Icon' | 'X.Icon' | '[YouTube].Icon';
 export type { IconVariant };
 //# sourceMappingURL=types.icon.variants.d.ts.map

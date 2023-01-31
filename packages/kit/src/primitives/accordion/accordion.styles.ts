@@ -29,15 +29,13 @@ const slideDown = keyframes({
     height: CONTENT_HEIGHT_ZERO,
   },
   to: {
-    // height: `var(--radix-accordion-content-height)`,
-    height: `--radix-accordion-content-height`,
+    height: `var(--radix-accordion-content-height)`,
   },
 })
 
 const slideUp = keyframes({
   from: {
-    height: `--radix-accordion-content-height`,
-    // height: `var(--radix-accordion-content-height)`,
+    height: `var(--radix-accordion-content-height)`,
   },
   to: {
     height: CONTENT_HEIGHT_ZERO,
@@ -58,9 +56,6 @@ const slideUp = keyframes({
  */
 
 const styledAccordion = styled(AccordionPrimitive.Root, {
-  /**
-   * <Accordion />
-   */
   position: 'relative',
   justifyContent: 'center',
   alignItems: 'center',
@@ -117,7 +112,6 @@ const styledItem = styled(AccordionPrimitive.Item, {
   '&:focus-within': {
     position: 'relative',
     zIndex: 1,
-    // boxShadow: `0 0 0 2px ${AtelierColors.mauve12}}`,
   },
   '&:last-of-type': {
     borderBottom: `0px solid ${KitColors.slate6}`,
@@ -142,18 +136,7 @@ const styledHeader = styled(AccordionPrimitive.Header, 'h2', {
   display: 'flex',
   borderRadius: HEADER_RADIUS,
 
-  // boxSizing: 'border-box',
-  // borderRadius: HEADER_RADIUS,
-
-  // flexDirection: 'row',
-  // justifyContent: 'space-between',
-  // alignItems: 'center',
-
-  // lineHeight: 'normal',
-
-  // padding: 0,
-  // margin: 'auto',
-  // width: '100%',
+  boxSizing: 'border-box',
 
   variants: {
     orientation: {
@@ -187,7 +170,6 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
   paddingTop: KitTheme.theme.space[3],
   paddingBottom: KitTheme.theme.space[3],
 
-  // height: 45,
   height: 'auto',
 
   flex: '1',
@@ -248,7 +230,6 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
   },
   '&:focus': {
     outline: 'none',
-    // boxShadow: `inset 0 0 0 0px ${KitColors.slate6}, 0 0 0 0px ${KitColors.slate6}`,
   },
   svg: {
     transition: 'transform 175ms cubic-bezier(0.65, 0, 0.35, 1)',
@@ -267,7 +248,6 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
     '&:focus-within': {
       position: 'relative',
       zIndex: 1,
-      // boxShadow: `0 0 0 2px ${KitColors.mauve12}`,
     },
     '&:last-of-type': {},
   },
@@ -315,13 +295,13 @@ const styledContent = styled(AccordionPrimitive.Content, 'div', {
   textAlign: 'left',
 
   '&[data-state="open"]': {
-    height: CONTENT_HEIGHT_FULL,
-    animation: `${slideDown} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    // height: CONTENT_HEIGHT_FULL,
+    // animation: `${slideDown} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
     // animationName: `${slideDown}`,
   },
   '&[data-state="closed"]': {
-    height: CONTENT_HEIGHT_ZERO,
-    animation: `${slideUp} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
+    // height: CONTENT_HEIGHT_ZERO,
+    // animation: `${slideUp} 400ms cubic-bezier(0.87, 0, 0.13, 1)`,
     // animationName: `${slideUp}`,
   },
 })

@@ -23,13 +23,6 @@ type AccordionItemProps = AccordionItemPrimitiveProps;
 /**
  *
  *
- *
- * Accordion.Header...
- *
- */
-/**
- *
- *
  * Accordion.Trigger...
  *
  *

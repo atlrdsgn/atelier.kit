@@ -1,14 +1,9 @@
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import * as React from 'react'
 import {baseComponentProps} from '../@shared/types'
-import {
-  AccordionRootVariantProps,
-  // AccordionHeaderVariantProps,
-  StyledArrow,
-} from './accordion.styles'
+import {AccordionRootVariantProps, StyledArrow} from './accordion.styles'
 
 import {
-  // AtlrAccordionArrowDown,
   AtlrAccordionContent,
   AtlrAccordionHeader,
   AtlrAccordionItem,
@@ -74,35 +69,6 @@ const accordionItem = React.forwardRef<
   </AtlrAccordionItem>
 ))
 
-/**
- *
- *
- *
- * Accordion.Header...
- *
- */
-/*
-type AccordionHeaderPrimitiveProps = baseComponentProps &
-  AccordionHeaderVariantProps &
-  React.ComponentProps<typeof AccordionPrimitive.Header> 
-type AccordionHeaderProps = AccordionHeaderPrimitiveProps
-const ForwardedHeader = React.forwardRef<
-  React.ElementRef<typeof AtlrAccordionHeader>,
-  AccordionHeaderProps
->(({...props}, forwardedRef) => (
-  <AtlrAccordionHeader
-    {...props}
-    ref={forwardedRef}
-    asChild={props.asChild}
-    orientation={'horizontal'}
-    data-orientation={props['data-orientation'] ? 'horizontal' : 'vertical'}
-    css={{
-      ...props.css,
-    }}>
-    {props.children}
-  </AtlrAccordionHeader>
-))
-*/
 /**
  *
  *

@@ -4,6 +4,7 @@ type IconVariant =
 
   // a.
   | '[A].Filled.Icon'
+  | '[A].Bordered.Icon'
   | 'A[Alternate].Icon'
   | 'A[Bordered].Icon'
   | '[Atelier].Icon'

@@ -14,6 +14,7 @@ import {YouTubeIcon} from './src/YouTube.Icon'
 import {XIcon} from './src/X.Icon'
 import {FourKIcon} from './src/4K.Icon'
 import {ASolidIcon} from './src/A.Filled.Icon'
+import {ABorderedIcon} from './src/A.Bordered.Icon'
 
 import {SdIcon} from './src/SD.Icon'
 import {HdIcon} from './src/HD.Icon'
@@ -64,6 +65,11 @@ const IconSource = ({
   if (variant === '[A].Filled.Icon') {
     // A.Filled[Icon]
     return <ASolidIcon {...props} color={color} />
+  }
+
+  if (variant === '[A].Bordered.Icon') {
+    // A.Filled[Icon]
+    return <ABorderedIcon {...props} color={color} />
   }
 
   // -- Atelier[Icon]

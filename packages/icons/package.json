@@ -1,0 +1,63 @@
+{
+    "name": "atlr.icons",
+    "packageManager": "yarn@3.3.0",
+    "version": "0.0.1",
+    "description": "Atlr® Icons",
+    "author": "Chandler Chappell @chvndler <chvndler.ch@icloud.com>",
+    "license": "MIT",
+    "type": "module",
+    "main": "./build/index.es.js",
+    "exports": "./build/index.es.js",
+    "module": "./build/index.es.js",
+    "types": "./build/index.d.ts",
+    "typings": "./build/index.d.ts",
+    "engines": {
+        "node": ">=12.4"
+    },
+    "files": [
+        "build",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "lint": "eslint src --ext .ts",
+        "clean": "rm -rf node_modules && rm -rf dist",
+        "release": "npm publish --access public",
+        "dev:release": "npm publish --access private",
+        "chromatic": "chromatic --project-token=ddabdd11b035"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "prettier": "^2.8.3",
+        "rollup": "^3.12.1",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.34.1",
+        "typescript": "^4.9.5"
+    },
+    "resolutions": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "prettier": {
+        "bracketSameLine": true,
+        "bracketSpacing": false,
+        "semi": false,
+        "singleQuote": true,
+        "arrowParens": "always",
+        "tabWidth": 2,
+        "useTabs": false,
+        "printWidth": 100,
+        "trailingComma": "es5",
+        "singleAttributePerLine": false
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

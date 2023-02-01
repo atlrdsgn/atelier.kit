@@ -6160,6 +6160,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"atlr.icons@workspace:packages/icons":
+  version: 0.0.0-use.local
+  resolution: "atlr.icons@workspace:packages/icons"
+  dependencies:
+    "@types/node": ^18.11.18
+    "@types/react": ^18.0.27
+    "@types/react-dom": ^18.0.10
+    prettier: ^2.8.3
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    rollup: ^3.12.1
+    rollup-plugin-peer-deps-external: ^2.2.4
+    rollup-plugin-terser: ^7.0.2
+    rollup-plugin-typescript2: ^0.34.1
+    typescript: ^4.9.5
+  languageName: unknown
+  linkType: soft
+
 "atlr.kit@*, atlr.kit@workspace:packages/kit":
   version: 0.0.0-use.local
   resolution: "atlr.kit@workspace:packages/kit"
@@ -11475,7 +11493,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^26.5.0, jest-worker@npm:^26.6.2":
+"jest-worker@npm:^26.2.1, jest-worker@npm:^26.5.0, jest-worker@npm:^26.6.2":
   version: 26.6.2
   resolution: "jest-worker@npm:26.6.2"
   dependencies:
@@ -15054,6 +15072,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rollup-plugin-terser@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "rollup-plugin-terser@npm:7.0.2"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    jest-worker: ^26.2.1
+    serialize-javascript: ^4.0.0
+    terser: ^5.0.0
+  peerDependencies:
+    rollup: ^2.0.0
+  checksum: af84bb7a7a894cd00852b6486528dfb8653cf94df4c126f95f389a346f401d054b08c46bee519a2ab6a22b33804d1d6ac6d8c90b1b2bf8fffb097eed73fc3c72
+  languageName: node
+  linkType: hard
+
 "rollup-plugin-typescript2@npm:^0.34.1":
   version: 0.34.1
   resolution: "rollup-plugin-typescript2@npm:0.34.1"
@@ -15081,6 +15113,20 @@ __metadata:
   bin:
     rollup: dist/bin/rollup
   checksum: 66182947ea74bd4777e1a02514124f49eacc6b123e23738cf31342f8e73b79e43da05671aebe6d5f55b5830ebf3dd11f2eaba1b98b8fc6a9e6d96fd4c3ecc534
+  languageName: node
+  linkType: hard
+
+"rollup@npm:^3.12.1":
+  version: 3.12.1
+  resolution: "rollup@npm:3.12.1"
+  dependencies:
+    fsevents: ~2.3.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: b6b3aa4bcc13b1f15c1945201f3837be07b249854ed8a73bd67411ffe56f691b808d5b563246b78ecea4110afdb9e9e6cc7d5a3f82965a5592187dbb10d3671f
   languageName: node
   linkType: hard
 
@@ -16280,6 +16326,20 @@ __metadata:
   bin:
     terser: bin/terser
   checksum: b342819bf7e82283059aaa3f22bb74deb1862d07573ba5a8947882190ad525fd9b44a15074986be083fd379c58b9a879457a330b66dcdb77b485c44267f9a55a
+  languageName: node
+  linkType: hard
+
+"terser@npm:^5.0.0":
+  version: 5.16.2
+  resolution: "terser@npm:5.16.2"
+  dependencies:
+    "@jridgewell/source-map": ^0.3.2
+    acorn: ^8.5.0
+    commander: ^2.20.0
+    source-map-support: ~0.5.20
+  bin:
+    terser: bin/terser
+  checksum: 58f3ea10ebc931ecd8143a8d9749b4567df891352f1bac992e8ee0e5645327150a16a0d7e0263d947fd648075fea4e42653cbec7ba7a4f2f3e1ff7272889a221
   languageName: node
   linkType: hard
 

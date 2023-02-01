@@ -6160,7 +6160,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"atlr.icons@workspace:packages/icons":
+"atlr.icons@*, atlr.icons@workspace:packages/icons":
   version: 0.0.0-use.local
   resolution: "atlr.icons@workspace:packages/icons"
   dependencies:
@@ -11727,6 +11727,7 @@ __metadata:
     "@types/node": 18.11.18
     "@types/react": 18.0.27
     "@types/react-dom": 18.0.10
+    atlr.icons: "*"
     atlr.kit: "*"
     babel-loader: ^9.1.2
     eslint: 8.32.0

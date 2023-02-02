@@ -1,5 +1,3 @@
-// Button.stories.ts|tsx
-
 import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
@@ -11,7 +9,7 @@ export default {
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'primitives/reveal',
+  title: 'primitives/Reveal',
   component: Reveal,
 } as ComponentMeta<typeof Reveal>
 

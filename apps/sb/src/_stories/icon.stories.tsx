@@ -14,7 +14,7 @@ import {
 } from 'atlr.icons'
 
 export default {
-  title: 'primitives/icon',
+  title: 'primitives/Icon',
   component: Icon,
 } as ComponentMeta<typeof Icon>
 

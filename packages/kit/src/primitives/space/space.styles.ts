@@ -13,7 +13,7 @@ const SpaceStyles = styled('div', {
   variants: {
     size: {
       xs: {
-        height: KitTheme.theme.space[1], // 8px
+        height: KitTheme.theme.space[2], // 8px
       },
       sm: {
         height: KitTheme.theme.space[3], // 12px

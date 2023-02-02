@@ -24,7 +24,7 @@ export default {
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'primitives/select',
+  title: 'primitives/Select',
   component: Select,
 } as ComponentMeta<typeof Select>
 

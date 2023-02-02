@@ -1,1 +1,1 @@
-export * from './section'
+export {Section} from './section'

@@ -7,9 +7,6 @@ const baseSectionStyle = {
   width: '100%',
   maxWidth: '100vw',
   margin: 0,
-
-  alignItems: 'center',
-  justifyContent: 'center',
 }
 
 const sectionStyles = styled('div', {
@@ -45,6 +42,13 @@ const sectionStyles = styled('div', {
         paddingLeft: 0,
         paddingRight: 0,
       },
+      full: {
+        paddingTop: 2,
+        paddingBottom: 2,
+        paddingLeft: 0,
+        paddingRight: 0,
+        width: '100%',
+      },
     },
 
     /**
@@ -55,7 +59,7 @@ const sectionStyles = styled('div', {
     dev: {
       true: {
         border: `2px solid ${KitColors.slate5}`,
-        backgroundColor: KitColors.slate3,
+        backgroundColor: KitColors.transparent,
       },
     },
 
@@ -93,19 +97,28 @@ const sectionStyles = styled('div', {
     responsive: {
       true: {
         '@xs': {
+          width: '100%',
           maxWidth: KitTheme.media.xs,
         },
         '@sm': {
+          width: '100%',
           maxWidth: KitTheme.media.sm,
         },
         '@md': {
+          width: '100%',
           maxWidth: KitTheme.media.md,
         },
         '@lg': {
+          width: '100%',
           maxWidth: KitTheme.media.lg,
         },
         '@xl': {
+          width: '100%',
           maxWidth: KitTheme.media.xl,
+        },
+        '@full': {
+          width: '100%',
+          maxWidth: KitTheme.media.full,
         },
       },
     },

@@ -4,7 +4,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Container, Checkbox, CheckboxFlex, CheckboxLabel} from 'atlr.kit'
 
 export default {
-  title: 'primitives/checkbox',
+  title: 'primitives/Checkbox',
   component: Checkbox,
 } as ComponentMeta<typeof Checkbox>
 

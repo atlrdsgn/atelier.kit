@@ -5,7 +5,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Container, ToggleGroupPrimitive, ToggleGroupItem} from 'atlr.kit'
 
 export default {
-  title: 'primitives/toggle-group',
+  title: 'primitives/Toggle Group',
   component: ToggleGroupPrimitive,
 } as ComponentMeta<typeof ToggleGroupPrimitive>
 

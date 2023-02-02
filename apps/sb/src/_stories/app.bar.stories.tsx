@@ -3,7 +3,7 @@ import type {Meta, StoryObj} from '@storybook/react'
 import {Appbar, AppbarSpot} from 'atlr.kit'
 
 const meta: Meta<typeof Appbar> = {
-  title: 'primitives/app-bar',
+  title: 'primitives/App Bar',
   component: Appbar,
   argTypes: {},
 }

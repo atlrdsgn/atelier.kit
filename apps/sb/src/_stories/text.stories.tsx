@@ -5,7 +5,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Container, Text} from 'atlr.kit'
 
 export default {
-  title: 'typography/text',
+  title: 'typography/Text',
   component: Text,
 } as ComponentMeta<typeof Text>
 

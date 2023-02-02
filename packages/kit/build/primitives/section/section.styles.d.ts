@@ -1,6 +1,6 @@
 import { VariantProps } from '../../theme';
 declare const sectionStyles: import("@stitches/react/types/styled-component").StyledComponent<"div", {
-    size?: "sm" | "md" | "lg" | "xl" | undefined;
+    size?: "sm" | "md" | "lg" | "xl" | "full" | undefined;
     dev?: boolean | "true" | undefined;
     hero?: boolean | "true" | undefined;
     fluid?: boolean | "true" | undefined;
@@ -484,7 +484,7 @@ declare const sectionStyles: import("@stitches/react/types/styled-component").St
     zIndex: "zIndices";
 }, {}>>;
 export declare const SectionPrimitive: import("@stitches/react/types/styled-component").StyledComponent<"div", {
-    size?: "sm" | "md" | "lg" | "xl" | undefined;
+    size?: "sm" | "md" | "lg" | "xl" | "full" | undefined;
     dev?: boolean | "true" | undefined;
     hero?: boolean | "true" | undefined;
     fluid?: boolean | "true" | undefined;

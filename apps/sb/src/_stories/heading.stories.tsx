@@ -4,7 +4,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 
 import {Container, Heading} from 'atlr.kit'
 export default {
-  title: 'typography/heading',
+  title: 'typography/Heading',
   component: Heading,
   argTypes: {
     size: {

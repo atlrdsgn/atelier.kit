@@ -5,7 +5,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Space} from 'atlr.kit'
 
 export default {
-  title: 'elements/space',
+  title: 'elements/Space',
   component: Space,
   argTypes: {
     size: {

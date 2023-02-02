@@ -5,7 +5,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Container, RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel} from 'atlr.kit'
 
 export default {
-  title: 'primitives/radiogroup',
+  title: 'primitives/Radio Group',
   component: RadioGroup,
 } as ComponentMeta<typeof RadioGroup>
 

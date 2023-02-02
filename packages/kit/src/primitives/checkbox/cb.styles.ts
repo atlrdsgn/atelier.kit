@@ -27,7 +27,7 @@ const cbStyles = styled(CheckboxPrimitive.Root, {
   transition: 'ease-in 200ms',
   '&:hover': {backgroundColor: KitColors.slateA4},
   '&:focus': {
-    boxShadow: `0 0 0 1px ${KitColors.radical6}`,
+    boxShadow: `0 0 0 1px ${KitColors.slate6}`,
   },
 
   '&[data-state="checked"]': {

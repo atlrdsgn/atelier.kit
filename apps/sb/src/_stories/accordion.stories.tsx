@@ -3,7 +3,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from 'atlr.kit'
 
 export default {
-  title: 'primitives/acordion',
+  title: 'primitives/Accordion',
   component: Accordion,
 
   argTypes: {

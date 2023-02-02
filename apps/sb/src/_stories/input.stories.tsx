@@ -5,7 +5,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Container, Input, InputWithLabel} from 'atlr.kit'
 
 export default {
-  title: 'primitives/input',
+  title: 'primitives/Input',
   component: Input,
   argTypes: {
     placeholder: {

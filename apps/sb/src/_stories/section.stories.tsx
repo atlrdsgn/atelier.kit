@@ -2,15 +2,15 @@ import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
 
-import {Container, KitColors, KitTheme} from 'atlr.kit'
+import {Section, KitColors, KitTheme} from 'atlr.kit'
 
 export default {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'elements/Container',
-  component: Container,
+  title: 'elements/Section',
+  component: Section,
 
   argTypes: {
     size: {
@@ -20,10 +20,24 @@ export default {
       },
     },
 
-    align: {
+    hero: {
       control: {
-        type: 'select',
-        options: ['left', 'center', 'right'],
+        type: 'boolean',
+        defaultValue: false,
+      },
+    },
+
+    responsive: {
+      control: {
+        type: 'boolean',
+        defaultValue: false,
+      },
+    },
+
+    fluid: {
+      control: {
+        type: 'boolean',
+        defaultValue: false,
       },
     },
 
@@ -34,20 +48,22 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Container>
+} as ComponentMeta<typeof Section>
 
-const CHILDREN_TEXT = 'Kit Container'
+const CHILDREN_TEXT = 'Kit Section Element'
 
-const Template: ComponentStory<typeof Container> = (args) => (
-  <Container {...args}>{args.children}</Container>
+const Template: ComponentStory<typeof Section> = (args) => (
+  <Section {...args}>{args.children}</Section>
 )
 
 export const Playground = Template.bind({})
 
 Playground.args = {
   children: CHILDREN_TEXT,
+  hero: false,
+  responsive: false,
+  fluid: false,
   size: 'sm',
-  align: 'center',
   dev: true,
   css: {
     fontFamily: KitTheme.theme.fonts.sans,

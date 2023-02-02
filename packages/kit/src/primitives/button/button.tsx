@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import {StyledButton} from './button.styles'
+import {StyledBtnGroupButton, StyledBtnGroupRoot} from './button.group.styles'
 import type {ButtonVariantProps} from './button.styles'
 import type {buttonProps} from './button.types'
 import {baseComponentProps} from '../@shared/types'
@@ -106,3 +107,52 @@ export const Button = ButtonComponent
 applyDisplayName(Button, 'Button')
 
 export type {ButtonProps}
+
+const ButtonGroupComponent = ({
+  children,
+  type,
+  /**
+   *
+   * as React.ElementType..
+   * only takes 'a' or 'button'..
+   */
+  as = 'a',
+  /**
+   *
+   * linkHref - string
+   */
+  href,
+  onClick,
+  target = '_self',
+  rel = 'noopener noreferrer',
+  /**
+   *
+   * Styled Size options.
+   */
+  size = 'sm',
+  /**
+   *
+   * Styled variant options.
+   */
+  primary = true,
+  secondary = false,
+  neon = false,
+  rainbow = false,
+  ghost = false,
+
+  /**
+   *
+   * style prop.
+   */
+  css,
+  ...rest
+}: ButtonProps) => {
+  return (
+    <StyledBtnGroupButton {...rest} href={href}>
+      {children}
+    </StyledBtnGroupButton>
+  )
+}
+
+export const ButtonGroup = StyledBtnGroupRoot
+export const ButtonGroupItem = ButtonGroupComponent

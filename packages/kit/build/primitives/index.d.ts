@@ -3,6 +3,7 @@ export { Appbar, AppbarSpot } from './app-bar';
 export { Badge } from './badge';
 export { Box } from './box';
 export { Button, TestButton } from './button';
+export { ButtonGroup, ButtonGroupItem } from './button';
 export { Canvas } from './canvas';
 export { Card, CardImage } from './card';
 export { Checkbox, CheckboxFlex, CheckboxLabel } from './checkbox';

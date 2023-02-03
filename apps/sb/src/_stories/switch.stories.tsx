@@ -2,7 +2,7 @@ import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
 
-import {Container, Switch, SwitchThumb} from 'atlr.kit'
+import {Container, Switch, SwitchThumb, FramerSwitchThumb} from 'atlr.kit'
 
 export default {
   /* 👇 The title prop is optional.
@@ -29,5 +29,24 @@ const Template: ComponentStory<typeof Switch> = (args) => {
 export const Playground = Template.bind({})
 
 Playground.args = {
+  css: {},
+}
+
+//👇 We create a “template” of how args map to rendering
+const Framer: ComponentStory<typeof Switch> = (args) => {
+  return (
+    <Container size={'sm'} align={'center'}>
+      <form>
+        <Switch {...args}>
+          <FramerSwitchThumb />
+        </Switch>
+      </form>
+    </Container>
+  )
+}
+
+export const FramerPlayground = Framer.bind({})
+
+FramerPlayground.args = {
   css: {},
 }

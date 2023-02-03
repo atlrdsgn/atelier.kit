@@ -81,7 +81,7 @@ export {
   SelectArrow,
 } from './select'
 export {Space} from './space'
-export {Switch, SwitchThumb} from './switch'
+export {Switch, SwitchThumb, FramerSwitchThumb} from './switch'
 
 export {Tabs, TabsList, TabsTrigger, TabsContent} from './tabs'
 export {Text} from './text'

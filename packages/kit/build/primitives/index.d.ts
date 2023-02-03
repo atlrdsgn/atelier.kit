@@ -27,7 +27,7 @@ export { Reveal, RevealTrigger, RevealContent } from './reveal';
 export { Section } from './section';
 export { Select, SelectTrigger, SelectContent, SelectItem, SelectValue, SelectIcon, SelectViewport, SelectPortal, SelectItemIndicator, SelectItemText, SelectGroup, SelectLabel, SelectSeparator, SelectScrollUpButton, SelectScrollDownButton, SelectArrow, } from './select';
 export { Space } from './space';
-export { Switch, SwitchThumb, FramerSwitchThumb } from './switch';
+export { Switch, SwitchThumb } from './switch';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs';
 export { Text } from './text';
 export { Toast, ToastHeading, ToastSubheading, ToastCloseButton, ToastActionItem } from './toast';

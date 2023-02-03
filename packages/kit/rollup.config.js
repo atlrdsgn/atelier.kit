@@ -22,7 +22,6 @@ export default [
       '@stitches/react',
       'copy-to-clipboard',
 
-      'framer-motion',
       /**
        *
        * @radix-ui..

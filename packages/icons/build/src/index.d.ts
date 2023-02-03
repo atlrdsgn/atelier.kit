@@ -1,6 +1,7 @@
 export { ALogoIcon } from './brands/a.logo.icon';
 export { AtlrFilledIcon } from './brands/atlr.filled.icon';
 export { AtlrOutlinedIcon } from './brands/atlr.outlined.icon';
+export { AtlrShapeIcon } from './brands/atlr.shape.icon';
 export { AddIcon } from './tools/add.icon';
 export { LinkedIcon } from './tools/linked.icon';
 export { SpellCheckIcon } from './tools/spell.check.icon';

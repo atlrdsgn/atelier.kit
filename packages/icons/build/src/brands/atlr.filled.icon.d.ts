@@ -1,3 +1,2 @@
 import * as React from 'react';
-import { IconProps } from '../../types';
-export declare const AtlrFilledIcon: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<SVGSVGElement>>;
+export declare const AtlrFilledIcon: ({ color, ...props }: React.SVGProps<SVGSVGElement>) => JSX.Element;

@@ -7,7 +7,7 @@ const globalKitRadii = {
     lg: '10px',
     xl: '12px',
     '2xl': '16px',
-    pill: '50px',
+    pill: '100%',
     none: '0px',
   },
 }

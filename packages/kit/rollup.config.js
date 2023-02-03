@@ -26,6 +26,7 @@ export default [
        *
        * @radix-ui..
        */
+      '@radix-ui/react-avatar',
       '@radix-ui/react-icons',
       '@radix-ui/react-scroll-area',
       '@radix-ui/react-slider',

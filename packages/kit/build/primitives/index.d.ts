@@ -1,5 +1,6 @@
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from './accordion';
 export { Appbar, AppbarSpot } from './app-bar';
+export { Avatar, AvatarImage } from './avatar';
 export { Badge } from './badge';
 export { Box } from './box';
 export { Button, TestButton } from './button';

@@ -20,6 +20,7 @@ export { MenuBar, MenuBarMenu, MenuBarLabel, MenuBarTrigger, MenuBarSub, MenuBar
 export { NavMenu, NavMenuBar, NavMenuItem, NavMenuTrigger, NavMenuContent, NavMenuLink, NavMenuViewport, } from './navigation-menu';
 export { Paragraph } from './paragraph';
 export { PassLink } from './pass-link';
+export { Popover } from './pop';
 export { RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel } from './radio-group';
 export { Reveal, RevealTrigger, RevealContent } from './reveal';
 export { Select, SelectTrigger, SelectContent, SelectItem, SelectValue, SelectIcon, SelectViewport, SelectPortal, SelectItemIndicator, SelectItemText, SelectGroup, SelectLabel, SelectSeparator, SelectScrollUpButton, SelectScrollDownButton, SelectArrow, } from './select';

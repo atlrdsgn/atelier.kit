@@ -31,8 +31,13 @@ declare const appbarSpot: import("@stitches/react/types/styled-component").Style
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -522,8 +527,13 @@ declare const appbar: import("@stitches/react/types/styled-component").CssCompon
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -1007,8 +1017,13 @@ export declare const AppbarPrimitive: import("@stitches/react/types/styled-compo
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -1484,8 +1499,13 @@ export declare const AppbarPrimitive: import("@stitches/react/types/styled-compo
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -1964,8 +1984,13 @@ export declare const AppbarSpotComponent: import("@stitches/react/types/styled-c
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;

@@ -45,8 +45,13 @@ declare const styledAccordion: import("@stitches/react/types/styled-component").
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -535,8 +540,13 @@ declare const styledItem: import("@stitches/react/types/styled-component").Style
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -1027,8 +1037,13 @@ declare const styledHeader: import("@stitches/react/types/styled-component").Sty
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -1507,8 +1522,13 @@ export declare const AtlrAccordionRoot: import("@stitches/react/types/styled-com
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -1985,8 +2005,13 @@ export declare const AtlrAccordionItem: import("@stitches/react/types/styled-com
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -2465,8 +2490,13 @@ export declare const AtlrAccordionHeader: import("@stitches/react/types/styled-c
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -2943,8 +2973,13 @@ export declare const AtlrAccordionTrigger: import("@stitches/react/types/styled-
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -3421,8 +3456,13 @@ export declare const AtlrAccordionContent: import("@stitches/react/types/styled-
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -3899,8 +3939,13 @@ export declare const AtlrAccordionContentText: import("@stitches/react/types/sty
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -4379,8 +4424,13 @@ export declare const AtlrAccordionArrowDown: import("@stitches/react/types/style
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -4859,8 +4909,13 @@ export declare const StyledArrow: import("@stitches/react/types/styled-component
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;

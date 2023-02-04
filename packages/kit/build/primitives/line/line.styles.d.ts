@@ -35,8 +35,13 @@ declare const lineRoot: import("@stitches/react/types/styled-component").StyledC
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -517,8 +522,13 @@ export declare const Line: import("@stitches/react/types/styled-component").Styl
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -999,8 +1009,13 @@ export declare const StyledLine: import("@stitches/react/types/styled-component"
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;

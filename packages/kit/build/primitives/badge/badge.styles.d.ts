@@ -2,7 +2,7 @@ import { VariantProps } from '../../theme';
 declare const badgeStyles: import("@stitches/react/types/styled-component").CssComponent<never, {
     pill?: boolean | "true" | undefined;
     size?: "sm" | "md" | "lg" | undefined;
-    color?: "initial" | "subtle" | "fizz" | "slate" | "helios" | "heliotrope" | "gold" | undefined;
+    color?: "heliotrope" | "initial" | "subtle" | "fizz" | "slate" | "helios" | "gold" | undefined;
 }, {
     xs: string;
     sm: string;
@@ -33,8 +33,13 @@ declare const badgeStyles: import("@stitches/react/types/styled-component").CssC
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -485,7 +490,7 @@ export type BadgeVariantsProps = VariantProps<typeof badgeStyles>;
 export declare const BadgePrimitive: import("@stitches/react/types/styled-component").StyledComponent<"span", {
     pill?: boolean | "true" | undefined;
     size?: "sm" | "md" | "lg" | undefined;
-    color?: "initial" | "subtle" | "fizz" | "slate" | "helios" | "heliotrope" | "gold" | undefined;
+    color?: "heliotrope" | "initial" | "subtle" | "fizz" | "slate" | "helios" | "gold" | undefined;
 }, {
     xs: string;
     sm: string;
@@ -516,8 +521,13 @@ export declare const BadgePrimitive: import("@stitches/react/types/styled-compon
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;

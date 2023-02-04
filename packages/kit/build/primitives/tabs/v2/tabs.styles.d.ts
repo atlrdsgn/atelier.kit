@@ -30,8 +30,13 @@ export declare const StyledTabsRoot: import("@stitches/react/types/styled-compon
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -508,8 +513,13 @@ export declare const StyledTabsList: import("@stitches/react/types/styled-compon
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -986,8 +996,13 @@ export declare const StyledTabsTrigger: import("@stitches/react/types/styled-com
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -1464,8 +1479,13 @@ export declare const StyledTabsContent: import("@stitches/react/types/styled-com
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;

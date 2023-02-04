@@ -1,6 +1,6 @@
 import * as D from '@radix-ui/react-dialog'
 import {styled, keyframes, KitTheme, KitColors} from '../../theme'
-import {fadeIn, fadeOut} from '../@shared/utils/keyframe-animations'
+import {fadeIn, fadeOut, overlayShow} from '../@shared/utils/keyframe-animations'
 
 const DIALOG_Z_INDEX = KitTheme.theme.zIndices[0]
 const CONTENT_ON_SCREEN = `translate3d(-50%, -50%, 0)`
@@ -31,6 +31,9 @@ const StyledDialogOverlay = styled(D.Overlay, 'div', {
   bottom: 0,
   left: 0,
 
+  inset: 0,
+  animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
+
   backgroundColor: KitColors.slateA9,
   zIndex: DIALOG_Z_INDEX,
 
@@ -45,7 +48,26 @@ const StyledDialogOverlay = styled(D.Overlay, 'div', {
 })
 
 //////////////////// content ////////////////////
-const StyledDialogClose = styled(D.Close, {})
+const StyledDialogClose = styled(D.Close, {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: 42,
+  height: 42,
+
+  marginTop: '2rem',
+  marginLeft: '2rem',
+
+  color: KitColors.helios5,
+  backgroundColor: KitColors.transparent,
+  border: 'none',
+
+  outline: 'none',
+  '&:hover': {},
+  '&:focus': {
+    outline: 'none',
+  },
+})
 
 const contentBase = {
   boxSizing: 'border-box',
@@ -91,18 +113,21 @@ const StyledDialogContent = styled(D.Content, 'div', {
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'sm',
   },
 })
 
 const StyledDialogTitle = styled(D.Title, 'div', {
   fontFamily: KitTheme.theme.fonts.sans,
-  fontSize: KitTheme.theme.fontSizes.xl,
+  fontSize: KitTheme.theme.fontSizes['2xl'],
   fontWeight: KitTheme.theme.fontWeights.semibold,
 
-  color: KitColors.slate11,
+  color: KitColors.olive,
 
   textAlign: 'left',
+
+  marginTop: 40,
+  lineHeight: 'normal',
 })
 
 const StyledDialogDescription = styled(D.Description, 'div', {
@@ -110,9 +135,12 @@ const StyledDialogDescription = styled(D.Description, 'div', {
   fontSize: KitTheme.theme.fontSizes.base,
   fontWeight: KitTheme.theme.fontWeights.normal,
 
-  color: KitColors.slate8,
+  color: KitColors.bandicoot,
 
   textAlign: 'left',
+
+  marginBottom: 20,
+  lineHeight: 1.3,
 })
 
 const StyledDialogTrigger = styled(D.Trigger, {
@@ -146,6 +174,8 @@ const StyledDialogTrigger = styled(D.Trigger, {
   backgroundColor: KitColors.white,
   background: KitColors.white,
   border: `1.5px solid ${KitColors.secondaryBorder}`,
+
+  '&:focus': {boxShadow: `0 0 0 2px black`},
 
   '&:hover': {
     backgroundColor: KitColors.white,

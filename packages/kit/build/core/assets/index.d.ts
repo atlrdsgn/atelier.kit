@@ -9,6 +9,7 @@ export { AtlrIcon } from './icons/atlr.icon';
 export { AppOutlineIcon } from './icons/app.outline.icon';
 export { ArrowDownIcon } from './icons/arrow.down.icon';
 export { ButterflyIcon } from './icons/butterfly.icon';
+export { CloseIcon } from './icons/close.icon';
 export { CrossIcon } from './icons/cross.icon';
 export { FrameIcon } from './icons/frame.icon';
 export { ReactIcon } from './icons/react.icon';

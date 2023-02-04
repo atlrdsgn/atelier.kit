@@ -10,11 +10,11 @@ import {
   StyledDialogDescription,
   StyledDialogTrigger,
 } from './dialog.styles'
-import {CrossIcon} from '../../core/assets'
+import {CloseIcon} from '../../core/assets'
 import type {baseComponentProps} from '../@shared/types'
-import {IconBox} from '../icon-box'
 
 const MODAL_OVERLAY_ID = 'modal-overlay'
+const closeColor = 'currentColor'
 
 //////////////// root //////////////////
 type DialogRootProps = baseComponentProps & React.ComponentProps<typeof StyledDialogRoot>
@@ -46,7 +46,7 @@ const DialogContentComponent: React.FC<DialogContentProps> = ({
       )}
       <StyledDialogContent
         size={size}
-        aria-label="Dialog"
+        aria-label="atlr-dialog"
         onPointerDownOutside={(event) => {
           const element = event.target as HTMLElement
           if (element?.id !== MODAL_OVERLAY_ID) {
@@ -56,9 +56,7 @@ const DialogContentComponent: React.FC<DialogContentProps> = ({
         {...rest}>
         {showCloseButton && (
           <StyledDialogClose>
-            <IconBox>
-              <CrossIcon />
-            </IconBox>
+            <CloseIcon color={closeColor} width={'24'} />
           </StyledDialogClose>
         )}
         {React.Children.map(

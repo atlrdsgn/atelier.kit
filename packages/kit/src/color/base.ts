@@ -16,8 +16,13 @@ import {gray} from './src/gray'
 const baseKitThemeColors = {
   white: '#ffffff',
   black: '#000000',
+  olive: '#3E3E3C',
+  bandicoot: '#7C7D73',
+  blueCharcoal: '#000711',
   primaryGray: '#232A2F',
   secondaryGray: '#161D1D',
+  heliotrope: '#D958FF',
+  honeySuckle: '#E4FF88',
   accentHeliotrope: helios.helios7,
   accentFizz: fizz.fizz7,
   transparent: 'transparent',

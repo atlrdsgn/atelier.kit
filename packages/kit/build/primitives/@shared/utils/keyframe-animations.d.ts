@@ -30,4 +30,8 @@ export declare const slideOutLeft: {
     (): string;
     name: string;
 };
+export declare const overlayShow: {
+    (): string;
+    name: string;
+};
 //# sourceMappingURL=keyframe-animations.d.ts.map

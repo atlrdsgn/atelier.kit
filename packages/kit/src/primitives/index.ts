@@ -54,6 +54,7 @@ export {
 
 export {Paragraph} from './paragraph'
 export {PassLink} from './pass-link'
+export {Popover} from './pop'
 
 export {RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel} from './radio-group'
 export {Reveal, RevealTrigger, RevealContent} from './reveal'

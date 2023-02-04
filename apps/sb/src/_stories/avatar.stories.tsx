@@ -2,7 +2,7 @@ import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
 
-import {Avatar, AvatarImage} from 'atlr.kit'
+import {Avatar, AvatarImage, Container} from 'atlr.kit'
 
 export default {
   /* 👇 The title prop is optional.
@@ -24,12 +24,14 @@ export default {
 
 //👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof Avatar> = (args) => (
-  <Avatar {...args}>
-    <AvatarImage
-      src={'https://pbs.twimg.com/profile_images/1610719884266160130/avDWWNlx_400x400.jpg'}
-      alt={'avatar-example'}
-    />
-  </Avatar>
+  <Container align={'center'} size={'sm'}>
+    <Avatar {...args}>
+      <AvatarImage
+        src={'https://pbs.twimg.com/profile_images/1610719884266160130/avDWWNlx_400x400.jpg'}
+        alt={'avatar-example'}
+      />
+    </Avatar>
+  </Container>
 )
 
 export const Default = Template.bind({})

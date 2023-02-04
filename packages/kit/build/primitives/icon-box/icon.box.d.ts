@@ -1,6 +1,6 @@
 export declare const IconBox: import("@stitches/react/types/styled-component").StyledComponent<"div", {
     border?: boolean | "true" | undefined;
-    color?: "default" | "slate" | "heliotrope" | "fizz" | "purple" | "lime" | undefined;
+    color?: "heliotrope" | "default" | "slate" | "fizz" | "purple" | "lime" | undefined;
 }, {
     xs: string;
     sm: string;
@@ -31,8 +31,13 @@ export declare const IconBox: import("@stitches/react/types/styled-component").S
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;

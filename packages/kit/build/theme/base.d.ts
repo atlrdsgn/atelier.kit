@@ -154,26 +154,17 @@ export declare const KitTheme: {
         colors: {
             white: string;
             black: string;
+            olive: string;
+            bandicoot: string;
+            blueCharcoal: string;
             primaryGray: string;
             secondaryGray: string;
-            /**
-             *
-             *
-             *
-             * @baseColors
-             *
-             * passing all values forward as [baseColors].
-             *
-             * later extending use with KitColors.color as the final token.
-             *
-             */
+            heliotrope: string;
+            honeySuckle: string;
             accentHeliotrope: string;
             accentFizz: string;
             transparent: string;
             panel: string;
-            transparentPanel: string;
-            shadowLight: string;
-            shadowDark: string;
             /**
              *
              *
@@ -185,6 +176,9 @@ export declare const KitTheme: {
              * later extending use with KitMedia.size as the final token.
              *
              */
+            transparentPanel: string;
+            shadowLight: string;
+            shadowDark: string;
             primaryBorder: string;
             primaryBorderHover: string;
             secondaryBorder: string;
@@ -212,7 +206,10 @@ export declare const KitTheme: {
             brand3: string;
             brand4: string;
             brand5: string;
-            brand6: string;
+            brand6: string; /**
+             *
+             * using Stitches defaultThemeMap to start with.
+             */
             brand7: string;
             brand8: string;
             brand9: string;
@@ -704,8 +701,13 @@ export declare const createThemeBase: <Argument0 extends string | ({
     colors?: {
         white?: string | number | boolean | undefined;
         black?: string | number | boolean | undefined;
+        olive?: string | number | boolean | undefined;
+        bandicoot?: string | number | boolean | undefined;
+        blueCharcoal?: string | number | boolean | undefined;
         primaryGray?: string | number | boolean | undefined;
         secondaryGray?: string | number | boolean | undefined;
+        heliotrope?: string | number | boolean | undefined;
+        honeySuckle?: string | number | boolean | undefined;
         accentHeliotrope?: string | number | boolean | undefined;
         accentFizz?: string | number | boolean | undefined;
         transparent?: string | number | boolean | undefined;
@@ -1031,8 +1033,13 @@ export declare const createThemeBase: <Argument0 extends string | ({
     colors?: {
         white?: string | number | boolean | undefined;
         black?: string | number | boolean | undefined;
+        olive?: string | number | boolean | undefined;
+        bandicoot?: string | number | boolean | undefined;
+        blueCharcoal?: string | number | boolean | undefined;
         primaryGray?: string | number | boolean | undefined;
         secondaryGray?: string | number | boolean | undefined;
+        heliotrope?: string | number | boolean | undefined;
+        honeySuckle?: string | number | boolean | undefined;
         accentHeliotrope?: string | number | boolean | undefined;
         accentFizz?: string | number | boolean | undefined;
         transparent?: string | number | boolean | undefined;
@@ -1362,8 +1369,13 @@ export declare const createDarkTheme: <Argument0 extends string | ({
     colors?: {
         white?: string | number | boolean | undefined;
         black?: string | number | boolean | undefined;
+        olive?: string | number | boolean | undefined;
+        bandicoot?: string | number | boolean | undefined;
+        blueCharcoal?: string | number | boolean | undefined;
         primaryGray?: string | number | boolean | undefined;
         secondaryGray?: string | number | boolean | undefined;
+        heliotrope?: string | number | boolean | undefined;
+        honeySuckle?: string | number | boolean | undefined;
         accentHeliotrope?: string | number | boolean | undefined;
         accentFizz?: string | number | boolean | undefined;
         transparent?: string | number | boolean | undefined;
@@ -1689,8 +1701,13 @@ export declare const createDarkTheme: <Argument0 extends string | ({
     colors?: {
         white?: string | number | boolean | undefined;
         black?: string | number | boolean | undefined;
+        olive?: string | number | boolean | undefined;
+        bandicoot?: string | number | boolean | undefined;
+        blueCharcoal?: string | number | boolean | undefined;
         primaryGray?: string | number | boolean | undefined;
         secondaryGray?: string | number | boolean | undefined;
+        heliotrope?: string | number | boolean | undefined;
+        honeySuckle?: string | number | boolean | undefined;
         accentHeliotrope?: string | number | boolean | undefined;
         accentFizz?: string | number | boolean | undefined;
         transparent?: string | number | boolean | undefined;
@@ -2035,8 +2052,13 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -2523,8 +2545,13 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -2990,8 +3017,13 @@ export declare const css: <Composers extends (string | import("@stitches/react/t
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -3485,8 +3517,13 @@ export declare const globalCss: <Styles extends {
         colors: {
             white: string;
             black: string;
+            olive: string;
+            bandicoot: string;
+            blueCharcoal: string;
             primaryGray: string;
             secondaryGray: string;
+            heliotrope: string;
+            honeySuckle: string;
             accentHeliotrope: string;
             accentFizz: string;
             transparent: string;
@@ -3950,8 +3987,13 @@ export declare const globalCss: <Styles extends {
     colors: {
         white: string;
         black: string;
+        olive: string;
+        bandicoot: string;
+        blueCharcoal: string;
         primaryGray: string;
         secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
         accentHeliotrope: string;
         accentFizz: string;
         transparent: string;
@@ -4416,8 +4458,13 @@ export declare const keyframes: (style: {
         colors: {
             white: string;
             black: string;
+            olive: string;
+            bandicoot: string;
+            blueCharcoal: string;
             primaryGray: string;
             secondaryGray: string;
+            heliotrope: string;
+            honeySuckle: string;
             accentHeliotrope: string;
             accentFizz: string;
             transparent: string;
@@ -4876,8 +4923,13 @@ export declare const theme: string & {
     colors: {
         white: import("@stitches/react/types/theme").Token<"white", string, "colors", string>;
         black: import("@stitches/react/types/theme").Token<"black", string, "colors", string>;
+        olive: import("@stitches/react/types/theme").Token<"olive", string, "colors", string>;
+        bandicoot: import("@stitches/react/types/theme").Token<"bandicoot", string, "colors", string>;
+        blueCharcoal: import("@stitches/react/types/theme").Token<"blueCharcoal", string, "colors", string>;
         primaryGray: import("@stitches/react/types/theme").Token<"primaryGray", string, "colors", string>;
         secondaryGray: import("@stitches/react/types/theme").Token<"secondaryGray", string, "colors", string>;
+        heliotrope: import("@stitches/react/types/theme").Token<"heliotrope", string, "colors", string>;
+        honeySuckle: import("@stitches/react/types/theme").Token<"honeySuckle", string, "colors", string>;
         accentHeliotrope: import("@stitches/react/types/theme").Token<"accentHeliotrope", string, "colors", string>;
         accentFizz: import("@stitches/react/types/theme").Token<"accentFizz", string, "colors", string>;
         transparent: import("@stitches/react/types/theme").Token<"transparent", string, "colors", string>;
@@ -5202,8 +5254,13 @@ export declare const kit_theme: string & {
     colors: {
         white: import("@stitches/react/types/theme").Token<"white", string, "colors", string>;
         black: import("@stitches/react/types/theme").Token<"black", string, "colors", string>;
+        olive: import("@stitches/react/types/theme").Token<"olive", string, "colors", string>;
+        bandicoot: import("@stitches/react/types/theme").Token<"bandicoot", string, "colors", string>;
+        blueCharcoal: import("@stitches/react/types/theme").Token<"blueCharcoal", string, "colors", string>;
         primaryGray: import("@stitches/react/types/theme").Token<"primaryGray", string, "colors", string>;
         secondaryGray: import("@stitches/react/types/theme").Token<"secondaryGray", string, "colors", string>;
+        heliotrope: import("@stitches/react/types/theme").Token<"heliotrope", string, "colors", string>;
+        honeySuckle: import("@stitches/react/types/theme").Token<"honeySuckle", string, "colors", string>;
         accentHeliotrope: import("@stitches/react/types/theme").Token<"accentHeliotrope", string, "colors", string>;
         accentFizz: import("@stitches/react/types/theme").Token<"accentFizz", string, "colors", string>;
         transparent: import("@stitches/react/types/theme").Token<"transparent", string, "colors", string>;
@@ -5541,8 +5598,13 @@ export declare const config: {
         colors: {
             white: string;
             black: string;
+            olive: string;
+            bandicoot: string;
+            blueCharcoal: string;
             primaryGray: string;
             secondaryGray: string;
+            heliotrope: string;
+            honeySuckle: string;
             accentHeliotrope: string;
             accentFizz: string;
             transparent: string;
@@ -6014,26 +6076,17 @@ export type Breakpoints = StitchesConfig['media'];
 export declare const KitColors: {
     white: string;
     black: string;
+    olive: string;
+    bandicoot: string;
+    blueCharcoal: string;
     primaryGray: string;
     secondaryGray: string;
-    /**
-     *
-     *
-     *
-     * @baseColors
-     *
-     * passing all values forward as [baseColors].
-     *
-     * later extending use with KitColors.color as the final token.
-     *
-     */
+    heliotrope: string;
+    honeySuckle: string;
     accentHeliotrope: string;
     accentFizz: string;
     transparent: string;
     panel: string;
-    transparentPanel: string;
-    shadowLight: string;
-    shadowDark: string;
     /**
      *
      *
@@ -6045,6 +6098,9 @@ export declare const KitColors: {
      * later extending use with KitMedia.size as the final token.
      *
      */
+    transparentPanel: string;
+    shadowLight: string;
+    shadowDark: string;
     primaryBorder: string;
     primaryBorderHover: string;
     secondaryBorder: string;
@@ -6072,7 +6128,10 @@ export declare const KitColors: {
     brand3: string;
     brand4: string;
     brand5: string;
-    brand6: string;
+    brand6: string; /**
+     *
+     * using Stitches defaultThemeMap to start with.
+     */
     brand7: string;
     brand8: string;
     brand9: string;

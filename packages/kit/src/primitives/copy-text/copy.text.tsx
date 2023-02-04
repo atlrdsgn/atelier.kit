@@ -1,7 +1,12 @@
 import * as React from 'react'
 import copy from 'copy-to-clipboard'
 
-import {StyledCopyField, StyledCopyFieldText, StyledCopyTrigger} from './copy.text.styles'
+import {
+  StyledCopyField,
+  StyledCopyFieldText,
+  StyledCopyTrigger,
+  StyledTriggerBox,
+} from './copy.text.styles'
 import type {CopyTriggerVariantProps, CopyFieldVariantProps} from './copy.text.styles'
 import {baseComponentProps} from '../@shared/types'
 import {applyDisplayName} from '../@shared/utils'
@@ -55,7 +60,7 @@ type CopyFieldTextPrimitiveProps = React.HTMLAttributes<HTMLParagraphElement> &
 type CopyFieldTextProps = CopyFieldTextPrimitiveProps & copyTextProps
 
 const CopyFieldText = ({children, textElement, ...rest}: CopyFieldTextProps) => {
-  return <StyledCopyFieldText {...rest}>{children || textElement}</StyledCopyFieldText>
+  return <StyledCopyFieldText {...rest}>{children}</StyledCopyFieldText>
 }
 
 /**
@@ -133,9 +138,11 @@ const CopyTextTrigger = ({copyText, onClick, primary, secondary, ...rest}: CopyT
     return copyText
   }
   return (
-    <StyledCopyTrigger onClick={copyClick} {...rest}>
-      {copied ? 'Copied' : 'Copy'}
-    </StyledCopyTrigger>
+    <StyledTriggerBox>
+      <StyledCopyTrigger onClick={copyClick} {...rest}>
+        {copied ? 'Copied' : 'Copy'}
+      </StyledCopyTrigger>
+    </StyledTriggerBox>
   )
 }
 

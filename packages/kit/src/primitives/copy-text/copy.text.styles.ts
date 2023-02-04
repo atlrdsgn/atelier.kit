@@ -14,41 +14,6 @@ const TRIGGER_BORDER_RADIUS = 7
 const FIELD_PADDING_LEFT = 14
 const FIELD_PADDING_RIGHT = 3.5
 
-const baseTriggerStyles = {
-  all: 'unset',
-  transition: 'all 250ms ease-in-out',
-
-  margin: 'auto',
-  marginTop: 0,
-  marginBottom: 0,
-  alignItems: 'flex-end',
-  justifyContent: 'center',
-  boxSizing: 'border-box',
-  userSelect: 'none',
-
-  height: 'auto',
-  width: 'auto',
-
-  padding: '5px 10px',
-
-  borderRadius: TRIGGER_BORDER_RADIUS,
-
-  display: 'inline-flex',
-  flexShrink: 0,
-  lineHeight: '1',
-  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-
-  fontFamily: KitTheme.theme.fonts.sans,
-  fontWeight: KitTheme.theme.fontWeights.semibold,
-  fontSize: KitTheme.theme.fontSizes.sm,
-
-  fontVariantNumeric: 'tabular-nums',
-
-  backgroundColor: 'white',
-  position: 'relative',
-  color: KitColors.slate12,
-}
-
 /**
  *
  * ..CopyField.Root
@@ -58,15 +23,16 @@ const baseTriggerStyles = {
 const copyFieldStyles = styled(FIELD_TAG, {
   boxSizing: 'border-box',
 
-  // maxWidth: 380,
-  width: 'max-content',
-  height: 35,
+  width: '100%',
+  height: 'auto',
 
-  gap: 26,
+  gap: '32px',
 
-  display: 'flex',
+  display: 'inline-flex',
   flexDirection: 'row',
+  flexBasis: 'auto',
   alignItems: 'center',
+
   justifyContent: 'space-between',
 
   margin: 'auto',
@@ -87,7 +53,7 @@ const copyFieldStyles = styled(FIELD_TAG, {
     primary: {
       true: {
         color: KitColors.slate11,
-        backgroundColor: KitColors.slate2,
+        backgroundColor: KitColors.slate1,
         border: `1.6px solid ${KitColors.slateA6}`,
 
         '&:hover': {
@@ -98,7 +64,7 @@ const copyFieldStyles = styled(FIELD_TAG, {
     secondary: {
       true: {
         color: KitColors.slate12,
-        backgroundColor: KitColors.slateA4,
+        backgroundColor: KitColors.slate2,
         border: `2px solid ${KitColors.gray10}`,
       },
     },
@@ -118,10 +84,10 @@ const copyFieldStyles = styled(FIELD_TAG, {
 const copyTextStyles = styled(TEXT_TAG, {
   all: 'unset',
   transition: 'all 250ms ease-in-out',
-  boxSizing: 'border-box',
   userSelect: 'none',
 
   textAlign: 'left',
+  alignItems: 'center',
   alignContent: 'center',
   justifyContent: 'flex-start',
 
@@ -141,6 +107,39 @@ const copyTextStyles = styled(TEXT_TAG, {
  * 'button' element that copies the contents of [CopyField.Text] to the clipboard.
  *
  */
+const baseTriggerStyles = {
+  all: 'unset',
+  transition: 'all 250ms ease-in-out',
+
+  position: 'relative',
+  display: 'inline-flex',
+  flexShrink: 0,
+
+  margin: 'auto',
+  marginTop: 0,
+  marginBottom: 0,
+  alignItems: 'flex-end',
+  justifyContent: 'flex-end',
+  boxSizing: 'border-box',
+  userSelect: 'none',
+  height: 'auto',
+  width: 'auto',
+  padding: '5px 10px',
+  borderRadius: TRIGGER_BORDER_RADIUS,
+
+  lineHeight: '1',
+  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+
+  fontFamily: KitTheme.theme.fonts.sans,
+  fontWeight: KitTheme.theme.fontWeights.semibold,
+  fontSize: KitTheme.theme.fontSizes.xs,
+
+  fontVariantNumeric: 'tabular-nums',
+
+  backgroundColor: 'white',
+  color: KitColors.gray12,
+}
+
 const copyTriggerStyles = styled(TRIGGER_TAG, {
   ...baseTriggerStyles,
 
@@ -189,16 +188,60 @@ const copyTriggerStyles = styled(TRIGGER_TAG, {
         },
       },
     },
+    /**
+     *
+     * ..Heliotrope <Button /> ... styles
+     */
+    heliotrope: {
+      true: {
+        color: KitColors.white,
+        backgroundColor: KitColors.heliotrope5,
+        background: KitColors.heliotrope5,
+        border: `1.6px solid ${KitColors.primaryBorder}`,
+        boxShadow: `0px 2px 2px rgba(0, 0, 0, 0)`,
+        boxSizing: `border-box`,
+        position: 'relative',
+        justifyContent: 'center',
+
+        '&:hover': {
+          backgroundColor: KitColors.heliotrope6,
+          background: KitColors.heliotrope6,
+          boxShadow: `0px 2px 2px rgba(0, 0, 0, 0.09)`,
+          borderColor: KitColors.primaryBorderHover,
+          cursor: 'pointer',
+        },
+      },
+    },
   },
   defaultVariants: {
     primary: true,
     secondary: false,
+    heliotrope: false,
   },
+})
+
+const styledTriggerBox = styled('div', {
+  all: 'unset',
+  alignItems: 'flex-end',
+  justifyContent: 'flex-end',
+  display: 'flex',
+  flexShrink: 0,
+  position: 'relative',
+  height: 'auto',
+  width: 'auto',
+
+  padding: 0,
+  paddingTop: 4,
+  paddingBottom: 4,
+  paddingLeft: 0,
+  paddingRight: 0,
 })
 
 export const StyledCopyField = copyFieldStyles
 export const StyledCopyFieldText = copyTextStyles
 export const StyledCopyTrigger = copyTriggerStyles
+
+export const StyledTriggerBox = styledTriggerBox
 
 export type CopyTriggerVariantProps = VariantProps<typeof copyTriggerStyles>
 export type CopyFieldVariantProps = VariantProps<typeof copyFieldStyles>

@@ -4,6 +4,9 @@ export {AtlrFilledIcon} from './brands/atlr.filled.icon'
 export {AtlrOutlinedIcon} from './brands/atlr.outlined.icon'
 export {AtlrShapeIcon} from './brands/atlr.shape.icon'
 
+export {CodeSandboxIcon} from './brands/codesandbox.icon'
+export {CodeSandboxAltIcon} from './brands/codesandbox.alt.icon'
+
 // tools.
 export {AddIcon} from './tools/add.icon'
 export {LinkedIcon} from './tools/linked.icon'

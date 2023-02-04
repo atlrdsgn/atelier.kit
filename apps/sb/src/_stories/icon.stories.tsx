@@ -11,10 +11,11 @@ import {
   AtlrOutlinedIcon,
   SpellCheckIcon,
   LinkedIcon,
+  AtlrShapeIcon,
 } from 'atlr.icons'
 
 export default {
-  title: 'primitives/Icon',
+  title: 'icons/Icon',
   component: Icon,
 } as ComponentMeta<typeof Icon>
 
@@ -24,20 +25,14 @@ const Template: ComponentStory<typeof Icon> = (args) => {
   return (
     <Container size={'md'} align={'center'}>
       <Flex align={'center'} justify={'between'}>
-        <ALogoIcon />
-        <AtlrFilledIcon />
-        <AtlrOutlinedIcon />
-
+        <AtlrFilledIcon color={color} />
+        <AtlrOutlinedIcon color={color} />
+        <AtlrShapeIcon color={color} />
+        <ALogoIcon color={color} />
+      </Flex>
+      <Flex align={'center'} justify={'between'}>
         <SpellCheckIcon />
         <LinkedIcon />
-      </Flex>
-
-      <Flex align={'center'} justify={'between'}>
-        <Icon {...args} variant={'[A].Filled.Icon'} color={color} />
-        <Icon {...args} variant={'[A].Bordered.Icon'} color={color} />
-        <Icon {...args} variant={'[4K].Icon'} color={color} />
-        <Icon {...args} variant={'[HD].Icon'} color={color} />
-        <Icon {...args} variant={'[SD].Icon'} color={color} />
       </Flex>
     </Container>
   )

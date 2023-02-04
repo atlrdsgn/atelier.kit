@@ -10,6 +10,8 @@ export {Card, CardImage} from './card'
 export {Checkbox, CheckboxFlex, CheckboxLabel} from './checkbox'
 export {CopyField, CopyText, CopyTrigger} from './copy-text'
 
+export {Dialog, DialogContent} from './dialog'
+
 export {Heading} from './heading'
 
 export {Icon} from './_icon'

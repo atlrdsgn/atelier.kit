@@ -1,6 +1,7 @@
 export { Box } from './box';
 export { Canvas } from './canvas';
 export { Container } from './container';
+export { Divide } from './divide';
 export { Flex } from './flex';
 export { Footer } from './footer';
 export { Grid } from './grid';

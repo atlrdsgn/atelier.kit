@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {baseComponentProps} from '../@shared/types'
+import type {baseElementProps} from '../@shared'
 import {SectionPrimitive} from './section.styles'
 import type {SectionVariantProps} from './section.styles'
 
@@ -8,7 +8,7 @@ interface sectionProps {
   children?: React.ReactNode
 }
 
-type SectionPrimitiveProps = baseComponentProps & sectionProps & SectionVariantProps
+type SectionPrimitiveProps = baseElementProps & sectionProps & SectionVariantProps
 type SectionProps = SectionPrimitiveProps
 
 const SectionComponent = ({

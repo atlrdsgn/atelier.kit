@@ -1,0 +1,1 @@
+{"version":3,"file":"theme-scale-object.d.ts","sourceRoot":"","sources":["../../../src/theme/utils/theme-scale-object.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,YAAY,GAAG,KAAK,CAAC,CAAC,eAAe,EAAE,MAAM,EAAE,KAAK,EAAE,MAAM,CAAC,CAAC,CAAA;AAE1E,MAAM,MAAM,gBAAgB,GAAG;IAC7B,CAAC,GAAG,EAAE,MAAM,GAAG,gBAAgB,GAAG,MAAM,CAAA;CACzC,CAAA"}

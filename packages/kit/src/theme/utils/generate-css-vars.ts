@@ -1,5 +1,5 @@
 import {setThemeScaleValue} from './set-theme-scale'
-import type {CSSVariables, ThemeScaleObject} from '../core.types'
+import type {CSSVariables, ThemeScaleObject} from './theme-scale-object'
 
 const hasMoreKeys = (keys: string[]): keys is [string, ...string[]] => {
   if (keys.length) return true

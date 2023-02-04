@@ -1,4 +1,4 @@
-import type {ThemeScaleObject} from '../core.types'
+import type {ThemeScaleObject} from './theme-scale-object'
 
 const hasMoreKeys = (keys: string[]): keys is [string, ...string[]] => {
   if (keys.length) return true

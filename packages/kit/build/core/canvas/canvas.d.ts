@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { baseComponentProps } from '../@shared/types';
+import type { baseElementProps } from '../@shared';
 import type { CanvasVariantProps } from './canvas.styles';
 import { CanvasPrimitive } from './canvas.styles';
 type canvasProps = React.ComponentPropsWithRef<typeof CanvasPrimitive> & React.HTMLAttributes<HTMLDivElement>;
-type CanvasPrimitiveProps = baseComponentProps & canvasProps & CanvasVariantProps;
+type CanvasPrimitiveProps = baseElementProps & canvasProps & CanvasVariantProps;
 type CanvasProps = CanvasPrimitiveProps;
 export type { CanvasProps };
 /**

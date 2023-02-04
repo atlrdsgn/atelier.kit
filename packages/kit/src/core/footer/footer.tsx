@@ -1,5 +1,5 @@
 import * as React from 'react'
-import type {baseComponentProps} from '../../primitives/@shared/types'
+import type {baseElementProps} from '../@shared'
 import type {FooterVariantProps} from './footer.styles'
 import {StyledFooter} from './footer.styles'
 
@@ -7,7 +7,7 @@ type footerProps = {
   children: React.ReactNode
 }
 
-type FooterPrimiticveProps = baseComponentProps &
+type FooterPrimiticveProps = baseElementProps &
   FooterVariantProps &
   React.HTMLAttributes<HTMLDivElement> &
   React.ComponentPropsWithRef<typeof StyledFooter> &

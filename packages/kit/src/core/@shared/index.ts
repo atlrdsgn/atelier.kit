@@ -1,4 +1,2 @@
-export * from './styles'
-
-export type {baseKitProp} from './types'
-export type {commonKitProps} from './types'
+export {applyDisplayName} from './utils'
+export type {baseElementProps} from './types'

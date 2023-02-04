@@ -1,4 +1,4 @@
-import type { CSSVariables, ThemeScaleObject } from '../core.types';
+import type { CSSVariables, ThemeScaleObject } from './theme-scale-object';
 declare const generateCSSVariablesMap: (scaleName: string, themeScaleObject: ThemeScaleObject, rootScale?: boolean) => CSSVariables;
 /**
  * Given a theme scale object, this returns a modified version with the

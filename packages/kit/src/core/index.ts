@@ -15,5 +15,4 @@ export {KitTypefaceLogo} from './assets'
 
 // utils.
 export {KitHead} from './utils/kit.head'
-export {generateCSSVariablesMap} from './utils/generate-css-vars'
 export {getTouchPosition} from './utils/touch-position'

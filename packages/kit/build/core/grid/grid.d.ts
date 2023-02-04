@@ -1,5 +1,5 @@
 import React from 'react';
-import { baseComponentProps } from '../@shared/types';
+import type { baseElementProps } from '../@shared';
 import type { GridVariantProps } from './grid.styles';
 type gridProps = {
     children?: React.ReactNode;
@@ -12,9 +12,9 @@ type gridProps = {
     columns?: number;
     flow?: string;
 };
-type GridPrimitiveProps = baseComponentProps & gridProps & GridVariantProps;
+type GridPrimitiveProps = baseElementProps & gridProps & GridVariantProps;
 type GridProps = GridPrimitiveProps;
-export declare const Grid: React.ForwardRefExoticComponent<baseComponentProps & gridProps & import("@stitches/react/types/styled-component").TransformProps<{
+export declare const Grid: React.ForwardRefExoticComponent<baseElementProps & gridProps & import("@stitches/react/types/styled-component").TransformProps<{
     align?: "start" | "center" | "end" | "stretch" | "baseline" | undefined;
     justify?: "start" | "center" | "end" | "stretch" | "between" | undefined;
     flow?: "row" | "column" | "dense" | "rowDense" | "columnDense" | undefined;

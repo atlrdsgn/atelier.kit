@@ -1,5 +1,5 @@
 import React from 'react'
-import {baseComponentProps} from '../@shared/types'
+import type {baseElementProps} from '../@shared'
 import {applyDisplayName} from '../@shared/utils'
 import type {GridVariantProps} from './grid.styles'
 import {GridPrimitive} from './grid.styles'
@@ -16,7 +16,7 @@ type gridProps = {
   flow?: string
 }
 
-type GridPrimitiveProps = baseComponentProps & gridProps & GridVariantProps
+type GridPrimitiveProps = baseElementProps & gridProps & GridVariantProps
 type GridProps = GridPrimitiveProps
 
 const GridComponent = React.forwardRef<React.ElementRef<typeof GridPrimitive>, GridProps>(

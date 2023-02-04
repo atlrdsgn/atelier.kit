@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {baseComponentProps} from '../@shared/types'
+import type {baseElementProps} from '../@shared'
 import {applyDisplayName} from '../@shared/utils'
 import {PrimitivePropsWithRef} from '../../primitives'
 import {BoxPrimitive} from './box.styles'
@@ -8,7 +8,7 @@ type bProps = PrimitivePropsWithRef<typeof BoxPrimitive> & {
   children?: React.ReactNode
 }
 
-type BoxPrimitiveProps = baseComponentProps & bProps & React.HTMLAttributes<HTMLDivElement>
+type BoxPrimitiveProps = baseElementProps & bProps & React.HTMLAttributes<HTMLDivElement>
 type BoxProps = BoxPrimitiveProps
 
 const BoxComponent = ({children, css, ...rest}: BoxProps) => (

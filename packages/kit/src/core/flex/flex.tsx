@@ -1,6 +1,6 @@
 import * as React from 'react'
 import type {PrimitivePropsWithRef} from '../../primitives'
-import type {CSS} from '../../theme'
+import type {baseElementProps} from '../@shared'
 import type {FlexVariantProps} from './flex.styles'
 import {FlexPrimitive} from './flex.styles'
 
@@ -10,7 +10,7 @@ type flexProps = PrimitivePropsWithRef<typeof FlexPrimitive> & {
 }
 
 type FlexPrimitiveProps = flexProps & FlexVariantProps
-type FlexProps = FlexPrimitiveProps & {css?: CSS}
+type FlexProps = FlexPrimitiveProps & baseElementProps
 
 const FlexComponent = React.forwardRef<React.ElementRef<typeof FlexPrimitive>, FlexProps>(
   (props, forwardedRef) => {

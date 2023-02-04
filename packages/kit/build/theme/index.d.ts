@@ -12,7 +12,8 @@ export { darkTheme } from './base';
  *
  * @utils
  */
-export { generateColorArray } from './utils/generate-color-array';
+export { generateColorArray } from './utils';
+export type { ThemeScaleObject } from './utils';
 /**
  *
  * @types

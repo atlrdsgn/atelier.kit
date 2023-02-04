@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {ContainerPrimitive} from './container.styles'
 import type {ContainerVariantProps} from './container.styles'
-import {baseComponentProps} from '../@shared/types'
+import {baseElementProps} from '../@shared'
 import {applyDisplayName} from '../@shared/utils'
 
 interface containerProps {
@@ -10,7 +10,7 @@ interface containerProps {
   align?: 'left' | 'center' | 'right' | string
 }
 
-type ContainerPrimitiveProps = baseComponentProps & containerProps & ContainerVariantProps
+type ContainerPrimitiveProps = baseElementProps & containerProps & ContainerVariantProps
 type ContainerProps = ContainerPrimitiveProps
 
 const ContainerComponent = ({

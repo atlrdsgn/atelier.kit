@@ -1,7 +1,7 @@
 import React from 'react'
 import {SpacePrimitive} from './space.styles'
 import type {SpaceVariantProps} from './space.styles'
-import {baseComponentProps} from '../@shared/types'
+import type {baseElementProps} from '../@shared/types'
 import {applyDisplayName} from '../@shared/utils'
 
 interface spaceProps {
@@ -10,7 +10,7 @@ interface spaceProps {
   devFlag?: boolean
 }
 
-type SpacePrimitiveProps = baseComponentProps &
+type SpacePrimitiveProps = baseElementProps &
   spaceProps &
   SpaceVariantProps &
   React.HTMLAttributes<HTMLDivElement>

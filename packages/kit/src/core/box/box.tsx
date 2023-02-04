@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {baseComponentProps} from '../@shared/types'
 import {applyDisplayName} from '../@shared/utils'
-import {PrimitivePropsWithRef} from '../primitive'
+import {PrimitivePropsWithRef} from '../../primitives'
 import {BoxPrimitive} from './box.styles'
 
 type bProps = PrimitivePropsWithRef<typeof BoxPrimitive> & {

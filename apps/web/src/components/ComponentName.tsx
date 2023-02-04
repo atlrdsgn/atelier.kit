@@ -11,7 +11,7 @@ export const ComponentName = ({component}: ComponentNameProps) => {
     <div>
       <Space size={'sm'} />
 
-      <Heading size={'3'} css={{textAlign: 'center'}}>
+      <Heading size={'3'} css={{textAlign: 'center'}} color={'helios'}>
         {component}
       </Heading>
 

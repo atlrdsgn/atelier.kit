@@ -40,9 +40,9 @@ type ScrollAreaCornerPrimitiveProps = React.ComponentPropsWithRef<typeof StyledS
 type SACornerProps = ScrollAreaCornerPrimitiveProps & {
     css?: CSS;
 };
-export declare const ScrollArea: React.ForwardRefExoticComponent<Pick<SARootProps, "key" | "css" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "type" | "scrollHideDelay"> & React.RefAttributes<HTMLDivElement>>;
-export declare const ScrollAreaViewport: React.ForwardRefExoticComponent<Pick<SAViewportProps, "key" | "css" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild"> & React.RefAttributes<HTMLDivElement>>;
-export declare const ScrollAreaScrollbar: React.ForwardRefExoticComponent<Pick<SAScrollbarProps, "key" | "css" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "forceMount" | "orientation"> & React.RefAttributes<HTMLDivElement>>;
-export declare const ScrollAreaCorner: React.ForwardRefExoticComponent<Pick<SACornerProps, "key" | "css" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild"> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollArea: React.ForwardRefExoticComponent<Pick<SARootProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "type" | "scrollHideDelay" | "css"> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollAreaViewport: React.ForwardRefExoticComponent<Pick<SAViewportProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css"> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollAreaScrollbar: React.ForwardRefExoticComponent<Pick<SAScrollbarProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css" | "forceMount" | "orientation"> & React.RefAttributes<HTMLDivElement>>;
+export declare const ScrollAreaCorner: React.ForwardRefExoticComponent<Pick<SACornerProps, "key" | keyof React.HTMLAttributes<HTMLDivElement> | "asChild" | "css"> & React.RefAttributes<HTMLDivElement>>;
 export type { SARootProps, SAViewportProps, SAScrollbarProps, SACornerProps };
 //# sourceMappingURL=scroll.area.d.ts.map

@@ -52,6 +52,11 @@ a {
     text-decoration: none;
 }
 
+.sp-code-editor {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
 
 /*
 @media (prefers-color-scheme: dark) {

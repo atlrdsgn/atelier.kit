@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 const getTouchPosition = (event: React.TouchEvent<HTMLCanvasElement>) => {
   const canvas = event.target as HTMLCanvasElement
   var rect = canvas.getBoundingClientRect()

@@ -1,3 +1,4 @@
+import * as React from 'react';
 declare const getTouchPosition: (event: React.TouchEvent<HTMLCanvasElement>) => {
     x: number;
     y: number;

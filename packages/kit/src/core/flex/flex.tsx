@@ -1,5 +1,5 @@
 import * as React from 'react'
-import type {PrimitivePropsWithRef} from '../primitive'
+import type {PrimitivePropsWithRef} from '../../primitives'
 import type {CSS} from '../../theme'
 import type {FlexVariantProps} from './flex.styles'
 import {FlexPrimitive} from './flex.styles'

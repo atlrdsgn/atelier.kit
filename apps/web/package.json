@@ -11,6 +11,8 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@codesandbox/sandpack-react": "^1.20.8",
+        "@codesandbox/sandpack-themes": "^1.19.0",
         "atlr.kit": "*",
         "next": "^13.1.5",
         "next-themes": "^0.2.1",

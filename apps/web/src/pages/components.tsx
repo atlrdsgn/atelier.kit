@@ -14,8 +14,7 @@ import {
   TabsDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
-import {AtelierKitLogo} from 'atlr.kit'
-import {Container} from 'atlr.kit'
+import {Header} from '@/components/Header'
 
 function Components() {
   return (
@@ -27,11 +26,9 @@ function Components() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <!-- Components go here --> */}
+      <Header />
 
-      <Container size={'sm'} align={'center'}>
-        <AtelierKitLogo width={'180'} color={'white'} />
-      </Container>
+      {/* <!-- Components go here --> */}
 
       <SectionGap />
       <ContainerDemo />
@@ -51,11 +48,6 @@ function Components() {
       <TabsDemo />
       <SectionGap />
       <AccordionDemo />
-      <SectionGap />
-      <RevealDemo />
-      <SectionGap />
-      <GridDemo />
-      <SectionGap />
     </>
   )
 }

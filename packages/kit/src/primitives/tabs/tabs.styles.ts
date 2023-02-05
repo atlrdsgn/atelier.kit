@@ -21,7 +21,7 @@ const styledTabs = styled(TabsPrimitive.Root, {
   flexDirection: 'column',
   justifyContent: 'center',
   width: '100%',
-  backgroundColor: KitColors.slate1,
+  backgroundColor: KitColors.transparent,
 
   fontFamily: KitTheme.theme.fonts.sans,
 

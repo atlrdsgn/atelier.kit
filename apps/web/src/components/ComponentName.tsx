@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {Space, Heading} from 'atlr.kit'
+import {Space, Badge} from 'atlr.kit'
 
 interface ComponentNameProps {
   component: string
@@ -11,9 +11,9 @@ export const ComponentName = ({component}: ComponentNameProps) => {
     <div>
       <Space size={'sm'} />
 
-      <Heading size={'3'} css={{textAlign: 'center'}} color={'helios'}>
+      <Badge size={'sm'} color={'subtle'}>
         {component}
-      </Heading>
+      </Badge>
 
       <Space size={'md'} />
     </div>

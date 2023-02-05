@@ -7,7 +7,9 @@ import {Container, Space, Text} from 'atlr.kit'
 export const ContainerDemo = () => {
   return (
     <>
-      <ComponentName component={'Container'} />
+      <Container size={'sm'} align={'center'}>
+        <ComponentName component={'Container'} />
+      </Container>
       <Container size={'sm'} align={'center'} dev>
         <Text size={'sm'}>Container Small</Text>
       </Container>

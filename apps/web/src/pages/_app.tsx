@@ -3,19 +3,19 @@ import '@/styles/globals.css'
 import {ThemeProvider} from 'next-themes'
 import type {NextComponentType, NextPageContext} from 'next'
 import type {AppProps} from 'next/app'
-import {globalCss, KitColors} from 'atlr.kit'
+import {AtelierKitThemeProvider, globalCss, KitColors} from 'atlr.kit'
 
 const globalStyles = globalCss({
   html: {
     margin: 0,
     padding: 0,
-    backgroundColor: '#121212',
+    backgroundColor: KitColors.white,
   },
   body: {
     margin: 0,
     WebkitTextSizeAdjust: '100%',
-    backgroundColor: '#121212',
-    color: KitColors.slate2,
+    backgroundColor: KitColors.white,
+    color: KitColors.gray12,
   },
 })
 
@@ -32,7 +32,11 @@ function App({Component, pageProps, ...rest}: AppProps) {
 
   return (
     <>
-      <ThemeProvider attribute="class">{getLayout({Component, pageProps, ...rest})}</ThemeProvider>
+      <ThemeProvider attribute="class">
+        <AtelierKitThemeProvider theme={'auto'} mode={'light'}>
+          {getLayout({Component, pageProps, ...rest})}
+        </AtelierKitThemeProvider>
+      </ThemeProvider>
     </>
   )
 }

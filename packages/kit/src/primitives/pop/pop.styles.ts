@@ -36,6 +36,7 @@ const StyledPopTrigger = styled(P.Trigger, {
 const baseContentStyles = {
   all: 'unset',
 
+  color: KitColors.gray11,
   fontFamily: KitTheme.theme.fonts.sans,
   fontSize: KitTheme.theme.fontSizes.sm,
   fontWeight: KitTheme.theme.fontWeights.medium,

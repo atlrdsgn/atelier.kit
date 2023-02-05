@@ -75,7 +75,9 @@ module.exports = {
         'prettier/prettier': ['warn'],
         '@typescript-eslint/explicit-module-boundary-types': 'off',
     },
-    babelOptions: {
-        presets: [require.resolve('next/babel')],
+    parserOptions: {
+        babelOptions: {
+            presets: [require.resolve('next/babel')],
+        },
     },
 }

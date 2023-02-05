@@ -1,3 +1,7 @@
+// provider.
+export {AtelierKitThemeProvider} from './provider'
+export {useThemeContext} from './provider'
+
 // core elements.
 export {Box} from './box'
 export {Canvas} from './canvas'

@@ -6,8 +6,8 @@
     "main": "packages/kit/src/index.ts",
     "packageManager": "yarn@3.2.2",
     "workspaces": [
-        "packages/*",
-        "apps/*"
+        "apps/*",
+        "packages/*"
     ],
     "scripts": {
         "build": "turbo run build",

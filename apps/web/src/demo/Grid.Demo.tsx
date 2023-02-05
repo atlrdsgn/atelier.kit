@@ -11,7 +11,7 @@ export const GridDemo = () => {
         <ComponentName component={'Grid'} />
 
         <div>
-          <Grid align={'stretch'} columns={4} justify={'between'} gap={4}>
+          <Grid align={'center'} columns={4} justify={'between'} gap={4}>
             <DemoBox>Space One</DemoBox>
             <DemoBox>Space Two</DemoBox>
             <DemoBox>Space Three</DemoBox>
@@ -24,8 +24,10 @@ export const GridDemo = () => {
 }
 
 const DemoBox = styled('div', {
-  width: 'auto',
+  width: '100%',
   height: '40px',
+  minWidth: '100%',
+  maxWidth: '100%',
   backgroundColor: KitColors.helios5,
   borderRadius: '6px',
 
@@ -35,7 +37,7 @@ const DemoBox = styled('div', {
 
   textAlign: 'center',
   lineHeight: '40px',
-  margin: 0,
+  margin: 'auto',
   justifyContent: 'center',
   alignItems: 'center',
 })

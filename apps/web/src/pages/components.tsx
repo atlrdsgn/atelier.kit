@@ -8,10 +8,12 @@ import {
   CopyTextFieldDemo,
   GridDemo,
   RadioGroupDemo,
-  RevealDemo,
   SwitchDemo,
   SelectDemo,
   TabsDemo,
+  DialogDemo,
+  PopoverDemo,
+  BadgeDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
 import {Header} from '@/components/Header'
@@ -33,11 +35,19 @@ function Components() {
       <SectionGap />
       <ContainerDemo />
       <SectionGap />
+      <GridDemo />
+      <SectionGap />
+      <BadgeDemo />
+      <SectionGap />
       <CopyTextFieldDemo />
       <SectionGap />
       <ButtonDemo />
       <SectionGap />
       <SwitchDemo />
+      <SectionGap />
+      <PopoverDemo />
+      <SectionGap />
+      <DialogDemo />
       <SectionGap />
       <SelectDemo />
       <SectionGap />

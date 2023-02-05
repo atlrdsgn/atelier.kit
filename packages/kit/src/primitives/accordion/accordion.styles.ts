@@ -56,6 +56,7 @@ const slideUp = keyframes({
  */
 
 const styledAccordion = styled(AccordionPrimitive.Root, {
+  boxSizing: 'border-box',
   position: 'relative',
   justifyContent: 'center',
   alignItems: 'center',

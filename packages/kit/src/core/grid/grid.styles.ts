@@ -9,7 +9,6 @@ const coreDefaults = {
   width: '100%',
   whiteSpace: 'nowrap',
   overflowWrap: 'break-word',
-  flexWrap: 'wrap',
 }
 
 const gridStyles = css({

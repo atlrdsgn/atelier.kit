@@ -10,7 +10,7 @@ import {
   SelectGroup,
   SelectLabel,
 } from 'atlr.kit'
-
+import {ComponentName} from '@/components/ComponentName'
 import {Container, Section} from 'atlr.kit'
 
 const options = [
@@ -37,6 +37,7 @@ export const SelectDemo = () => {
     <>
       <Section>
         <Container size={'lg'} align={'center'}>
+          <ComponentName component={'Select'} />
           <div>
             <Select css={{width: 200}}>
               <SelectTrigger>

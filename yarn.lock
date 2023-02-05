@@ -12164,6 +12164,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"kit.tsconfig@workspace:packages/kit.tsconfig":
+  version: 0.0.0-use.local
+  resolution: "kit.tsconfig@workspace:packages/kit.tsconfig"
+  languageName: unknown
+  linkType: soft
+
 "kit.website@workspace:apps/web":
   version: 0.0.0-use.local
   resolution: "kit.website@workspace:apps/web"

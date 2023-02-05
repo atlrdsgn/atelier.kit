@@ -1,75 +1,75 @@
 {
-    "name": "atlr.kit",
-    "version": "0.3.44",
-    "license": "MIT",
-    "packageManager": "yarn@3.2.2",
-    "type": "module",
-    "main": "./build/index.esm.js",
-    "exports": "./build/index.esm.js",
-    "module": "./build/index.esm.js",
-    "types": "./build/index.d.ts",
-    "typings": "./build/index.d.ts",
-    "files": [
-        "build",
-        "README.md"
-    ],
-    "scripts": {
-        "build": "rollup -c",
-        "lint": "eslint src --ext .ts",
-        "clean": "rm -rf node_modules && rm -rf build",
-        "release": "npm publish --access public",
-        "dev:release": "npm publish --access private",
-        "pretty": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,md}"
-    },
-    "peerDependencies": {
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2"
-    },
-    "dependencies": {
-        "@radix-ui/react-accordion": "^1.1.0",
-        "@radix-ui/react-avatar": "^1.0.1",
-        "@radix-ui/react-checkbox": "^1.0.1",
-        "@radix-ui/react-collapsible": "^1.0.1",
-        "@radix-ui/react-dialog": "^1.0.2",
-        "@radix-ui/react-icons": "^1.1.1",
-        "@radix-ui/react-label": "^2.0.0",
-        "@radix-ui/react-menubar": "^1.0.0",
-        "@radix-ui/react-navigation-menu": "^1.1.1",
-        "@radix-ui/react-popover": "^1.0.3",
-        "@radix-ui/react-radio-group": "^1.1.1",
-        "@radix-ui/react-scroll-area": "^1.0.2",
-        "@radix-ui/react-select": "^1.2.0",
-        "@radix-ui/react-separator": "^1.0.1",
-        "@radix-ui/react-slider": "^1.1.0",
-        "@radix-ui/react-switch": "^1.0.1",
-        "@radix-ui/react-tabs": "^1.0.2",
-        "@radix-ui/react-toast": "^1.1.2",
-        "@radix-ui/react-toggle-group": "^1.0.2",
-        "@stitches/react": "^1.2.8",
-        "copy-to-clipboard": "^3.3.3",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@rollup/plugin-terser": "^0.3.0",
-        "@types/node": "^18.11.18",
-        "@types/react": "^18.0.27",
-        "@types/react-dom": "^18.0.10",
-        "eslint-config-kit": "*",
-        "prettier": "^2.8.3",
-        "rollup": "^3.12.0",
-        "rollup-plugin-copy": "^3.4.0",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-typescript2": "^0.34.1",
-        "typescript": "^4.9.5"
-    },
-    "prettierIgnore": [
-        "node_modules",
-        "dist",
-        "build",
-        "rollup.config.js"
-    ],
-    "publishConfig": {
-        "access": "public"
-    }
+  "name": "atlr.kit",
+  "version": "0.3.46",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.2",
+  "type": "module",
+  "main": "./build/index.esm.js",
+  "exports": "./build/index.esm.js",
+  "module": "./build/index.esm.js",
+  "types": "./build/index.d.ts",
+  "typings": "./build/index.d.ts",
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf node_modules && rm -rf build",
+    "release": "npm publish --access public",
+    "dev:release": "npm publish --access private",
+    "pretty": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,md}"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.0",
+    "@radix-ui/react-avatar": "^1.0.1",
+    "@radix-ui/react-checkbox": "^1.0.1",
+    "@radix-ui/react-collapsible": "^1.0.1",
+    "@radix-ui/react-dialog": "^1.0.2",
+    "@radix-ui/react-icons": "^1.1.1",
+    "@radix-ui/react-label": "^2.0.0",
+    "@radix-ui/react-menubar": "^1.0.0",
+    "@radix-ui/react-navigation-menu": "^1.1.1",
+    "@radix-ui/react-popover": "^1.0.3",
+    "@radix-ui/react-radio-group": "^1.1.1",
+    "@radix-ui/react-scroll-area": "^1.0.2",
+    "@radix-ui/react-select": "^1.2.0",
+    "@radix-ui/react-separator": "^1.0.1",
+    "@radix-ui/react-slider": "^1.1.0",
+    "@radix-ui/react-switch": "^1.0.1",
+    "@radix-ui/react-tabs": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.2",
+    "@radix-ui/react-toggle-group": "^1.0.2",
+    "@stitches/react": "^1.2.8",
+    "copy-to-clipboard": "^3.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.3.0",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "eslint-config-kit": "*",
+    "prettier": "^2.8.3",
+    "rollup": "^3.12.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.5"
+  },
+  "prettierIgnore": [
+    "node_modules",
+    "dist",
+    "build",
+    "rollup.config.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

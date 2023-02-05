@@ -1,3 +1,5 @@
+export { AtelierKitThemeProvider } from './provider';
+export { useThemeContext } from './provider';
 export { Box } from './box';
 export { Canvas } from './canvas';
 export { Container } from './container';

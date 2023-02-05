@@ -172,6 +172,32 @@ const baseButton = styled(TAG, {
         },
       },
     },
+
+    midnightShadow: {
+      true: {
+        color: KitColors.white,
+        backgroundColor: KitColors.secondaryGray,
+        boxShadow: `0px 0.7079948583634852px 0.7079948583634852px -0.625px rgba(0, 0, 0, 0.15), 
+  0px 1.8096906216668867px 1.8096906216668867px -1.25px rgba(0, 0, 0, 0.14397), 
+  0px 3.6205156475884093px 3.6205156475884093px -1.875px rgba(0, 0, 0, 0.13793), 
+  0px 6.870631714892718px 6.870631714892718px -2.5px rgba(0, 0, 0, 0.1271), 
+  0px 13.644368889910274px 13.644368889910274px -3.125px rgba(0, 0, 0, 0.10452), 
+  0px 30px 30px -3.75px rgba(0, 0, 0, 0.05)`,
+
+        '&:hover': {
+          color: KitColors.white,
+          backgroundColor: KitColors.primaryGray,
+          transform: 'scale(1.02)',
+
+          boxShadow: `0px 0.7079948583634852px 0.7079948583634852px -0.625px rgba(0, 0, 0, 0.15), 
+  0px 1.8096906216668867px 1.8096906216668867px -1.25px rgba(0, 0, 0, 0.14397), 
+  0px 3.6205156475884093px 3.6205156475884093px -1.875px rgba(0, 0, 0, 0.13793), 
+  0px 6.870631714892718px 6.870631714892718px -2.5px rgba(0, 0, 0, 0.1271), 
+  0px 13.644368889910274px 13.644368889910274px -3.125px rgba(0, 0, 0, 0.10452), 
+  0px 30px 30px -3.75px rgba(0, 0, 0, 0.05)`,
+        },
+      },
+    },
   },
 
   /**
@@ -186,6 +212,7 @@ const baseButton = styled(TAG, {
     neon: false,
     rainbow: false,
     ghost: false,
+    midnightShadow: false,
   },
 })
 
@@ -282,5 +309,43 @@ export type ButtonVariantProps = VariantProps<typeof baseButton>
     margin-left: 0px;
     box-shadow: 0 6px 20px var(--button-shadow);
     cursor: pointer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const button = {
+  boxSizing: "border-box",
+  flexShrink: 0,
+  width: "min-content", 
+  height: 40,
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "15px 15px 15px 15px",
+  boxShadow: `0px 0.7079948583634852px 0.7079948583634852px -0.625px rgba(0, 0, 0, 0.15), 
+  0px 1.8096906216668867px 1.8096906216668867px -1.25px rgba(0, 0, 0, 0.14397), 
+  0px 3.6205156475884093px 3.6205156475884093px -1.875px rgba(0, 0, 0, 0.13793), 
+  0px 6.870631714892718px 6.870631714892718px -2.5px rgba(0, 0, 0, 0.1271), 
+  0px 13.644368889910274px 13.644368889910274px -3.125px rgba(0, 0, 0, 0.10452), 
+  0px 30px 30px -3.75px rgba(0, 0, 0, 0.05)`,
+  backgroundColor: "#222222",
+  overflow: "visible",
+  position: "relative",
+  alignContent: "center",
+  flexWrap: "nowrap",
+  gap: 10,
+  borderRadius: 8,
+}
 }
  */

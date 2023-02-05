@@ -8,7 +8,7 @@ import {AppWrapper} from '@/components/AppWrapper'
 import {BlurredCanvas} from '@/components/BlurredCanvas'
 import mainBackdrop from '../../public/main.png'
 
-const logoColor = KitColors.fizz3
+const logoColor = KitColors.primaryGray
 
 function Index() {
   return (
@@ -25,7 +25,7 @@ function Index() {
           <Flex direction="column" align="center" justify="center">
             <AtelierKitLogo width={'260'} color={logoColor} />
             <Space size={'xs'} />
-            <Button size="sm" href="/components" secondary>
+            <Button size="sm" href="/components" midnightShadow>
               View Components
             </Button>
           </Flex>

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as Slct from '@radix-ui/react-select'
 import {baseComponentProps} from '../@shared/types'
+import type {SelectContentVariantProps} from './select.styles'
 import {applyDisplayName} from '../@shared/utils'
 
 import {
@@ -144,6 +145,7 @@ const SelectTriggerComponent = ({children, asChild, css, ...rest}: STriggerProps
  * content.
  */
 type SContentPrimitiveProps = baseComponentProps &
+  SelectContentVariantProps &
   React.ComponentPropsWithRef<typeof StyledSelectContent> &
   React.HTMLAttributes<HTMLDivElement>
 type SContentProps = SContentPrimitiveProps
@@ -165,6 +167,8 @@ const SelectContentComponent = ({
   arrowPadding,
   sticky = 'partial',
   hideWhenDetached = false,
+
+  hasBlur,
   css,
   ...rest
 }: SContentProps) => (
@@ -185,6 +189,7 @@ const SelectContentComponent = ({
       collisionPadding={collisionPadding}
       arrowPadding={arrowPadding}
       sticky={sticky}
+      hasBlur={hasBlur}
       hideWhenDetached={hideWhenDetached}
       css={{
         ...css,

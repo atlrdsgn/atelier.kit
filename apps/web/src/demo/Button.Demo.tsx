@@ -22,6 +22,10 @@ export const ButtonDemo = () => {
               <Button size={'sm'} secondary>
                 Small Button
               </Button>
+
+              <Button size={'sm'} midnightShadow>
+                Small Button
+              </Button>
             </Flex>
             <Space size={'md'} />
           </div>

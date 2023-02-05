@@ -1,5 +1,5 @@
 import * as Select from '@radix-ui/react-select'
-import {KitColors, KitTheme, styled} from '../../theme'
+import {KitColors, KitTheme, styled, VariantProps} from '../../theme'
 import {ArrowDownIcon} from '../_icon/src/ArrowDown.Icon'
 
 /**
@@ -108,15 +108,12 @@ const contentStyles = styled(Select.Content, {
   zIndex: 999,
 
   maxHeight: 'var(--radix-select-content-available-height)',
-  // maxWidth: 'var(--radix-select-trigger-width)',
-  // width: '100%',
   width: 'var(--radix-select-trigger-width)',
 
-  // backgroundColor: KitColors.white,
-  color: KitColors.slate12,
+  color: KitColors.primaryGray,
   borderRadius: KitTheme.theme.radii.lg,
 
-  backgroundColor: KitColors.blur,
+  backgroundColor: KitColors.white,
   backdropFilter: 'blur(20px)',
   WebkitBackdropFilter: 'blur(20px)',
   saturate: '180%',
@@ -135,6 +132,21 @@ const contentStyles = styled(Select.Content, {
   'var(--radix-select-content-transform-origin)': {},
   'var(--radix-select-content-available-width)': {},
   'var(--radix-select-trigger-height)': {},
+
+  // export as SelectContentVariantProps..
+  variants: {
+    hasBlur: {
+      true: {
+        backgroundColor: KitColors.blur,
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        saturate: '180%',
+      },
+    },
+  },
+  defaultVariants: {
+    hasBlur: false,
+  },
 })
 
 /**
@@ -326,3 +338,5 @@ export const StyledSelectItemIndicator = itemIndicatorStyles
 export const StyledSelectSeparator = separatorStyles
 export const StyledSelectLabel = labelStyles
 export const StyledSelectGroup = groupStyles
+
+export type SelectContentVariantProps = VariantProps<typeof contentStyles>

@@ -220,3 +220,67 @@ export const InternalStyles = internalStyles
 
 export const StyledButton = baseButton
 export type ButtonVariantProps = VariantProps<typeof baseButton>
+
+/**
+ *
+ * Expiremental styles.
+ *
+ *
+ * maskImage: `-webkit-radial-gradient(center, rgb(255, 255, 255), rgb(0, 0, 0));
+ * -webkit-radial-gradient(center, rgb(255, 255, 255), rgb(0, 0, 0))
+ * 
+ * 
+ * .glow_button__UdtqY {
+    --button-background: #161616;
+    --button-shadow: rgba(0,0,0,0.2);
+    --button-shine-left: hsla(40,22%,92%,0.3);
+    --button-shine-right: hsla(40,22%,92%,0.1);
+    --button-glow-start: hsla(40,22%,92%,0.2);
+    --button-glow-end: #efece6;
+    --button-text-color: #efece6;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+    column-gap: 8px;
+    z-index: 10;
+    appearance: none;
+    outline-color: initial;
+    outline-style: none;
+    outline-width: initial;
+    border-top-width: initial;
+    border-right-width: initial;
+    border-bottom-width: initial;
+    border-left-width: initial;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: transparent;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    min-width: 100px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    box-shadow: 0 6px 20px var(--button-shadow);
+    cursor: pointer;
+}
+ */

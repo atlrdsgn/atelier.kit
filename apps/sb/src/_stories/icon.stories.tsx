@@ -2,7 +2,7 @@ import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
 
-import {Container, Flex, Icon, KitColors} from 'atlr.kit'
+import {Container, Flex, Icon, KitColors, Space} from 'atlr.kit'
 
 import {
   AddIcon,
@@ -12,6 +12,9 @@ import {
   SpellCheckIcon,
   LinkedIcon,
   AtlrShapeIcon,
+  TwitterIcon,
+  ArenaIcon,
+  DocumentIcon,
 } from 'atlr.icons'
 
 export default {
@@ -29,10 +32,12 @@ const Template: ComponentStory<typeof Icon> = (args) => {
         <AtlrOutlinedIcon color={color} />
         <AtlrShapeIcon color={color} />
         <ALogoIcon color={color} />
+        <TwitterIcon color={color} />
+        <ArenaIcon color={color} />
       </Flex>
+      <Space size={'md'} />
       <Flex align={'center'} justify={'between'}>
-        <SpellCheckIcon />
-        <LinkedIcon />
+        <DocumentIcon color={color} />
       </Flex>
     </Container>
   )

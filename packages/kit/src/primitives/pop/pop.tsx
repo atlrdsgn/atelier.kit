@@ -1,31 +1,107 @@
 import * as P from '@radix-ui/react-popover'
 import * as React from 'react'
-import {baseComponentProps} from '../@shared/types'
+import type {baseComponentProps} from '../@shared/types'
+import type {PopoverContentVariantProps} from './pop.styles'
 import {StyledPopRoot, StyledPopContent, StyledPopTrigger} from './pop.styles'
 
-type PopContentPrimitiveProps = baseComponentProps & React.ComponentProps<typeof StyledPopContent>
+///////////////////////////// root /////////////////////////////
+
+type popProps = {
+  defaultOpen?: boolean
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+  modal?: boolean
+}
+
+type PopoverPrimitiveProps = baseComponentProps & popProps & React.ComponentProps<typeof P.Root>
+type PopoverProps = PopoverPrimitiveProps
+
+const PopoverRootComponent = ({children, modal = false, ...rest}: PopoverProps) => (
+  <StyledPopRoot
+    {...rest}
+    defaultOpen={rest.defaultOpen}
+    open={rest.open}
+    onOpenChange={rest.onOpenChange}
+    modal={modal}
+    css={{
+      ...rest.css,
+    }}>
+    {children}
+  </StyledPopRoot>
+)
+
+///////////////////////////// content /////////////////////////////
+
+type popContentProps = {
+  asChild?: boolean
+  onOpenAutoFocus?: (event: React.FocusEvent<HTMLElement>) => void
+  onCloseAutoFocus?: (event: React.FocusEvent<HTMLElement>) => void
+  onEscapeKeyDown?: (event: React.KeyboardEvent<HTMLElement>) => void
+  onFocusOutside?: (event: React.FocusEvent<HTMLElement>) => void
+  onInteractOutside?: (event: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>) => void
+  forceMount?: boolean
+  side?: 'top' | 'right' | 'bottom' | 'left'
+  sideOffset?: number
+  align?: 'start' | 'center' | 'end'
+  alignOffset?: number
+  avoidCollisions?: boolean
+  stick?: boolean
+}
+
+type PopContentPrimitiveProps = popContentProps &
+  baseComponentProps &
+  PopoverContentVariantProps &
+  React.ComponentProps<typeof StyledPopContent>
 export type PopContentProps = PopContentPrimitiveProps
 
 const PopContent = React.forwardRef<HTMLDivElement, PopContentProps>(
-  ({children, ...props}, forwardedRef) => {
+  ({children, side = 'bottom', sideOffset = 12, sticky = 'partial', ...props}, forwardedRef) => {
     return (
-      <StyledPopContent {...props} ref={forwardedRef} css={{...props.css}}>
-        {children}
-      </StyledPopContent>
+      <P.Portal>
+        <StyledPopContent
+          {...props}
+          ref={forwardedRef}
+          side={side}
+          sideOffset={sideOffset}
+          sticky={sticky}
+          bordered={props.bordered}
+          css={{...props.css}}>
+          {children}
+        </StyledPopContent>
+      </P.Portal>
     )
   }
 )
 
-type PopoverProps = React.ComponentProps<typeof StyledPopRoot>
-
 export const Popover: React.FC<PopoverProps> & {
-  Trigger: typeof P.Trigger
+  Trigger: typeof StyledPopTrigger
+  Anchor: typeof P.Anchor
   Content: typeof PopContent
+  Close: typeof P.Close
   Portal: typeof P.Portal
-} = (props) => <StyledPopRoot {...props} />
+} = (props) => <PopoverRootComponent {...props} />
 
-Popover.Content = PopContent
-Popover.Portal = P.Portal
 Popover.Trigger = StyledPopTrigger
+Popover.Anchor = P.Anchor
+Popover.Content = PopContent
+Popover.Close = P.Close
+Popover.Portal = P.Portal
 
 Popover.displayName = 'Popover'
+
+/*
+
+
+export default () => (
+  <Popover.Root>
+    <Popover.Trigger />
+    <Popover.Anchor />
+    <Popover.Portal>
+      <Popover.Content>
+        <Popover.Close />
+        <Popover.Arrow />
+      </Popover.Content>
+    </Popover.Portal>
+  </Popover.Root>
+);
+*/

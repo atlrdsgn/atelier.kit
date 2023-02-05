@@ -5,7 +5,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react'
 import {Canvas, Text} from 'atlr.kit'
 
 export default {
-  title: 'primitives/Canvas',
+  title: 'elements/Canvas',
   component: Canvas,
 } as ComponentMeta<typeof Canvas>
 

@@ -1,5 +1,6 @@
 /// <reference types="react" />
 import * as P from '@radix-ui/react-popover';
+import { VariantProps } from '../../theme';
 declare const StyledPopRoot: import("@stitches/react/types/styled-component").StyledComponent<import("react").FC<P.PopoverProps>, {}, {
     xs: string;
     sm: string;
@@ -966,7 +967,9 @@ declare const StyledPopTrigger: import("@stitches/react/types/styled-component")
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-declare const StyledPopContent: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<P.PopoverContentProps & import("react").RefAttributes<HTMLDivElement>>, {}, {
+declare const StyledPopContent: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<P.PopoverContentProps & import("react").RefAttributes<HTMLDivElement>>, {
+    bordered?: boolean | "true" | undefined;
+}, {
     xs: string;
     sm: string;
     md: string;
@@ -1450,4 +1453,5 @@ declare const StyledPopContent: import("@stitches/react/types/styled-component")
     zIndex: "zIndices";
 }, {}>>;
 export { StyledPopRoot, StyledPopTrigger, StyledPopContent };
+export type PopoverContentVariantProps = VariantProps<typeof StyledPopContent>;
 //# sourceMappingURL=pop.styles.d.ts.map

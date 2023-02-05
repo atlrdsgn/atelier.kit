@@ -34,4 +34,8 @@ export declare const overlayShow: {
     (): string;
     name: string;
 };
+export declare const contentShow: {
+    (): string;
+    name: string;
+};
 //# sourceMappingURL=keyframe-animations.d.ts.map

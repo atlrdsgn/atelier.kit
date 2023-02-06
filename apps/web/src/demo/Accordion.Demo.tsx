@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import {ComponentName} from '@/components/ComponentName'
-import {Accordion, AccordionItem, AccordionTrigger, AccordionContent, Section} from 'atlr.kit'
+import {Accordion, Section} from 'atlr.kit'
 import {Container} from 'atlr.kit'
 
 export const AccordionDemo = () => {
@@ -16,19 +16,19 @@ export const AccordionDemo = () => {
               type={'single'}
               bordered={false}
               css={{width: '500px', fontFamily: 'sans-serif'}}>
-              <AccordionItem value={'item1'} css={{}}>
-                <AccordionTrigger css={{}}>Accordion One</AccordionTrigger>
-                <AccordionContent css={{width: '100%'}}>
+              <Accordion.Item value={'item1'} css={{}}>
+                <Accordion.Trigger css={{}}>Accordion One</Accordion.Trigger>
+                <Accordion.Content css={{width: '100%'}}>
                   Deserunt culpa sunt eiusmod magna excepteur minim in id.
-                </AccordionContent>
-              </AccordionItem>
+                </Accordion.Content>
+              </Accordion.Item>
 
-              <AccordionItem value={'item2'} css={{}}>
-                <AccordionTrigger css={{}}>Accordion Two</AccordionTrigger>
-                <AccordionContent css={{width: '100%'}}>
+              <Accordion.Item value={'item2'} css={{}}>
+                <Accordion.Trigger css={{}}>Accordion Two</Accordion.Trigger>
+                <Accordion.Content css={{width: '100%'}}>
                   Deserunt culpa sunt eiusmod magna excepteur minim in id.
-                </AccordionContent>
-              </AccordionItem>
+                </Accordion.Content>
+              </Accordion.Item>
             </Accordion>
           </div>
         </Container>

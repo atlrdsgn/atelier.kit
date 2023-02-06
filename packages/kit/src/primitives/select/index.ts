@@ -1,24 +1,22 @@
 export {Select} from './select'
-export {SelectTrigger} from './select'
-export {SelectContent} from './select'
-export {SelectItem} from './select'
 
-export {SelectValue} from './select'
-export {SelectIcon} from './select'
-
-export {SelectViewport} from './select'
-export {SelectPortal} from './select'
-
-export {SelectItemIndicator} from './select'
-export {SelectItemText} from './select'
-
-export {SelectGroup} from './select'
-export {SelectLabel} from './select'
-export {SelectSeparator} from './select'
-
-export {SelectScrollUpButton} from './select'
-export {SelectScrollDownButton} from './select'
-export {SelectArrow} from './select'
+/**
+ *
+ * Select
+ *
+ * Select.Value
+ * Select.Trigger
+ * Select.Content
+ * Select.Item
+ * Select.Label
+ *
+ * Select.Icon
+ * Select.Viewport
+ * Select.Portal
+ * Select.Separator
+ * Select.Group
+ *
+ */
 
 // types.
 export type {SelectProps} from './select'

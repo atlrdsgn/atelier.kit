@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import {ComponentName} from '@/components/ComponentName'
-import {Reveal, RevealContent, RevealTrigger, Section, Space, Text} from 'atlr.kit'
+import {Reveal, Section, Space, Text} from 'atlr.kit'
 import {Container, Badge, Flex, styled, KitColors, KitTheme} from 'atlr.kit'
 
 export const RevealDemo = () => {
@@ -15,8 +15,8 @@ export const RevealDemo = () => {
 
           <div>
             <Reveal>
-              <RevealTrigger>Reveal</RevealTrigger>
-              <RevealContent>Reveal Content</RevealContent>
+              <Reveal.Trigger>Reveal</Reveal.Trigger>
+              <Reveal.Content>Reveal Content</Reveal.Content>
             </Reveal>
           </div>
           <Space size={'lg'} />
@@ -26,21 +26,21 @@ export const RevealDemo = () => {
             <Reveal open={open} onOpenChange={setOpen}>
               <Flex direction={'row'} align={'stretch'} css={{width: '100%'}}>
                 <Badge size="sm">@chvndler starred 5 repositories</Badge>
-                <RevealTrigger asChild>
+                <Reveal.Trigger>
                   <Text size={'sm'}>{open ? <span>hide</span> : <span>view all</span>}</Text>
-                </RevealTrigger>
+                </Reveal.Trigger>
               </Flex>
 
               <InitialContent>@AtelierDesign/atlr.ds</InitialContent>
               <InitialContent>@atlr-dsgn/rhythm</InitialContent>
-              <RevealContent>
+              <Reveal.Content>
                 <Flex direction={'column'} gap={2} css={{width: '100%'}}>
                   <InitialContent>@radix-ui/colors</InitialContent>
                   <InitialContent>@stitches/react</InitialContent>
                   <InitialContent>@AtelierDesign/atlr.ds</InitialContent>
                   <InitialContent>@rollup/rollup</InitialContent>
                 </Flex>
-              </RevealContent>
+              </Reveal.Content>
             </Reveal>
           </div>
         </Container>

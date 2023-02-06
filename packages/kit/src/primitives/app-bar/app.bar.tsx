@@ -1,7 +1,4 @@
 import * as React from 'react'
-
-import {applyDisplayName} from '../@shared/utils'
-import type {CSS} from '../../theme'
 import type {AppbarVariantProps, AppbarSpotVariantProps} from './app.bar.styles'
 import type {baseComponentProps} from '../@shared/types'
 import {AppbarPrimitive, AppbarSpotComponent} from './app.bar.styles'
@@ -13,7 +10,7 @@ import {AppbarPrimitive, AppbarSpotComponent} from './app.bar.styles'
 type AppbarPrimitiveProps = baseComponentProps &
   AppbarVariantProps &
   React.HTMLAttributes<HTMLDivElement>
-type AppbarProps = AppbarPrimitiveProps & {css?: CSS}
+type AppbarProps = AppbarPrimitiveProps
 
 /*
     size: 'sm',
@@ -68,7 +65,7 @@ const AppbarComponent = ({
 type AppbarSpotPrimitiveProps = baseComponentProps &
   AppbarSpotVariantProps &
   React.HTMLAttributes<HTMLDivElement>
-type AppbarSpotProps = AppbarSpotPrimitiveProps & {css?: CSS}
+type AppbarSpotProps = AppbarSpotPrimitiveProps
 
 const Spot = ({children, alignment = 'center', css, ...rest}: AppbarSpotProps) => {
   return (
@@ -83,11 +80,13 @@ const Spot = ({children, alignment = 'center', css, ...rest}: AppbarSpotProps) =
   )
 }
 
-export const Appbar = AppbarComponent
-export const AppbarSpot = Spot
+export const Appbar: React.FC<AppbarProps> & {
+  Spot: typeof Spot
+} = (props) => <AppbarComponent {...props} />
 
-applyDisplayName(Appbar, 'Appbar')
-applyDisplayName(AppbarSpot, 'AppbarSpot')
+Appbar.Spot = Spot
+
+Appbar.displayName = 'Appbar'
 
 export type {AppbarProps}
 export type {AppbarSpotProps}

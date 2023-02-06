@@ -1,28 +1,28 @@
 ### Basic Select Anatomy
 
-```tsx
+```tsx SelectModule.tsx
 export default () => (
   <Select css={{width: 200}}>
-    <SelectTrigger>
-      <SelectValue placeholder={'Select an option..'} />
-      <SelectIcon />
-    </SelectTrigger>
-    <SelectPortal>
-      <SelectContent sideOffset={5}>
-        <SelectScrollUpButton>⌃</SelectScrollUpButton>
-        <SelectViewport>
-          <SelectGroup>
-            <SelectLabel>Primitives</SelectLabel>
+    <Select.Trigger>
+      <Select.Value placeholder={'Select an option..'} />
+      <Select.Icon />
+    </Select.Trigger>
+    <Select.Portal>
+      <Select.Content sideOffset={5}>
+        <Select.ScrollUpButton>⌃</Select.ScrollUpButton>
+        <Select.Viewport>
+          <Select.Group>
+            <Select.Label>Primitives</Select.Label>
             {options.map((options) => (
-              <SelectItem key={options.type} value={options.value}>
+              <Select.Item key={options.type} value={options.value}>
                 {options.value}
-              </SelectItem>
+              </Select.Item>
             ))}
-          </SelectGroup>
-        </SelectViewport>
-        <SelectScrollDownButton>⌄</SelectScrollDownButton>
-      </SelectContent>
-    </SelectPortal>
+          </Select.Group>
+        </Select.Viewport>
+        <Select.ScrollDownButton>⌄</Select.ScrollDownButton>
+      </Select.Content>
+    </Select.Portal>
   </Select>
 )
 ```

@@ -20,6 +20,5 @@ export declare const Dialog: React.FC<DialogProps> & {
     Title: typeof StyledDialogTitle;
     Trigger: typeof StyledDialogTrigger;
 };
-export declare const DialogContent: React.FC<DialogContentPrimitiveProps>;
 export {};
 //# sourceMappingURL=dialog.d.ts.map

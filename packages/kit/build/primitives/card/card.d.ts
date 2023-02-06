@@ -5,6 +5,7 @@ export interface cardProps {
     children: React.ReactNode;
 }
 export interface imgProps extends React.HTMLAttributes<HTMLImageElement> {
+    htmlChildren?: React.ReactNode;
     src?: string;
     alt?: string;
     width?: number;
@@ -16,7 +17,7 @@ export interface imgProps extends React.HTMLAttributes<HTMLImageElement> {
 }
 type CardPrimitiveProps = baseComponentProps & CardVariantProps & React.HTMLAttributes<HTMLDivElement>;
 type CardProps = CardPrimitiveProps & imgProps;
-export declare const Card: ({ children, src, dev, ...rest }: CardProps) => JSX.Element;
+export declare const Card: ({ htmlChildren, src, dev, ...rest }: CardProps) => JSX.Element;
 export declare const CardImage: import("@stitches/react/types/styled-component").StyledComponent<"img", {}, {
     xs: string;
     sm: string;

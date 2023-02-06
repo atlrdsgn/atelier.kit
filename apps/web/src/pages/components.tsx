@@ -37,8 +37,6 @@ function Components() {
       <SectionGap />
       <ContainerDemo />
       <SectionGap />
-      <GridDemo />
-      <SectionGap />
       <BadgeDemo />
       <SectionGap />
       <CheckboxDemo />
@@ -57,11 +55,12 @@ function Components() {
       <SectionGap />
       <RadioGroupDemo />
       <SectionGap />
-      <VideoPlayerDemo />
-      <SectionGap />
       <TabsDemo />
       <SectionGap />
       <AccordionDemo />
+      <SectionGap />
+      <VideoPlayerDemo />
+      <SectionGap />
     </>
   )
 }

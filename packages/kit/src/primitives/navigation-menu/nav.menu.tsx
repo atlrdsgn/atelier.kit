@@ -19,6 +19,7 @@ import type {baseComponentProps} from '../@shared/types'
 import {ArrowDownIcon} from '../_icon/src/ArrowDown.Icon'
 
 /* ---------------------------- Nav Menu Root ---------------------------- */
+
 type NavMenuPrimitiveProps = baseComponentProps &
   NavMenuRootVariantProps &
   React.ComponentProps<typeof NavigationMenu.Root>
@@ -170,12 +171,36 @@ const NavViewport = React.forwardRef<
  *
  */
 
-/* ---------------------------- EXPORTS ---------------------------- */
-export const NavMenu = NavMenuRoot
-export const NavMenuBar = NavBar_List
-export const NavMenuItem = NavMenuItemComponent
+//////////////////////// export parts ////////////////////////
 
-export const NavMenuTrigger = NavTrigger
-export const NavMenuContent = NavContent
-export const NavMenuLink = NavLink
-export const NavMenuViewport = NavViewport
+export const Nav: React.FC<NavMenuProps> & {
+  Bar: typeof NavBar_List
+  Item: typeof NavMenuItemComponent
+  Trigger: typeof NavTrigger
+  Content: typeof NavContent
+  Link: typeof NavLink
+  Viewport: typeof NavViewport
+} = (props) => <NavMenuRoot {...props} />
+
+Nav.Bar = NavBar_List
+Nav.Item = NavMenuItemComponent
+Nav.Trigger = NavTrigger
+Nav.Content = NavContent
+Nav.Link = NavLink
+Nav.Viewport = NavViewport
+
+//////////////////////// display name ////////////////////////
+Nav.displayName = 'Nav'
+
+//////////////////////// prop types ////////////////////////
+export type {
+  //
+  NavMenuProps,
+  NavMenuBarProps,
+  NavMenuItemProps,
+  NavMenuTriggerProps,
+  NavMenuContentProps,
+  NavMenuLinkProps,
+  NavMenuViewportProps,
+  //
+}

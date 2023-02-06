@@ -66,7 +66,3 @@ const revealContent = styled(Collapsible.Content, {
 export const StyledRevealRoot = revealRoot
 export const StyledRevealTrigger = revealTrigger
 export const StyledRevealContent = revealContent
-
-export type RevealProps = React.ComponentProps<typeof StyledRevealRoot>
-export type RevealTriggerProps = React.ComponentProps<typeof StyledRevealTrigger>
-export type RevealContentProps = React.ComponentProps<typeof StyledRevealContent>

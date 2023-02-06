@@ -1,12 +1,12 @@
 import * as React from 'react'
 import ReactPlayer from 'react-player/vimeo'
-import {Portal} from '../portal'
 
 import {BoxComponent} from '../box'
 import type {baseElementProps} from '../@shared'
 import {CSSWrapper} from '../utils/css-wrapper'
 import {StyledVideoPlayer} from './video.styles'
 import {Override} from '../utils/types'
+import {Portal} from '../portal'
 
 // vimeo player src: https://player.vimeo.com/video/VIDEO_ID
 // Read more: https://github.com/vimeo/player.js
@@ -37,7 +37,7 @@ export const VideoPlayer = React.forwardRef<React.ElementRef<typeof StyledVideoP
             paddingTop: `${ratio * 100}%`,
             overflow: 'hidden',
             // height: 0,
-            height: 'auot',
+            height: 0,
             width: '100%',
           }}>
           <StyledVideoPlayer
@@ -51,9 +51,9 @@ export const VideoPlayer = React.forwardRef<React.ElementRef<typeof StyledVideoP
             height={'100%'}
             width={'100%'}
             css={{
-              position: 'relative',
-              // top: 0,
-              //left: 0
+              position: 'absolute',
+              top: 0,
+              left: 0,
             }}
           />
         </BoxComponent>

@@ -1,4 +1,4 @@
-export { Appbar, AppbarSpot } from './app.bar';
+export { Appbar } from './app.bar';
 export type { AppbarProps } from './app.bar';
 /**
  *
@@ -6,9 +6,9 @@ export type { AppbarProps } from './app.bar';
  *
  * () => (
  * <Appbar>
- *  <AppbarSpot align="left">Left Side</AppbarSpot>
- *  <AppbarSpot align="center">Center/AppbarSpot>
- *  <AppbarSpot align="right">Right Side</AppbarSpot>
+ *  <Appbar.Spot align="left">Left Side</Appbar.Spot>
+ *  <Appbar.Spot align="center">Center/Appbar.Spot>
+ *  <Appbar.Spot align="right">Right Side</Appbar.Spot>
  * </Appbar>
  * )
  */

@@ -1,6 +1,6 @@
-export {Accordion, AccordionItem, AccordionTrigger, AccordionContent} from './accordion'
-export {Appbar, AppbarSpot} from './app-bar'
-export {Avatar, AvatarImage} from './avatar'
+export {Accordion} from './accordion'
+export {Appbar} from './app-bar'
+export {Avatar} from './avatar'
 
 export {Badge} from './badge'
 export {Button, TestButton} from './button'
@@ -10,7 +10,7 @@ export {Card, CardImage} from './card'
 export {Checkbox, CheckboxFlex, CheckboxLabel} from './checkbox'
 export {CopyField, CopyText, CopyTrigger} from './copy-text'
 
-export {Dialog, DialogContent} from './dialog'
+export {Dialog} from './dialog'
 
 export {Heading} from './heading'
 
@@ -42,44 +42,19 @@ export {
   MenuBarRightSlot,
 } from './menu-bar'
 
-export {
-  NavMenu,
-  NavMenuBar,
-  NavMenuItem,
-  NavMenuTrigger,
-  NavMenuContent,
-  NavMenuLink,
-  NavMenuViewport,
-} from './navigation-menu'
+export {Nav} from './navigation-menu'
 
 export {Paragraph} from './paragraph'
 export {PassLink} from './pass-link'
 export {Popover} from './pop'
 
 export {RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel} from './radio-group'
-export {Reveal, RevealTrigger, RevealContent} from './reveal'
+export {Reveal} from './reveal'
 
-export {
-  Select,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,
-  SelectValue,
-  SelectIcon,
-  SelectViewport,
-  SelectPortal,
-  SelectItemIndicator,
-  SelectItemText,
-  SelectGroup,
-  SelectLabel,
-  SelectSeparator,
-  SelectScrollUpButton,
-  SelectScrollDownButton,
-  SelectArrow,
-} from './select'
+export {Select} from './select'
 export {Switch} from './switch'
 
-export {Tabs, TabsList, TabsTrigger, TabsContent} from './tabs'
+export {Tabs} from './tabs'
 export {Text} from './text'
 export {Toast, ToastHeading, ToastSubheading, ToastCloseButton, ToastActionItem} from './toast'
 export {ToggleGroupPrimitive, ToggleGroupItem} from './toggle-group'

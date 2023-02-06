@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {baseComponentProps} from '../@shared/types'
+import type {baseComponentProps} from '../@shared/types'
 import type {
   TabsContentVariantProps,
   TabsVariantProps,
@@ -9,42 +9,26 @@ import type {
 } from './tabs.styles'
 import {StyledTabsContent, StyledTabsList, StyledTabsRoot, StyledTabsTrigger} from './tabs.styles'
 
-/**
- *
- *
- * root.
- */
+////////////////////// root //////////////////////
+
 type TabsProps = baseComponentProps &
   TabsVariantProps &
   React.ComponentPropsWithRef<typeof StyledTabsRoot>
 
-const TabsComponent = React.forwardRef<React.ElementRef<typeof StyledTabsRoot>, TabsProps>(
-  ({...props}, forwardedRef) => (
-    <StyledTabsRoot
-      {...props}
-      ref={forwardedRef}
-      value={props.value}
-      defaultValue={props.defaultValue}
-      dir={props.dir}
-      orientation={props.orientation}
-      activationMode={props.activationMode}
-      shadow={props.shadow}
-      css={{
-        ...props.css,
-      }}>
-      {props.children}
+const TabsRoot = ({children, ...rest}: TabsProps) => {
+  return (
+    <StyledTabsRoot {...rest} shadow={rest.shadow}>
+      {children}
     </StyledTabsRoot>
   )
-)
+}
 
-/**
- *
- *
- * list.
- */
+////////////////////// list //////////////////////
+
 type TabsListProps = baseComponentProps &
   TabsListVariantProps &
   React.ComponentPropsWithRef<typeof StyledTabsList>
+
 const TabsListComponent = React.forwardRef<React.ElementRef<typeof StyledTabsList>, TabsListProps>(
   ({...props}, ref) => (
     <StyledTabsList
@@ -59,11 +43,8 @@ const TabsListComponent = React.forwardRef<React.ElementRef<typeof StyledTabsLis
   )
 )
 
-/**
- *
- *
- * trigger.
- */
+////////////////////// trigger //////////////////////
+
 type TabsTriggerProps = baseComponentProps &
   TabsTriggerVariantProps &
   React.ComponentPropsWithRef<typeof StyledTabsTrigger>
@@ -84,11 +65,8 @@ const TabsTriggerComponent = React.forwardRef<
   </StyledTabsTrigger>
 ))
 
-/**
- *
- *
- * content.
- */
+////////////////////// content //////////////////////
+
 type TabsContentProps = baseComponentProps &
   TabsContentVariantProps &
   React.ComponentPropsWithRef<typeof StyledTabsContent>
@@ -109,19 +87,21 @@ const TabsContentComponent = React.forwardRef<
   </StyledTabsContent>
 ))
 
-/** ---------------- COMPONENTS ------------------- */
-export const Tabs = React.memo(TabsComponent)
-export const TabsList = React.memo(TabsListComponent)
-export const TabsTrigger = React.memo(TabsTriggerComponent)
-export const TabsContent = React.memo(TabsContentComponent)
+/** ---------------- export parts ------------------- */
+export const Tabs: React.FC<TabsProps> & {
+  List: typeof TabsListComponent
+  Trigger: typeof TabsTriggerComponent
+  Content: typeof TabsContentComponent
+} = (props) => <TabsRoot {...props} />
 
-/** ------------ REACT DISPLAY NAMES ------------- */
+Tabs.List = TabsListComponent
+Tabs.Trigger = TabsTriggerComponent
+Tabs.Content = TabsContentComponent
+
+/** ------------ displayName ------------- */
 Tabs.displayName = 'Tabs'
-TabsList.displayName = 'TabsList'
-TabsTrigger.displayName = 'TabsTrigger'
-TabsContent.displayName = 'TabsContent'
 
-/** ---------------- TYPES ------------------ */
+/** ---------------- prop types ------------------ */
 export type {
   TabsContentProps,
   //

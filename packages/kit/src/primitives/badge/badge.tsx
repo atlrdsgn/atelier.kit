@@ -11,43 +11,6 @@ type badgeProps = React.HTMLAttributes<HTMLSpanElement> & {
 type BadgePrimitiveProps = baseComponentProps & badgeProps & BadgeVariantsProps
 type BadgeProps = BadgePrimitiveProps
 
-/*
-const BadgeComponent = ({
-  type = 'default',
-  color,
-  children,
-  subtle,
-  as,
-  size,
-  css,
-  ...rest
-}: BadgeProps) => {
-  /**
-   *
-   * previous implementation below..
-   *
-   * seems to be a typescript issue with the forwardRef..
-   */
-
-// const BadgeComponent = React.forwardRef<React.ElementRef<typeof BadgePrimitive>, BadgeProps>(
-/*
-  return (
-    <BadgePrimitive
-      {...rest}
-      type={type}
-      size={size}
-      color={color}
-      subtle={subtle}
-      as={as}
-      css={{
-        ...css,
-      }}>
-      {children}
-    </BadgePrimitive>
-  )
-}
-*/
-
 const BadgeComponent: React.FC<BadgeProps> = ({
   color = 'initial',
   pill = true,

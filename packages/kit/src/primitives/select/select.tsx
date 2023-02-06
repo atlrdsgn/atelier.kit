@@ -234,39 +234,41 @@ const SelectItemComponent = ({
 )
 
 // exports.
-export const Select = SelectRoot
+export const Select: React.FC<SelectProps> & {
+  Trigger: typeof SelectTriggerComponent
+  Value: typeof SelectValueComponent
+  Content: typeof SelectContentComponent
+  Item: typeof SelectItemComponent
+  Icon: typeof SelectIconComponent
+  Viewport: typeof StyledSelectViewport
+  Portal: typeof StyledSelectPortal
+  ItemText: typeof StyledSelectItemText
+  Indicator: typeof StyledSelectItemIndicator
+  Separator: typeof StyledSelectSeparator
+  Label: typeof StyledSelectLabel
+  Group: typeof StyledSelectGroup
 
-export const SelectTrigger = SelectTriggerComponent
-export const SelectValue = SelectValueComponent
-export const SelectContent = SelectContentComponent
-export const SelectItem = SelectItemComponent
-export const SelectIcon = SelectIconComponent
-export const SelectViewport = StyledSelectViewport
-export const SelectPortal = StyledSelectPortal
-export const SelectItemText = StyledSelectItemText
-export const SelectItemIndicator = StyledSelectItemIndicator
-export const SelectSeparator = StyledSelectSeparator
-export const SelectLabel = StyledSelectLabel
-export const SelectGroup = StyledSelectGroup
+  ScrollUpButton: typeof StyledSelectScrollUpButton
+  ScrollDownButton: typeof StyledSelectScrollDownButton
+  Arrow: typeof StyledSelectArrow
+} = (props) => <SelectRoot {...props} />
 
-export const SelectScrollUpButton = StyledSelectScrollUpButton
-export const SelectScrollDownButton = StyledSelectScrollDownButton
-export const SelectArrow = StyledSelectArrow
+Select.Trigger = SelectTriggerComponent
+Select.Value = SelectValueComponent
+Select.Content = SelectContentComponent
+Select.Item = SelectItemComponent
+Select.Icon = SelectIconComponent
+Select.Viewport = StyledSelectViewport
+Select.Portal = StyledSelectPortal
+Select.ItemText = StyledSelectItemText
+Select.Indicator = StyledSelectItemIndicator
+Select.Separator = StyledSelectSeparator
+Select.Label = StyledSelectLabel
+Select.Group = StyledSelectGroup
 
-applyDisplayName(Select, 'Select')
-
-applyDisplayName(SelectTrigger, 'SelectTrigger')
-applyDisplayName(SelectValue, 'SelectValue')
-applyDisplayName(SelectContent, 'SelectContent')
-applyDisplayName(SelectItem, 'SelectItem')
-applyDisplayName(SelectIcon, 'SelectIcon')
-applyDisplayName(SelectViewport, 'SelectViewport')
-applyDisplayName(SelectPortal, 'SelectPortal')
-applyDisplayName(SelectItemText, 'SelectItemText')
-applyDisplayName(SelectItemIndicator, 'SelectItemIndicator')
-applyDisplayName(SelectSeparator, 'SelectSeparator')
-applyDisplayName(SelectLabel, 'SelectLabel')
-applyDisplayName(SelectGroup, 'SelectGroup')
+Select.ScrollUpButton = StyledSelectScrollUpButton
+Select.ScrollDownButton = StyledSelectScrollDownButton
+Select.Arrow = StyledSelectArrow
 
 export type SelectProps = SProps
 export type SelectTriggerProps = STriggerProps
@@ -275,6 +277,4 @@ export type SelectItemProps = SItemProps
 export type SelectValueProps = SValueProps
 export type SelectIconProps = SIconProps
 
-// export const SelectValue = SelectValueComponent
-// applyDisplayName(SelectValue, 'SelectValue')
-// export type SelectValueProps = SValueProps
+Select.displayName = 'Select'

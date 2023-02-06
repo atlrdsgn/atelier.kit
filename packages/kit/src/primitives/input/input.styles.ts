@@ -212,5 +212,5 @@ const inputStyles = styled('input', {
 export const StyledFlex = labelFlexStyles
 export const StyledLabel = labelStyles
 
-export const InputPrimitive = inputStyles
+export const StyledInput = inputStyles
 export type InputVariantProps = VariantProps<typeof inputStyles>

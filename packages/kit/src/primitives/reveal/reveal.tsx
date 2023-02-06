@@ -1,13 +1,7 @@
 import * as React from 'react'
-import type {CSS} from '../../theme'
-import {
-  StyledRevealRoot,
-  StyledRevealTrigger,
-  StyledRevealContent,
-  RevealProps,
-  RevealTriggerProps,
-  RevealContentProps,
-} from './reveal.styles'
+
+import type {baseComponentProps} from '../@shared/types'
+import {StyledRevealRoot, StyledRevealTrigger, StyledRevealContent} from './reveal.styles'
 
 type revealProps = {
   children: React.ReactNode
@@ -16,15 +10,12 @@ type revealProps = {
   onOpenChange?: (open: boolean) => void
 }
 
-/**
- *
- *
- * Reveal[Root]
- *
- */
-type RevealRootPrimitiveProps = React.HTMLAttributes<HTMLDivElement>
-type RProps = RevealProps & revealProps & RevealRootPrimitiveProps & {css?: CSS}
-const RevealComponent = React.forwardRef<React.ElementRef<typeof StyledRevealRoot>, RProps>(
+////////////////////// Reaveal //////////////////////
+
+type RevealRootPrimitiveProps = baseComponentProps & React.HTMLAttributes<HTMLDivElement>
+type RevealProps = revealProps & RevealRootPrimitiveProps
+
+const RevealComponent = React.forwardRef<React.ElementRef<typeof StyledRevealRoot>, RevealProps>(
   ({children, ...props}, forwardedRef) => (
     <StyledRevealRoot {...props} ref={forwardedRef}>
       {children}
@@ -32,48 +23,53 @@ const RevealComponent = React.forwardRef<React.ElementRef<typeof StyledRevealRoo
   )
 )
 
-/**
- *
- *
- * Reveal[Trigger]
- *
- */
-type RevealTriggerPrimitiveProps = React.HTMLAttributes<HTMLButtonElement>
-type TriggerProps = RevealTriggerProps & RevealTriggerPrimitiveProps & {css?: CSS}
-const Trigger = React.forwardRef<React.ElementRef<typeof StyledRevealTrigger>, TriggerProps>(
-  ({children, ...props}, forwardedRef) => (
-    <StyledRevealTrigger {...props} ref={forwardedRef}>
-      {children}
-    </StyledRevealTrigger>
-  )
-)
+////////////////////// Reveal[Trigger] //////////////////////
 
-/**
- *
- *
- * Reveal[Content]
- *
- */
-type RevealContentPrimitiveProps = React.HTMLAttributes<HTMLDivElement>
-type ContentProps = RevealContentProps & RevealContentPrimitiveProps & {css?: CSS}
-const Content = React.forwardRef<React.ElementRef<typeof StyledRevealContent>, ContentProps>(
-  ({children, ...props}, forwardedRef) => (
-    <StyledRevealContent {...props} ref={forwardedRef}>
-      {children}
-    </StyledRevealContent>
-  )
-)
+type RevealTriggerPrimitiveProps = baseComponentProps & React.HTMLAttributes<HTMLButtonElement>
+type RevealTriggerProps = RevealTriggerPrimitiveProps
+const RevealTrigger = React.forwardRef<
+  React.ElementRef<typeof StyledRevealTrigger>,
+  RevealTriggerProps
+>(({children, ...props}, forwardedRef) => (
+  <StyledRevealTrigger {...props} ref={forwardedRef}>
+    {children}
+  </StyledRevealTrigger>
+))
 
-export const Reveal = RevealComponent
-export const RevealTrigger = Trigger
-export const RevealContent = Content
+////////////////////// Reveal[Content] //////////////////////
 
-/**
- *
- * Path: src/primitives/reveal/reveal.tsx
- *
- * Reveal
- * RevealTrigger
- * RevealContent
- *
- */
+type RevealContentPrimitiveProps = baseComponentProps & React.HTMLAttributes<HTMLDivElement>
+type RevealContentProps = RevealContentPrimitiveProps
+
+const RevealContent = React.forwardRef<
+  React.ElementRef<typeof StyledRevealContent>,
+  RevealContentProps
+>(({children, ...props}, forwardedRef) => (
+  <StyledRevealContent {...props} ref={forwardedRef}>
+    {children}
+  </StyledRevealContent>
+))
+
+///////////////// export parts //////////////////////
+
+export const Reveal: React.FC<RevealProps> & {
+  Trigger: typeof RevealTrigger
+  Content: typeof RevealContent
+} = (props) => <RevealComponent {...props} />
+
+Reveal.Trigger = RevealTrigger
+Reveal.Content = RevealContent
+
+///////////////// display name //////////////////////
+
+Reveal.displayName = 'Reveal'
+
+///////////////// prop types //////////////////////
+export type {
+  //
+  RevealProps,
+  //
+  RevealContentProps,
+  //
+  RevealTriggerProps,
+}

@@ -1454,7 +1454,7 @@ export declare const StyledLabel: import("@stitches/react/types/styled-component
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-export declare const InputPrimitive: import("@stitches/react/types/styled-component").StyledComponent<"input", {
+export declare const StyledInput: import("@stitches/react/types/styled-component").StyledComponent<"input", {
     style?: "ghost" | "atelier" | undefined;
     size?: "sm" | "md" | "lg" | undefined;
     cursor?: "text" | "default" | "pointer" | undefined;

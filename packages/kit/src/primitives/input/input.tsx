@@ -1,8 +1,9 @@
 import * as React from 'react'
 
 import {baseComponentProps} from '../@shared/types'
-import {applyDisplayName} from '../@shared/utils'
-import {InputPrimitive, InputVariantProps} from './input.styles'
+
+import {StyledInput} from './input.styles'
+import type {InputVariantProps} from './input.styles'
 
 interface inputProps {
   label?: string
@@ -28,6 +29,7 @@ const InputElement = ({
   size,
   style,
 
+  inputMode,
   value,
   type,
   className,
@@ -35,8 +37,14 @@ const InputElement = ({
 
   ...rest
 }: InputProps) => {
+  if (type === 'number') {
+    return (
+      <StyledInput {...rest} type={'text'} inputMode={'numeric'} pattern="[0-9]*" size={size} />
+    )
+  }
+
   return (
-    <InputPrimitive
+    <StyledInput
       {...rest}
       className={className}
       type={type}
@@ -52,8 +60,12 @@ const InputElement = ({
   )
 }
 
-export const Input = InputElement
-
-applyDisplayName(Input, 'Input')
+export {
+  //
+  InputElement as Input,
+  //
+}
 
 export type {InputProps}
+
+InputElement.displayName = 'Input'

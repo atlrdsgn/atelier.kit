@@ -39,4 +39,14 @@ export type BaseProps<T> = {
     id?: string;
     ref?: React.Ref<T>;
 };
+/**
+ * Component helper type to be extended by component types, e.g.:
+ * type CustomComponentProps = BaseProps<HTMLDivElement> & { ... }
+ *
+ * Example use:
+ * const CustomComponent = forwardRef<HTMLDivElement, CustomComponentProps>(({className, ...props}, ref) => { ... })
+ * // OR:
+ * const CustomComponent = forwardRef(({className: CustomComponentProps, ...props}, ref: Ref<HTMLDivElement>) => { ... })
+ */
+export type Override<T, U> = Omit<T, keyof U> & U;
 //# sourceMappingURL=index.d.ts.map

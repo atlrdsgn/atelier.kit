@@ -13,6 +13,8 @@ import {
 import {CloseIcon} from '../../core/assets'
 import type {baseComponentProps} from '../@shared/types'
 
+//////////////////// constants //////////////////////
+
 const MODAL_OVERLAY_ID = 'modal-overlay'
 const closeColor = 'currentColor'
 
@@ -87,5 +89,3 @@ Dialog.Title = StyledDialogTitle
 Dialog.Trigger = StyledDialogTrigger
 
 Dialog.displayName = 'Dialog'
-
-export const DialogContent = Dialog.Content

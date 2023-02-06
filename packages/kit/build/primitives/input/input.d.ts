@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { baseComponentProps } from '../@shared/types';
-import { InputVariantProps } from './input.styles';
+import type { InputVariantProps } from './input.styles';
 interface inputProps {
     label?: string;
     type?: 'text' | 'email' | 'password' | 'number' | 'search' | 'tel' | 'url';
@@ -12,6 +12,10 @@ interface inputProps {
 }
 type InputPrimitiveProps = baseComponentProps & InputVariantProps & inputProps & React.HTMLAttributes<HTMLInputElement>;
 type InputProps = InputPrimitiveProps;
-export declare const Input: ({ label, placeholder, cursor, size, style, value, type, className, css, ...rest }: InputProps) => JSX.Element;
+declare const InputElement: {
+    ({ label, placeholder, cursor, size, style, inputMode, value, type, className, css, ...rest }: InputProps): JSX.Element;
+    displayName: string;
+};
+export { InputElement as Input, };
 export type { InputProps };
 //# sourceMappingURL=input.d.ts.map

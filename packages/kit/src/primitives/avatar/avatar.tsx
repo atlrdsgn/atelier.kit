@@ -16,21 +16,6 @@ type AvatarPrimitiveProps = avatarProps &
   React.ComponentPropsWithRef<typeof StyledAvatarRoot>
 type AvatarProps = AvatarPrimitiveProps
 
-const AvatarRootComponent = React.forwardRef<HTMLDivElement, AvatarProps>((props, forwardedRef) => {
-  const {children, ...rest} = props
-  return (
-    <StyledAvatarRoot
-      {...rest}
-      ref={forwardedRef}
-      size={props.size}
-      css={{
-        ...props.css,
-      }}>
-      {children}
-    </StyledAvatarRoot>
-  )
-})
-
 //////////////////// Fallback ////////////////////
 
 type fallbackProps = {
@@ -86,5 +71,12 @@ const AvatarImageComponent = React.forwardRef<
 
 ////////////////////// Exports. /////////////////////////////
 
-export const Avatar = AvatarRootComponent
-export const AvatarImage = AvatarImageComponent
+export const Avatar: React.FC<AvatarProps> & {
+  Fallback: typeof AvatarFallbackComponent
+  Image: typeof AvatarImageComponent
+} = (props) => <StyledAvatarRoot {...props} />
+
+Avatar.Fallback = AvatarFallbackComponent
+Avatar.Image = AvatarImageComponent
+
+Avatar.displayName = 'Avatar'

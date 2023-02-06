@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as LabelPrimitive from '@radix-ui/react-label'
 import {CSS} from '../../theme'
-import {InputPrimitive, InputVariantProps, StyledFlex, StyledLabel} from './input.styles'
+import {StyledInput, InputVariantProps, StyledFlex, StyledLabel} from './input.styles'
 
 interface inputProps {
   label?: string
@@ -36,7 +36,7 @@ const InputWithLabelComponent = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <StyledFlex>
         <InputLabel>{label}</InputLabel>
-        <InputPrimitive
+        <StyledInput
           {...props}
           ref={ref}
           className={props.className}

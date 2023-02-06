@@ -64,7 +64,7 @@ const radioGroupIndicator = styled(RadioGroup.Indicator, {
   borderRadius: 999,
 
   '&::after': {
-    zIndex: 9999,
+    // zIndex: 9999,
     content: '""',
     display: 'flex',
     width: 48,

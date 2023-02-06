@@ -2,7 +2,7 @@ import React from 'react'
 
 import {ComponentStory, ComponentMeta} from '@storybook/react'
 
-import {Container, Switch, SwitchThumb} from 'atlr.kit'
+import {Container, Switch} from 'atlr.kit'
 
 export default {
   /* 👇 The title prop is optional.
@@ -16,13 +16,22 @@ export default {
 //👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof Switch> = (args) => {
   return (
-    <Container size={'sm'} align={'center'}>
-      <form>
-        <Switch {...args}>
-          <SwitchThumb />
-        </Switch>
-      </form>
-    </Container>
+    <>
+      <Container size={'sm'} align={'center'}>
+        <form>
+          <Switch {...args}>
+            <Switch.Toggle />
+          </Switch>
+        </form>
+      </Container>
+      <Container size={'sm'} align={'center'}>
+        <form>
+          <Switch {...args}>
+            <Switch.Thumb />
+          </Switch>
+        </form>
+      </Container>
+    </>
   )
 }
 

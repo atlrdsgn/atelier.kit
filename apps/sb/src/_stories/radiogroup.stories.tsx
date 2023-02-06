@@ -15,20 +15,20 @@ const Template: ComponentStory<typeof RadioGroup> = (args) => {
   return (
     <Container size={'sm'} align={'center'}>
       <RadioGroup {...args}>
-        <RadioGroupItem value="light">
-          <RadioLabel>Light</RadioLabel>
-          <RadioGroupIndicator />
-        </RadioGroupItem>
+        <RadioGroup.Item value="light">
+          <RadioGroup.Label>Light</RadioGroup.Label>
+          <RadioGroup.Indicator />
+        </RadioGroup.Item>
 
-        <RadioGroupItem value="dark">
-          <RadioLabel>Dark</RadioLabel>
-          <RadioGroupIndicator />
-        </RadioGroupItem>
+        <RadioGroup.Item value="dark">
+          <RadioGroup.Label>Dark</RadioGroup.Label>
+          <RadioGroup.Indicator />
+        </RadioGroup.Item>
 
-        <RadioGroupItem value="auto">
-          <RadioLabel>Auto</RadioLabel>
-          <RadioGroupIndicator />
-        </RadioGroupItem>
+        <RadioGroup.Item value="auto">
+          <RadioGroup.Label>Auto</RadioGroup.Label>
+          <RadioGroup.Indicator />
+        </RadioGroup.Item>
       </RadioGroup>
     </Container>
   )

@@ -1,10 +1,11 @@
 import * as React from 'react'
-
+import {useTheme} from 'next-themes'
 import {ComponentName} from '@/components/ComponentName'
-import {RadioGroup, RadioGroupIndicator, RadioGroupItem, RadioLabel, Section} from 'atlr.kit'
+import {RadioGroup, Section} from 'atlr.kit'
 import {Container} from 'atlr.kit'
 
 export const RadioGroupDemo = () => {
+  const {theme, setTheme} = useTheme()
   return (
     <>
       <Section>
@@ -13,21 +14,23 @@ export const RadioGroupDemo = () => {
 
           <div>
             <form>
-              <RadioGroup defaultValue={'Light'}>
-                <RadioGroupItem value={'Light'}>
-                  <RadioGroupIndicator />
-                  <RadioLabel>Light</RadioLabel>
-                </RadioGroupItem>
+              <RadioGroup
+                defaultValue={'auto'}
+                onValueChange={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}>
+                <RadioGroup.Item value={'auto'}>
+                  <RadioGroup.Indicator />
+                  <RadioGroup.Label>Auto</RadioGroup.Label>
+                </RadioGroup.Item>
 
-                <RadioGroupItem value={'Dark'}>
-                  <RadioGroupIndicator />
-                  <RadioLabel>Dark</RadioLabel>
-                </RadioGroupItem>
+                <RadioGroup.Item value={'light'}>
+                  <RadioGroup.Indicator />
+                  <RadioGroup.Label>Light</RadioGroup.Label>
+                </RadioGroup.Item>
 
-                <RadioGroupItem value={'Auto'}>
-                  <RadioGroupIndicator />
-                  <RadioLabel>Auto</RadioLabel>
-                </RadioGroupItem>
+                <RadioGroup.Item value={'dark'}>
+                  <RadioGroup.Indicator />
+                  <RadioGroup.Label>Dark</RadioGroup.Label>
+                </RadioGroup.Item>
               </RadioGroup>
             </form>
           </div>

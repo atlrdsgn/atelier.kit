@@ -77,7 +77,7 @@ export {
   SelectScrollDownButton,
   SelectArrow,
 } from './select'
-export {Switch, SwitchThumb} from './switch'
+export {Switch} from './switch'
 
 export {Tabs, TabsList, TabsTrigger, TabsContent} from './tabs'
 export {Text} from './text'

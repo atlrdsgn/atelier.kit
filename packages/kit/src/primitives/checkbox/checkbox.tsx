@@ -54,23 +54,16 @@ const CBLabel = React.forwardRef<HTMLLabelElement, CheckboxLabelProps>(({...prop
   )
 })
 
-export const Checkbox = CBox
 export const CheckboxLabel = CBLabel
 export const CheckboxFlex = CBFlex
 export type {CheckboxProps, CheckboxLabelProps}
 
-/**
- *
- * Experimenting with display names..
- */
-
-/*
-CBox.displayName = 'Checkbox'
-CBLabel.displayName = 'Checkbox.Label'
-CBFlex.displayName = 'Checkbox.Flex'
-
-export const Checkbox = CBox as typeof CBox & {
+export const Checkbox: React.FC<CheckboxProps> & {
   Flex: typeof CBFlex
   Label: typeof CBLabel
-}
-*/
+} = (props) => <CBox {...props} />
+
+Checkbox.Flex = CheckboxFlex
+Checkbox.Label = CheckboxLabel
+
+Checkbox.displayName = 'Checkbox'

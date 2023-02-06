@@ -1,10 +1,9 @@
 import * as SwitchPrimitive from '@radix-ui/react-switch'
 
 import {baseComponentProps} from '../@shared/types'
-import {applyDisplayName} from '../@shared/utils'
 import {PrimitivePropsWithRef} from '../primitive'
 import type {SwitchVariantProps} from './switch.styles'
-import {SwitchRoot, StyledSwitchThumb} from './switch.styles'
+import {SwitchRoot, StyledSwitchThumb, StyledSwitchToggle} from './switch.styles'
 
 type switchProps = {
   asChild?: boolean
@@ -88,9 +87,14 @@ const SwitchComponent = ({
   )
 }
 
-export const Switch = SwitchComponent
-export const SwitchThumb = StyledSwitchThumb
-export type {SwitchProps}
+export const Switch: React.FC<SwitchProps> & {
+  Thumb: typeof StyledSwitchThumb
+  Toggle: typeof StyledSwitchToggle
+} = (props) => <SwitchComponent {...props} />
 
-applyDisplayName(Switch, 'Switch')
-applyDisplayName(SwitchThumb, 'SwitchThumb')
+Switch.Thumb = StyledSwitchThumb
+Switch.Toggle = StyledSwitchToggle
+
+Switch.displayName = 'Switch'
+
+export type {SwitchProps}

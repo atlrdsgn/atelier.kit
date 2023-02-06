@@ -24,7 +24,7 @@ export { Popover } from './pop';
 export { RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel } from './radio-group';
 export { Reveal, RevealTrigger, RevealContent } from './reveal';
 export { Select, SelectTrigger, SelectContent, SelectItem, SelectValue, SelectIcon, SelectViewport, SelectPortal, SelectItemIndicator, SelectItemText, SelectGroup, SelectLabel, SelectSeparator, SelectScrollUpButton, SelectScrollDownButton, SelectArrow, } from './select';
-export { Switch, SwitchThumb } from './switch';
+export { Switch } from './switch';
 export { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs';
 export { Text } from './text';
 export { Toast, ToastHeading, ToastSubheading, ToastCloseButton, ToastActionItem } from './toast';

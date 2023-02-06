@@ -56,7 +56,7 @@ const DialogContentComponent: React.FC<DialogContentProps> = ({
         {...rest}>
         {showCloseButton && (
           <StyledDialogClose>
-            <CloseIcon color={closeColor} width={'24'} />
+            <CloseIcon color={closeColor} width={'16'} height={'16'} />
           </StyledDialogClose>
         )}
         {React.Children.map(

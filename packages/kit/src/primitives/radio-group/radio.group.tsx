@@ -1,5 +1,5 @@
 import * as React from 'react'
-import type {CSS} from '../../theme'
+import type {baseComponentProps} from '../@shared/types'
 
 import {GroupRoot_Radio, GroupItem_Radio, GroupIndicator_Radio, Label_Radio} from './group.styles'
 
@@ -25,21 +25,34 @@ interface _radioGroupProps {
   onValueChange?: (value: string) => void
 }
 
-type RadioGroupPrimitiveProps = _radioGroupProps & React.ComponentProps<typeof GroupRoot_Radio>
-type RadioGroupProps = RadioGroupPrimitiveProps & {css?: CSS}
+type RadioGroupPrimitiveProps = baseComponentProps &
+  _radioGroupProps &
+  React.ComponentProps<typeof GroupRoot_Radio>
+type RadioGroupProps = RadioGroupPrimitiveProps
 
-const RadioGroupRoot = React.forwardRef<React.ElementRef<typeof GroupRoot_Radio>, RadioGroupProps>(
-  (props, forwardedRef) => {
-    return (
-      <GroupRoot_Radio
-        {...props}
-        ref={forwardedRef}
-        defaultValue={props.defaultValue}
-        css={{...props.css}}>
-        {props.children}
-      </GroupRoot_Radio>
-    )
-  }
+const RadioGroupComponent: React.FC<RadioGroupProps> = ({
+  children,
+  asChild = false,
+  disabled = false,
+  required = false,
+  orientation = 'horizontal',
+  onValueChange,
+  loop = true,
+  ...props
+}) => (
+  <GroupRoot_Radio
+    {...props}
+    orientation={orientation}
+    required={required}
+    disabled={disabled}
+    asChild={asChild}
+    loop={loop}
+    onValueChange={onValueChange}
+    css={{
+      ...props.css,
+    }}>
+    {children}
+  </GroupRoot_Radio>
 )
 
 /**
@@ -58,17 +71,30 @@ type _groupItemProps = {
   asChild?: boolean
 }
 
-type GroupItemPrimitiveProps = _groupItemProps & React.ComponentProps<typeof GroupItem_Radio>
-type GroupItemProps = GroupItemPrimitiveProps & {css?: CSS}
+type GroupItemPrimitiveProps = baseComponentProps &
+  _groupItemProps &
+  React.ComponentProps<typeof GroupItem_Radio>
+type GroupItemProps = GroupItemPrimitiveProps
 
-const GroupItemRoot = React.forwardRef<React.ElementRef<typeof GroupItem_Radio>, GroupItemProps>(
-  (props, ref) => {
-    return (
-      <GroupItem_Radio {...props} ref={ref} css={{...props.css}}>
-        {props.children}
-      </GroupItem_Radio>
-    )
-  }
+const RadioGroupItemComponent: React.FC<GroupItemProps> = ({
+  children,
+  asChild = false,
+  disabled = false,
+  required = false,
+  value,
+  ...props
+}) => (
+  <GroupItem_Radio
+    {...props}
+    value={value}
+    required={required}
+    disabled={disabled}
+    asChild={asChild}
+    css={{
+      ...props.css,
+    }}>
+    {children}
+  </GroupItem_Radio>
 )
 
 /**
@@ -76,25 +102,29 @@ const GroupItemRoot = React.forwardRef<React.ElementRef<typeof GroupItem_Radio>,
  *
  * ..RadioGroup[Indicator]
  */
-type _groupIndicatorProps = {
+
+type groupIndicatorProps = React.ComponentProps<typeof GroupIndicator_Radio> & {
   asChild?: boolean
   forceMount?: boolean
 }
 
-type GroupIndicatorPrimitiveProps = _groupIndicatorProps &
-  React.ComponentProps<typeof GroupIndicator_Radio>
-type GroupIndicatorProps = GroupIndicatorPrimitiveProps & {css?: CSS}
+type GroupIndicatorProps = baseComponentProps & groupIndicatorProps
 
-const GroupIndicatorRoot = React.forwardRef<
-  React.ElementRef<typeof GroupIndicator_Radio>,
-  GroupIndicatorProps
->((props, ref) => {
-  return (
-    <GroupIndicator_Radio {...props} ref={ref} css={{...props.css}}>
-      {props.children}
-    </GroupIndicator_Radio>
-  )
-})
+const RadioGroupIndicatorComponent: React.FC<GroupIndicatorProps> = ({
+  children,
+  asChild = false,
+  forceMount,
+  ...props
+}) => (
+  <GroupIndicator_Radio
+    {...props}
+    asChild={asChild}
+    forceMount={forceMount}
+    css={{
+      ...props.css,
+    }}
+  />
+)
 
 /**
  *
@@ -105,10 +135,11 @@ const GroupIndicatorRoot = React.forwardRef<
  */
 type _labelProps = {}
 
-type LabelPrimitiveProps = _labelProps &
+type LabelPrimitiveProps = baseComponentProps &
+  _labelProps &
   React.ComponentProps<typeof Label_Radio> &
   React.HTMLAttributes<HTMLLabelElement>
-type LabelProps = LabelPrimitiveProps & {css?: CSS}
+type LabelProps = LabelPrimitiveProps
 
 const LabelRoot = React.forwardRef<React.ElementRef<typeof Label_Radio>, LabelProps>(
   (props, ref) => {
@@ -120,15 +151,21 @@ const LabelRoot = React.forwardRef<React.ElementRef<typeof Label_Radio>, LabelPr
   }
 )
 
-export const RadioGroup = RadioGroupRoot
-export const RadioGroupItem = GroupItemRoot
-export const RadioGroupIndicator = GroupIndicatorRoot
+export const RadioGroupItem = RadioGroupItemComponent
+export const RadioGroupIndicator = RadioGroupIndicatorComponent
 export const RadioLabel = LabelRoot
 
+export const RadioGroup: React.FC<RadioGroupProps> & {
+  Item: typeof RadioGroupItemComponent
+  Indicator: typeof RadioGroupIndicatorComponent
+  Label: typeof LabelRoot
+} = (props) => <RadioGroupComponent {...props} />
+
+RadioGroup.Item = RadioGroupItemComponent
+RadioGroup.Indicator = RadioGroupIndicatorComponent
+RadioGroup.Label = LabelRoot
+
 RadioGroup.displayName = 'RadioGroup'
-RadioGroupItem.displayName = 'RadioGroupItem'
-RadioGroupIndicator.displayName = 'RadioGroupIndicator'
-RadioLabel.displayName = 'RadioLabel'
 
 export type {RadioGroupProps}
 export type {GroupItemProps}

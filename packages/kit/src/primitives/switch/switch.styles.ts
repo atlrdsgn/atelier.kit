@@ -33,7 +33,24 @@ const StyledThumb = styled(SwitchPrimitive.Thumb, {
   },
 })
 
+const StyledToggle = styled(SwitchPrimitive.Thumb, {
+  display: 'block',
+  width: 17,
+  height: 17,
+  backgroundColor: KitColors.slate10,
+  borderRadius: '9999px',
+  boxShadow: `0 2px 2px ${KitColors.slateA6}`,
+  transition: 'transform 100ms',
+  transform: 'translateX(1.5px)',
+  willChange: 'transform',
+  '&[data-state="checked"]': {
+    transform: 'translateX(19.5px)',
+    backgroundColor: KitColors.atlr06,
+  },
+})
+
 export const SwitchRoot = StyledSwitch
 export const StyledSwitchThumb = StyledThumb
+export const StyledSwitchToggle = StyledToggle
 
 export type SwitchVariantProps = VariantProps<typeof StyledSwitch>

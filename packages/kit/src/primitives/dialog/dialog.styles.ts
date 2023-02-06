@@ -7,6 +7,7 @@ const CONTENT_ON_SCREEN = `translate3d(-50%, -50%, 0)`
 const CONTENT_OFF_SCREEN = `translate3d(-50%, 50vh, 0)`
 
 //////////////////// keyframes ////////////////////
+
 const slideIn = keyframes({
   '0%': {transform: CONTENT_OFF_SCREEN},
   '100%': {transform: CONTENT_ON_SCREEN},
@@ -17,9 +18,11 @@ const slideOut = keyframes({
 })
 
 //////////////////// root ////////////////////
+
 const StyledDialogRoot = styled(D.Root, {})
 
 //////////////////// overlay ////////////////////
+
 const StyledDialogOverlay = styled(D.Overlay, 'div', {
   width: '100vw',
   height: '100vh',
@@ -48,22 +51,29 @@ const StyledDialogOverlay = styled(D.Overlay, 'div', {
 })
 
 //////////////////// content ////////////////////
+
 const StyledDialogClose = styled(D.Close, {
   position: 'absolute',
-  top: 0,
-  left: 0,
-  width: 42,
-  height: 42,
+  top: 16,
+  left: 16,
+  width: 24,
+  height: 24,
 
-  marginTop: '2rem',
-  marginLeft: '2rem',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 
-  color: KitColors.helios5,
-  backgroundColor: KitColors.transparent,
-  border: 'none',
+  backgroundColor: KitColors.slateA1,
+  border: `1px solid ${KitColors.transparent}`,
+  borderRadius: KitTheme.theme.radii.base,
 
   outline: 'none',
-  '&:hover': {},
+
+  transition: 'background-color 150ms ease-out',
+  '&:hover': {
+    backgroundColor: KitColors.slateA5,
+    border: `1px solid ${KitColors.gray10}`,
+  },
   '&:focus': {
     outline: 'none',
   },
@@ -117,18 +127,23 @@ const StyledDialogContent = styled(D.Content, 'div', {
   },
 })
 
+///////////////////// title /////////////////////
+
 const StyledDialogTitle = styled(D.Title, 'div', {
   fontFamily: KitTheme.theme.fonts.sans,
   fontSize: KitTheme.theme.fontSizes['2xl'],
   fontWeight: KitTheme.theme.fontWeights.semibold,
 
-  color: KitColors.olive,
+  color: KitColors.gray12,
 
   textAlign: 'left',
 
   marginTop: 40,
+  marginBottom: 10,
   lineHeight: 'normal',
 })
+
+//////////////////// description ////////////////////
 
 const StyledDialogDescription = styled(D.Description, 'div', {
   fontFamily: KitTheme.theme.fonts.sans,
@@ -140,8 +155,10 @@ const StyledDialogDescription = styled(D.Description, 'div', {
   textAlign: 'left',
 
   marginBottom: 20,
-  lineHeight: 1.3,
+  lineHeight: '1.3',
 })
+
+//////////////////// trigger ////////////////////
 
 const StyledDialogTrigger = styled(D.Trigger, {
   all: 'unset',

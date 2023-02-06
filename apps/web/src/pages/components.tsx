@@ -6,6 +6,7 @@ import {
   ButtonDemo,
   ContainerDemo,
   CopyTextFieldDemo,
+  CheckboxDemo,
   GridDemo,
   RadioGroupDemo,
   SwitchDemo,
@@ -38,6 +39,8 @@ function Components() {
       <GridDemo />
       <SectionGap />
       <BadgeDemo />
+      <SectionGap />
+      <CheckboxDemo />
       <SectionGap />
       <CopyTextFieldDemo />
       <SectionGap />

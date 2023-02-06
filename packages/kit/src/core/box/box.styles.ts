@@ -11,3 +11,7 @@ const boxStyles = styled('div', {
 })
 
 export const BoxPrimitive = boxStyles
+
+const spanStyles = styled('div', {})
+
+export const BoxComponent = spanStyles

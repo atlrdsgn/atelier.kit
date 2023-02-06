@@ -15,6 +15,7 @@ import {
   DialogDemo,
   PopoverDemo,
   BadgeDemo,
+  VideoPlayerDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
 import {Header} from '@/components/Header'
@@ -56,7 +57,7 @@ function Components() {
       <SectionGap />
       <RadioGroupDemo />
       <SectionGap />
-
+      <VideoPlayerDemo />
       <SectionGap />
       <TabsDemo />
       <SectionGap />

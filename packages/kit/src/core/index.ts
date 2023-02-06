@@ -10,8 +10,10 @@ export {Divide} from './divide'
 export {Flex} from './flex'
 export {Footer} from './footer'
 export {Grid} from './grid'
+export {Portal} from './portal'
 export {Section} from './section'
 export {Space} from './space'
+export {VideoPlayer} from './video'
 
 // assets.
 export {AtelierKitLogo} from './assets'

@@ -1,4 +1,5 @@
-export declare const BoxPrimitive: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {
+import ReactPlayer from 'react-player/vimeo';
+export declare const StyledVideoPlayer: import("@stitches/react/types/styled-component").StyledComponent<typeof ReactPlayer, {}, {
     xs: string;
     sm: string;
     md: string;
@@ -481,7 +482,7 @@ export declare const BoxPrimitive: import("@stitches/react/types/styled-componen
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-export declare const BoxComponent: import("@stitches/react/types/styled-component").StyledComponent<"div", {}, {
+export declare const StyledVideoComponent: import("@stitches/react/types/styled-component").StyledComponent<"video", {}, {
     xs: string;
     sm: string;
     md: string;
@@ -964,4 +965,4 @@ export declare const BoxComponent: import("@stitches/react/types/styled-componen
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-//# sourceMappingURL=box.styles.d.ts.map
+//# sourceMappingURL=video.styles.d.ts.map

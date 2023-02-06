@@ -6510,10 +6510,12 @@ __metadata:
     prettier: ^2.8.3
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-player: ^2.11.0
     rollup: ^3.12.0
     rollup-plugin-copy: ^3.4.0
     rollup-plugin-peer-deps-external: ^2.2.4
     rollup-plugin-typescript2: ^0.34.1
+    throttle-debounce: ^5.0.0
     typescript: ^4.9.5
   peerDependencies:
     react: ^17.0.2
@@ -8308,6 +8310,13 @@ __metadata:
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: edb65dd0d7d1b9c40b2f50219aef30e116cedd6fc79290e740972c132c09106d2e80aa0bc8826673dd5a00222d4179c84b36a790eef63a4c4bca75a37ef90804
+  languageName: node
+  linkType: hard
+
+"deepmerge@npm:^4.0.0":
+  version: 4.3.0
+  resolution: "deepmerge@npm:4.3.0"
+  checksum: c7980eb5c5be040b371f1df0d566473875cfabed9f672ccc177b81ba8eee5686ce2478de2f1d0076391621cbe729e5eacda397179a59ef0f68901849647db126
   languageName: node
   linkType: hard
 
@@ -12283,6 +12292,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"load-script@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "load-script@npm:1.0.0"
+  checksum: 8458e3f07b4a86f8d9d66e47a987811491a5d013af23ba7b371c6d3c9dc899885b072ccf65abf7874c10cb197d4975eacd8a7a125bfb38dbbcb267539f5dc1e9
+  languageName: node
+  linkType: hard
+
 "load-yaml-file@npm:^0.2.0":
   version: 0.2.0
   resolution: "load-yaml-file@npm:0.2.0"
@@ -12669,6 +12685,13 @@ __metadata:
   dependencies:
     fs-monkey: ^1.0.3
   checksum: 3f9717d6f060919d53f211acb6096a0ea2f566a8cbcc4ef7e1f2561e31e33dc456053fdf951c90a49c8ec55402de7f01b006b81683ab7bd4bdbbd8c9b9cdae5f
+  languageName: node
+  linkType: hard
+
+"memoize-one@npm:^5.1.1":
+  version: 5.2.1
+  resolution: "memoize-one@npm:5.2.1"
+  checksum: a3cba7b824ebcf24cdfcd234aa7f86f3ad6394b8d9be4c96ff756dafb8b51c7f71320785fbc2304f1af48a0467cbbd2a409efc9333025700ed523f254cb52e3d
   languageName: node
   linkType: hard
 
@@ -14879,6 +14902,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.0.1":
+  version: 3.2.0
+  resolution: "react-fast-compare@npm:3.2.0"
+  checksum: 8ef272c825ae329f61633ce4ce7f15aa5b84e5214d88bc0823880236e03e985a13195befa2c7a4eda7db3b017dc7985729152d88445823f652403cf36c2b86aa
+  languageName: node
+  linkType: hard
+
 "react-inspector@npm:^5.1.0":
   version: 5.1.1
   resolution: "react-inspector@npm:5.1.1"
@@ -14910,6 +14940,21 @@ __metadata:
   version: 1.1.0
   resolution: "react-merge-refs@npm:1.1.0"
   checksum: 90884352999002d868ab9f1bcfe3222fb0f2178ed629f1da7e98e5a9b02a2c96b4aa72800db92aabd69d2483211b4be57a2088e89a11a0b660e7ada744d4ddf7
+  languageName: node
+  linkType: hard
+
+"react-player@npm:^2.11.0":
+  version: 2.11.0
+  resolution: "react-player@npm:2.11.0"
+  dependencies:
+    deepmerge: ^4.0.0
+    load-script: ^1.0.0
+    memoize-one: ^5.1.1
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.0.1
+  peerDependencies:
+    react: ">=16.6.0"
+  checksum: 2ee0271b3a80a6caf96912c689f67c55ea7de940511d1da83c8c323e6f6a9556988004fe7f093d801e8778760aede0c64137d6b0a0b77882a0dd17f77f38dec1
   languageName: node
   linkType: hard
 
@@ -16841,6 +16886,13 @@ __metadata:
   version: 2.6.0
   resolution: "textextensions@npm:2.6.0"
   checksum: e28781f092d0172b78974fd22d5c007cc43ac50be666b36bbf10125d961775faf309a70b51697a2debc074c8f23cc923f1386b1e4661e11b128cee292060034c
+  languageName: node
+  linkType: hard
+
+"throttle-debounce@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "throttle-debounce@npm:5.0.0"
+  checksum: aa8bf25828b4f8645ce863589de05d6807ea3debc147ce7d89624638ff8a16792d6d0baa0f8a32a260f0b163444d74020c6087b713ae561fde594b97b6e51f28
   languageName: node
   linkType: hard
 

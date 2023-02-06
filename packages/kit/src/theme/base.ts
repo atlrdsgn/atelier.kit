@@ -178,7 +178,7 @@ const stitches = createStitches({
  * coming soon.
  *
  */
-const darkTheme = createTheme('dark-theme', {
+const dark = createTheme('dark-theme', {
   //...
   colors: {
     ...baseDarkColors,
@@ -219,7 +219,7 @@ export const KitColors = KitTheme.theme.colors
 export const KitMedia = KitTheme.media
 export const KitPrefix = KitTheme.prefix
 
-export {darkTheme}
+export const darkTheme = dark
 
 /*
 export const {

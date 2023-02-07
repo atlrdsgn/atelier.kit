@@ -12,6 +12,8 @@ import type {CSS} from '../../theme'
 import {IconButton} from '../icon-button'
 import {CrossIcon} from '../../core/assets'
 import type {SlideMenuVariantProps} from './slide.menu.styles'
+import {StyledSlider} from './sm.styles'
+import {baseComponentProps} from '../@shared/types'
 
 type SlideMenuPrimitiveProps = {
   children?: React.ReactNode
@@ -38,6 +40,28 @@ const SlideContentComponent = React.forwardRef<
     </ContentStyles>
   </DialogPrimitive.Portal>
 ))
+
+/////////// SlideMenuRoot ///////////
+
+type sliderProps = {
+  children?: React.ReactNode
+  placement?: 'left' | 'right' | 'top' | 'bottom' | string
+  mask?: boolean
+}
+
+type SliderMenuPrimitiveProps = baseComponentProps &
+  sliderProps &
+  React.ComponentProps<typeof StyledSlider>
+type SliderMenuProps = SliderMenuPrimitiveProps
+
+const SlideMenuRootComponent = ({
+  children,
+  placement = 'right',
+  mask = false,
+  ...props
+}: SliderMenuProps) => {
+  return <StyledSlider {...props}>{children}</StyledSlider>
+}
 
 export const SlideMenu = SlideMenuRoot
 export {SlideMenuTrigger}

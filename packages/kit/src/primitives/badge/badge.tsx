@@ -1,5 +1,4 @@
 import * as React from 'react'
-import {applyDisplayName} from '../@shared/utils'
 import {BadgePrimitive, BadgeVariantsProps} from './badge.styles'
 import {baseComponentProps} from '../@shared/types'
 
@@ -11,7 +10,7 @@ type badgeProps = React.HTMLAttributes<HTMLSpanElement> & {
 type BadgePrimitiveProps = baseComponentProps & badgeProps & BadgeVariantsProps
 type BadgeProps = BadgePrimitiveProps
 
-const BadgeComponent: React.FC<BadgeProps> = ({
+const Badge: React.FC<BadgeProps> = ({
   color = 'initial',
   pill = true,
   as,
@@ -53,8 +52,7 @@ const BadgeComponent: React.FC<BadgeProps> = ({
  *
  * exports, etc..
  */
-export const Badge = BadgeComponent
-
-applyDisplayName(Badge, 'Badge')
+export {Badge}
+Badge.displayName = 'Badge'
 
 export type {BadgeProps}

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Menubar from '@radix-ui/react-menubar'
+import * as M from '@radix-ui/react-menubar'
 import type {
   MenuBarRootVariantProps,
   MenuBarContentVariantProps,
@@ -57,7 +57,7 @@ import {baseComponentProps} from '../@shared/types'
  * - dir: 'ltr' | 'rtl'
  * - loop: boolean
  */
-type MenuBarPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof Menubar.Root>
+type MenuBarPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof M.Root>
 type MenuBarProps = MenuBarPrimitiveProps & MenuBarRootVariantProps
 const MenuRoot = React.forwardRef<React.ElementRef<typeof StyledMenuBarRoot>, MenuBarProps>(
   ({loop = true, ...props}, forwardedRef) => {
@@ -83,7 +83,7 @@ const MenuRoot = React.forwardRef<React.ElementRef<typeof StyledMenuBarRoot>, Me
  * MENU_SUB
  *
  */
-type MenuBarSUBPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof Menubar.Sub>
+type MenuBarSUBPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof M.Sub>
 type MenuBarSUBProps = MenuBarSUBPrimitiveProps
 
 const MenuSub = ({children, css, ...rest}: MenuBarSUBProps) => (
@@ -114,7 +114,7 @@ const MenuSub = ({children, css, ...rest}: MenuBarSUBProps) => (
  */
 type MenuBarTriggerPrimitiveProps = baseComponentProps &
   MenuBarTriggerVariantProps &
-  React.ComponentPropsWithRef<typeof Menubar.Trigger>
+  React.ComponentPropsWithRef<typeof M.Trigger>
 type MenuBarTriggerProps = MenuBarTriggerPrimitiveProps
 const MenuTrigger = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarTrigger>,
@@ -150,7 +150,7 @@ const MenuTrigger = React.forwardRef<
  *  </Menubar.Sub>
  */
 type MenuBarSubTriggerPrimitiveProps = baseComponentProps &
-  React.ComponentPropsWithRef<typeof Menubar.SubTrigger>
+  React.ComponentPropsWithRef<typeof M.SubTrigger>
 type MenuBarSubTriggerProps = MenuBarSubTriggerPrimitiveProps
 const MenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarSubTrigger>,
@@ -174,10 +174,10 @@ const MenuSubTrigger = React.forwardRef<
  *
  * the content that renders inside of the portal. (the menu)
  */
-const MenuBarPortal = Menubar.Portal
+const MenuBarPortal = M.Portal
 
 type MenuBarContentPrimitiveProps = baseComponentProps &
-  React.ComponentPropsWithRef<typeof Menubar.Content>
+  React.ComponentPropsWithRef<typeof M.Content>
 type MenuBarContentProps = MenuBarContentVariantProps &
   MenuBarContentPrimitiveProps & {label?: string}
 const MenuContent = React.forwardRef<
@@ -196,7 +196,7 @@ const MenuContent = React.forwardRef<
         css={{
           ...props.css,
         }}>
-        <MenuBarLabel>{label}</MenuBarLabel>
+        <StyledMenuBarLabel>{label}</StyledMenuBarLabel>
         {props.children}
       </StyledMenuBarContent>
     </MenuBarPortal>
@@ -209,7 +209,7 @@ const MenuContent = React.forwardRef<
  * MENU_SUB_CONTENT & PORTAL..
  */
 type MenuBarSubContentPrimitiveProps = baseComponentProps &
-  React.ComponentPropsWithRef<typeof Menubar.SubContent>
+  React.ComponentPropsWithRef<typeof M.SubContent>
 type MenuBarSubContentProps = MenuBarSubContentPrimitiveProps
 const MenuSubContent = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarSubContent>,
@@ -217,7 +217,7 @@ const MenuSubContent = React.forwardRef<
 >(({...props}, forwardedRef) => {
   return (
     <MenuBarPortal {...props}>
-      <StyledMenuBarSubContent {...props} ref={forwardedRef} css={{...props.css}}>
+      <StyledMenuBarSubContent {...props} ref={forwardedRef} sideOffset={8} css={{...props.css}}>
         {props.children}
       </StyledMenuBarSubContent>
     </MenuBarPortal>
@@ -234,7 +234,7 @@ const MenuSubContent = React.forwardRef<
  */
 type asHrefProps = {as?: React.ElementType; href?: string}
 type MenuBarItemPrimitiveProps = baseComponentProps &
-  React.ComponentPropsWithRef<typeof Menubar.Item> &
+  React.ComponentPropsWithRef<typeof M.Item> &
   asHrefProps
 type MenuBarItemProps = MenuBarItemPrimitiveProps & MenuBarItemVariantProps
 const MenuItem = React.forwardRef<React.ElementRef<typeof StyledMenuBarItem>, MenuBarItemProps>(
@@ -255,8 +255,7 @@ const MenuItem = React.forwardRef<React.ElementRef<typeof StyledMenuBarItem>, Me
  *
  * also could be named (option)
  */
-type MenuBarGroupPrimitiveProps = baseComponentProps &
-  React.ComponentPropsWithRef<typeof Menubar.Group>
+type MenuBarGroupPrimitiveProps = baseComponentProps & React.ComponentPropsWithRef<typeof M.Group>
 type MenuBarGroupProps = MenuBarGroupPrimitiveProps
 const MenuGroup = React.forwardRef<React.ElementRef<typeof StyledMenuBarGroup>, MenuBarGroupProps>(
   ({...props}, forwardedRef) => {
@@ -269,7 +268,7 @@ const MenuGroup = React.forwardRef<React.ElementRef<typeof StyledMenuBarGroup>, 
 )
 
 type MenuBarSeparatorPrimitiveProps = baseComponentProps &
-  React.ComponentPropsWithRef<typeof Menubar.Separator>
+  React.ComponentPropsWithRef<typeof M.Separator>
 type MenuBarSeparatorProps = MenuBarSeparatorPrimitiveProps & MenuBarSeparatorVariantProps
 const MenuSeparator = React.forwardRef<
   React.ElementRef<typeof StyledMenuBarSeparator>,
@@ -279,37 +278,42 @@ const MenuSeparator = React.forwardRef<
 })
 
 /* ------------------------------ EXPORTS --------------------------------- */
-export const MenuBar = MenuRoot
-export const MenuBarSub = MenuSub
+export const Menubar: React.FC<MenuBarProps> & {
+  Menu: typeof StyledMenuBarMenu
+  SubMenu: typeof MenuSub
+  Trigger: typeof MenuTrigger
+  SubTrigger: typeof MenuSubTrigger
+  Content: typeof MenuContent
+  SubContent: typeof MenuSubContent
+  Item: typeof MenuItem
+  Group: typeof MenuGroup
+  ItemIndicator: typeof StyledMenuBarItemIndicator
+  Separator: typeof MenuSeparator
+  RadioItem: typeof StyledMenuBarRadioItem
+  CheckboxItem: typeof StyledMenuBarCheckboxItem
+  SlotRight: typeof StyledMenuBarRightSlot
 
-export const MenuBarTrigger = MenuTrigger
-export const MenuBarSubTrigger = MenuSubTrigger
-export const MenuBarLabel = StyledMenuBarLabel
+  Portal: typeof MenuBarPortal
+} = (props) => <MenuRoot {...props} />
 
-export const MenuBarContent = MenuContent
-export const MenuBarSubContent = MenuSubContent
+///////////////////////// parts ///////////////////////////
 
-export const MenuBarItem = MenuItem
-export const MenuBarGroup = MenuGroup
-export const MenuBarItemIndicator = StyledMenuBarItemIndicator
-export const MenuBarSeparator = MenuSeparator
+Menubar.Menu = StyledMenuBarMenu
+Menubar.SubMenu = MenuSub
+Menubar.Trigger = MenuTrigger
+Menubar.SubTrigger = MenuSubTrigger
+Menubar.Content = MenuContent
+Menubar.SubContent = MenuSubContent
+Menubar.Item = MenuItem
+Menubar.Group = MenuGroup
+Menubar.ItemIndicator = StyledMenuBarItemIndicator
+Menubar.Separator = MenuSeparator
+Menubar.RadioItem = StyledMenuBarRadioItem
+Menubar.CheckboxItem = StyledMenuBarCheckboxItem
+Menubar.SlotRight = StyledMenuBarRightSlot
+Menubar.Portal = MenuBarPortal
 
-export const MenuBarMenu = StyledMenuBarMenu
-export const MenuBarRightSlot = StyledMenuBarRightSlot
-
-export const MenuBarCheckboxItem = StyledMenuBarCheckboxItem
-export const MenuBarRadioItem = StyledMenuBarRadioItem
-/* ------------------------ DISPLAY NAMES ------------------------------ */
-MenuBar.displayName = 'MenuBar'
-MenuBarMenu.displayName = 'MenuBarMenu'
-MenuBarTrigger.displayName = 'MenuBarTrigger'
-MenuBarSubTrigger.displayName = 'MenuBarSubTrigger'
-MenuBarContent.displayName = 'MenuBarContent'
-MenuBarItem.displayName = 'MenuBarItem'
-MenuBarGroup.displayName = 'MenuBarGroup'
-MenuBarItemIndicator.displayName = 'MenuBarItemIndicator'
-MenuBarSeparator.displayName = 'MenuBarSeparator'
-/* -------------------------------------------------------------------- */
+Menubar.displayName = 'Menubar'
 
 /* --------------------------------------------------------------
   <Menubar.Root>

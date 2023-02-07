@@ -4,10 +4,9 @@ export {Avatar} from './avatar'
 
 export {Badge} from './badge'
 export {Button, TestButton} from './button'
-export {ButtonGroup, ButtonGroupItem} from './button'
 
 export {Card, CardImage} from './card'
-export {Checkbox, CheckboxFlex, CheckboxLabel} from './checkbox'
+export {Checkbox} from './checkbox'
 export {CopyField, CopyText, CopyTrigger} from './copy-text'
 
 export {Dialog} from './dialog'
@@ -18,29 +17,13 @@ export {Icon} from './_icon'
 
 export {IconBox} from './icon-box'
 export {IconButton} from './icon-button'
-export {Input, InputWithLabel} from './input'
+export {Input} from './input'
 
 export {Line, LineComponent} from './line'
 export {Link} from './link'
 export {List, ListItem} from './list'
 
-export {
-  MenuBar,
-  MenuBarMenu,
-  MenuBarLabel,
-  MenuBarTrigger,
-  MenuBarSub,
-  MenuBarSubTrigger,
-  MenuBarContent,
-  MenuBarSubContent,
-  MenuBarGroup,
-  MenuBarItem,
-  MenuBarItemIndicator,
-  MenuBarSeparator,
-  MenuBarCheckboxItem,
-  MenuBarRadioItem,
-  MenuBarRightSlot,
-} from './menu-bar'
+export {Menubar} from './menu-bar'
 
 export {Nav} from './navigation-menu'
 
@@ -48,7 +31,7 @@ export {Paragraph} from './paragraph'
 export {PassLink} from './pass-link'
 export {Popover} from './pop'
 
-export {RadioGroup, RadioGroupItem, RadioGroupIndicator, RadioLabel} from './radio-group'
+export {RadioGroup} from './radio-group'
 export {Reveal} from './reveal'
 
 export {Select} from './select'
@@ -56,8 +39,9 @@ export {Switch} from './switch'
 
 export {Tabs} from './tabs'
 export {Text} from './text'
+export {Tip} from './tip'
 export {Toast, ToastHeading, ToastSubheading, ToastCloseButton, ToastActionItem} from './toast'
-export {ToggleGroupPrimitive, ToggleGroupItem} from './toggle-group'
+export {ToggleGroup} from './toggle-group'
 
 // primitive utilities.
 export {composeEventHandlers} from './primitive'

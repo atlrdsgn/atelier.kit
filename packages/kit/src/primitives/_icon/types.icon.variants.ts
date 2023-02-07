@@ -38,6 +38,7 @@ type IconVariant =
   // x.
   | '[x].Icon'
   | 'X.Icon'
+  | '[Info].Icon'
 
   // y.
   | '[YouTube].Icon'

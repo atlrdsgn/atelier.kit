@@ -1,5 +1,5 @@
 import content from 'atelier.config.json'
-import {Box, Text, styled, KitTheme, KitColors, Button, Space} from 'atlr.kit'
+import {Box, Text, styled, KitTheme, KitColors, Button, Space, Flex} from 'atlr.kit'
 import {CodeBlock} from './CodeBlock'
 
 import {Container, AtelierKitLogo} from 'atlr.kit'
@@ -45,9 +45,15 @@ export const Header: React.FC = () => {
 */}
 
       <Space size={'sm'} />
-      <Button size={'sm'} neon>
-        Get Started
-      </Button>
+
+      <Flex direction="row" align="center" justify="center" gap={2}>
+        <Button size={'sm'} secondary>
+          Get Started
+        </Button>
+        <Button href={'/colors'} size={'sm'} ghost>
+          View Colors
+        </Button>
+      </Flex>
     </SectionHeader>
   )
 }

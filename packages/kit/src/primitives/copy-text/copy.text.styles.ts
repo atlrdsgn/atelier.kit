@@ -52,12 +52,12 @@ const copyFieldStyles = styled(FIELD_TAG, {
   variants: {
     primary: {
       true: {
-        color: KitColors.slate11,
+        color: KitColors.gray11,
         backgroundColor: KitColors.slate1,
         border: `1.6px solid ${KitColors.slateA6}`,
 
         '&:hover': {
-          backgroundColor: KitColors.slateA2,
+          backgroundColor: KitColors.slate2,
         },
       },
     },

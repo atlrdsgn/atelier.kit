@@ -15,6 +15,7 @@ import {XIcon} from './src/X.Icon'
 import {FourKIcon} from './src/4K.Icon'
 import {ASolidIcon} from './src/A.Filled.Icon'
 import {ABorderedIcon} from './src/A.Bordered.Icon'
+import {InfoIcon} from './src/Info.Icon'
 
 import {SdIcon} from './src/SD.Icon'
 import {HdIcon} from './src/HD.Icon'
@@ -111,6 +112,8 @@ const IconSource = ({
     return <CodeSandbox2Icon {...props} color={color} />
   }
 
+  /** --------------- Utilites ----------------------- */
+
   // -- Mail[Icon]
   if (variant === '[Mail].Icon') {
     return <MailIcon {...props} color={color} />
@@ -133,6 +136,10 @@ const IconSource = ({
   // -- YouTube[Icon]
   if (variant === '[YouTube].Icon') {
     return <YouTubeIcon {...props} color={color} />
+  }
+
+  if (variant === '[Info].Icon') {
+    return <InfoIcon {...props} color={color} />
   }
 
   /**

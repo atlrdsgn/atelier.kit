@@ -2,7 +2,7 @@ import * as P from '@radix-ui/react-popover'
 import * as React from 'react'
 import type {baseComponentProps} from '../@shared/types'
 import type {PopoverContentVariantProps} from './pop.styles'
-import {StyledPopRoot, StyledPopContent, StyledPopTrigger} from './pop.styles'
+import {StyledPopRoot, StyledPopContent, StyledPopTrigger, StyledContentText} from './pop.styles'
 
 ///////////////////////////// root /////////////////////////////
 
@@ -45,7 +45,7 @@ type popContentProps = {
   align?: 'start' | 'center' | 'end'
   alignOffset?: number
   avoidCollisions?: boolean
-  stick?: boolean
+  sticky?: 'partial' | 'always'
 }
 
 type PopContentPrimitiveProps = popContentProps &
@@ -55,18 +55,31 @@ type PopContentPrimitiveProps = popContentProps &
 export type PopContentProps = PopContentPrimitiveProps
 
 const PopContent = React.forwardRef<HTMLDivElement, PopContentProps>(
-  ({children, side = 'bottom', sideOffset = 12, sticky = 'partial', ...props}, forwardedRef) => {
+  (
+    {
+      children,
+      side = 'bottom',
+      sideOffset = 10,
+      sticky = 'partial',
+      align = 'center',
+      alignOffset = 0,
+      ...rest
+    },
+    forwardedRef
+  ) => {
     return (
       <P.Portal>
         <StyledPopContent
-          {...props}
+          {...rest}
           ref={forwardedRef}
           side={side}
           sideOffset={sideOffset}
           sticky={sticky}
-          bordered={props.bordered}
-          css={{...props.css}}>
-          {children}
+          bordered={rest.bordered}
+          css={{
+            ...rest.css,
+          }}>
+          <StyledContentText>{children}</StyledContentText>
         </StyledPopContent>
       </P.Portal>
     )

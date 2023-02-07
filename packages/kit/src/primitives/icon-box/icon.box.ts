@@ -1,13 +1,13 @@
-import {css, styled, KitColors} from '../../theme'
+import {css, styled, KitColors, KitTheme} from '../../theme'
 
 const iconBoxStyles = css({
   boxSizing: 'border-box',
   color: 'inherit',
 
   margin: 'auto',
-  width: 24,
-  height: 24,
-  borderRadius: 6,
+  width: 28,
+  height: 28,
+  borderRadius: KitTheme.theme.radii.base,
   alignItems: 'center',
   justifyContent: 'center',
   display: 'flex',
@@ -38,7 +38,12 @@ const iconBoxStyles = css({
         color: KitColors.slate11,
       },
       heliotrope: {
-        color: KitColors.heliotrope6,
+        color: KitColors.heliotrope5,
+        backgroundColor: KitColors.slateA4,
+
+        '&:hover': {
+          backgroundColor: KitColors.gray3,
+        },
       },
       fizz: {
         color: KitColors.fizz6,

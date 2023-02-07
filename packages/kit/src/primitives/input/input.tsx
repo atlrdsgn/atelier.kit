@@ -1,8 +1,8 @@
 import * as React from 'react'
-
+import * as LabelPrimitive from '@radix-ui/react-label'
 import {baseComponentProps} from '../@shared/types'
 
-import {StyledInput} from './input.styles'
+import {StyledInput, StyledLabel, StyledFlex} from './input.styles'
 import type {InputVariantProps} from './input.styles'
 
 interface inputProps {
@@ -60,12 +60,28 @@ const InputElement = ({
   )
 }
 
-export {
-  //
-  InputElement as Input,
-  //
-}
+type InputLabelPrmitiveProps = baseComponentProps &
+  React.HTMLAttributes<HTMLLabelElement> &
+  React.ComponentPropsWithRef<typeof LabelPrimitive.Root>
+type InputLabelProps = InputLabelPrmitiveProps
+const InputLabel = React.forwardRef<React.ElementRef<typeof StyledLabel>, InputLabelProps>(
+  ({htmlFor, ...props}, forwardedRef) => {
+    return (
+      <StyledLabel {...props} ref={forwardedRef} css={{...props.css}} htmlFor={htmlFor}>
+        {props.children}
+      </StyledLabel>
+    )
+  }
+)
+
+export const Input: React.FC<InputProps> & {
+  Label: typeof InputLabel
+  Flex: typeof StyledFlex
+} = ({label, ...props}) => <InputElement {...props} />
+
+Input.Label = InputLabel
+Input.Flex = StyledFlex
+
+Input.displayName = 'Input'
 
 export type {InputProps}
-
-InputElement.displayName = 'Input'

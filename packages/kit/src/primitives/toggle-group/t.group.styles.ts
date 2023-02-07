@@ -19,7 +19,6 @@ const rootStyles = styled(ToggleGroup.Root, {
   backgroundColor: KitColors.transparent,
   boxShadow: `0 2px 10px ${KitColors.blur}`,
 
-  // '&:focus': {outline: 'none'},
   '&[data-orientation="vertical"]': {flexDirection: 'column'},
   '&[data-orientation="horizontal"]': {flexDirection: 'row', margin: 'auto'},
 })

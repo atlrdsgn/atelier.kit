@@ -10,11 +10,6 @@ const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.met
 export default [
   {
     input: ['./src/index.ts'],
-    /**
-     *
-     * define external dependencies
-     * needed for the package
-     */
     external: [
       'react',
       'react-dom',
@@ -24,10 +19,7 @@ export default [
 
       'react-player/vimeo',
 
-      /**
-       *
-       * @radix-ui..
-       */
+      '@radix-ui/react-tooltip',
       '@radix-ui/react-popover',
       '@radix-ui/react-avatar',
       '@radix-ui/react-icons',

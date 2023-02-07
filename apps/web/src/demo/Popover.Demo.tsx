@@ -14,7 +14,7 @@ export const PopoverDemo = () => {
             <Popover>
               <Popover.Trigger>Popover Trigger</Popover.Trigger>
               <Popover.Anchor />
-              <Popover.Content>Hi, I'm a Popover!</Popover.Content>
+              <Popover.Content bordered>Hi, This is a Popover!</Popover.Content>
             </Popover>
           </div>
         </Container>

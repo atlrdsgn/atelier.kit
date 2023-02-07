@@ -1,7 +1,44 @@
 import * as React from 'react'
-import * as ToggleGroup from '@radix-ui/react-toggle-group'
-import type {CSS} from '../../theme'
+import * as TG from '@radix-ui/react-toggle-group'
+import type {baseComponentProps} from '../@shared/types'
 import {ToggleFlexBox, ToggleGroupRoot, ToggleItem} from './t.group.styles'
+
+///////////////////////// root //////////////////////////
+
+interface toggleProps {
+  asChild?: boolean
+  type: 'single' | 'multiple'
+  value?: string[] | string | undefined
+  defaultValue?: string[]
+  onValueChange?: (value: string[]) => void
+  disabled?: boolean
+  rovingFocus?: boolean
+  orientation?: 'horizontal' | 'vertical'
+  loop?: boolean | 'true'
+}
+
+type ToggleGroupKitProps = baseComponentProps & toggleProps & React.ComponentProps<typeof TG.Root>
+type ToggleGroupProps = ToggleGroupKitProps
+
+const ToggleGroupPrimitive = React.forwardRef<
+  React.ElementRef<typeof ToggleGroupRoot>,
+  ToggleGroupProps
+>(({children, ...props}, ref) => {
+  return (
+    <ToggleGroupRoot
+      {...props}
+      ref={ref}
+      data-orientation={props.orientation}
+      orientation={props.orientation}
+      css={{
+        ...props.css,
+      }}>
+      <ToggleFlexBox>{children}</ToggleFlexBox>
+    </ToggleGroupRoot>
+  )
+})
+
+///////////////////////// item //////////////////////////
 
 interface itemProps {
   children?: React.ReactNode
@@ -12,8 +49,10 @@ interface itemProps {
   asChild?: boolean | false
 }
 
-type ToggleItemPrimitiveProps = itemProps & React.ComponentProps<typeof ToggleItem>
-type ToggleGroupItemProps = ToggleItemPrimitiveProps & {css?: CSS}
+type ToggleItemPrimitiveProps = baseComponentProps &
+  itemProps &
+  React.ComponentProps<typeof ToggleItem>
+type ToggleGroupItemProps = ToggleItemPrimitiveProps
 
 const ToggleGroup_Item = React.forwardRef<
   React.ElementRef<typeof ToggleItem>,
@@ -31,51 +70,14 @@ const ToggleGroup_Item = React.forwardRef<
     </ToggleItem>
   )
 })
-/**
- *
- *
- *
- *
- *
- * ToggleGroup.Root
- */
-interface toggleProps {
-  children?: React.ReactNode
 
-  asChild?: boolean
+/** ---------------- export parts ------------------- */
+export const ToggleGroup: React.FC<ToggleGroupProps> & {
+  Item: typeof ToggleGroup_Item
+} = (props) => <ToggleGroupPrimitive {...props} />
 
-  type: 'single' | 'multiple'
-  value?: string[] | string | undefined
-  defaultValue?: string[]
-  onValueChange?: (value: string[]) => void
-  disabled?: boolean
-  rovingFocus?: boolean
-  orientation?: 'horizontal' | 'vertical'
-  loop?: boolean | 'true'
-}
+ToggleGroup.Item = ToggleGroup_Item
 
-type ToggleGroupKitProps = toggleProps & React.ComponentProps<typeof ToggleGroup.Root>
-type ToggleGroupProps = ToggleGroupKitProps & {css?: CSS}
-
-const ToggleGroup_Root = React.forwardRef<
-  React.ElementRef<typeof ToggleGroupRoot>,
-  ToggleGroupProps
->(({...props}, ref) => {
-  return (
-    <ToggleGroupRoot
-      {...props}
-      ref={ref}
-      data-orientation={props.orientation}
-      orientation={props.orientation}
-      css={{
-        ...props.css,
-      }}>
-      <ToggleFlexBox>{props.children}</ToggleFlexBox>
-    </ToggleGroupRoot>
-  )
-})
-
-export const ToggleGroupPrimitive = ToggleGroup_Root
-export const ToggleGroupItem = ToggleGroup_Item
+ToggleGroup.displayName = 'ToggleGroup'
 
 export type {ToggleGroupProps, ToggleGroupItemProps}

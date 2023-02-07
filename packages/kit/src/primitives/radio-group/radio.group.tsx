@@ -3,16 +3,7 @@ import type {baseComponentProps} from '../@shared/types'
 
 import {GroupRoot_Radio, GroupItem_Radio, GroupIndicator_Radio, Label_Radio} from './group.styles'
 
-/**
- *
- *
- *
- *
- * ..Radio[Root]
- *
- *
- */
-
+///////////////////////// root //////////////////////////
 interface _radioGroupProps {
   defaultValue?: string
   value?: string
@@ -55,14 +46,7 @@ const RadioGroupComponent: React.FC<RadioGroupProps> = ({
   </GroupRoot_Radio>
 )
 
-/**
- *
- *
- *
- * ..RadioGroup[Item]
- *
- *
- */
+///////////////////////// item //////////////////////////
 
 type _groupItemProps = {
   value?: string
@@ -97,11 +81,7 @@ const RadioGroupItemComponent: React.FC<GroupItemProps> = ({
   </GroupItem_Radio>
 )
 
-/**
- *
- *
- * ..RadioGroup[Indicator]
- */
+///////////////////////// indicator //////////////////////////
 
 type groupIndicatorProps = React.ComponentProps<typeof GroupIndicator_Radio> & {
   asChild?: boolean
@@ -126,13 +106,8 @@ const RadioGroupIndicatorComponent: React.FC<GroupIndicatorProps> = ({
   />
 )
 
-/**
- *
- *
- * ..Radio[Label]
- *
- *
- */
+///////////////////////// label //////////////////////////
+
 type _labelProps = {}
 
 type LabelPrimitiveProps = baseComponentProps &
@@ -150,10 +125,6 @@ const LabelRoot = React.forwardRef<React.ElementRef<typeof Label_Radio>, LabelPr
     )
   }
 )
-
-export const RadioGroupItem = RadioGroupItemComponent
-export const RadioGroupIndicator = RadioGroupIndicatorComponent
-export const RadioLabel = LabelRoot
 
 export const RadioGroup: React.FC<RadioGroupProps> & {
   Item: typeof RadioGroupItemComponent

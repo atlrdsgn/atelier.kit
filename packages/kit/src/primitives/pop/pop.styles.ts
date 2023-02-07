@@ -33,14 +33,18 @@ const StyledPopTrigger = styled(P.Trigger, {
   defaultVariants: {},
 })
 
+const StyledContentText = styled('span', {})
+
 const baseContentStyles = {
   all: 'unset',
 
+  boxSizing: 'border-box',
   color: KitColors.gray11,
   fontFamily: KitTheme.theme.fonts.sans,
   fontSize: KitTheme.theme.fontSizes.sm,
   fontWeight: KitTheme.theme.fontWeights.medium,
-  lineHeight: 1,
+  lineHeight: '1.3',
+  textAlign: 'center',
 
   backgroundColor: 'white',
   borderRadius: KitTheme.theme.radii.xl,
@@ -55,9 +59,10 @@ const baseContentStyles = {
   justifyContent: 'center',
   display: 'flex',
   flexDirection: 'column',
-  width: 'auto',
+  width: '100%',
+  maxWidth: 380,
+  minWidth: 120,
 
-  // animation: `${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1)`,
   '&:focus': {outline: 'none'},
 }
 
@@ -67,7 +72,7 @@ const StyledPopContent = styled(P.Content, {
   variants: {
     bordered: {
       true: {
-        border: `1.5px solid ${KitColors.gray6}`,
+        border: `1.5px solid ${KitColors.gray4}`,
       },
     },
   },
@@ -86,5 +91,5 @@ const StyledPopContent = styled(P.Content, {
   },
 })
 
-export {StyledPopRoot, StyledPopTrigger, StyledPopContent}
+export {StyledPopRoot, StyledPopTrigger, StyledPopContent, StyledContentText}
 export type PopoverContentVariantProps = VariantProps<typeof StyledPopContent>

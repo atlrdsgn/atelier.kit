@@ -3,29 +3,9 @@ import type {baseComponentProps} from '../@shared/types'
 import {StyledAvatarRoot, StyledAvatarImage, StyledAvatarFallback} from './avatar.styles'
 import type {AvatarVariantProps} from './avatar.styles'
 
-///////////////////////// Avatar /////////////////////////
-
-export interface avatarProps {
-  asChild?: boolean
-}
-
-type AvatarPrimitiveProps = avatarProps &
-  baseComponentProps &
-  AvatarVariantProps &
-  React.HTMLAttributes<HTMLDivElement> &
-  React.ComponentPropsWithRef<typeof StyledAvatarRoot>
-type AvatarProps = AvatarPrimitiveProps
-
 //////////////////// Fallback ////////////////////
 
-type fallbackProps = {
-  asChild?: boolean
-  delayMs?: number
-}
-
 type AvatarFallbackPrimitiveProps = baseComponentProps &
-  fallbackProps &
-  React.HTMLAttributes<HTMLDivElement> &
   React.ComponentPropsWithRef<typeof StyledAvatarFallback>
 type AvatarFallbackProps = AvatarFallbackPrimitiveProps
 
@@ -33,8 +13,8 @@ const AvatarFallbackComponent = React.forwardRef<HTMLDivElement, AvatarFallbackP
   (props, ref) => {
     const {children, ...rest} = props
     return (
-      <StyledAvatarFallback ref={ref} {...rest}>
-        CH
+      <StyledAvatarFallback ref={ref} {...rest} asChild={rest.asChild} delayMs={rest.delayMs}>
+        {children}
       </StyledAvatarFallback>
     )
   }
@@ -42,18 +22,16 @@ const AvatarFallbackComponent = React.forwardRef<HTMLDivElement, AvatarFallbackP
 
 //////////////////// Image ////////////////////
 
-type imageProps = {
-  asChild?: boolean
-  src?: string
-  alt?: string
+export interface aviProps extends React.HTMLAttributes<HTMLImageElement> {
+  src: string
+  alt: string
   onError?: (event: React.SyntheticEvent<HTMLImageElement, Event>) => void
-  onLoadingStatusChange?: (status: boolean) => void
+  onLoadingStatusChange?: (isLoading: boolean) => void
 }
 
 type AvatarImagePrimitiveProps = baseComponentProps &
-  imageProps &
-  React.HTMLAttributes<HTMLImageElement> &
-  React.ComponentPropsWithRef<typeof StyledAvatarImage>
+  aviProps &
+  React.ComponentProps<typeof StyledAvatarImage>
 type AvatarImageProps = AvatarImagePrimitiveProps
 
 const AvatarImageComponent = React.forwardRef<
@@ -69,14 +47,26 @@ const AvatarImageComponent = React.forwardRef<
   )
 })
 
-////////////////////// Exports. /////////////////////////////
+///////////////////////// Root /////////////////////////
+
+export interface avatarProps {
+  asChild?: boolean
+}
+
+type AvatarPrimitiveProps = avatarProps &
+  baseComponentProps &
+  AvatarVariantProps &
+  React.ComponentPropsWithRef<typeof StyledAvatarRoot>
+type AvatarProps = AvatarPrimitiveProps
 
 export const Avatar: React.FC<AvatarProps> & {
   Fallback: typeof AvatarFallbackComponent
   Image: typeof AvatarImageComponent
 } = (props) => <StyledAvatarRoot {...props} />
 
+/** -------------- exports ----------------- */
 Avatar.Fallback = AvatarFallbackComponent
 Avatar.Image = AvatarImageComponent
 
 Avatar.displayName = 'Avatar'
+/** ----------------------------------------- */

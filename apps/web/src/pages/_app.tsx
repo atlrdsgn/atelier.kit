@@ -9,13 +9,13 @@ const globalStyles = globalCss({
   html: {
     margin: 0,
     padding: 0,
-    backgroundColor: KitTheme.theme.colors.slate1,
+    backgroundColor: KitTheme.theme.colors.white,
   },
   body: {
     margin: 0,
     WebkitTextSizeAdjust: '100%',
-    backgroundColor: KitTheme.theme.colors.slate1,
-    color: KitTheme.theme.colors.gray12,
+    backgroundColor: KitTheme.theme.colors.white,
+    color: KitTheme.theme.colors.gray11,
   },
 })
 

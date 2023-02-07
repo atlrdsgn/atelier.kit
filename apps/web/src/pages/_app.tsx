@@ -33,7 +33,7 @@ function App({Component, pageProps, ...rest}: AppProps) {
   return (
     <>
       <ThemeProvider attribute="class" value={{light: 'light-theme', dark: darkTheme.className}}>
-        <AtelierKitThemeProvider theme={'auto'} mode={'light'}>
+        <AtelierKitThemeProvider theme={'auto'} mode={'light'} lightTheme>
           {getLayout({Component, pageProps, ...rest})}
         </AtelierKitThemeProvider>
       </ThemeProvider>

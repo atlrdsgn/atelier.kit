@@ -17,6 +17,7 @@ import {
   BadgeDemo,
   TipDemo,
   MenubarDemo,
+  TestBoxDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
 import {Header} from '@/components/Header'
@@ -32,6 +33,8 @@ function Components() {
       </Head>
 
       <Header />
+
+      <TestBoxDemo />
 
       {/* <!-- Components go here --> */}
 

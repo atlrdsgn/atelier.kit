@@ -16,4 +16,5 @@ export { KitLogo } from './assets';
 export { KitTypefaceLogo } from './assets';
 export { KitHead } from './utils/kit.head';
 export { getTouchPosition } from './utils/touch-position';
+export { TestBox } from './test-component';
 //# sourceMappingURL=index.d.ts.map

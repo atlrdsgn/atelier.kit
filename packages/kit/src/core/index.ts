@@ -23,3 +23,6 @@ export {KitTypefaceLogo} from './assets'
 // utils.
 export {KitHead} from './utils/kit.head'
 export {getTouchPosition} from './utils/touch-position'
+
+// testing.
+export {TestBox} from './test-component'

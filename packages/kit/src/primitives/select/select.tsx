@@ -2,7 +2,6 @@ import * as React from 'react'
 import * as Slct from '@radix-ui/react-select'
 import {baseComponentProps} from '../@shared/types'
 import type {SelectContentVariantProps} from './select.styles'
-import {applyDisplayName} from '../@shared/utils'
 
 import {
   StyledSelectRoot,

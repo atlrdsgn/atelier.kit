@@ -17,3 +17,6 @@ export {PopoverDemo} from './Popover.Demo'
 export {TipDemo} from './Tip.Demo'
 export {ToggleGroupDemo} from './ToggleGroup.Demo'
 export {VideoPlayerDemo} from './VideoPlayer.Demo'
+
+// testing.
+export {TestBoxDemo} from './TestBox.Demo'

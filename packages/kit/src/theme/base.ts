@@ -168,23 +168,6 @@ const stitches = createStitches({
   },
 })
 
-/**
- *
- *
- * @darkTheme
- *
- * we will build this soon.
- *
- * coming soon.
- *
- */
-const dark = createTheme('dark-theme', {
-  //...
-  colors: {
-    ...baseDarkColors,
-  },
-})
-
 export const createThemeBase = stitches.createTheme
 export const createDarkTheme = stitches.createTheme
 export const styled = stitches.styled
@@ -219,7 +202,56 @@ export const KitColors = KitTheme.theme.colors
 export const KitMedia = KitTheme.media
 export const KitPrefix = KitTheme.prefix
 
-export const darkTheme = dark
+const {styled: atelierTheme} = createStitches({
+  ...KitTheme,
+  theme: {
+    ...KitTheme.theme,
+    colors: {
+      ...KitTheme.theme.colors,
+    },
+  },
+  utils: {},
+})
+
+/**
+ *
+ *
+ * @auto & @lightTheme
+ *
+ */
+const autoTheme = createTheme('auto', {
+  colors: {
+    ...KitTheme.theme.colors,
+  },
+})
+
+const lightTheme = createTheme('light-theme', {
+  colors: {
+    ...KitTheme.theme.colors,
+  },
+})
+
+/**
+ *
+ *
+ * @darkTheme
+ *
+ * we will build this soon.
+ *
+ * coming soon.
+ *
+ */
+const darkTheme = createTheme('dark-theme', {
+  //...
+  colors: {
+    ...baseDarkColors,
+  },
+})
+
+export {autoTheme}
+export {lightTheme}
+export {darkTheme}
+export {atelierTheme}
 
 /*
 export const {

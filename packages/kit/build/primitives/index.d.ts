@@ -5,7 +5,7 @@ export { Badge } from './badge';
 export { Button, TestButton } from './button';
 export { Card, CardImage } from './card';
 export { Checkbox } from './checkbox';
-export { CopyField, CopyText, CopyTrigger } from './copy-text';
+export { CopyField } from './copy-text';
 export { Dialog } from './dialog';
 export { Heading } from './heading';
 export { Icon } from './_icon';

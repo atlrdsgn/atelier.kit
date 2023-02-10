@@ -13,7 +13,7 @@ interface inputProps {
 export declare const InputWithLabel: React.ForwardRefExoticComponent<import("@stitches/react/types/styled-component").TransformProps<{
     style?: "ghost" | "atelier" | undefined;
     size?: "sm" | "md" | "lg" | undefined;
-    cursor?: "default" | "pointer" | "text" | undefined;
+    cursor?: "text" | "default" | "pointer" | undefined;
 }, {
     xs: string;
     sm: string;

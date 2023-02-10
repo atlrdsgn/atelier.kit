@@ -36,6 +36,7 @@ type CopyFieldProps = CopyFieldVariantProps & CopyFieldPrimitiveProps & copyText
  */
 type CopyFieldTextPrimitiveProps = React.HTMLAttributes<HTMLParagraphElement> & React.ComponentProps<typeof StyledCopyFieldText>;
 type CopyFieldTextProps = CopyFieldTextPrimitiveProps & copyTextProps;
+declare const CopyFieldText: ({ children, textElement, ...rest }: CopyFieldTextProps) => JSX.Element;
 /**
  *
  *
@@ -72,8 +73,11 @@ type copyTriggerProps = {
 } & React.HTMLAttributes<HTMLButtonElement>;
 type CopyTriggerPrimitiveProps = baseComponentProps & copyTriggerProps & React.ComponentProps<typeof StyledCopyTrigger> & CopyTriggerVariantProps;
 type CopyTriggerProps = CopyTriggerPrimitiveProps;
-export declare const CopyField: ({ children, primary, secondary, css, ...rest }: CopyFieldProps) => JSX.Element;
-export declare const CopyText: ({ children, textElement, ...rest }: CopyFieldTextProps) => JSX.Element;
-export declare const CopyTrigger: ({ copyText, onClick, primary, secondary, ...rest }: CopyTriggerProps) => JSX.Element;
+declare const CopyTextTrigger: ({ copyText, onClick, primary, secondary, ...rest }: CopyTriggerProps) => JSX.Element;
+/** ---------------- export parts ------------------- */
+export declare const CopyField: React.FC<CopyFieldProps> & {
+    Text: typeof CopyFieldText;
+    Trigger: typeof CopyTextTrigger;
+};
 export type { CopyFieldProps, CopyFieldTextProps, CopyTriggerProps };
 //# sourceMappingURL=copy.text.d.ts.map

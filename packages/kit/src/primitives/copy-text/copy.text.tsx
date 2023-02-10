@@ -146,12 +146,15 @@ const CopyTextTrigger = ({copyText, onClick, primary, secondary, ...rest}: CopyT
   )
 }
 
-export const CopyField = CopyFieldRoot
-export const CopyText = CopyFieldText
-export const CopyTrigger = CopyTextTrigger
+/** ---------------- export parts ------------------- */
+export const CopyField: React.FC<CopyFieldProps> & {
+  Text: typeof CopyFieldText
+  Trigger: typeof CopyTextTrigger
+} = (props) => <CopyFieldRoot {...props} />
+
+CopyField.Text = CopyFieldText
+CopyField.Trigger = CopyTextTrigger
+
+CopyField.displayName = 'CopyField'
 
 export type {CopyFieldProps, CopyFieldTextProps, CopyTriggerProps}
-
-applyDisplayName(CopyField, 'CopyField')
-applyDisplayName(CopyText, 'CopyText')
-applyDisplayName(CopyTrigger, 'CopyTrigger')

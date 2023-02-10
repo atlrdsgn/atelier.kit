@@ -18,9 +18,12 @@ import {
   TipDemo,
   MenubarDemo,
   TestBoxDemo,
+  AviDemo,
+  ToastDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
 import {Header} from '@/components/Header'
+import {Button, Container} from 'atlr.kit'
 
 function Components() {
   return (
@@ -63,6 +66,12 @@ function Components() {
       <TipDemo />
 
       <SectionGap />
+      <ToastDemo />
+
+      <SectionGap />
+      <AviDemo />
+
+      <SectionGap />
       <PopoverDemo />
 
       <SectionGap />
@@ -84,6 +93,12 @@ function Components() {
       <AccordionDemo />
 
       <SectionGap />
+
+      <Container size={'md'} align={'center'}>
+        <Button size={'sm'} href={'/colors'} midnightShadow>
+          View Colors
+        </Button>
+      </Container>
       <SectionGap />
     </>
   )

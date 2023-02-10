@@ -7,6 +7,7 @@ type badgeProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 type BadgePrimitiveProps = baseComponentProps & badgeProps & BadgeVariantsProps;
 type BadgeProps = BadgePrimitiveProps;
+declare const Badge: React.FC<BadgeProps>;
 /**
  *
  *
@@ -33,6 +34,6 @@ type BadgeProps = BadgePrimitiveProps;
  *
  * exports, etc..
  */
-export declare const Badge: React.FC<BadgePrimitiveProps>;
+export { Badge };
 export type { BadgeProps };
 //# sourceMappingURL=badge.d.ts.map

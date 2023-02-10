@@ -1,7 +1,6 @@
 import * as P from '@radix-ui/react-popover'
 import {styled, KitTheme, KitColors, VariantProps} from '../../theme'
 import {
-  overlayShow,
   slideDownAndFade,
   slideLeftAndFade,
   slideUpAndFade,

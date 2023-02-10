@@ -1,6 +1,6 @@
 export { Accordion } from './accordion';
 export { Appbar } from './app-bar';
-export { Avatar } from './avatar';
+export { Avi } from './avatar';
 export { Badge } from './badge';
 export { Button, TestButton } from './button';
 export { Card, CardImage } from './card';
@@ -27,8 +27,9 @@ export { Switch } from './switch';
 export { Tabs } from './tabs';
 export { Text } from './text';
 export { Tip } from './tip';
-export { Toast, ToastHeading, ToastSubheading, ToastCloseButton, ToastActionItem } from './toast';
+export { Toast } from './toast';
 export { ToggleGroup } from './toggle-group';
+export { UIPopover } from './ui-popover';
 export { composeEventHandlers } from './primitive';
 export type { ComponentPropsWithoutRef, PrimitivePropsWithRef, PropsWithHTMLElement, } from './primitive';
 /*********************************************************

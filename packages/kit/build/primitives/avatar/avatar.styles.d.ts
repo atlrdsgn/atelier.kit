@@ -1,7 +1,7 @@
 /// <reference types="react" />
-import * as Avatar from '@radix-ui/react-avatar';
+import * as Avi from '@radix-ui/react-avatar';
 import type { VariantProps } from '../../theme';
-export declare const StyledAvatarRoot: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<Avatar.AvatarProps & import("react").RefAttributes<HTMLSpanElement>>, {
+export declare const StyledAvatarRoot: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<Avi.AvatarProps & import("react").RefAttributes<HTMLSpanElement>>, {
     size?: "xs" | "sm" | "md" | "lg" | undefined;
 }, {
     xs: string;
@@ -52,6 +52,19 @@ export declare const StyledAvatarRoot: import("@stitches/react/types/styled-comp
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -486,7 +499,7 @@ export declare const StyledAvatarRoot: import("@stitches/react/types/styled-comp
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-export declare const StyledAvatarImage: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<Avatar.AvatarImageProps & import("react").RefAttributes<HTMLImageElement>>, {}, {
+export declare const StyledAvatarImage: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<Avi.AvatarImageProps & import("react").RefAttributes<HTMLImageElement>>, {}, {
     xs: string;
     sm: string;
     md: string;
@@ -535,6 +548,19 @@ export declare const StyledAvatarImage: import("@stitches/react/types/styled-com
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -969,7 +995,7 @@ export declare const StyledAvatarImage: import("@stitches/react/types/styled-com
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-export declare const StyledAvatarFallback: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<Avatar.AvatarFallbackProps & import("react").RefAttributes<HTMLSpanElement>>, {}, {
+export declare const StyledAvatarFallback: import("@stitches/react/types/styled-component").StyledComponent<import("react").ForwardRefExoticComponent<Avi.AvatarFallbackProps & import("react").RefAttributes<HTMLSpanElement>>, {}, {
     xs: string;
     sm: string;
     md: string;
@@ -1018,6 +1044,19 @@ export declare const StyledAvatarFallback: import("@stitches/react/types/styled-
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;

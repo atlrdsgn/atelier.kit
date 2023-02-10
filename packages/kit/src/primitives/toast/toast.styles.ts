@@ -134,8 +134,22 @@ const styledAction = styled(ToastPrimitive.Action, {
 
 const styledClose = styled(ToastPrimitive.Close, {
   gridArea: 'action',
-  borderRadius: KitTheme.theme.radii.sm,
   padding: 2,
+
+  boxSizing: 'border-box',
+  color: 'inherit',
+
+  margin: 'auto',
+  width: 28,
+  height: 28,
+  borderRadius: KitTheme.theme.radii.base,
+  alignItems: 'center',
+  justifyContent: 'center',
+  display: 'flex',
+
+  outline: 'none',
+  border: `1px solid ${KitColors.slate5}`,
+  backgroundColor: 'transparent',
 })
 
 /** -------------------------------------------------------------- *

@@ -12,6 +12,7 @@ import {torch} from './src/torch'
 import {gold} from './src/gold'
 import {brand} from './src/brand'
 import {gray} from './src/gray'
+import {silver} from './src/silver'
 
 const baseKitThemeColors = {
   white: '#ffffff',
@@ -38,6 +39,20 @@ const baseKitThemeColors = {
 
   flag: 'rgba(74, 74, 74, 0.2)',
   blur: 'rgba(240,240,240,0.4)',
+
+  silver0: silver.silver0,
+  silver1: silver.silver1,
+  silver2: silver.silver2,
+  silver3: silver.silver3,
+  silver4: silver.silver4,
+  silver5: silver.silver5,
+  silver6: silver.silver6,
+  silver7: silver.silver7,
+  silver8: silver.silver8,
+  silver9: silver.silver9,
+  silver10: silver.silver10,
+  silver11: silver.silver11,
+  silver12: silver.silver12,
 
   atelier00: '#CEFE71',
   atelier01: '#BEBCA6',

@@ -154,7 +154,17 @@ export declare const KitTheme: {
         colors: {
             white: string;
             black: string;
-            olive: string;
+            olive: string; /**
+             *
+             *
+             *
+             * @baseColors
+             *
+             * passing all values forward as [baseColors].
+             *
+             * later extending use with KitColors.color as the final token.
+             *
+             */
             bandicoot: string;
             blueCharcoal: string;
             primaryGray: string;
@@ -165,17 +175,6 @@ export declare const KitTheme: {
             accentFizz: string;
             transparent: string;
             panel: string;
-            /**
-             *
-             *
-             *
-             * @baseMedia
-             *
-             * passing all values forward as [baseMedia].
-             *
-             * later extending use with KitMedia.size as the final token.
-             *
-             */
             transparentPanel: string;
             shadowLight: string;
             shadowDark: string;
@@ -184,6 +183,19 @@ export declare const KitTheme: {
             secondaryBorder: string;
             flag: string;
             blur: string;
+            silver0: string;
+            silver1: string;
+            silver2: string;
+            silver3: string;
+            silver4: string;
+            silver5: string;
+            silver6: string;
+            silver7: string;
+            silver8: string;
+            silver9: string;
+            silver10: string;
+            silver11: string;
+            silver12: string;
             atelier00: string;
             atelier01: string;
             atelier02: string;
@@ -206,12 +218,31 @@ export declare const KitTheme: {
             brand3: string;
             brand4: string;
             brand5: string;
-            brand6: string; /**
-             *
-             * using Stitches defaultThemeMap to start with.
-             */
+            brand6: string;
             brand7: string;
             brand8: string;
+            /**
+             *
+             *
+             * This the main stitches config.
+             *
+             * where all css tokens are generated from.
+             * if a value does not derive from [baseKitTheme] it will be ignored.
+             *
+             * for Stitches Config Documentation
+             * see https://stitches.dev/docs/introduction
+             *
+             * config file accepts:
+             * - prefix: string
+             * - theme: object
+             *    - color: object
+             *    - utils: object
+             * - media: object
+             * - themeMap: object
+             * - utils: object
+             * - breakpoints: object
+             *
+             */
             brand9: string;
             brand10: string;
             brand11: string;
@@ -347,16 +378,7 @@ export declare const KitTheme: {
             burn10: string;
             burn11: string;
             burn12: string;
-            moon1: string; /**
-             *
-             *
-             * @darkTheme
-             *
-             * we will build this soon.
-             *
-             * coming soon.
-             *
-             */
+            moon1: string;
             moon2: string;
             moon3: string;
             moon4: string;
@@ -678,6 +700,19 @@ export declare const createThemeBase: <Argument0 extends string | ({
         secondaryBorder?: string | number | boolean | undefined;
         flag?: string | number | boolean | undefined;
         blur?: string | number | boolean | undefined;
+        silver0?: string | number | boolean | undefined;
+        silver1?: string | number | boolean | undefined;
+        silver2?: string | number | boolean | undefined;
+        silver3?: string | number | boolean | undefined;
+        silver4?: string | number | boolean | undefined;
+        silver5?: string | number | boolean | undefined;
+        silver6?: string | number | boolean | undefined;
+        silver7?: string | number | boolean | undefined;
+        silver8?: string | number | boolean | undefined;
+        silver9?: string | number | boolean | undefined;
+        silver10?: string | number | boolean | undefined;
+        silver11?: string | number | boolean | undefined;
+        silver12?: string | number | boolean | undefined;
         atelier00?: string | number | boolean | undefined;
         atelier01?: string | number | boolean | undefined;
         atelier02?: string | number | boolean | undefined;
@@ -1010,6 +1045,19 @@ export declare const createThemeBase: <Argument0 extends string | ({
         secondaryBorder?: string | number | boolean | undefined;
         flag?: string | number | boolean | undefined;
         blur?: string | number | boolean | undefined;
+        silver0?: string | number | boolean | undefined;
+        silver1?: string | number | boolean | undefined;
+        silver2?: string | number | boolean | undefined;
+        silver3?: string | number | boolean | undefined;
+        silver4?: string | number | boolean | undefined;
+        silver5?: string | number | boolean | undefined;
+        silver6?: string | number | boolean | undefined;
+        silver7?: string | number | boolean | undefined;
+        silver8?: string | number | boolean | undefined;
+        silver9?: string | number | boolean | undefined;
+        silver10?: string | number | boolean | undefined;
+        silver11?: string | number | boolean | undefined;
+        silver12?: string | number | boolean | undefined;
         atelier00?: string | number | boolean | undefined;
         atelier01?: string | number | boolean | undefined;
         atelier02?: string | number | boolean | undefined;
@@ -1346,6 +1394,19 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         secondaryBorder?: string | number | boolean | undefined;
         flag?: string | number | boolean | undefined;
         blur?: string | number | boolean | undefined;
+        silver0?: string | number | boolean | undefined;
+        silver1?: string | number | boolean | undefined;
+        silver2?: string | number | boolean | undefined;
+        silver3?: string | number | boolean | undefined;
+        silver4?: string | number | boolean | undefined;
+        silver5?: string | number | boolean | undefined;
+        silver6?: string | number | boolean | undefined;
+        silver7?: string | number | boolean | undefined;
+        silver8?: string | number | boolean | undefined;
+        silver9?: string | number | boolean | undefined;
+        silver10?: string | number | boolean | undefined;
+        silver11?: string | number | boolean | undefined;
+        silver12?: string | number | boolean | undefined;
         atelier00?: string | number | boolean | undefined;
         atelier01?: string | number | boolean | undefined;
         atelier02?: string | number | boolean | undefined;
@@ -1678,6 +1739,19 @@ export declare const createDarkTheme: <Argument0 extends string | ({
         secondaryBorder?: string | number | boolean | undefined;
         flag?: string | number | boolean | undefined;
         blur?: string | number | boolean | undefined;
+        silver0?: string | number | boolean | undefined;
+        silver1?: string | number | boolean | undefined;
+        silver2?: string | number | boolean | undefined;
+        silver3?: string | number | boolean | undefined;
+        silver4?: string | number | boolean | undefined;
+        silver5?: string | number | boolean | undefined;
+        silver6?: string | number | boolean | undefined;
+        silver7?: string | number | boolean | undefined;
+        silver8?: string | number | boolean | undefined;
+        silver9?: string | number | boolean | undefined;
+        silver10?: string | number | boolean | undefined;
+        silver11?: string | number | boolean | undefined;
+        silver12?: string | number | boolean | undefined;
         atelier00?: string | number | boolean | undefined;
         atelier01?: string | number | boolean | undefined;
         atelier02?: string | number | boolean | undefined;
@@ -2029,6 +2103,19 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -2522,6 +2609,19 @@ export declare const styled: <Type extends import("@stitches/react/types/util").
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -2994,6 +3094,19 @@ export declare const css: <Composers extends (string | import("@stitches/react/t
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -3494,6 +3607,19 @@ export declare const globalCss: <Styles extends {
             secondaryBorder: string;
             flag: string;
             blur: string;
+            silver0: string;
+            silver1: string;
+            silver2: string;
+            silver3: string;
+            silver4: string;
+            silver5: string;
+            silver6: string;
+            silver7: string;
+            silver8: string;
+            silver9: string;
+            silver10: string;
+            silver11: string;
+            silver12: string;
             atelier00: string;
             atelier01: string;
             atelier02: string;
@@ -3964,6 +4090,19 @@ export declare const globalCss: <Styles extends {
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -4435,6 +4574,19 @@ export declare const keyframes: (style: {
             secondaryBorder: string;
             flag: string;
             blur: string;
+            silver0: string;
+            silver1: string;
+            silver2: string;
+            silver3: string;
+            silver4: string;
+            silver5: string;
+            silver6: string;
+            silver7: string;
+            silver8: string;
+            silver9: string;
+            silver10: string;
+            silver11: string;
+            silver12: string;
             atelier00: string;
             atelier01: string;
             atelier02: string;
@@ -4900,6 +5052,19 @@ export declare const theme: string & {
         secondaryBorder: import("@stitches/react/types/theme").Token<"secondaryBorder", string, "colors", string>;
         flag: import("@stitches/react/types/theme").Token<"flag", string, "colors", string>;
         blur: import("@stitches/react/types/theme").Token<"blur", string, "colors", string>;
+        silver0: import("@stitches/react/types/theme").Token<"silver0", string, "colors", string>;
+        silver1: import("@stitches/react/types/theme").Token<"silver1", string, "colors", string>;
+        silver2: import("@stitches/react/types/theme").Token<"silver2", string, "colors", string>;
+        silver3: import("@stitches/react/types/theme").Token<"silver3", string, "colors", string>;
+        silver4: import("@stitches/react/types/theme").Token<"silver4", string, "colors", string>;
+        silver5: import("@stitches/react/types/theme").Token<"silver5", string, "colors", string>;
+        silver6: import("@stitches/react/types/theme").Token<"silver6", string, "colors", string>;
+        silver7: import("@stitches/react/types/theme").Token<"silver7", string, "colors", string>;
+        silver8: import("@stitches/react/types/theme").Token<"silver8", string, "colors", string>;
+        silver9: import("@stitches/react/types/theme").Token<"silver9", string, "colors", string>;
+        silver10: import("@stitches/react/types/theme").Token<"silver10", string, "colors", string>;
+        silver11: import("@stitches/react/types/theme").Token<"silver11", string, "colors", string>;
+        silver12: import("@stitches/react/types/theme").Token<"silver12", string, "colors", string>;
         atelier00: import("@stitches/react/types/theme").Token<"atelier00", string, "colors", string>;
         atelier01: import("@stitches/react/types/theme").Token<"atelier01", string, "colors", string>;
         atelier02: import("@stitches/react/types/theme").Token<"atelier02", string, "colors", string>;
@@ -5231,6 +5396,19 @@ export declare const kit_theme: string & {
         secondaryBorder: import("@stitches/react/types/theme").Token<"secondaryBorder", string, "colors", string>;
         flag: import("@stitches/react/types/theme").Token<"flag", string, "colors", string>;
         blur: import("@stitches/react/types/theme").Token<"blur", string, "colors", string>;
+        silver0: import("@stitches/react/types/theme").Token<"silver0", string, "colors", string>;
+        silver1: import("@stitches/react/types/theme").Token<"silver1", string, "colors", string>;
+        silver2: import("@stitches/react/types/theme").Token<"silver2", string, "colors", string>;
+        silver3: import("@stitches/react/types/theme").Token<"silver3", string, "colors", string>;
+        silver4: import("@stitches/react/types/theme").Token<"silver4", string, "colors", string>;
+        silver5: import("@stitches/react/types/theme").Token<"silver5", string, "colors", string>;
+        silver6: import("@stitches/react/types/theme").Token<"silver6", string, "colors", string>;
+        silver7: import("@stitches/react/types/theme").Token<"silver7", string, "colors", string>;
+        silver8: import("@stitches/react/types/theme").Token<"silver8", string, "colors", string>;
+        silver9: import("@stitches/react/types/theme").Token<"silver9", string, "colors", string>;
+        silver10: import("@stitches/react/types/theme").Token<"silver10", string, "colors", string>;
+        silver11: import("@stitches/react/types/theme").Token<"silver11", string, "colors", string>;
+        silver12: import("@stitches/react/types/theme").Token<"silver12", string, "colors", string>;
         atelier00: import("@stitches/react/types/theme").Token<"atelier00", string, "colors", string>;
         atelier01: import("@stitches/react/types/theme").Token<"atelier01", string, "colors", string>;
         atelier02: import("@stitches/react/types/theme").Token<"atelier02", string, "colors", string>;
@@ -5575,6 +5753,19 @@ export declare const config: {
             secondaryBorder: string;
             flag: string;
             blur: string;
+            silver0: string;
+            silver1: string;
+            silver2: string;
+            silver3: string;
+            silver4: string;
+            silver5: string;
+            silver6: string;
+            silver7: string;
+            silver8: string;
+            silver9: string;
+            silver10: string;
+            silver11: string;
+            silver12: string;
             atelier00: string;
             atelier01: string;
             atelier02: string;
@@ -6034,7 +6225,17 @@ export type Breakpoints = StitchesConfig['media'];
 export declare const KitColors: {
     white: string;
     black: string;
-    olive: string;
+    olive: string; /**
+     *
+     *
+     *
+     * @baseColors
+     *
+     * passing all values forward as [baseColors].
+     *
+     * later extending use with KitColors.color as the final token.
+     *
+     */
     bandicoot: string;
     blueCharcoal: string;
     primaryGray: string;
@@ -6045,17 +6246,6 @@ export declare const KitColors: {
     accentFizz: string;
     transparent: string;
     panel: string;
-    /**
-     *
-     *
-     *
-     * @baseMedia
-     *
-     * passing all values forward as [baseMedia].
-     *
-     * later extending use with KitMedia.size as the final token.
-     *
-     */
     transparentPanel: string;
     shadowLight: string;
     shadowDark: string;
@@ -6064,6 +6254,19 @@ export declare const KitColors: {
     secondaryBorder: string;
     flag: string;
     blur: string;
+    silver0: string;
+    silver1: string;
+    silver2: string;
+    silver3: string;
+    silver4: string;
+    silver5: string;
+    silver6: string;
+    silver7: string;
+    silver8: string;
+    silver9: string;
+    silver10: string;
+    silver11: string;
+    silver12: string;
     atelier00: string;
     atelier01: string;
     atelier02: string;
@@ -6086,12 +6289,31 @@ export declare const KitColors: {
     brand3: string;
     brand4: string;
     brand5: string;
-    brand6: string; /**
-     *
-     * using Stitches defaultThemeMap to start with.
-     */
+    brand6: string;
     brand7: string;
     brand8: string;
+    /**
+     *
+     *
+     * This the main stitches config.
+     *
+     * where all css tokens are generated from.
+     * if a value does not derive from [baseKitTheme] it will be ignored.
+     *
+     * for Stitches Config Documentation
+     * see https://stitches.dev/docs/introduction
+     *
+     * config file accepts:
+     * - prefix: string
+     * - theme: object
+     *    - color: object
+     *    - utils: object
+     * - media: object
+     * - themeMap: object
+     * - utils: object
+     * - breakpoints: object
+     *
+     */
     brand9: string;
     brand10: string;
     brand11: string;
@@ -6227,16 +6449,7 @@ export declare const KitColors: {
     burn10: string;
     burn11: string;
     burn12: string;
-    moon1: string; /**
-     *
-     *
-     * @darkTheme
-     *
-     * we will build this soon.
-     *
-     * coming soon.
-     *
-     */
+    moon1: string;
     moon2: string;
     moon3: string;
     moon4: string;
@@ -6338,6 +6551,19 @@ declare const atelierTheme: <Type extends import("@stitches/react/types/util").F
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -6831,6 +7057,19 @@ declare const atelierTheme: <Type extends import("@stitches/react/types/util").F
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -7278,7 +7517,17 @@ declare const autoTheme: string & {
     colors: {
         white: string;
         black: string;
-        olive: string;
+        olive: string; /**
+         *
+         *
+         *
+         * @baseColors
+         *
+         * passing all values forward as [baseColors].
+         *
+         * later extending use with KitColors.color as the final token.
+         *
+         */
         bandicoot: string;
         blueCharcoal: string;
         primaryGray: string;
@@ -7289,17 +7538,6 @@ declare const autoTheme: string & {
         accentFizz: string;
         transparent: string;
         panel: string;
-        /**
-         *
-         *
-         *
-         * @baseMedia
-         *
-         * passing all values forward as [baseMedia].
-         *
-         * later extending use with KitMedia.size as the final token.
-         *
-         */
         transparentPanel: string;
         shadowLight: string;
         shadowDark: string;
@@ -7308,6 +7546,19 @@ declare const autoTheme: string & {
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -7330,12 +7581,31 @@ declare const autoTheme: string & {
         brand3: string;
         brand4: string;
         brand5: string;
-        brand6: string; /**
-         *
-         * using Stitches defaultThemeMap to start with.
-         */
+        brand6: string;
         brand7: string;
         brand8: string;
+        /**
+         *
+         *
+         * This the main stitches config.
+         *
+         * where all css tokens are generated from.
+         * if a value does not derive from [baseKitTheme] it will be ignored.
+         *
+         * for Stitches Config Documentation
+         * see https://stitches.dev/docs/introduction
+         *
+         * config file accepts:
+         * - prefix: string
+         * - theme: object
+         *    - color: object
+         *    - utils: object
+         * - media: object
+         * - themeMap: object
+         * - utils: object
+         * - breakpoints: object
+         *
+         */
         brand9: string;
         brand10: string;
         brand11: string;
@@ -7471,16 +7741,7 @@ declare const autoTheme: string & {
         burn10: string;
         burn11: string;
         burn12: string;
-        moon1: string; /**
-         *
-         *
-         * @darkTheme
-         *
-         * we will build this soon.
-         *
-         * coming soon.
-         *
-         */
+        moon1: string;
         moon2: string;
         moon3: string;
         moon4: string;
@@ -7537,7 +7798,17 @@ declare const lightTheme: string & {
     colors: {
         white: string;
         black: string;
-        olive: string;
+        olive: string; /**
+         *
+         *
+         *
+         * @baseColors
+         *
+         * passing all values forward as [baseColors].
+         *
+         * later extending use with KitColors.color as the final token.
+         *
+         */
         bandicoot: string;
         blueCharcoal: string;
         primaryGray: string;
@@ -7548,17 +7819,6 @@ declare const lightTheme: string & {
         accentFizz: string;
         transparent: string;
         panel: string;
-        /**
-         *
-         *
-         *
-         * @baseMedia
-         *
-         * passing all values forward as [baseMedia].
-         *
-         * later extending use with KitMedia.size as the final token.
-         *
-         */
         transparentPanel: string;
         shadowLight: string;
         shadowDark: string;
@@ -7567,6 +7827,19 @@ declare const lightTheme: string & {
         secondaryBorder: string;
         flag: string;
         blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
         atelier00: string;
         atelier01: string;
         atelier02: string;
@@ -7589,12 +7862,31 @@ declare const lightTheme: string & {
         brand3: string;
         brand4: string;
         brand5: string;
-        brand6: string; /**
-         *
-         * using Stitches defaultThemeMap to start with.
-         */
+        brand6: string;
         brand7: string;
         brand8: string;
+        /**
+         *
+         *
+         * This the main stitches config.
+         *
+         * where all css tokens are generated from.
+         * if a value does not derive from [baseKitTheme] it will be ignored.
+         *
+         * for Stitches Config Documentation
+         * see https://stitches.dev/docs/introduction
+         *
+         * config file accepts:
+         * - prefix: string
+         * - theme: object
+         *    - color: object
+         *    - utils: object
+         * - media: object
+         * - themeMap: object
+         * - utils: object
+         * - breakpoints: object
+         *
+         */
         brand9: string;
         brand10: string;
         brand11: string;
@@ -7730,16 +8022,7 @@ declare const lightTheme: string & {
         burn10: string;
         burn11: string;
         burn12: string;
-        moon1: string; /**
-         *
-         *
-         * @darkTheme
-         *
-         * we will build this soon.
-         *
-         * coming soon.
-         *
-         */
+        moon1: string;
         moon2: string;
         moon3: string;
         moon4: string;

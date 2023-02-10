@@ -1,13 +1,35 @@
 import * as React from 'react'
-import {Container, Flex, KitColors, styled, Space} from 'atlr.kit'
+import {Container, Flex, KitColors, styled, Space, Box} from 'atlr.kit'
 import {AppWrapper} from '@/components/AppWrapper'
+
+function NameBox({name}: {name: string}) {
+  return <NameBoxWrapper css={{}}>{name}</NameBoxWrapper>
+}
 
 function ColorPage() {
   return (
     <>
       <AppWrapper>
-        <Container size={'md'} align={'center'}>
-          <Flex direction="row" justify={'between'}>
+        <Container size={'lg'} align={'center'}>
+          <Flex direction="row" justify={'between'} gap={1}>
+            <NameBox name={'silver'} />
+            <ColorBox css={{backgroundColor: KitColors.silver12}} />
+            <ColorBox css={{backgroundColor: KitColors.silver11}} />
+            <ColorBox css={{backgroundColor: KitColors.silver10}} />
+            <ColorBox css={{backgroundColor: KitColors.silver9}} />
+            <ColorBox css={{backgroundColor: KitColors.silver8}} />
+            <ColorBox css={{backgroundColor: KitColors.silver7}} />
+            <ColorBox css={{backgroundColor: KitColors.silver6}} />
+            <ColorBox css={{backgroundColor: KitColors.silver5}} />
+            <ColorBox css={{backgroundColor: KitColors.silver4}} />
+            <ColorBox css={{backgroundColor: KitColors.silver3}} />
+            <ColorBox css={{backgroundColor: KitColors.silver2}} />
+            <ColorBox css={{backgroundColor: KitColors.silver1}} />
+          </Flex>
+          <Space size={'sm'} />
+
+          <Flex direction="row" justify={'between'} gap={1}>
+            <NameBox name={'slate'} />
             <ColorBox css={{backgroundColor: KitColors.gray12}} />
             <ColorBox css={{backgroundColor: KitColors.gray11}} />
             <ColorBox css={{backgroundColor: KitColors.gray10}} />
@@ -22,7 +44,9 @@ function ColorPage() {
             <ColorBox css={{backgroundColor: KitColors.gray1}} />
           </Flex>
           <Space size={'sm'} />
-          <Flex direction="row" justify={'between'}>
+
+          <Flex direction="row" justify={'between'} gap={1}>
+            <NameBox name={'heliotrope'} />
             <ColorBox css={{backgroundColor: KitColors.heliotrope12}} />
             <ColorBox css={{backgroundColor: KitColors.heliotrope11}} />
             <ColorBox css={{backgroundColor: KitColors.heliotrope10}} />
@@ -37,31 +61,6 @@ function ColorPage() {
             <ColorBox css={{backgroundColor: KitColors.heliotrope1}} />
           </Flex>
           <Space size={'sm'} />
-          <Flex direction="row" justify={'between'}>
-            <ColorBox css={{backgroundColor: KitColors.fizz12}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz11}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz10}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz9}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz8}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz7}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz6}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz5}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz4}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz3}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz2}} />
-            <ColorBox css={{backgroundColor: KitColors.fizz1}} />
-          </Flex>
-
-          <Space size={'lg'} />
-          <Flex direction="row" justify={'between'}>
-            <ColorBox css={{backgroundColor: KitColors.atlr06}} />
-            <ColorBox css={{backgroundColor: KitColors.atlr05}} />
-            <ColorBox css={{backgroundColor: KitColors.atlr04}} />
-            <ColorBox css={{backgroundColor: KitColors.atlr03}} />
-            <ColorBox css={{backgroundColor: KitColors.atlr02}} />
-            <ColorBox css={{backgroundColor: KitColors.atlr01}} />
-            <ColorBox css={{backgroundColor: KitColors.atlr00}} />
-          </Flex>
         </Container>
       </AppWrapper>
     </>
@@ -71,8 +70,28 @@ function ColorPage() {
 const ColorBox = styled('div', {
   width: 50,
   height: 50,
+  minWidth: 20,
+  backgroundColor: 'inherit',
+  borderRadius: 3,
+})
+
+const NameBoxWrapper = styled('div', {
+  width: 120,
+  minWidth: 60,
+  height: 50,
   backgroundColor: 'inherit',
   borderRadius: 12,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-end',
+  margin: 'auto',
+  textAlign: 'right',
+  flexDirection: 'row',
+
+  // border: '1px solid #000',
+
+  fontFamily: 'monospace',
+  fontSize: 12,
 })
 
 export default ColorPage

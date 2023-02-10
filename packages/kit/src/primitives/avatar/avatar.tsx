@@ -2,6 +2,7 @@ import * as React from 'react'
 import type {baseComponentProps} from '../@shared/types'
 import {StyledAvatarRoot, StyledAvatarImage, StyledAvatarFallback} from './avatar.styles'
 import type {AvatarVariantProps} from './avatar.styles'
+import Avatar from 'boring-avatars'
 
 //////////////////// Fallback ////////////////////
 
@@ -47,6 +48,40 @@ const AvatarImageComponent = React.forwardRef<
   )
 })
 
+//////////////////// BoringAvatar ////////////////////
+
+type randomAvatarProps = {
+  name: string
+  variant?: AvatarVariantProps
+  size?: number
+  colors?: string[]
+  square?: boolean
+}
+
+type RandomAvatarPrimitiveProps = baseComponentProps &
+  randomAvatarProps &
+  React.ComponentPropsWithRef<typeof Avatar>
+type RandomAvatarProps = RandomAvatarPrimitiveProps
+
+const AvatarRandomComponent = ({
+  size = 45,
+  variant = 'marble',
+  colors = ['#A78BFA', '#FBCFE8', '#88D7B6'],
+  square = false,
+  ...rest
+}: RandomAvatarProps) => {
+  return (
+    <Avatar
+      size={size}
+      variant={variant}
+      colors={colors}
+      square={square}
+      css={{...rest.css}}
+      {...rest}
+    />
+  )
+}
+
 ///////////////////////// Root /////////////////////////
 
 export interface avatarProps {
@@ -59,14 +94,16 @@ type AvatarPrimitiveProps = avatarProps &
   React.ComponentPropsWithRef<typeof StyledAvatarRoot>
 type AvatarProps = AvatarPrimitiveProps
 
-export const Avatar: React.FC<AvatarProps> & {
+export const Avi: React.FC<AvatarProps> & {
   Fallback: typeof AvatarFallbackComponent
   Image: typeof AvatarImageComponent
+  Random: typeof AvatarRandomComponent
 } = (props) => <StyledAvatarRoot {...props} />
 
 /** -------------- exports ----------------- */
-Avatar.Fallback = AvatarFallbackComponent
-Avatar.Image = AvatarImageComponent
+Avi.Fallback = AvatarFallbackComponent
+Avi.Image = AvatarImageComponent
+Avi.Random = AvatarRandomComponent
 
-Avatar.displayName = 'Avatar'
+Avi.displayName = 'Avatar'
 /** ----------------------------------------- */

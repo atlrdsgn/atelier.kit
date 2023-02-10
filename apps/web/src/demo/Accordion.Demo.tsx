@@ -15,9 +15,9 @@ export const AccordionDemo = () => {
             <Accordion
               type={'single'}
               bordered={false}
-              css={{width: '500px', fontFamily: 'sans-serif'}}>
+              css={{width: '100%', fontFamily: 'sans-serif'}}>
               <Accordion.Item value={'item1'} css={{}}>
-                <Accordion.Trigger css={{}}>Accordion One</Accordion.Trigger>
+                <Accordion.Trigger css={{width: '100%'}}>Accordion One</Accordion.Trigger>
                 <Accordion.Content css={{width: '100%'}}>
                   Deserunt culpa sunt eiusmod magna excepteur minim in id.
                 </Accordion.Content>

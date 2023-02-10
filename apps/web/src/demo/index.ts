@@ -1,4 +1,5 @@
 export {AccordionDemo} from './Accordion.Demo'
+export {AviDemo} from './Avi.Demo'
 export {BadgeDemo} from './Badge.Demo'
 export {ContainerDemo} from './Container.Demo'
 export {CheckboxDemo} from './Checkbox.Demo'
@@ -15,8 +16,11 @@ export {RevealDemo} from './Reveal.Demo'
 export {GridDemo} from './Grid.Demo'
 export {PopoverDemo} from './Popover.Demo'
 export {TipDemo} from './Tip.Demo'
+export {ToastDemo} from './Toast.Demo'
 export {ToggleGroupDemo} from './ToggleGroup.Demo'
 export {VideoPlayerDemo} from './VideoPlayer.Demo'
+
+export {UIPopoverDemo} from './UIPopover.Demo'
 
 // testing.
 export {TestBoxDemo} from './TestBox.Demo'

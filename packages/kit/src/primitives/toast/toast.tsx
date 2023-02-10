@@ -113,18 +113,20 @@ const ToastCloseButtonComponent = React.forwardRef<
   </ToastClose>
 ))
 
+/** ---------------- export parts ------------------- */
+export const Toast: React.FC<ToastProps> & {
+  Heading: typeof ToastHead
+  SubHeading: typeof ToastSubHead
+  Close: typeof ToastCloseButtonComponent
+  Action: typeof ToastActionItemComponent
+} = (props) => <ToastRoot {...props} />
+
 /** ------------------ TOAST EXPORTS ----------------------- */
-export const Toast = React.memo(ToastRoot)
-export const ToastHeading = React.memo(ToastHead)
-export const ToastSubheading = React.memo(ToastSubHead)
-export const ToastCloseButton = React.memo(ToastCloseButtonComponent)
-export const ToastActionItem = React.memo(ToastActionItemComponent)
+Toast.Heading = ToastHead
+Toast.SubHeading = ToastSubHead
+Toast.Close = ToastCloseButtonComponent
+Toast.Action = ToastActionItemComponent
 
 Toast.displayName = 'Toast'
-ToastHeading.displayName = 'ToastHeading'
-ToastSubheading.displayName = 'ToastSubheading'
-ToastCloseButton.displayName = 'ToastCloseButton'
-ToastActionItem.displayName = 'ToastActionItem'
-
 /** ------------------------------------------ */
 export type {ToastActionProps, ToastHeadingProps, ToastProps, ToastSubheadingProps}

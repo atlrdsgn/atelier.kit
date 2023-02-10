@@ -19,6 +19,10 @@ export default [
 
       'react-player/vimeo',
 
+      'boring-avatars',
+
+      '@headlessui/react',
+
       '@radix-ui/react-tooltip',
       '@radix-ui/react-popover',
       '@radix-ui/react-avatar',

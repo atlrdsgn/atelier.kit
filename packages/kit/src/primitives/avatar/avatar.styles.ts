@@ -1,4 +1,5 @@
-import * as Avatar from '@radix-ui/react-avatar'
+import * as Avi from '@radix-ui/react-avatar'
+import Avatar from 'boring-avatars'
 import {styled, KitColors, KitTheme} from '../../theme'
 import type {VariantProps} from '../../theme'
 
@@ -14,7 +15,7 @@ const aviBase = {
   backgroundColor: KitColors.slate4,
 }
 
-const styledAvatarRoot = styled(Avatar.Root, {
+const styledAvatarRoot = styled(Avi.Root, {
   ...aviBase,
 
   border: `2px solid ${KitColors.fizz4}`,
@@ -47,14 +48,14 @@ const styledAvatarRoot = styled(Avatar.Root, {
   },
 })
 
-const styledAvatarImage = styled(Avatar.Image, {
+const styledAvatarImage = styled(Avi.Image, {
   width: '100%',
   height: '100%',
   objectFit: 'cover',
   borderRadius: KitTheme.theme.radii.pill,
 })
 
-const styledAvatarFallback = styled(Avatar.Fallback, {
+const styledAvatarFallback = styled(Avi.Fallback, {
   width: '100%',
   height: '100%',
   display: 'flex',
@@ -66,6 +67,8 @@ const styledAvatarFallback = styled(Avatar.Fallback, {
   lineHeight: 1,
   fontWeight: 500,
 })
+
+const styledBoringAvatar = styled(Avatar, {})
 
 export const StyledAvatarRoot = styledAvatarRoot
 export const StyledAvatarImage = styledAvatarImage

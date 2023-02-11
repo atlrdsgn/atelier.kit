@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import {ComponentName} from '@/components/ComponentName'
-import {Container, CopyField, CopyText, CopyTrigger, Section} from 'atlr.kit'
+import {Container, CopyField, Section} from 'atlr.kit'
 
 export const CopyTextFieldDemo = () => {
   return (
@@ -12,8 +12,8 @@ export const CopyTextFieldDemo = () => {
 
           <div>
             <CopyField>
-              <CopyText>npm install --save atlr.kit</CopyText>
-              <CopyTrigger copyText={'npm install --save atlr.kit'} />
+              <CopyField.Text>npm install --save atlr.kit</CopyField.Text>
+              <CopyField.Trigger copyText={'npm install --save atlr.kit'} />
             </CopyField>
           </div>
         </Container>

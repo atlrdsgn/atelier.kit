@@ -47,6 +47,7 @@
     "@radix-ui/react-toast": "^1.1.2",
     "@radix-ui/react-toggle-group": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.3",
+    "@react-types/breadcrumbs": "^3.4.6",
     "@stitches/react": "^1.2.8",
     "boring-avatars": "^1.7.0",
     "copy-to-clipboard": "^3.3.3",

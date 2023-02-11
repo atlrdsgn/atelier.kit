@@ -22,7 +22,6 @@ const HEADER_RADIUS = KitTheme.theme.radii.md
 const TRIGGER_RADIUS = KitTheme.theme.radii.md
 
 const CONTENT_HEIGHT_ZERO = '0px'
-const CONTENT_HEIGHT_FULL = '100%'
 
 const slideDown = keyframes({
   from: {
@@ -139,6 +138,8 @@ const styledHeader = styled(AccordionPrimitive.Header, 'h2', {
 
   boxSizing: 'border-box',
 
+  width: '100%',
+
   variants: {
     orientation: {
       horizontal: {
@@ -173,7 +174,7 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
 
   height: 'auto',
 
-  flex: '1',
+  flex: 'flex-grow',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -183,6 +184,7 @@ const styledTrigger = styled(AccordionPrimitive.Trigger, {
   width: '100%',
 
   '&[data-state="closed"]': {
+    width: '100%',
     backgroundColor: KitColors.slate1,
     border: `1px solid ${KitColors.slate6}`,
     borderBottomWidth: 1,

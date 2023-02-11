@@ -3624,6 +3624,45 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-aria/interactions@npm:^3.13.1":
+  version: 3.13.1
+  resolution: "@react-aria/interactions@npm:3.13.1"
+  dependencies:
+    "@react-aria/utils": ^3.14.2
+    "@react-types/shared": ^3.16.0
+    "@swc/helpers": ^0.4.14
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 9712bc41b7e6f76a81594b0e175a8f6839830d305d43bfe677c2ea7156f54a75a74a4e6687f3e8f1f52482122dad2eac902870291cad3b65a9088c56004f0b2c
+  languageName: node
+  linkType: hard
+
+"@react-aria/ssr@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "@react-aria/ssr@npm:3.4.1"
+  dependencies:
+    "@swc/helpers": ^0.4.14
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 3421951446d1b8d3d5c9903cb098ee7a8058185d1bcfd1f04d8a3341958f5d2241f3d2f1232d8ddb46cd0fef9cfc6d39dd4a19bf3a64131e81ba21c57e80eda8
+  languageName: node
+  linkType: hard
+
+"@react-aria/utils@npm:^3.14.2":
+  version: 3.14.2
+  resolution: "@react-aria/utils@npm:3.14.2"
+  dependencies:
+    "@react-aria/ssr": ^3.4.1
+    "@react-stately/utils": ^3.5.2
+    "@react-types/shared": ^3.16.0
+    "@swc/helpers": ^0.4.14
+    clsx: ^1.1.1
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: db3f59ace7463268d9214d51368fdd86fa7587d62eaabef23f806d85aa50d98fc9b785a858e9b8208cea10e9a9e92b11f95166fcd2795d0d98c74649a1327768
+  languageName: node
+  linkType: hard
+
 "@react-hook/intersection-observer@npm:^3.1.1":
   version: 3.1.1
   resolution: "@react-hook/intersection-observer@npm:3.1.1"
@@ -3642,6 +3681,50 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: 217cb8aa90fb8e677672319a9a466d7752890cf4357c76df000b207696e9cc717cf2ee88080671cc9dae238a82f92093ab4f61ab2f6032d2a8db958fc7d99b5d
+  languageName: node
+  linkType: hard
+
+"@react-stately/utils@npm:^3.5.2":
+  version: 3.5.2
+  resolution: "@react-stately/utils@npm:3.5.2"
+  dependencies:
+    "@swc/helpers": ^0.4.14
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 156fdc5389337921a34e9a9ac3c8876c82953479dd696771f1ecd852def0d269bcee879f51ad036024b06f9d6e68b2e25eae12f1996599cb9bfdaa243351b2b1
+  languageName: node
+  linkType: hard
+
+"@react-types/breadcrumbs@npm:^3.4.6":
+  version: 3.4.6
+  resolution: "@react-types/breadcrumbs@npm:3.4.6"
+  dependencies:
+    "@react-types/link": ^3.3.6
+    "@react-types/shared": ^3.16.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 25651c26ec5da239b2273a6eb6516bc7ebbe4dd11dd6524829ceed165c213f7b556dfea7299cccbdac6b8ba776ae60c2b841e7ece4ffadcc6ed528f8047c0e98
+  languageName: node
+  linkType: hard
+
+"@react-types/link@npm:^3.3.6":
+  version: 3.3.6
+  resolution: "@react-types/link@npm:3.3.6"
+  dependencies:
+    "@react-aria/interactions": ^3.13.1
+    "@react-types/shared": ^3.16.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 646987b76467bea935510de065123fd99341c3e9ff3410500f426b213fae9d06aefdff3c9bff7a55b8fceaaf08606c1fe6737ad1df593538198aa2dd94e24703
+  languageName: node
+  linkType: hard
+
+"@react-types/shared@npm:^3.16.0":
+  version: 3.16.0
+  resolution: "@react-types/shared@npm:3.16.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+  checksum: 3bb3aa77f4938fcd7788c5c5abf24f8f3d3c034d555962e44202d09673844cbb31d7b280edc9ac432bdd06847bc253527f8946f2604b9c88d5fcb96fdc56fbd1
   languageName: node
   linkType: hard
 
@@ -4964,7 +5047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/helpers@npm:0.4.14":
+"@swc/helpers@npm:0.4.14, @swc/helpers@npm:^0.4.14":
   version: 0.4.14
   resolution: "@swc/helpers@npm:0.4.14"
   dependencies:
@@ -6552,6 +6635,7 @@ __metadata:
     "@radix-ui/react-toast": ^1.1.2
     "@radix-ui/react-toggle-group": ^1.0.2
     "@radix-ui/react-tooltip": ^1.0.3
+    "@react-types/breadcrumbs": ^3.4.6
     "@rollup/plugin-terser": ^0.3.0
     "@stitches/react": ^1.2.8
     "@types/node": ^18.11.18
@@ -7660,7 +7744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.0.4":
+"clsx@npm:^1.0.4, clsx@npm:^1.1.1":
   version: 1.2.1
   resolution: "clsx@npm:1.2.1"
   checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12

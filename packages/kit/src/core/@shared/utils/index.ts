@@ -16,3 +16,4 @@ export type ReplaceProps<Inner extends React.ElementType, P> = Omit<
 
 // exports.
 export {applyDisplayName} from './apply-display-name'
+export {useDOMRef} from './use-dom-ref'

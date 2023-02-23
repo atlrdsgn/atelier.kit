@@ -1,2 +1,2 @@
 export {useThemeContext} from './AtelierKitProvider'
-export {AtelierKitThemeProvider} from './AtelierKitProvider'
+export {KitThemeProvider} from './AtelierKitProvider'

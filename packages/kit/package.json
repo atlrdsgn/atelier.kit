@@ -14,7 +14,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "yarn clean && yarn install && yarn rollup",
+    "rollup": "rollup -c",
     "lint": "eslint src --ext .ts",
     "clean": "rm -rf node_modules && rm -rf build",
     "release": "npm publish --access public",

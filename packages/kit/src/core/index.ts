@@ -1,5 +1,5 @@
 // provider.
-export {AtelierKitThemeProvider} from './provider'
+export {KitThemeProvider} from './provider'
 export {useThemeContext} from './provider'
 
 // core elements.
@@ -23,6 +23,3 @@ export {KitTypefaceLogo} from './assets'
 // utils.
 export {KitHead} from './utils/kit.head'
 export {getTouchPosition} from './utils/touch-position'
-
-// testing.
-export {TestBox} from './test-component'

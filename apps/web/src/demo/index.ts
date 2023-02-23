@@ -21,6 +21,3 @@ export {ToggleGroupDemo} from './ToggleGroup.Demo'
 export {VideoPlayerDemo} from './VideoPlayer.Demo'
 
 export {UIPopoverDemo} from './UIPopover.Demo'
-
-// testing.
-export {TestBoxDemo} from './TestBox.Demo'

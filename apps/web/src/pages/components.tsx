@@ -17,13 +17,13 @@ import {
   BadgeDemo,
   TipDemo,
   MenubarDemo,
-  TestBoxDemo,
   AviDemo,
   ToastDemo,
 } from '@/demo'
 import {SectionGap} from '@/components/SectionGap'
 import {Header} from '@/components/Header'
 import {Button, Container} from 'atlr.kit'
+import {Footer} from '@/components/Footer'
 
 function Components() {
   return (
@@ -37,10 +37,10 @@ function Components() {
 
       <Header />
 
-      <TestBoxDemo />
-
       {/* <!-- Components go here --> */}
 
+      <SectionGap />
+      <SectionGap />
       <SectionGap />
       <ContainerDemo />
 
@@ -100,6 +100,9 @@ function Components() {
         </Button>
       </Container>
       <SectionGap />
+      <SectionGap />
+
+      <Footer />
     </>
   )
 }

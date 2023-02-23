@@ -7,9 +7,8 @@ export { getCssAndReset } from './style';
 export { KitTheme } from './base';
 export { KitColors } from './base';
 export { KitMedia } from './base';
-export { autoTheme } from './base';
-export { lightTheme } from './base';
-export { darkTheme } from './base';
+export { KitProvider } from './src/provider';
+export { Auto, Light, Dark } from './base';
 /**
  *
  * @utils

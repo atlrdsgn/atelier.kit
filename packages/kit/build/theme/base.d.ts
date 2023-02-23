@@ -8123,8 +8123,611 @@ declare const darkTheme: string & {
         slate12: string;
     };
 }, "">;
-export { autoTheme };
-export { lightTheme };
-export { darkTheme };
+export declare const Auto: string & {
+    className: string;
+    selector: string;
+} & import("@stitches/react/types/stitches").ThemeTokens<{
+    colors: {
+        white: string;
+        black: string;
+        olive: string; /**
+         *
+         *
+         *
+         * @baseColors
+         *
+         * passing all values forward as [baseColors].
+         *
+         * later extending use with KitColors.color as the final token.
+         *
+         */
+        bandicoot: string;
+        blueCharcoal: string;
+        primaryGray: string;
+        secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
+        accentHeliotrope: string;
+        accentFizz: string;
+        transparent: string;
+        panel: string;
+        transparentPanel: string;
+        shadowLight: string;
+        shadowDark: string;
+        primaryBorder: string;
+        primaryBorderHover: string;
+        secondaryBorder: string;
+        flag: string;
+        blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
+        atelier00: string;
+        atelier01: string;
+        atelier02: string;
+        atelier03: string;
+        atlr00: string;
+        atlr01: string;
+        atlr02: string;
+        atlr03: string;
+        atlr04: string;
+        atlr05: string;
+        atlr06: string;
+        atlr07: string;
+        atlr08: string;
+        atlr09: string;
+        atlr10: string;
+        atlr11: string;
+        atlr12: string;
+        brand1: string;
+        brand2: string;
+        brand3: string;
+        brand4: string;
+        brand5: string;
+        brand6: string;
+        brand7: string;
+        brand8: string;
+        /**
+         *
+         *
+         * This the main stitches config.
+         *
+         * where all css tokens are generated from.
+         * if a value does not derive from [baseKitTheme] it will be ignored.
+         *
+         * for Stitches Config Documentation
+         * see https://stitches.dev/docs/introduction
+         *
+         * config file accepts:
+         * - prefix: string
+         * - theme: object
+         *    - color: object
+         *    - utils: object
+         * - media: object
+         * - themeMap: object
+         * - utils: object
+         * - breakpoints: object
+         *
+         */
+        brand9: string;
+        brand10: string;
+        brand11: string;
+        brand12: string;
+        limey: string;
+        purp: string;
+        gray1: string;
+        gray2: string;
+        gray3: string;
+        gray4: string;
+        gray5: string;
+        gray6: string;
+        gray7: string;
+        gray8: string;
+        gray9: string;
+        gray10: string;
+        gray11: string;
+        gray12: string;
+        slate1: string;
+        slate2: string;
+        slate3: string;
+        slate4: string;
+        slate5: string;
+        slate6: string;
+        slate7: string;
+        slate8: string;
+        slate9: string;
+        slate10: string;
+        slate11: string;
+        slate12: string;
+        slateA1: string;
+        slateA2: string;
+        slateA3: string;
+        slateA4: string;
+        slateA5: string;
+        slateA6: string;
+        slateA7: string;
+        slateA8: string;
+        slateA9: string;
+        slateA10: string;
+        slateA11: string;
+        slateA12: string;
+        sky1: string;
+        sky2: string;
+        sky3: string;
+        sky4: string;
+        sky5: string;
+        sky6: string;
+        sky7: string;
+        sky8: string;
+        sky9: string;
+        sky10: string;
+        sky11: string;
+        sky12: string;
+        sky13: string;
+        sky14: string;
+        sky15: string;
+        mauve1: string;
+        mauve2: string;
+        mauve3: string;
+        mauve4: string;
+        mauve5: string;
+        mauve6: string;
+        mauve7: string;
+        mauve8: string;
+        mauve9: string;
+        mauve10: string;
+        mauve11: string;
+        mauve12: string;
+        mauve13: string;
+        mauve14: string;
+        mauve15: string;
+        helios1: string;
+        helios2: string;
+        helios3: string;
+        helios4: string;
+        helios5: string;
+        helios6: string;
+        helios7: string;
+        helios8: string;
+        helios9: string;
+        helios10: string;
+        helios11: string;
+        helios12: string;
+        helios13: string;
+        helios14: string;
+        helios15: string;
+        heliotrope1: string;
+        heliotrope2: string;
+        heliotrope3: string;
+        heliotrope4: string;
+        heliotrope5: string;
+        heliotrope6: string;
+        heliotrope7: string;
+        heliotrope8: string;
+        heliotrope9: string;
+        heliotrope10: string;
+        heliotrope11: string;
+        heliotrope12: string;
+        fizz1: string;
+        fizz2: string;
+        fizz3: string;
+        fizz4: string;
+        fizz5: string;
+        fizz6: string;
+        fizz7: string;
+        fizz8: string;
+        fizz9: string;
+        fizz10: string;
+        fizz11: string;
+        fizz12: string;
+        lime1: string;
+        lime2: string;
+        lime3: string;
+        lime4: string;
+        lime5: string;
+        lime6: string;
+        lime7: string;
+        lime8: string;
+        lime9: string;
+        lime10: string;
+        lime11: string;
+        lime12: string;
+        burn1: string;
+        burn2: string;
+        burn3: string;
+        burn4: string;
+        burn5: string;
+        burn6: string;
+        burn7: string;
+        burn8: string;
+        burn9: string;
+        burn10: string;
+        burn11: string;
+        burn12: string;
+        moon1: string;
+        moon2: string;
+        moon3: string;
+        moon4: string;
+        moon5: string;
+        moon6: string;
+        moon7: string;
+        moon8: string;
+        moon9: string;
+        moon10: string;
+        moon11: string;
+        moon12: string;
+        radical1: string;
+        radical2: string;
+        radical3: string;
+        radical4: string;
+        radical5: string;
+        radical6: string;
+        radical7: string;
+        radical8: string;
+        radical9: string;
+        radical10: string;
+        radical11: string;
+        radical12: string;
+        torch1: string;
+        torch2: string;
+        torch3: string;
+        torch4: string;
+        torch5: string;
+        torch6: string;
+        torch7: string;
+        torch8: string;
+        torch9: string;
+        torch10: string;
+        torch11: string;
+        torch12: string;
+        gold1: string;
+        gold2: string;
+        gold3: string;
+        gold4: string;
+        gold5: string;
+        gold6: string;
+        gold7: string;
+        gold8: string;
+        gold9: string;
+        gold10: string;
+        gold11: string;
+        gold12: string;
+    };
+}, "">;
+export declare const Light: string & {
+    className: string;
+    selector: string;
+} & import("@stitches/react/types/stitches").ThemeTokens<{
+    colors: {
+        white: string;
+        black: string;
+        olive: string; /**
+         *
+         *
+         *
+         * @baseColors
+         *
+         * passing all values forward as [baseColors].
+         *
+         * later extending use with KitColors.color as the final token.
+         *
+         */
+        bandicoot: string;
+        blueCharcoal: string;
+        primaryGray: string;
+        secondaryGray: string;
+        heliotrope: string;
+        honeySuckle: string;
+        accentHeliotrope: string;
+        accentFizz: string;
+        transparent: string;
+        panel: string;
+        transparentPanel: string;
+        shadowLight: string;
+        shadowDark: string;
+        primaryBorder: string;
+        primaryBorderHover: string;
+        secondaryBorder: string;
+        flag: string;
+        blur: string;
+        silver0: string;
+        silver1: string;
+        silver2: string;
+        silver3: string;
+        silver4: string;
+        silver5: string;
+        silver6: string;
+        silver7: string;
+        silver8: string;
+        silver9: string;
+        silver10: string;
+        silver11: string;
+        silver12: string;
+        atelier00: string;
+        atelier01: string;
+        atelier02: string;
+        atelier03: string;
+        atlr00: string;
+        atlr01: string;
+        atlr02: string;
+        atlr03: string;
+        atlr04: string;
+        atlr05: string;
+        atlr06: string;
+        atlr07: string;
+        atlr08: string;
+        atlr09: string;
+        atlr10: string;
+        atlr11: string;
+        atlr12: string;
+        brand1: string;
+        brand2: string;
+        brand3: string;
+        brand4: string;
+        brand5: string;
+        brand6: string;
+        brand7: string;
+        brand8: string;
+        /**
+         *
+         *
+         * This the main stitches config.
+         *
+         * where all css tokens are generated from.
+         * if a value does not derive from [baseKitTheme] it will be ignored.
+         *
+         * for Stitches Config Documentation
+         * see https://stitches.dev/docs/introduction
+         *
+         * config file accepts:
+         * - prefix: string
+         * - theme: object
+         *    - color: object
+         *    - utils: object
+         * - media: object
+         * - themeMap: object
+         * - utils: object
+         * - breakpoints: object
+         *
+         */
+        brand9: string;
+        brand10: string;
+        brand11: string;
+        brand12: string;
+        limey: string;
+        purp: string;
+        gray1: string;
+        gray2: string;
+        gray3: string;
+        gray4: string;
+        gray5: string;
+        gray6: string;
+        gray7: string;
+        gray8: string;
+        gray9: string;
+        gray10: string;
+        gray11: string;
+        gray12: string;
+        slate1: string;
+        slate2: string;
+        slate3: string;
+        slate4: string;
+        slate5: string;
+        slate6: string;
+        slate7: string;
+        slate8: string;
+        slate9: string;
+        slate10: string;
+        slate11: string;
+        slate12: string;
+        slateA1: string;
+        slateA2: string;
+        slateA3: string;
+        slateA4: string;
+        slateA5: string;
+        slateA6: string;
+        slateA7: string;
+        slateA8: string;
+        slateA9: string;
+        slateA10: string;
+        slateA11: string;
+        slateA12: string;
+        sky1: string;
+        sky2: string;
+        sky3: string;
+        sky4: string;
+        sky5: string;
+        sky6: string;
+        sky7: string;
+        sky8: string;
+        sky9: string;
+        sky10: string;
+        sky11: string;
+        sky12: string;
+        sky13: string;
+        sky14: string;
+        sky15: string;
+        mauve1: string;
+        mauve2: string;
+        mauve3: string;
+        mauve4: string;
+        mauve5: string;
+        mauve6: string;
+        mauve7: string;
+        mauve8: string;
+        mauve9: string;
+        mauve10: string;
+        mauve11: string;
+        mauve12: string;
+        mauve13: string;
+        mauve14: string;
+        mauve15: string;
+        helios1: string;
+        helios2: string;
+        helios3: string;
+        helios4: string;
+        helios5: string;
+        helios6: string;
+        helios7: string;
+        helios8: string;
+        helios9: string;
+        helios10: string;
+        helios11: string;
+        helios12: string;
+        helios13: string;
+        helios14: string;
+        helios15: string;
+        heliotrope1: string;
+        heliotrope2: string;
+        heliotrope3: string;
+        heliotrope4: string;
+        heliotrope5: string;
+        heliotrope6: string;
+        heliotrope7: string;
+        heliotrope8: string;
+        heliotrope9: string;
+        heliotrope10: string;
+        heliotrope11: string;
+        heliotrope12: string;
+        fizz1: string;
+        fizz2: string;
+        fizz3: string;
+        fizz4: string;
+        fizz5: string;
+        fizz6: string;
+        fizz7: string;
+        fizz8: string;
+        fizz9: string;
+        fizz10: string;
+        fizz11: string;
+        fizz12: string;
+        lime1: string;
+        lime2: string;
+        lime3: string;
+        lime4: string;
+        lime5: string;
+        lime6: string;
+        lime7: string;
+        lime8: string;
+        lime9: string;
+        lime10: string;
+        lime11: string;
+        lime12: string;
+        burn1: string;
+        burn2: string;
+        burn3: string;
+        burn4: string;
+        burn5: string;
+        burn6: string;
+        burn7: string;
+        burn8: string;
+        burn9: string;
+        burn10: string;
+        burn11: string;
+        burn12: string;
+        moon1: string;
+        moon2: string;
+        moon3: string;
+        moon4: string;
+        moon5: string;
+        moon6: string;
+        moon7: string;
+        moon8: string;
+        moon9: string;
+        moon10: string;
+        moon11: string;
+        moon12: string;
+        radical1: string;
+        radical2: string;
+        radical3: string;
+        radical4: string;
+        radical5: string;
+        radical6: string;
+        radical7: string;
+        radical8: string;
+        radical9: string;
+        radical10: string;
+        radical11: string;
+        radical12: string;
+        torch1: string;
+        torch2: string;
+        torch3: string;
+        torch4: string;
+        torch5: string;
+        torch6: string;
+        torch7: string;
+        torch8: string;
+        torch9: string;
+        torch10: string;
+        torch11: string;
+        torch12: string;
+        gold1: string;
+        gold2: string;
+        gold3: string;
+        gold4: string;
+        gold5: string;
+        gold6: string;
+        gold7: string;
+        gold8: string;
+        gold9: string;
+        gold10: string;
+        gold11: string;
+        gold12: string;
+    };
+}, "">;
+export declare const Dark: string & {
+    className: string;
+    selector: string;
+} & import("@stitches/react/types/stitches").ThemeTokens<{
+    colors: {
+        white: string;
+        black: string;
+        primaryGray: string;
+        secondaryGray: string;
+        accentHeliotrope: string;
+        accentFizz: string;
+        transparent: string;
+        panel: string;
+        transparentPanel: string;
+        shadowLight: string;
+        shadowDark: string;
+        primaryBorder: string;
+        primaryBorderHover: string;
+        secondaryBorder: string;
+        flag: string;
+        blur: string;
+        atelier00: string;
+        atelier01: string;
+        atelier02: string;
+        atelier03: string;
+        limey: string;
+        purp: string;
+        slate1: string;
+        slate2: string;
+        slate3: string;
+        slate4: string;
+        slate5: string;
+        slate6: string;
+        slate7: string;
+        slate8: string;
+        slate9: string;
+        slate10: string;
+        slate11: string;
+        slate12: string;
+    };
+}, "">;
 export { atelierTheme };
+export type AutoTheme = typeof autoTheme;
+export type LightTheme = typeof lightTheme;
+export type DarkTheme = typeof darkTheme;
 //# sourceMappingURL=base.d.ts.map

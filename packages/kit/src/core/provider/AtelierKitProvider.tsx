@@ -12,7 +12,7 @@ type ContextValue = {
 
 const Context = React.createContext<ContextValue | null>(null)
 
-type AtelierKitThemeProviderProps = {
+type KitThemeProviderProps = {
   children?: React.ReactNode
   theme?: Theme
   mode?: Mode
@@ -22,10 +22,10 @@ type AtelierKitThemeProviderProps = {
   customTheme?: CustomTheme
 }
 
-export const AtelierKitThemeProvider: React.FC<AtelierKitThemeProviderProps> = ({
+export const KitThemeProvider: React.FC<KitThemeProviderProps> = ({
   children,
   theme = 'auto',
-  mode = 'auto',
+  mode = 'light-theme',
 
   autoTheme = true,
   lightTheme = false,

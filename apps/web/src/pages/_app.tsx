@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import {ThemeProvider} from 'next-themes'
 import type {NextComponentType, NextPageContext} from 'next'
 import type {AppProps} from 'next/app'
-import {AtelierKitThemeProvider, globalCss, KitTheme, darkTheme} from 'atlr.kit'
+import {KitThemeProvider, globalCss, KitTheme, Dark, Light} from 'atlr.kit'
 
 const globalStyles = globalCss({
   html: {
@@ -32,10 +32,8 @@ function App({Component, pageProps, ...rest}: AppProps) {
 
   return (
     <>
-      <ThemeProvider attribute="class" value={{light: 'light-theme', dark: darkTheme.className}}>
-        <AtelierKitThemeProvider theme={'auto'} mode={'light'} lightTheme>
-          {getLayout({Component, pageProps, ...rest})}
-        </AtelierKitThemeProvider>
+      <ThemeProvider attribute="class" value={{light: Light.className, dark: Dark.className}}>
+        <KitThemeProvider>{getLayout({Component, pageProps, ...rest})}</KitThemeProvider>
       </ThemeProvider>
     </>
   )

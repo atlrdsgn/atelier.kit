@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import {Button, Canvas, Flex, KitColors, Space} from 'atlr.kit'
 import {AtelierKitLogo} from 'atlr.kit'
+import {Footer} from '@/components/Footer'
 import {AppWrapper} from '@/components/AppWrapper'
 import {BlurredCanvas} from '@/components/BlurredCanvas'
 import mainBackdrop from '../../public/main.png'
@@ -31,6 +32,7 @@ function Index() {
           </Flex>
         </Canvas>
 
+        <Footer />
         <BlurredCanvas />
         <Image src={mainBackdrop} alt="src" fill style={{width: '100%', height: '100%'}} />
       </AppWrapper>

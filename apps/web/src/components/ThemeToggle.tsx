@@ -8,15 +8,13 @@ export const ThemeToggle = () => {
 
   return (
     <Flex css={{alignItems: 'center'}}>
-      <form>
-        <Switch
-          onCheckedChange={() =>
-            theme === Light.className ? setTheme(Dark.className) : setTheme(Light.className)
-          }
-          aria-label="Change Theme">
-          <Switch.Toggle />
-        </Switch>
-      </form>
+      <Switch
+        onCheckedChange={() =>
+          theme === Light.className ? setTheme(Dark.className) : setTheme(Light.className)
+        }
+        aria-label="Change Theme">
+        <Switch.Toggle />
+      </Switch>
     </Flex>
   )
 }
